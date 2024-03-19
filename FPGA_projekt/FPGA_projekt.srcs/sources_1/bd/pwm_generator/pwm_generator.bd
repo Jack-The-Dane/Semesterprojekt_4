@@ -76,7 +76,7 @@
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "ip_revision": "1",
         "xci_name": "pwm_generator_counter_0_0",
-        "xci_path": "ip\\pwm_generator_counter_0_0\\pwm_generator_counter_0_0.xci",
+        "xci_path": "ip/pwm_generator_counter_0_0/pwm_generator_counter_0_0.xci",
         "inst_hier_path": "counter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -116,7 +116,7 @@
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "pwm_generator_pwm_gen_0_0",
-        "xci_path": "ip\\pwm_generator_pwm_gen_0_0\\pwm_generator_pwm_gen_0_0.xci",
+        "xci_path": "ip/pwm_generator_pwm_gen_0_0/pwm_generator_pwm_gen_0_0.xci",
         "inst_hier_path": "pwm_gen_0",
         "reference_info": {
           "ref_type": "hdl",

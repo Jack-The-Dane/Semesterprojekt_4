@@ -2,18 +2,18 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="pwm_generator" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1710847009"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1710847009"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1710847009"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1710847009"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1710848810"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1710848810"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1710848810"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1710848810"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\pwm_generator.vhd" Type="VHDL">
+      <File Name="synth/pwm_generator.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\pwm_generator.vhd" Type="VHDL">
+      <File Name="sim/pwm_generator.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -27,7 +27,7 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\pwm_generator.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/pwm_generator.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -39,13 +39,13 @@
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\pwm_generator.hwdef">
+      <File Name="synth/pwm_generator.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\pwm_generator.protoinst">
+      <File Name="sim/pwm_generator.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

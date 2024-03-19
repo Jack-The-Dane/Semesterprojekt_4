@@ -36,9 +36,9 @@ entity counter is
         n_bits  :   POSITIVE    :=  16
     );
     port(
-        clk     :   in  STD_LOGIC;
-        rst     :   in  STD_LOGIC;
-        en      :   in  STD_LOGIC;
+        clk     :   in  STD_LOGIC := '0';
+        rst     :   in  STD_LOGIC := '0';
+        en      :   in  STD_LOGIC := '1';
         cnt     :   out STD_LOGIC_VECTOR(n_bits-1 downto 0)
     );
 end counter;
@@ -52,7 +52,7 @@ begin
             cnt_int     <=  (others => '0');
         elsif(rising_edge(clk)) then
             if (en = '1') then
-                cnt_int <=  cnt_int + "1";
+                cnt_int <=  cnt_int + 1;
             end if;
         end if;
     end process;
