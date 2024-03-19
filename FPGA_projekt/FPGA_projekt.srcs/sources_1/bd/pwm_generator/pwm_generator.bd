@@ -1,0 +1,182 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xED9E178001E127DC",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/pwm_generator",
+      "name": "pwm_generator",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "counter_0": "",
+      "pwm_gen_0": ""
+    },
+    "ports": {
+      "duty_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "pwm_0": {
+        "direction": "O"
+      },
+      "clk_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst_0",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "pwm_generator_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "en_0": {
+        "direction": "I"
+      },
+      "rst_0": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "pwm_generator_counter_0_0",
+        "xci_path": "ip\\pwm_generator_counter_0_0\\pwm_generator_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pwm_generator_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "pwm_gen_0": {
+        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "pwm_generator_pwm_gen_0_0",
+        "xci_path": "ip\\pwm_generator_pwm_gen_0_0\\pwm_generator_pwm_gen_0_0.xci",
+        "inst_hier_path": "pwm_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwm_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "cnt": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_0",
+          "counter_0/clk"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "pwm_gen_0/cnt"
+        ]
+      },
+      "duty_0_1": {
+        "ports": [
+          "duty_0",
+          "pwm_gen_0/duty"
+        ]
+      },
+      "en_0_1": {
+        "ports": [
+          "en_0",
+          "counter_0/en"
+        ]
+      },
+      "pwm_gen_0_pwm": {
+        "ports": [
+          "pwm_gen_0/pwm",
+          "pwm_0"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "rst_0",
+          "counter_0/rst"
+        ]
+      }
+    }
+  }
+}

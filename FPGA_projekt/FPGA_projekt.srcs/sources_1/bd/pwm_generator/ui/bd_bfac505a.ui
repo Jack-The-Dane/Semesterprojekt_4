@@ -1,0 +1,25 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.0",
+   "Default View_TopLeft":"-208,-134",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port port-id_pwm_0 -pg 1 -lvl 3 -x 440 -y 30 -defaultsOSRD
+preplace port port-id_clk_0 -pg 1 -lvl 0 -x -30 -y 0 -defaultsOSRD
+preplace port port-id_en_0 -pg 1 -lvl 0 -x -30 -y 60 -defaultsOSRD
+preplace port port-id_rst_0 -pg 1 -lvl 0 -x -30 -y 30 -defaultsOSRD
+preplace portBus duty_0 -pg 1 -lvl 0 -x -30 -y 110 -defaultsOSRD
+preplace inst counter_0 -pg 1 -lvl 1 -x 100 -y 30 -defaultsOSRD
+preplace inst pwm_gen_0 -pg 1 -lvl 2 -x 310 -y 30 -defaultsOSRD
+preplace netloc counter_0_cnt 1 1 1 200 20n
+preplace netloc duty_0_1 1 0 2 NJ 110 200J
+preplace netloc pwm_gen_0_pwm 1 2 1 N 30
+preplace netloc clk_0_1 1 0 1 -10J 0n
+preplace netloc en_0_1 1 0 1 -10J 50n
+preplace netloc rst_0_1 1 0 1 NJ 30
+levelinfo -pg 1 -30 100 310 440
+pagesize -pg 1 -db -bbox -sgen -160 -50 540 230
+"
+}
+

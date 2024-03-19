@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/Downloads/counter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'counter'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/OneDrive - Syddansk Universitet/4. semester/Semesterprojekt/Semesterprojekt/Semesterprojekt.srcs/sources_1/new/PWM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_gen'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/OneDrive - Syddansk Universitet/4. semester/Semesterprojekt/Semesterprojekt/Semesterprojekt.ip_user_files/bd/pwm_generator/ip/pwm_generator_counter_0_0/sim/pwm_generator_counter_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_generator_counter_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/OneDrive - Syddansk Universitet/4. semester/Semesterprojekt/Semesterprojekt/Semesterprojekt.ip_user_files/bd/pwm_generator/ip/pwm_generator_pwm_gen_0_0/sim/pwm_generator_pwm_gen_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_generator_pwm_gen_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/OneDrive - Syddansk Universitet/4. semester/Semesterprojekt/Semesterprojekt/Semesterprojekt.ip_user_files/bd/pwm_generator/sim/pwm_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_generator'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Rikke/OneDrive - Syddansk Universitet/4. semester/Semesterprojekt/Semesterprojekt/Semesterprojekt.gen/sources_1/bd/pwm_generator/hdl/pwm_generator_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'pwm_generator_wrapper'
