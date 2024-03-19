@@ -96,7 +96,7 @@ Contents of the .debug_info section:
     <b0>   DW_AT_decl_column : 1
     <b1>   DW_AT_type        : <0x69>
     <b5>   DW_AT_low_pc      : 0x2a0
-    <b9>   DW_AT_high_pc     : 0xbc
+    <b9>   DW_AT_high_pc     : 0xc8
     <bd>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <bf>   DW_AT_GNU_all_call_sites: 1
  <1><bf>: Abbrev Number: 6 (DW_TAG_subprogram)
@@ -145,7 +145,7 @@ Contents of the .debug_info section:
     <119>   DW_AT_comp_dir    : (indirect string, offset: 0x147): /home/balder/Documents/uni/lectures/Semester 4/semesterproj/microcontroller
     <11d>   DW_AT_ranges      : 0x18
     <121>   DW_AT_low_pc      : 0x0
-    <125>   DW_AT_stmt_list   : 0x1a4
+    <125>   DW_AT_stmt_list   : 0x1aa
  <1><129>: Abbrev Number: 2 (DW_TAG_enumeration_type)
     <12a>   DW_AT_name        : (indirect string, offset: 0x1d8): LEDColor
     <12e>   DW_AT_encoding    : 7	(unsigned)
@@ -250,7 +250,7 @@ Contents of the .debug_info section:
     <1e6>   DW_AT_decl_line   : 24
     <1e7>   DW_AT_decl_column : 6
     <1e8>   DW_AT_prototyped  : 1
-    <1e8>   DW_AT_low_pc      : 0x3ec
+    <1e8>   DW_AT_low_pc      : 0x3f8
     <1ec>   DW_AT_high_pc     : 0x24
     <1f0>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <1f2>   DW_AT_GNU_all_call_sites: 1
@@ -269,7 +269,7 @@ Contents of the .debug_info section:
     <20b>   DW_AT_decl_file   : 1
     <20c>   DW_AT_decl_line   : 4
     <20d>   DW_AT_decl_column : 6
-    <20e>   DW_AT_low_pc      : 0x35c
+    <20e>   DW_AT_low_pc      : 0x368
     <212>   DW_AT_high_pc     : 0x90
     <216>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <218>   DW_AT_GNU_all_call_sites: 1
@@ -286,7 +286,7 @@ Contents of the .debug_info section:
     <22e>   DW_AT_comp_dir    : (indirect string, offset: 0x147): /home/balder/Documents/uni/lectures/Semester 4/semesterproj/microcontroller
     <232>   DW_AT_ranges      : 0x38
     <236>   DW_AT_low_pc      : 0x0
-    <23a>   DW_AT_stmt_list   : 0x33c
+    <23a>   DW_AT_stmt_list   : 0x342
  <1><23e>: Abbrev Number: 2 (DW_TAG_base_type)
     <23f>   DW_AT_byte_size   : 1
     <240>   DW_AT_encoding    : 8	(unsigned char)
@@ -389,14 +389,14 @@ Contents of the .debug_info section:
     <2f4>   DW_AT_decl_column : 5
     <2f5>   DW_AT_prototyped  : 1
     <2f5>   DW_AT_type        : <0x2df>
-    <2f9>   DW_AT_low_pc      : 0x42c
-    <2fd>   DW_AT_high_pc     : 0x58
+    <2f9>   DW_AT_low_pc      : 0x438
+    <2fd>   DW_AT_high_pc     : 0x54
     <301>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <303>   DW_AT_GNU_all_tail_call_sites: 1
     <303>   DW_AT_sibling     : <0x35d>
  <2><307>: Abbrev Number: 9 (DW_TAG_lexical_block)
-    <308>   DW_AT_low_pc      : 0x442
-    <30c>   DW_AT_high_pc     : 0x3c
+    <308>   DW_AT_low_pc      : 0x44e
+    <30c>   DW_AT_high_pc     : 0x38
  <3><310>: Abbrev Number: 10 (DW_TAG_variable)
     <311>   DW_AT_name        : (indirect string, offset: 0x215): input
     <315>   DW_AT_decl_file   : 1
@@ -444,7 +444,7 @@ Contents of the .debug_info section:
     <369>   DW_AT_decl_file   : 1
     <36a>   DW_AT_decl_line   : 9
     <36b>   DW_AT_decl_column : 6
-    <36c>   DW_AT_low_pc      : 0x410
+    <36c>   DW_AT_low_pc      : 0x41c
     <370>   DW_AT_high_pc     : 0x1a
     <374>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <376>   DW_AT_GNU_all_tail_call_sites: 1
@@ -461,7 +461,7 @@ Contents of the .debug_info section:
     <38c>   DW_AT_comp_dir    : (indirect string, offset: 0x147): /home/balder/Documents/uni/lectures/Semester 4/semesterproj/microcontroller
     <390>   DW_AT_ranges      : 0x50
     <394>   DW_AT_low_pc      : 0x0
-    <398>   DW_AT_stmt_list   : 0x3fd
+    <398>   DW_AT_stmt_list   : 0x3fa
  <1><39c>: Abbrev Number: 2 (DW_TAG_base_type)
     <39d>   DW_AT_byte_size   : 1
     <39e>   DW_AT_encoding    : 6	(signed char)
@@ -587,7 +587,7 @@ Contents of the .debug_info section:
     <479>   DW_AT_decl_line   : 312
     <47b>   DW_AT_decl_column : 28
     <47c>   DW_AT_prototyped  : 1
-    <47c>   DW_AT_low_pc      : 0x4f8
+    <47c>   DW_AT_low_pc      : 0x500
     <480>   DW_AT_high_pc     : 0x6
     <484>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <486>   DW_AT_GNU_all_call_sites: 1
@@ -598,7 +598,7 @@ Contents of the .debug_info section:
     <48c>   DW_AT_decl_line   : 308
     <48e>   DW_AT_decl_column : 28
     <48f>   DW_AT_prototyped  : 1
-    <48f>   DW_AT_low_pc      : 0x4f2
+    <48f>   DW_AT_low_pc      : 0x4fa
     <493>   DW_AT_high_pc     : 0x6
     <497>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <499>   DW_AT_GNU_all_call_sites: 1
@@ -608,7 +608,7 @@ Contents of the .debug_info section:
     <49f>   DW_AT_decl_line   : 294
     <4a1>   DW_AT_decl_column : 13
     <4a2>   DW_AT_prototyped  : 1
-    <4a2>   DW_AT_low_pc      : 0x4ec
+    <4a2>   DW_AT_low_pc      : 0x4f4
     <4a6>   DW_AT_high_pc     : 0x6
     <4aa>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <4ac>   DW_AT_GNU_all_call_sites: 1
@@ -618,7 +618,7 @@ Contents of the .debug_info section:
     <4b2>   DW_AT_decl_line   : 279
     <4b4>   DW_AT_decl_column : 13
     <4b5>   DW_AT_prototyped  : 1
-    <4b5>   DW_AT_low_pc      : 0x4e6
+    <4b5>   DW_AT_low_pc      : 0x4ee
     <4b9>   DW_AT_high_pc     : 0x6
     <4bd>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <4bf>   DW_AT_GNU_all_call_sites: 1
@@ -628,7 +628,7 @@ Contents of the .debug_info section:
     <4c5>   DW_AT_decl_line   : 264
     <4c7>   DW_AT_decl_column : 13
     <4c8>   DW_AT_prototyped  : 1
-    <4c8>   DW_AT_low_pc      : 0x4e0
+    <4c8>   DW_AT_low_pc      : 0x4e8
     <4cc>   DW_AT_high_pc     : 0x6
     <4d0>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <4d2>   DW_AT_GNU_all_call_sites: 1
@@ -639,7 +639,7 @@ Contents of the .debug_info section:
     <4d8>   DW_AT_decl_line   : 227
     <4d9>   DW_AT_decl_column : 6
     <4da>   DW_AT_prototyped  : 1
-    <4da>   DW_AT_low_pc      : 0x484
+    <4da>   DW_AT_low_pc      : 0x48c
     <4de>   DW_AT_high_pc     : 0x54
     <4e2>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <4e4>   DW_AT_GNU_all_tail_call_sites: 1
@@ -675,7 +675,7 @@ Contents of the .debug_info section:
     <523>   DW_AT_comp_dir    : (indirect string, offset: 0x147): /home/balder/Documents/uni/lectures/Semester 4/semesterproj/microcontroller
     <527>   DW_AT_ranges      : 0x88
     <52b>   DW_AT_low_pc      : 0x0
-    <52f>   DW_AT_stmt_list   : 0x4dd
+    <52f>   DW_AT_stmt_list   : 0x4da
  <1><533>: Abbrev Number: 2 (DW_TAG_base_type)
     <534>   DW_AT_byte_size   : 1
     <535>   DW_AT_encoding    : 6	(signed char)
@@ -761,7 +761,7 @@ Contents of the .debug_info section:
     <5c9>   DW_AT_decl_line   : 156
     <5ca>   DW_AT_decl_column : 13
     <5cb>   DW_AT_prototyped  : 1
-    <5cb>   DW_AT_low_pc      : 0x5fc
+    <5cb>   DW_AT_low_pc      : 0x604
     <5cf>   DW_AT_high_pc     : 0xf8
     <5d3>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <5d5>   DW_AT_GNU_all_tail_call_sites: 1
@@ -809,7 +809,7 @@ Contents of the .debug_info section:
     <62b>   DW_AT_decl_line   : 148
     <62c>   DW_AT_decl_column : 13
     <62d>   DW_AT_prototyped  : 1
-    <62d>   DW_AT_low_pc      : 0x5dc
+    <62d>   DW_AT_low_pc      : 0x5e4
     <631>   DW_AT_high_pc     : 0x20
     <635>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <637>   DW_AT_GNU_all_call_sites: 1
@@ -829,7 +829,7 @@ Contents of the .debug_info section:
     <650>   DW_AT_decl_line   : 140
     <651>   DW_AT_decl_column : 16
     <652>   DW_AT_type        : <0x591>
-    <656>   DW_AT_low_pc      : 0x5bc
+    <656>   DW_AT_low_pc      : 0x5c4
     <65a>   DW_AT_high_pc     : 0x20
     <65e>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <660>   DW_AT_GNU_all_call_sites: 1
@@ -861,7 +861,7 @@ Contents of the .debug_info section:
     <691>   DW_AT_decl_file   : 1
     <692>   DW_AT_decl_line   : 113
     <693>   DW_AT_decl_column : 6
-    <694>   DW_AT_low_pc      : 0x59c
+    <694>   DW_AT_low_pc      : 0x5a4
     <698>   DW_AT_high_pc     : 0x20
     <69c>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <69e>   DW_AT_GNU_all_call_sites: 1
@@ -883,7 +883,7 @@ Contents of the .debug_info section:
     <6b7>   DW_AT_decl_column : 8
     <6b8>   DW_AT_prototyped  : 1
     <6b8>   DW_AT_type        : <0x5a9>
-    <6bc>   DW_AT_low_pc      : 0x54c
+    <6bc>   DW_AT_low_pc      : 0x554
     <6c0>   DW_AT_high_pc     : 0x50
     <6c4>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <6c6>   DW_AT_GNU_all_call_sites: 1
@@ -911,7 +911,7 @@ Contents of the .debug_info section:
     <6f0>   DW_AT_decl_column : 8
     <6f1>   DW_AT_prototyped  : 1
     <6f1>   DW_AT_type        : <0x5a9>
-    <6f5>   DW_AT_low_pc      : 0x52a
+    <6f5>   DW_AT_low_pc      : 0x532
     <6f9>   DW_AT_high_pc     : 0x22
     <6fd>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <6ff>   DW_AT_GNU_all_call_sites: 1
@@ -932,7 +932,7 @@ Contents of the .debug_info section:
     <71a>   DW_AT_decl_column : 8
     <71b>   DW_AT_prototyped  : 1
     <71b>   DW_AT_type        : <0x5a9>
-    <71f>   DW_AT_low_pc      : 0x4fe
+    <71f>   DW_AT_low_pc      : 0x506
     <723>   DW_AT_high_pc     : 0x2c
     <727>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <729>   DW_AT_GNU_all_call_sites: 1
@@ -957,7 +957,7 @@ Contents of the .debug_info section:
     <74f>   DW_AT_comp_dir    : (indirect string, offset: 0x147): /home/balder/Documents/uni/lectures/Semester 4/semesterproj/microcontroller
     <753>   DW_AT_ranges      : 0xe0
     <757>   DW_AT_low_pc      : 0x0
-    <75b>   DW_AT_stmt_list   : 0x757
+    <75b>   DW_AT_stmt_list   : 0x754
  <1><75f>: Abbrev Number: 2 (DW_TAG_base_type)
     <760>   DW_AT_byte_size   : 1
     <761>   DW_AT_encoding    : 8	(unsigned char)
@@ -1005,7 +1005,7 @@ Contents of the .debug_info section:
     <7ab>   DW_AT_decl_line   : 38
     <7ac>   DW_AT_decl_column : 6
     <7ad>   DW_AT_prototyped  : 1
-    <7ad>   DW_AT_low_pc      : 0x75a
+    <7ad>   DW_AT_low_pc      : 0x762
     <7b1>   DW_AT_high_pc     : 0x1c
     <7b5>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <7b7>   DW_AT_GNU_all_tail_call_sites: 1
@@ -1032,7 +1032,7 @@ Contents of the .debug_info section:
     <7de>   DW_AT_decl_line   : 34
     <7df>   DW_AT_decl_column : 6
     <7e0>   DW_AT_prototyped  : 1
-    <7e0>   DW_AT_low_pc      : 0x730
+    <7e0>   DW_AT_low_pc      : 0x738
     <7e4>   DW_AT_high_pc     : 0x2a
     <7e8>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <7ea>   DW_AT_GNU_all_tail_call_sites: 1
@@ -1051,7 +1051,7 @@ Contents of the .debug_info section:
     <803>   DW_AT_decl_file   : 1
     <804>   DW_AT_decl_line   : 30
     <805>   DW_AT_decl_column : 6
-    <806>   DW_AT_low_pc      : 0x71a
+    <806>   DW_AT_low_pc      : 0x722
     <80a>   DW_AT_high_pc     : 0x16
     <80e>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <810>   DW_AT_GNU_all_tail_call_sites: 1
@@ -1118,7 +1118,7 @@ Contents of the .debug_info section:
     <88e>   DW_AT_decl_line   : 3
     <88f>   DW_AT_decl_column : 6
     <890>   DW_AT_prototyped  : 1
-    <890>   DW_AT_low_pc      : 0x6f4
+    <890>   DW_AT_low_pc      : 0x6fc
     <894>   DW_AT_high_pc     : 0x26
     <898>   DW_AT_frame_base  : 1 byte block: 9c 	(DW_OP_call_frame_cfa)
     <89a>   DW_AT_GNU_all_tail_call_sites: 1
@@ -1714,7 +1714,7 @@ Contents of the .debug_aranges section:
 
     Address    Length
     0000026c 00000034 
-    000002a0 000000bc 
+    000002a0 000000c8 
     00000000 00000000 
   Length:                   44
   Version:                  2
@@ -1723,8 +1723,8 @@ Contents of the .debug_aranges section:
   Segment Size:             0
 
     Address    Length
-    0000035c 00000090 
-    000003ec 00000024 
+    00000368 00000090 
+    000003f8 00000024 
     00000000 0000001c 
     00000000 00000000 
   Length:                   36
@@ -1734,8 +1734,8 @@ Contents of the .debug_aranges section:
   Segment Size:             0
 
     Address    Length
-    00000410 0000001a 
-    0000042c 00000058 
+    0000041c 0000001a 
+    00000438 00000054 
     00000000 00000000 
   Length:                   68
   Version:                  2
@@ -1744,12 +1744,12 @@ Contents of the .debug_aranges section:
   Segment Size:             0
 
     Address    Length
-    00000484 00000054 
-    000004e0 00000006 
-    000004e6 00000006 
-    000004ec 00000006 
-    000004f2 00000006 
-    000004f8 00000006 
+    0000048c 00000054 
+    000004e8 00000006 
+    000004ee 00000006 
+    000004f4 00000006 
+    000004fa 00000006 
+    00000500 00000006 
     00000000 00000000 
   Length:                   100
   Version:                  2
@@ -1758,16 +1758,16 @@ Contents of the .debug_aranges section:
   Segment Size:             0
 
     Address    Length
-    000004fe 0000002c 
-    0000052a 00000022 
-    0000054c 00000050 
+    00000506 0000002c 
+    00000532 00000022 
+    00000554 00000050 
     00000000 00000020 
-    0000059c 00000020 
+    000005a4 00000020 
     00000000 00000020 
     00000000 00000018 
-    000005bc 00000020 
-    000005dc 00000020 
-    000005fc 000000f8 
+    000005c4 00000020 
+    000005e4 00000020 
+    00000604 000000f8 
     00000000 00000000 
   Length:                   68
   Version:                  2
@@ -1776,57 +1776,57 @@ Contents of the .debug_aranges section:
   Segment Size:             0
 
     Address    Length
-    000006f4 00000026 
+    000006fc 00000026 
     00000000 0000001a 
     00000000 00000048 
-    0000071a 00000016 
-    00000730 0000002a 
-    0000075a 0000001c 
+    00000722 00000016 
+    00000738 0000002a 
+    00000762 0000001c 
     00000000 00000000 
 
 Contents of the .debug_ranges section:
 
     Offset   Begin    End
     00000000 0000026c 000002a0 
-    00000000 000002a0 0000035c 
+    00000000 000002a0 00000368 
     00000000 <End of list>
-    00000018 0000035c 000003ec 
-    00000018 000003ec 00000410 
+    00000018 00000368 000003f8 
+    00000018 000003f8 0000041c 
     00000018 00000001 00000001 (start == end)
     00000018 <End of list>
-    00000038 00000410 0000042a 
-    00000038 0000042c 00000484 
+    00000038 0000041c 00000436 
+    00000038 00000438 0000048c 
     00000038 <End of list>
-    00000050 00000484 000004d8 
-    00000050 000004e0 000004e6 
-    00000050 000004e6 000004ec 
-    00000050 000004ec 000004f2 
-    00000050 000004f2 000004f8 
-    00000050 000004f8 000004fe 
+    00000050 0000048c 000004e0 
+    00000050 000004e8 000004ee 
+    00000050 000004ee 000004f4 
+    00000050 000004f4 000004fa 
+    00000050 000004fa 00000500 
+    00000050 00000500 00000506 
     00000050 <End of list>
-    00000088 000004fe 0000052a 
-    00000088 0000052a 0000054c 
-    00000088 0000054c 0000059c 
+    00000088 00000506 00000532 
+    00000088 00000532 00000554 
+    00000088 00000554 000005a4 
     00000088 00000001 00000001 (start == end)
-    00000088 0000059c 000005bc 
+    00000088 000005a4 000005c4 
     00000088 00000001 00000001 (start == end)
     00000088 00000001 00000001 (start == end)
-    00000088 000005bc 000005dc 
-    00000088 000005dc 000005fc 
-    00000088 000005fc 000006f4 
+    00000088 000005c4 000005e4 
+    00000088 000005e4 00000604 
+    00000088 00000604 000006fc 
     00000088 <End of list>
-    000000e0 000006f4 0000071a 
+    000000e0 000006fc 00000722 
     000000e0 00000001 00000001 (start == end)
     000000e0 00000001 00000001 (start == end)
-    000000e0 0000071a 00000730 
-    000000e0 00000730 0000075a 
-    000000e0 0000075a 00000776 
+    000000e0 00000722 00000738 
+    000000e0 00000738 00000762 
+    000000e0 00000762 0000077e 
     000000e0 <End of list>
 
 Raw dump of debug contents of section .debug_line:
 
   Offset:                      0x0
-  Length:                      416
+  Length:                      422
   DWARF Version:               3
   Prologue Length:             265
   Minimum Instruction Length:  2
@@ -1898,60 +1898,64 @@ Raw dump of debug contents of section .debug_line:
   [0x00000151]  Set column to 16
   [0x00000153]  Special opcode 19: advance Address by 2 to 0x2ca and Line by 0 to 29
   [0x00000154]  Set column to 3
-  [0x00000156]  Special opcode 50: advance Address by 6 to 0x2d0 and Line by 3 to 32
+  [0x00000156]  Special opcode 48: advance Address by 6 to 0x2d0 and Line by 1 to 30
   [0x00000157]  Set column to 16
-  [0x00000159]  Special opcode 19: advance Address by 2 to 0x2d2 and Line by 0 to 32
+  [0x00000159]  Special opcode 19: advance Address by 2 to 0x2d2 and Line by 0 to 30
   [0x0000015a]  Set column to 3
-  [0x0000015c]  Special opcode 34: advance Address by 4 to 0x2d6 and Line by 1 to 33
+  [0x0000015c]  Special opcode 50: advance Address by 6 to 0x2d8 and Line by 3 to 33
   [0x0000015d]  Set column to 16
-  [0x0000015f]  Special opcode 19: advance Address by 2 to 0x2d8 and Line by 0 to 33
+  [0x0000015f]  Special opcode 19: advance Address by 2 to 0x2da and Line by 0 to 33
   [0x00000160]  Set column to 3
-  [0x00000162]  Special opcode 35: advance Address by 4 to 0x2dc and Line by 2 to 35
-  [0x00000163]  Set column to 15
-  [0x00000165]  Special opcode 19: advance Address by 2 to 0x2de and Line by 0 to 35
+  [0x00000162]  Special opcode 34: advance Address by 4 to 0x2de and Line by 1 to 34
+  [0x00000163]  Set column to 16
+  [0x00000165]  Special opcode 19: advance Address by 2 to 0x2e0 and Line by 0 to 34
   [0x00000166]  Set column to 3
-  [0x00000168]  Special opcode 48: advance Address by 6 to 0x2e4 and Line by 1 to 36
+  [0x00000168]  Special opcode 35: advance Address by 4 to 0x2e4 and Line by 2 to 36
   [0x00000169]  Set column to 15
   [0x0000016b]  Special opcode 19: advance Address by 2 to 0x2e6 and Line by 0 to 36
   [0x0000016c]  Set column to 3
-  [0x0000016e]  Special opcode 50: advance Address by 6 to 0x2ec and Line by 3 to 39
-  [0x0000016f]  Set column to 17
-  [0x00000171]  Special opcode 19: advance Address by 2 to 0x2ee and Line by 0 to 39
+  [0x0000016e]  Special opcode 48: advance Address by 6 to 0x2ec and Line by 1 to 37
+  [0x0000016f]  Set column to 15
+  [0x00000171]  Special opcode 19: advance Address by 2 to 0x2ee and Line by 0 to 37
   [0x00000172]  Set column to 3
-  [0x00000174]  Special opcode 34: advance Address by 4 to 0x2f2 and Line by 1 to 40
+  [0x00000174]  Special opcode 50: advance Address by 6 to 0x2f4 and Line by 3 to 40
   [0x00000175]  Set column to 17
-  [0x00000177]  Special opcode 19: advance Address by 2 to 0x2f4 and Line by 0 to 40
+  [0x00000177]  Special opcode 19: advance Address by 2 to 0x2f6 and Line by 0 to 40
   [0x00000178]  Set column to 3
-  [0x0000017a]  Special opcode 36: advance Address by 4 to 0x2f8 and Line by 3 to 43
+  [0x0000017a]  Special opcode 34: advance Address by 4 to 0x2fa and Line by 1 to 41
   [0x0000017b]  Set column to 17
-  [0x0000017d]  Special opcode 19: advance Address by 2 to 0x2fa and Line by 0 to 43
+  [0x0000017d]  Special opcode 19: advance Address by 2 to 0x2fc and Line by 0 to 41
   [0x0000017e]  Set column to 3
-  [0x00000180]  Special opcode 34: advance Address by 4 to 0x2fe and Line by 1 to 44
+  [0x00000180]  Special opcode 36: advance Address by 4 to 0x300 and Line by 3 to 44
   [0x00000181]  Set column to 17
-  [0x00000183]  Special opcode 19: advance Address by 2 to 0x300 and Line by 0 to 44
+  [0x00000183]  Special opcode 19: advance Address by 2 to 0x302 and Line by 0 to 44
   [0x00000184]  Set column to 3
-  [0x00000186]  Special opcode 35: advance Address by 4 to 0x304 and Line by 2 to 46
-  [0x00000187]  Set column to 16
-  [0x00000189]  Special opcode 19: advance Address by 2 to 0x306 and Line by 0 to 46
+  [0x00000186]  Special opcode 34: advance Address by 4 to 0x306 and Line by 1 to 45
+  [0x00000187]  Set column to 17
+  [0x00000189]  Special opcode 19: advance Address by 2 to 0x308 and Line by 0 to 45
   [0x0000018a]  Set column to 3
-  [0x0000018c]  Special opcode 34: advance Address by 4 to 0x30a and Line by 1 to 47
+  [0x0000018c]  Special opcode 35: advance Address by 4 to 0x30c and Line by 2 to 47
   [0x0000018d]  Set column to 16
-  [0x0000018f]  Special opcode 19: advance Address by 2 to 0x30c and Line by 0 to 47
+  [0x0000018f]  Special opcode 19: advance Address by 2 to 0x30e and Line by 0 to 47
   [0x00000190]  Set column to 3
-  [0x00000192]  Special opcode 36: advance Address by 4 to 0x310 and Line by 3 to 50
-  [0x00000193]  Set column to 15
-  [0x00000195]  Special opcode 19: advance Address by 2 to 0x312 and Line by 0 to 50
+  [0x00000192]  Special opcode 34: advance Address by 4 to 0x312 and Line by 1 to 48
+  [0x00000193]  Set column to 16
+  [0x00000195]  Special opcode 19: advance Address by 2 to 0x314 and Line by 0 to 48
   [0x00000196]  Set column to 3
-  [0x00000198]  Special opcode 34: advance Address by 4 to 0x316 and Line by 1 to 51
+  [0x00000198]  Special opcode 36: advance Address by 4 to 0x318 and Line by 3 to 51
   [0x00000199]  Set column to 15
-  [0x0000019b]  Special opcode 19: advance Address by 2 to 0x318 and Line by 0 to 51
-  [0x0000019c]  Set column to 1
-  [0x0000019e]  Special opcode 34: advance Address by 4 to 0x31c and Line by 1 to 52
-  [0x0000019f]  Advance PC by 64 to 0x35c
-  [0x000001a1]  Extended opcode 1: End of Sequence
+  [0x0000019b]  Special opcode 19: advance Address by 2 to 0x31a and Line by 0 to 51
+  [0x0000019c]  Set column to 3
+  [0x0000019e]  Special opcode 34: advance Address by 4 to 0x31e and Line by 1 to 52
+  [0x0000019f]  Set column to 15
+  [0x000001a1]  Special opcode 19: advance Address by 2 to 0x320 and Line by 0 to 52
+  [0x000001a2]  Set column to 1
+  [0x000001a4]  Special opcode 34: advance Address by 4 to 0x324 and Line by 1 to 53
+  [0x000001a5]  Advance PC by 68 to 0x368
+  [0x000001a7]  Extended opcode 1: End of Sequence
 
 
-  Offset:                      0x1a4
+  Offset:                      0x1aa
   Length:                      404
   DWARF Version:               3
   Prologue Length:             262
@@ -1975,11 +1979,11 @@ Raw dump of debug contents of section .debug_line:
   Opcode 11 has 0 args
   Opcode 12 has 1 arg
 
- The Directory Table (offset 0x1bf):
+ The Directory Table (offset 0x1c5):
   1	/nix/store/i8p069hg9yhdqp764gaqs22wga33xnyl-gcc-arm-embedded-9.3.1/arm-none-eabi/include/machine
   2	/nix/store/i8p069hg9yhdqp764gaqs22wga33xnyl-gcc-arm-embedded-9.3.1/arm-none-eabi/include/sys
 
- The File Name Table (offset 0x27e):
+ The File Name Table (offset 0x284):
   Entry	Dir	Time	Size	Name
   1	0	0	0	gpio.c
   2	1	0	0	_default_types.h
@@ -1987,87 +1991,87 @@ Raw dump of debug contents of section .debug_line:
   4	0	0	0	gpio.h
 
  Line Number Statements:
-  [0x000002b4]  Set column to 19
-  [0x000002b6]  Extended opcode 2: set Address to 0x35c
-  [0x000002bd]  Special opcode 8: advance Address by 0 to 0x35c and Line by 3 to 4
-  [0x000002be]  Set column to 3
-  [0x000002c0]  Special opcode 35: advance Address by 4 to 0x360 and Line by 2 to 6
-  [0x000002c1]  Set column to 18
-  [0x000002c3]  Special opcode 19: advance Address by 2 to 0x362 and Line by 0 to 6
+  [0x000002ba]  Set column to 19
+  [0x000002bc]  Extended opcode 2: set Address to 0x368
+  [0x000002c3]  Special opcode 8: advance Address by 0 to 0x368 and Line by 3 to 4
   [0x000002c4]  Set column to 3
-  [0x000002c6]  Special opcode 35: advance Address by 4 to 0x366 and Line by 2 to 8
-  [0x000002c7]  Set column to 20
-  [0x000002c9]  Special opcode 19: advance Address by 2 to 0x368 and Line by 0 to 8
+  [0x000002c6]  Special opcode 35: advance Address by 4 to 0x36c and Line by 2 to 6
+  [0x000002c7]  Set column to 18
+  [0x000002c9]  Special opcode 19: advance Address by 2 to 0x36e and Line by 0 to 6
   [0x000002ca]  Set column to 3
-  [0x000002cc]  Special opcode 35: advance Address by 4 to 0x36c and Line by 2 to 10
+  [0x000002cc]  Special opcode 35: advance Address by 4 to 0x372 and Line by 2 to 8
   [0x000002cd]  Set column to 20
-  [0x000002cf]  Special opcode 19: advance Address by 2 to 0x36e and Line by 0 to 10
+  [0x000002cf]  Special opcode 19: advance Address by 2 to 0x374 and Line by 0 to 8
   [0x000002d0]  Set column to 3
-  [0x000002d2]  Special opcode 35: advance Address by 4 to 0x372 and Line by 2 to 12
+  [0x000002d2]  Special opcode 35: advance Address by 4 to 0x378 and Line by 2 to 10
   [0x000002d3]  Set column to 20
-  [0x000002d5]  Special opcode 19: advance Address by 2 to 0x374 and Line by 0 to 12
-  [0x000002d6]  Set column to 14
-  [0x000002d8]  Special opcode 36: advance Address by 4 to 0x378 and Line by 3 to 15
-  [0x000002d9]  Set column to 18
-  [0x000002db]  Special opcode 90: advance Address by 12 to 0x384 and Line by 1 to 16
-  [0x000002dc]  Set column to 30
-  [0x000002de]  Special opcode 33: advance Address by 4 to 0x388 and Line by 0 to 16
-  [0x000002df]  Set column to 3
-  [0x000002e1]  Special opcode 33: advance Address by 4 to 0x38c and Line by 0 to 16
-  [0x000002e2]  Set column to 44
-  [0x000002e4]  Special opcode 19: advance Address by 2 to 0x38e and Line by 0 to 16
-  [0x000002e5]  Set column to 15
-  [0x000002e7]  Special opcode 33: advance Address by 4 to 0x392 and Line by 0 to 16
-  [0x000002e8]  Set column to 19
-  [0x000002ea]  Special opcode 20: advance Address by 2 to 0x394 and Line by 1 to 17
-  [0x000002eb]  Set column to 20
-  [0x000002ed]  Special opcode 90: advance Address by 12 to 0x3a0 and Line by 1 to 18
-  [0x000002ee]  Set column to 3
-  [0x000002f0]  Special opcode 91: advance Address by 12 to 0x3ac and Line by 2 to 20
-  [0x000002f1]  Set column to 19
-  [0x000002f3]  Special opcode 19: advance Address by 2 to 0x3ae and Line by 0 to 20
+  [0x000002d5]  Special opcode 19: advance Address by 2 to 0x37a and Line by 0 to 10
+  [0x000002d6]  Set column to 3
+  [0x000002d8]  Special opcode 35: advance Address by 4 to 0x37e and Line by 2 to 12
+  [0x000002d9]  Set column to 20
+  [0x000002db]  Special opcode 19: advance Address by 2 to 0x380 and Line by 0 to 12
+  [0x000002dc]  Set column to 14
+  [0x000002de]  Special opcode 36: advance Address by 4 to 0x384 and Line by 3 to 15
+  [0x000002df]  Set column to 18
+  [0x000002e1]  Special opcode 90: advance Address by 12 to 0x390 and Line by 1 to 16
+  [0x000002e2]  Set column to 30
+  [0x000002e4]  Special opcode 33: advance Address by 4 to 0x394 and Line by 0 to 16
+  [0x000002e5]  Set column to 3
+  [0x000002e7]  Special opcode 33: advance Address by 4 to 0x398 and Line by 0 to 16
+  [0x000002e8]  Set column to 44
+  [0x000002ea]  Special opcode 19: advance Address by 2 to 0x39a and Line by 0 to 16
+  [0x000002eb]  Set column to 15
+  [0x000002ed]  Special opcode 33: advance Address by 4 to 0x39e and Line by 0 to 16
+  [0x000002ee]  Set column to 19
+  [0x000002f0]  Special opcode 20: advance Address by 2 to 0x3a0 and Line by 1 to 17
+  [0x000002f1]  Set column to 20
+  [0x000002f3]  Special opcode 90: advance Address by 12 to 0x3ac and Line by 1 to 18
   [0x000002f4]  Set column to 3
-  [0x000002f6]  Special opcode 34: advance Address by 4 to 0x3b2 and Line by 1 to 21
-  [0x000002f7]  Set column to 20
-  [0x000002f9]  Special opcode 19: advance Address by 2 to 0x3b4 and Line by 0 to 21
-  [0x000002fa]  Set column to 1
-  [0x000002fc]  Special opcode 34: advance Address by 4 to 0x3b8 and Line by 1 to 22
-  [0x000002fd]  Advance PC by 52 to 0x3ec
-  [0x000002ff]  Extended opcode 1: End of Sequence
+  [0x000002f6]  Special opcode 91: advance Address by 12 to 0x3b8 and Line by 2 to 20
+  [0x000002f7]  Set column to 19
+  [0x000002f9]  Special opcode 19: advance Address by 2 to 0x3ba and Line by 0 to 20
+  [0x000002fa]  Set column to 3
+  [0x000002fc]  Special opcode 34: advance Address by 4 to 0x3be and Line by 1 to 21
+  [0x000002fd]  Set column to 20
+  [0x000002ff]  Special opcode 19: advance Address by 2 to 0x3c0 and Line by 0 to 21
+  [0x00000300]  Set column to 1
+  [0x00000302]  Special opcode 34: advance Address by 4 to 0x3c4 and Line by 1 to 22
+  [0x00000303]  Advance PC by 52 to 0x3f8
+  [0x00000305]  Extended opcode 1: End of Sequence
 
-  [0x00000302]  Set column to 39
-  [0x00000304]  Extended opcode 2: set Address to 0x3ec
-  [0x0000030b]  Advance Line by 23 to 24
-  [0x0000030d]  Copy
-  [0x0000030e]  Set column to 67
-  [0x00000310]  Special opcode 75: advance Address by 10 to 0x3f6 and Line by 0 to 24
-  [0x00000311]  Set column to 41
-  [0x00000313]  Special opcode 33: advance Address by 4 to 0x3fa and Line by 0 to 24
-  [0x00000314]  Set column to 59
-  [0x00000316]  Special opcode 19: advance Address by 2 to 0x3fc and Line by 0 to 24
-  [0x00000317]  Set column to 73
-  [0x00000319]  Special opcode 19: advance Address by 2 to 0x3fe and Line by 0 to 24
-  [0x0000031a]  Advance PC by 18 to 0x410
-  [0x0000031c]  Extended opcode 1: End of Sequence
+  [0x00000308]  Set column to 39
+  [0x0000030a]  Extended opcode 2: set Address to 0x3f8
+  [0x00000311]  Advance Line by 23 to 24
+  [0x00000313]  Copy
+  [0x00000314]  Set column to 67
+  [0x00000316]  Special opcode 75: advance Address by 10 to 0x402 and Line by 0 to 24
+  [0x00000317]  Set column to 41
+  [0x00000319]  Special opcode 33: advance Address by 4 to 0x406 and Line by 0 to 24
+  [0x0000031a]  Set column to 59
+  [0x0000031c]  Special opcode 19: advance Address by 2 to 0x408 and Line by 0 to 24
+  [0x0000031d]  Set column to 73
+  [0x0000031f]  Special opcode 19: advance Address by 2 to 0x40a and Line by 0 to 24
+  [0x00000320]  Advance PC by 18 to 0x41c
+  [0x00000322]  Extended opcode 1: End of Sequence
 
-  [0x0000031f]  Set column to 26
-  [0x00000321]  Extended opcode 2: set Address to 0x0
-  [0x00000328]  Advance Line by 25 to 26
-  [0x0000032a]  Copy
-  [0x0000032b]  Set column to 37
-  [0x0000032d]  Special opcode 33: advance Address by 4 to 0x4 and Line by 0 to 26
-  [0x0000032e]  Set column to 35
-  [0x00000330]  Special opcode 33: advance Address by 4 to 0x8 and Line by 0 to 26
-  [0x00000331]  Set column to 56
-  [0x00000333]  Special opcode 19: advance Address by 2 to 0xa and Line by 0 to 26
-  [0x00000334]  Set column to 70
-  [0x00000336]  Special opcode 33: advance Address by 4 to 0xe and Line by 0 to 26
-  [0x00000337]  Advance PC by 14 to 0x1c
-  [0x00000339]  Extended opcode 1: End of Sequence
+  [0x00000325]  Set column to 26
+  [0x00000327]  Extended opcode 2: set Address to 0x0
+  [0x0000032e]  Advance Line by 25 to 26
+  [0x00000330]  Copy
+  [0x00000331]  Set column to 37
+  [0x00000333]  Special opcode 33: advance Address by 4 to 0x4 and Line by 0 to 26
+  [0x00000334]  Set column to 35
+  [0x00000336]  Special opcode 33: advance Address by 4 to 0x8 and Line by 0 to 26
+  [0x00000337]  Set column to 56
+  [0x00000339]  Special opcode 19: advance Address by 2 to 0xa and Line by 0 to 26
+  [0x0000033a]  Set column to 70
+  [0x0000033c]  Special opcode 33: advance Address by 4 to 0xe and Line by 0 to 26
+  [0x0000033d]  Advance PC by 14 to 0x1c
+  [0x0000033f]  Extended opcode 1: End of Sequence
 
 
-  Offset:                      0x33c
-  Length:                      189
+  Offset:                      0x342
+  Length:                      180
   DWARF Version:               3
   Prologue Length:             53
   Minimum Instruction Length:  2
@@ -2092,75 +2096,71 @@ Raw dump of debug contents of section .debug_line:
 
  The Directory Table is empty.
 
- The File Name Table (offset 0x358):
+ The File Name Table (offset 0x35e):
   Entry	Dir	Time	Size	Name
   1	0	0	0	main.c
   2	0	0	0	emp_type.h
   3	0	0	0	gpio.h
 
  Line Number Statements:
-  [0x0000037b]  Set column to 14
-  [0x0000037d]  Extended opcode 2: set Address to 0x410
-  [0x00000384]  Special opcode 13: advance Address by 0 to 0x410 and Line by 8 to 9
-  [0x00000385]  Set column to 5
-  [0x00000387]  Special opcode 34: advance Address by 4 to 0x414 and Line by 1 to 10
-  [0x00000388]  Special opcode 34: advance Address by 4 to 0x418 and Line by 1 to 11
-  [0x00000389]  Special opcode 48: advance Address by 6 to 0x41e and Line by 1 to 12
-  [0x0000038a]  Special opcode 34: advance Address by 4 to 0x422 and Line by 1 to 13
-  [0x0000038b]  Set column to 1
-  [0x0000038d]  Special opcode 34: advance Address by 4 to 0x426 and Line by 1 to 14
-  [0x0000038e]  Advance PC by 4 to 0x42a
-  [0x00000390]  Extended opcode 1: End of Sequence
+  [0x00000381]  Set column to 14
+  [0x00000383]  Extended opcode 2: set Address to 0x41c
+  [0x0000038a]  Special opcode 13: advance Address by 0 to 0x41c and Line by 8 to 9
+  [0x0000038b]  Set column to 5
+  [0x0000038d]  Special opcode 34: advance Address by 4 to 0x420 and Line by 1 to 10
+  [0x0000038e]  Special opcode 34: advance Address by 4 to 0x424 and Line by 1 to 11
+  [0x0000038f]  Special opcode 48: advance Address by 6 to 0x42a and Line by 1 to 12
+  [0x00000390]  Special opcode 34: advance Address by 4 to 0x42e and Line by 1 to 13
+  [0x00000391]  Set column to 1
+  [0x00000393]  Special opcode 34: advance Address by 4 to 0x432 and Line by 1 to 14
+  [0x00000394]  Advance PC by 4 to 0x436
+  [0x00000396]  Extended opcode 1: End of Sequence
 
-  [0x00000393]  Set column to 16
-  [0x00000395]  Extended opcode 2: set Address to 0x42c
-  [0x0000039c]  Advance Line by 15 to 16
-  [0x0000039e]  Copy
-  [0x0000039f]  Set column to 5
-  [0x000003a1]  Special opcode 48: advance Address by 6 to 0x432 and Line by 1 to 17
-  [0x000003a2]  Special opcode 34: advance Address by 4 to 0x436 and Line by 1 to 18
-  [0x000003a3]  Special opcode 48: advance Address by 6 to 0x43c and Line by 1 to 19
-  [0x000003a4]  Set column to 24
-  [0x000003a6]  Extended opcode 4: set Discriminator to 1
-  [0x000003aa]  Special opcode 50: advance Address by 6 to 0x442 and Line by 3 to 22
-  [0x000003ab]  Set column to 16
-  [0x000003ad]  Extended opcode 4: set Discriminator to 1
-  [0x000003b1]  Special opcode 47: advance Address by 6 to 0x448 and Line by 0 to 22
-  [0x000003b2]  Set column to 29
-  [0x000003b4]  Extended opcode 4: set Discriminator to 1
-  [0x000003b8]  Special opcode 21: advance Address by 2 to 0x44a and Line by 2 to 24
-  [0x000003b9]  Set column to 16
-  [0x000003bb]  Extended opcode 4: set Discriminator to 1
-  [0x000003bf]  Special opcode 33: advance Address by 4 to 0x44e and Line by 0 to 24
-  [0x000003c0]  Set column to 29
-  [0x000003c2]  Extended opcode 4: set Discriminator to 1
-  [0x000003c6]  Special opcode 20: advance Address by 2 to 0x450 and Line by 1 to 25
-  [0x000003c7]  Set column to 16
-  [0x000003c9]  Extended opcode 4: set Discriminator to 1
-  [0x000003cd]  Special opcode 33: advance Address by 4 to 0x454 and Line by 0 to 25
-  [0x000003ce]  Set column to 14
-  [0x000003d0]  Extended opcode 4: set Discriminator to 1
-  [0x000003d4]  Special opcode 35: advance Address by 4 to 0x458 and Line by 2 to 27
-  [0x000003d5]  Extended opcode 4: set Discriminator to 1
-  [0x000003d9]  Special opcode 62: advance Address by 8 to 0x460 and Line by 1 to 28
-  [0x000003da]  Set column to 29
-  [0x000003dc]  Extended opcode 4: set Discriminator to 1
-  [0x000003e0]  Special opcode 63: advance Address by 8 to 0x468 and Line by 2 to 30
-  [0x000003e1]  Set column to 34
-  [0x000003e3]  Extended opcode 4: set Discriminator to 1
-  [0x000003e7]  Special opcode 33: advance Address by 4 to 0x46c and Line by 0 to 30
-  [0x000003e8]  Set column to 9
-  [0x000003ea]  Extended opcode 4: set Discriminator to 1
-  [0x000003ee]  Special opcode 75: advance Address by 10 to 0x476 and Line by 0 to 30
-  [0x000003ef]  Set column to 16
-  [0x000003f1]  Extended opcode 4: set Discriminator to 1
-  [0x000003f5]  Advance Line by -9 to 21
-  [0x000003f7]  Special opcode 61: advance Address by 8 to 0x47e and Line by 0 to 21
-  [0x000003f8]  Advance PC by 6 to 0x484
-  [0x000003fa]  Extended opcode 1: End of Sequence
+  [0x00000399]  Set column to 16
+  [0x0000039b]  Extended opcode 2: set Address to 0x438
+  [0x000003a2]  Advance Line by 15 to 16
+  [0x000003a4]  Copy
+  [0x000003a5]  Set column to 5
+  [0x000003a7]  Special opcode 48: advance Address by 6 to 0x43e and Line by 1 to 17
+  [0x000003a8]  Special opcode 34: advance Address by 4 to 0x442 and Line by 1 to 18
+  [0x000003a9]  Special opcode 48: advance Address by 6 to 0x448 and Line by 1 to 19
+  [0x000003aa]  Set column to 24
+  [0x000003ac]  Extended opcode 4: set Discriminator to 1
+  [0x000003b0]  Special opcode 50: advance Address by 6 to 0x44e and Line by 3 to 22
+  [0x000003b1]  Set column to 16
+  [0x000003b3]  Extended opcode 4: set Discriminator to 1
+  [0x000003b7]  Special opcode 47: advance Address by 6 to 0x454 and Line by 0 to 22
+  [0x000003b8]  Set column to 29
+  [0x000003ba]  Extended opcode 4: set Discriminator to 1
+  [0x000003be]  Special opcode 21: advance Address by 2 to 0x456 and Line by 2 to 24
+  [0x000003bf]  Set column to 16
+  [0x000003c1]  Extended opcode 4: set Discriminator to 1
+  [0x000003c5]  Special opcode 33: advance Address by 4 to 0x45a and Line by 0 to 24
+  [0x000003c6]  Extended opcode 4: set Discriminator to 1
+  [0x000003ca]  Special opcode 20: advance Address by 2 to 0x45c and Line by 1 to 25
+  [0x000003cb]  Set column to 14
+  [0x000003cd]  Extended opcode 4: set Discriminator to 1
+  [0x000003d1]  Special opcode 35: advance Address by 4 to 0x460 and Line by 2 to 27
+  [0x000003d2]  Extended opcode 4: set Discriminator to 1
+  [0x000003d6]  Special opcode 62: advance Address by 8 to 0x468 and Line by 1 to 28
+  [0x000003d7]  Set column to 29
+  [0x000003d9]  Extended opcode 4: set Discriminator to 1
+  [0x000003dd]  Special opcode 63: advance Address by 8 to 0x470 and Line by 2 to 30
+  [0x000003de]  Set column to 34
+  [0x000003e0]  Extended opcode 4: set Discriminator to 1
+  [0x000003e4]  Special opcode 33: advance Address by 4 to 0x474 and Line by 0 to 30
+  [0x000003e5]  Set column to 9
+  [0x000003e7]  Extended opcode 4: set Discriminator to 1
+  [0x000003eb]  Special opcode 75: advance Address by 10 to 0x47e and Line by 0 to 30
+  [0x000003ec]  Set column to 16
+  [0x000003ee]  Extended opcode 4: set Discriminator to 1
+  [0x000003f2]  Advance Line by -9 to 21
+  [0x000003f4]  Special opcode 61: advance Address by 8 to 0x486 and Line by 0 to 21
+  [0x000003f5]  Advance PC by 6 to 0x48c
+  [0x000003f7]  Extended opcode 1: End of Sequence
 
 
-  Offset:                      0x3fd
+  Offset:                      0x3fa
   Length:                      220
   DWARF Version:               3
   Prologue Length:             36
@@ -2186,92 +2186,92 @@ Raw dump of debug contents of section .debug_line:
 
  The Directory Table is empty.
 
- The File Name Table (offset 0x419):
+ The File Name Table (offset 0x416):
   Entry	Dir	Time	Size	Name
   1	0	0	0	startup_gcc.c
 
  Line Number Statements:
-  [0x0000042b]  Set column to 21
-  [0x0000042d]  Extended opcode 2: set Address to 0x484
-  [0x00000434]  Advance Line by 226 to 227
-  [0x00000437]  Copy
-  [0x00000438]  Set column to 10
-  [0x0000043a]  Special opcode 53: advance Address by 6 to 0x48a and Line by 6 to 233
-  [0x0000043b]  Set column to 16
-  [0x0000043d]  Special opcode 34: advance Address by 4 to 0x48e and Line by 1 to 234
-  [0x0000043e]  Set column to 3
-  [0x00000440]  Special opcode 33: advance Address by 4 to 0x492 and Line by 0 to 234
-  [0x00000441]  Set column to 25
-  [0x00000443]  Special opcode 20: advance Address by 2 to 0x494 and Line by 1 to 235
-  [0x00000444]  Set column to 13
-  [0x00000446]  Special opcode 47: advance Address by 6 to 0x49a and Line by 0 to 235
-  [0x00000447]  Set column to 18
-  [0x00000449]  Special opcode 47: advance Address by 6 to 0x4a0 and Line by 0 to 235
-  [0x0000044a]  Set column to 16
-  [0x0000044c]  Special opcode 19: advance Address by 2 to 0x4a2 and Line by 0 to 235
-  [0x0000044d]  Set column to 3
-  [0x0000044f]  Extended opcode 4: set Discriminator to 1
-  [0x00000453]  Special opcode 18: advance Address by 2 to 0x4a4 and Line by -1 to 234
-  [0x00000454]  Special opcode 68: advance Address by 8 to 0x4ac and Line by 7 to 241
-  [0x00000455]  Advance Line by 13 to 254
-  [0x00000457]  Special opcode 131: advance Address by 18 to 0x4be and Line by 0 to 254
-  [0x00000458]  Set column to 1
-  [0x0000045a]  Special opcode 34: advance Address by 4 to 0x4c2 and Line by 1 to 255
-  [0x0000045b]  Advance PC by 30 to 0x4e0
-  [0x0000045d]  Extended opcode 1: End of Sequence
+  [0x00000428]  Set column to 21
+  [0x0000042a]  Extended opcode 2: set Address to 0x48c
+  [0x00000431]  Advance Line by 226 to 227
+  [0x00000434]  Copy
+  [0x00000435]  Set column to 10
+  [0x00000437]  Special opcode 53: advance Address by 6 to 0x492 and Line by 6 to 233
+  [0x00000438]  Set column to 16
+  [0x0000043a]  Special opcode 34: advance Address by 4 to 0x496 and Line by 1 to 234
+  [0x0000043b]  Set column to 3
+  [0x0000043d]  Special opcode 33: advance Address by 4 to 0x49a and Line by 0 to 234
+  [0x0000043e]  Set column to 25
+  [0x00000440]  Special opcode 20: advance Address by 2 to 0x49c and Line by 1 to 235
+  [0x00000441]  Set column to 13
+  [0x00000443]  Special opcode 47: advance Address by 6 to 0x4a2 and Line by 0 to 235
+  [0x00000444]  Set column to 18
+  [0x00000446]  Special opcode 47: advance Address by 6 to 0x4a8 and Line by 0 to 235
+  [0x00000447]  Set column to 16
+  [0x00000449]  Special opcode 19: advance Address by 2 to 0x4aa and Line by 0 to 235
+  [0x0000044a]  Set column to 3
+  [0x0000044c]  Extended opcode 4: set Discriminator to 1
+  [0x00000450]  Special opcode 18: advance Address by 2 to 0x4ac and Line by -1 to 234
+  [0x00000451]  Special opcode 68: advance Address by 8 to 0x4b4 and Line by 7 to 241
+  [0x00000452]  Advance Line by 13 to 254
+  [0x00000454]  Special opcode 131: advance Address by 18 to 0x4c6 and Line by 0 to 254
+  [0x00000455]  Set column to 1
+  [0x00000457]  Special opcode 34: advance Address by 4 to 0x4ca and Line by 1 to 255
+  [0x00000458]  Advance PC by 30 to 0x4e8
+  [0x0000045a]  Extended opcode 1: End of Sequence
 
-  [0x00000460]  Set column to 25
-  [0x00000462]  Extended opcode 2: set Address to 0x4e0
-  [0x00000469]  Advance Line by 263 to 264
-  [0x0000046c]  Copy
-  [0x0000046d]  Set column to 9
-  [0x0000046f]  Extended opcode 4: set Discriminator to 1
-  [0x00000473]  Special opcode 37: advance Address by 4 to 0x4e4 and Line by 4 to 268
-  [0x00000474]  Advance PC by 2 to 0x4e6
-  [0x00000476]  Extended opcode 1: End of Sequence
+  [0x0000045d]  Set column to 25
+  [0x0000045f]  Extended opcode 2: set Address to 0x4e8
+  [0x00000466]  Advance Line by 263 to 264
+  [0x00000469]  Copy
+  [0x0000046a]  Set column to 9
+  [0x0000046c]  Extended opcode 4: set Discriminator to 1
+  [0x00000470]  Special opcode 37: advance Address by 4 to 0x4ec and Line by 4 to 268
+  [0x00000471]  Advance PC by 2 to 0x4ee
+  [0x00000473]  Extended opcode 1: End of Sequence
 
-  [0x00000479]  Set column to 28
-  [0x0000047b]  Extended opcode 2: set Address to 0x4e6
-  [0x00000482]  Advance Line by 278 to 279
-  [0x00000485]  Copy
-  [0x00000486]  Set column to 9
-  [0x00000488]  Extended opcode 4: set Discriminator to 1
-  [0x0000048c]  Special opcode 37: advance Address by 4 to 0x4ea and Line by 4 to 283
-  [0x0000048d]  Advance PC by 2 to 0x4ec
-  [0x0000048f]  Extended opcode 1: End of Sequence
+  [0x00000476]  Set column to 28
+  [0x00000478]  Extended opcode 2: set Address to 0x4ee
+  [0x0000047f]  Advance Line by 278 to 279
+  [0x00000482]  Copy
+  [0x00000483]  Set column to 9
+  [0x00000485]  Extended opcode 4: set Discriminator to 1
+  [0x00000489]  Special opcode 37: advance Address by 4 to 0x4f2 and Line by 4 to 283
+  [0x0000048a]  Advance PC by 2 to 0x4f4
+  [0x0000048c]  Extended opcode 1: End of Sequence
 
-  [0x00000492]  Set column to 37
-  [0x00000494]  Extended opcode 2: set Address to 0x4ec
-  [0x0000049b]  Advance Line by 293 to 294
-  [0x0000049e]  Copy
-  [0x0000049f]  Set column to 9
-  [0x000004a1]  Extended opcode 4: set Discriminator to 1
-  [0x000004a5]  Special opcode 37: advance Address by 4 to 0x4f0 and Line by 4 to 298
-  [0x000004a6]  Advance PC by 2 to 0x4f2
-  [0x000004a8]  Extended opcode 1: End of Sequence
+  [0x0000048f]  Set column to 37
+  [0x00000491]  Extended opcode 2: set Address to 0x4f4
+  [0x00000498]  Advance Line by 293 to 294
+  [0x0000049b]  Copy
+  [0x0000049c]  Set column to 9
+  [0x0000049e]  Extended opcode 4: set Discriminator to 1
+  [0x000004a2]  Special opcode 37: advance Address by 4 to 0x4f8 and Line by 4 to 298
+  [0x000004a3]  Advance PC by 2 to 0x4fa
+  [0x000004a5]  Extended opcode 1: End of Sequence
 
-  [0x000004ab]  Set column to 50
-  [0x000004ad]  Extended opcode 2: set Address to 0x4f2
-  [0x000004b4]  Advance Line by 307 to 308
-  [0x000004b7]  Copy
-  [0x000004b8]  Set column to 9
-  [0x000004ba]  Extended opcode 4: set Discriminator to 1
-  [0x000004be]  Special opcode 34: advance Address by 4 to 0x4f6 and Line by 1 to 309
-  [0x000004bf]  Advance PC by 2 to 0x4f8
-  [0x000004c1]  Extended opcode 1: End of Sequence
+  [0x000004a8]  Set column to 50
+  [0x000004aa]  Extended opcode 2: set Address to 0x4fa
+  [0x000004b1]  Advance Line by 307 to 308
+  [0x000004b4]  Copy
+  [0x000004b5]  Set column to 9
+  [0x000004b7]  Extended opcode 4: set Discriminator to 1
+  [0x000004bb]  Special opcode 34: advance Address by 4 to 0x4fe and Line by 1 to 309
+  [0x000004bc]  Advance PC by 2 to 0x500
+  [0x000004be]  Extended opcode 1: End of Sequence
 
-  [0x000004c4]  Set column to 48
-  [0x000004c6]  Extended opcode 2: set Address to 0x4f8
-  [0x000004cd]  Advance Line by 311 to 312
-  [0x000004d0]  Copy
-  [0x000004d1]  Set column to 9
-  [0x000004d3]  Extended opcode 4: set Discriminator to 1
-  [0x000004d7]  Special opcode 34: advance Address by 4 to 0x4fc and Line by 1 to 313
-  [0x000004d8]  Advance PC by 2 to 0x4fe
-  [0x000004da]  Extended opcode 1: End of Sequence
+  [0x000004c1]  Set column to 48
+  [0x000004c3]  Extended opcode 2: set Address to 0x500
+  [0x000004ca]  Advance Line by 311 to 312
+  [0x000004cd]  Copy
+  [0x000004ce]  Set column to 9
+  [0x000004d0]  Extended opcode 4: set Discriminator to 1
+  [0x000004d4]  Special opcode 34: advance Address by 4 to 0x504 and Line by 1 to 313
+  [0x000004d5]  Advance PC by 2 to 0x506
+  [0x000004d7]  Extended opcode 1: End of Sequence
 
 
-  Offset:                      0x4dd
+  Offset:                      0x4da
   Length:                      630
   DWARF Version:               3
   Prologue Length:             267
@@ -2295,11 +2295,11 @@ Raw dump of debug contents of section .debug_line:
   Opcode 11 has 0 args
   Opcode 12 has 1 arg
 
- The Directory Table (offset 0x4f8):
+ The Directory Table (offset 0x4f5):
   1	/nix/store/i8p069hg9yhdqp764gaqs22wga33xnyl-gcc-arm-embedded-9.3.1/arm-none-eabi/include/machine
   2	/nix/store/i8p069hg9yhdqp764gaqs22wga33xnyl-gcc-arm-embedded-9.3.1/arm-none-eabi/include/sys
 
- The File Name Table (offset 0x5b7):
+ The File Name Table (offset 0x5b4):
   Entry	Dir	Time	Size	Name
   1	0	0	0	uart0.c
   2	1	0	0	_default_types.h
@@ -2307,197 +2307,197 @@ Raw dump of debug contents of section .debug_line:
   4	0	0	0	emp_type.h
 
  Line Number Statements:
-  [0x000005f2]  Set column to 1
-  [0x000005f4]  Extended opcode 2: set Address to 0x4fe
-  [0x000005fb]  Advance Line by 44 to 45
-  [0x000005fd]  Copy
-  [0x000005fe]  Set column to 5
-  [0x00000600]  Special opcode 76: advance Address by 10 to 0x508 and Line by 1 to 46
-  [0x00000601]  Set column to 29
-  [0x00000603]  Extended opcode 4: set Discriminator to 1
-  [0x00000607]  Special opcode 47: advance Address by 6 to 0x50e and Line by 0 to 46
-  [0x00000608]  Set column to 17
-  [0x0000060a]  Special opcode 48: advance Address by 6 to 0x514 and Line by 1 to 47
-  [0x0000060b]  Set column to 12
-  [0x0000060d]  Special opcode 34: advance Address by 4 to 0x518 and Line by 1 to 48
-  [0x0000060e]  Set column to 35
-  [0x00000610]  Special opcode 19: advance Address by 2 to 0x51a and Line by 0 to 48
-  [0x00000611]  Set column to 41
-  [0x00000613]  Special opcode 19: advance Address by 2 to 0x51c and Line by 0 to 48
-  [0x00000614]  Set column to 1
-  [0x00000616]  Special opcode 20: advance Address by 2 to 0x51e and Line by 1 to 49
-  [0x00000617]  Advance PC by 12 to 0x52a
-  [0x00000619]  Extended opcode 1: End of Sequence
+  [0x000005ef]  Set column to 1
+  [0x000005f1]  Extended opcode 2: set Address to 0x506
+  [0x000005f8]  Advance Line by 44 to 45
+  [0x000005fa]  Copy
+  [0x000005fb]  Set column to 5
+  [0x000005fd]  Special opcode 76: advance Address by 10 to 0x510 and Line by 1 to 46
+  [0x000005fe]  Set column to 29
+  [0x00000600]  Extended opcode 4: set Discriminator to 1
+  [0x00000604]  Special opcode 47: advance Address by 6 to 0x516 and Line by 0 to 46
+  [0x00000605]  Set column to 17
+  [0x00000607]  Special opcode 48: advance Address by 6 to 0x51c and Line by 1 to 47
+  [0x00000608]  Set column to 12
+  [0x0000060a]  Special opcode 34: advance Address by 4 to 0x520 and Line by 1 to 48
+  [0x0000060b]  Set column to 35
+  [0x0000060d]  Special opcode 19: advance Address by 2 to 0x522 and Line by 0 to 48
+  [0x0000060e]  Set column to 41
+  [0x00000610]  Special opcode 19: advance Address by 2 to 0x524 and Line by 0 to 48
+  [0x00000611]  Set column to 1
+  [0x00000613]  Special opcode 20: advance Address by 2 to 0x526 and Line by 1 to 49
+  [0x00000614]  Advance PC by 12 to 0x532
+  [0x00000616]  Extended opcode 1: End of Sequence
 
-  [0x0000061c]  Set column to 1
-  [0x0000061e]  Extended opcode 2: set Address to 0x52a
-  [0x00000625]  Advance Line by 59 to 60
-  [0x00000627]  Copy
-  [0x00000628]  Set column to 5
-  [0x0000062a]  Special opcode 76: advance Address by 10 to 0x534 and Line by 1 to 61
-  [0x0000062b]  Set column to 11
-  [0x0000062d]  Special opcode 48: advance Address by 6 to 0x53a and Line by 1 to 62
-  [0x0000062e]  Set column to 8
-  [0x00000630]  Special opcode 35: advance Address by 4 to 0x53e and Line by 2 to 64
-  [0x00000631]  Set column to 1
-  [0x00000633]  Special opcode 20: advance Address by 2 to 0x540 and Line by 1 to 65
-  [0x00000634]  Advance PC by 12 to 0x54c
-  [0x00000636]  Extended opcode 1: End of Sequence
+  [0x00000619]  Set column to 1
+  [0x0000061b]  Extended opcode 2: set Address to 0x532
+  [0x00000622]  Advance Line by 59 to 60
+  [0x00000624]  Copy
+  [0x00000625]  Set column to 5
+  [0x00000627]  Special opcode 76: advance Address by 10 to 0x53c and Line by 1 to 61
+  [0x00000628]  Set column to 11
+  [0x0000062a]  Special opcode 48: advance Address by 6 to 0x542 and Line by 1 to 62
+  [0x0000062b]  Set column to 8
+  [0x0000062d]  Special opcode 35: advance Address by 4 to 0x546 and Line by 2 to 64
+  [0x0000062e]  Set column to 1
+  [0x00000630]  Special opcode 20: advance Address by 2 to 0x548 and Line by 1 to 65
+  [0x00000631]  Advance PC by 12 to 0x554
+  [0x00000633]  Extended opcode 1: End of Sequence
 
-  [0x00000639]  Set column to 1
-  [0x0000063b]  Extended opcode 2: set Address to 0x54c
-  [0x00000642]  Advance Line by 78 to 79
-  [0x00000645]  Copy
-  [0x00000646]  Set column to 3
-  [0x00000648]  Special opcode 78: advance Address by 10 to 0x556 and Line by 3 to 82
-  [0x00000649]  Set column to 14
-  [0x0000064b]  Special opcode 204: advance Address by 28 to 0x572 and Line by 3 to 85
-  [0x0000064c]  Set column to 7
-  [0x0000064e]  Special opcode 34: advance Address by 4 to 0x576 and Line by 1 to 86
-  [0x0000064f]  Set column to 14
-  [0x00000651]  Special opcode 21: advance Address by 2 to 0x578 and Line by 2 to 88
-  [0x00000652]  Set column to 7
-  [0x00000654]  Special opcode 34: advance Address by 4 to 0x57c and Line by 1 to 89
-  [0x00000655]  Set column to 14
-  [0x00000657]  Special opcode 21: advance Address by 2 to 0x57e and Line by 2 to 91
-  [0x00000658]  Set column to 7
-  [0x0000065a]  Special opcode 34: advance Address by 4 to 0x582 and Line by 1 to 92
-  [0x0000065b]  Set column to 14
-  [0x0000065d]  Special opcode 21: advance Address by 2 to 0x584 and Line by 2 to 94
-  [0x0000065e]  Set column to 7
-  [0x00000660]  Special opcode 34: advance Address by 4 to 0x588 and Line by 1 to 95
-  [0x00000661]  Set column to 14
-  [0x00000663]  Special opcode 22: advance Address by 2 to 0x58a and Line by 3 to 98
-  [0x00000664]  Set column to 9
-  [0x00000666]  Special opcode 35: advance Address by 4 to 0x58e and Line by 2 to 100
-  [0x00000667]  Set column to 1
-  [0x00000669]  Special opcode 20: advance Address by 2 to 0x590 and Line by 1 to 101
-  [0x0000066a]  Advance PC by 12 to 0x59c
-  [0x0000066c]  Extended opcode 1: End of Sequence
+  [0x00000636]  Set column to 1
+  [0x00000638]  Extended opcode 2: set Address to 0x554
+  [0x0000063f]  Advance Line by 78 to 79
+  [0x00000642]  Copy
+  [0x00000643]  Set column to 3
+  [0x00000645]  Special opcode 78: advance Address by 10 to 0x55e and Line by 3 to 82
+  [0x00000646]  Set column to 14
+  [0x00000648]  Special opcode 204: advance Address by 28 to 0x57a and Line by 3 to 85
+  [0x00000649]  Set column to 7
+  [0x0000064b]  Special opcode 34: advance Address by 4 to 0x57e and Line by 1 to 86
+  [0x0000064c]  Set column to 14
+  [0x0000064e]  Special opcode 21: advance Address by 2 to 0x580 and Line by 2 to 88
+  [0x0000064f]  Set column to 7
+  [0x00000651]  Special opcode 34: advance Address by 4 to 0x584 and Line by 1 to 89
+  [0x00000652]  Set column to 14
+  [0x00000654]  Special opcode 21: advance Address by 2 to 0x586 and Line by 2 to 91
+  [0x00000655]  Set column to 7
+  [0x00000657]  Special opcode 34: advance Address by 4 to 0x58a and Line by 1 to 92
+  [0x00000658]  Set column to 14
+  [0x0000065a]  Special opcode 21: advance Address by 2 to 0x58c and Line by 2 to 94
+  [0x0000065b]  Set column to 7
+  [0x0000065d]  Special opcode 34: advance Address by 4 to 0x590 and Line by 1 to 95
+  [0x0000065e]  Set column to 14
+  [0x00000660]  Special opcode 22: advance Address by 2 to 0x592 and Line by 3 to 98
+  [0x00000661]  Set column to 9
+  [0x00000663]  Special opcode 35: advance Address by 4 to 0x596 and Line by 2 to 100
+  [0x00000664]  Set column to 1
+  [0x00000666]  Special opcode 20: advance Address by 2 to 0x598 and Line by 1 to 101
+  [0x00000667]  Advance PC by 12 to 0x5a4
+  [0x00000669]  Extended opcode 1: End of Sequence
 
-  [0x0000066f]  Set column to 1
-  [0x00000671]  Extended opcode 2: set Address to 0x0
-  [0x00000678]  Advance Line by 108 to 109
-  [0x0000067b]  Copy
-  [0x0000067c]  Set column to 17
-  [0x0000067e]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 110
-  [0x0000067f]  Set column to 1
-  [0x00000681]  Special opcode 90: advance Address by 12 to 0x10 and Line by 1 to 111
-  [0x00000682]  Advance PC by 16 to 0x20
-  [0x00000684]  Extended opcode 1: End of Sequence
+  [0x0000066c]  Set column to 1
+  [0x0000066e]  Extended opcode 2: set Address to 0x0
+  [0x00000675]  Advance Line by 108 to 109
+  [0x00000678]  Copy
+  [0x00000679]  Set column to 17
+  [0x0000067b]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 110
+  [0x0000067c]  Set column to 1
+  [0x0000067e]  Special opcode 90: advance Address by 12 to 0x10 and Line by 1 to 111
+  [0x0000067f]  Advance PC by 16 to 0x20
+  [0x00000681]  Extended opcode 1: End of Sequence
 
-  [0x00000687]  Set column to 1
-  [0x00000689]  Extended opcode 2: set Address to 0x59c
-  [0x00000690]  Advance Line by 118 to 119
-  [0x00000693]  Copy
-  [0x00000694]  Set column to 17
-  [0x00000696]  Special opcode 34: advance Address by 4 to 0x5a0 and Line by 1 to 120
-  [0x00000697]  Set column to 1
-  [0x00000699]  Special opcode 90: advance Address by 12 to 0x5ac and Line by 1 to 121
-  [0x0000069a]  Advance PC by 16 to 0x5bc
-  [0x0000069c]  Extended opcode 1: End of Sequence
+  [0x00000684]  Set column to 1
+  [0x00000686]  Extended opcode 2: set Address to 0x5a4
+  [0x0000068d]  Advance Line by 118 to 119
+  [0x00000690]  Copy
+  [0x00000691]  Set column to 17
+  [0x00000693]  Special opcode 34: advance Address by 4 to 0x5a8 and Line by 1 to 120
+  [0x00000694]  Set column to 1
+  [0x00000696]  Special opcode 90: advance Address by 12 to 0x5b4 and Line by 1 to 121
+  [0x00000697]  Advance PC by 16 to 0x5c4
+  [0x00000699]  Extended opcode 1: End of Sequence
 
-  [0x0000069f]  Set column to 1
-  [0x000006a1]  Extended opcode 2: set Address to 0x0
-  [0x000006a8]  Advance Line by 127 to 128
-  [0x000006ab]  Copy
-  [0x000006ac]  Set column to 11
-  [0x000006ae]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 129
-  [0x000006af]  Set column to 22
-  [0x000006b1]  Special opcode 33: advance Address by 4 to 0x8 and Line by 0 to 129
-  [0x000006b2]  Set column to 1
-  [0x000006b4]  Special opcode 62: advance Address by 8 to 0x10 and Line by 1 to 130
-  [0x000006b5]  Advance PC by 16 to 0x20
-  [0x000006b7]  Extended opcode 1: End of Sequence
+  [0x0000069c]  Set column to 1
+  [0x0000069e]  Extended opcode 2: set Address to 0x0
+  [0x000006a5]  Advance Line by 127 to 128
+  [0x000006a8]  Copy
+  [0x000006a9]  Set column to 11
+  [0x000006ab]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 129
+  [0x000006ac]  Set column to 22
+  [0x000006ae]  Special opcode 33: advance Address by 4 to 0x8 and Line by 0 to 129
+  [0x000006af]  Set column to 1
+  [0x000006b1]  Special opcode 62: advance Address by 8 to 0x10 and Line by 1 to 130
+  [0x000006b2]  Advance PC by 16 to 0x20
+  [0x000006b4]  Extended opcode 1: End of Sequence
 
-  [0x000006ba]  Set column to 1
-  [0x000006bc]  Extended opcode 2: set Address to 0x0
-  [0x000006c3]  Advance Line by 135 to 136
-  [0x000006c6]  Copy
-  [0x000006c7]  Set column to 12
-  [0x000006c9]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 137
-  [0x000006ca]  Set column to 1
-  [0x000006cc]  Special opcode 48: advance Address by 6 to 0xa and Line by 1 to 138
-  [0x000006cd]  Advance PC by 14 to 0x18
-  [0x000006cf]  Extended opcode 1: End of Sequence
+  [0x000006b7]  Set column to 1
+  [0x000006b9]  Extended opcode 2: set Address to 0x0
+  [0x000006c0]  Advance Line by 135 to 136
+  [0x000006c3]  Copy
+  [0x000006c4]  Set column to 12
+  [0x000006c6]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 137
+  [0x000006c7]  Set column to 1
+  [0x000006c9]  Special opcode 48: advance Address by 6 to 0xa and Line by 1 to 138
+  [0x000006ca]  Advance PC by 14 to 0x18
+  [0x000006cc]  Extended opcode 1: End of Sequence
 
-  [0x000006d2]  Set column to 1
-  [0x000006d4]  Extended opcode 2: set Address to 0x5bc
-  [0x000006db]  Advance Line by 143 to 144
-  [0x000006de]  Copy
-  [0x000006df]  Set column to 11
-  [0x000006e1]  Special opcode 34: advance Address by 4 to 0x5c0 and Line by 1 to 145
-  [0x000006e2]  Set column to 22
-  [0x000006e4]  Special opcode 33: advance Address by 4 to 0x5c4 and Line by 0 to 145
-  [0x000006e5]  Set column to 1
-  [0x000006e7]  Special opcode 62: advance Address by 8 to 0x5cc and Line by 1 to 146
-  [0x000006e8]  Advance PC by 16 to 0x5dc
-  [0x000006ea]  Extended opcode 1: End of Sequence
+  [0x000006cf]  Set column to 1
+  [0x000006d1]  Extended opcode 2: set Address to 0x5c4
+  [0x000006d8]  Advance Line by 143 to 144
+  [0x000006db]  Copy
+  [0x000006dc]  Set column to 11
+  [0x000006de]  Special opcode 34: advance Address by 4 to 0x5c8 and Line by 1 to 145
+  [0x000006df]  Set column to 22
+  [0x000006e1]  Special opcode 33: advance Address by 4 to 0x5cc and Line by 0 to 145
+  [0x000006e2]  Set column to 1
+  [0x000006e4]  Special opcode 62: advance Address by 8 to 0x5d4 and Line by 1 to 146
+  [0x000006e5]  Advance PC by 16 to 0x5e4
+  [0x000006e7]  Extended opcode 1: End of Sequence
 
-  [0x000006ed]  Set column to 1
-  [0x000006ef]  Extended opcode 2: set Address to 0x5dc
-  [0x000006f6]  Advance Line by 151 to 152
-  [0x000006f9]  Copy
-  [0x000006fa]  Set column to 3
-  [0x000006fc]  Special opcode 76: advance Address by 10 to 0x5e6 and Line by 1 to 153
-  [0x000006fd]  Set column to 14
-  [0x000006ff]  Special opcode 19: advance Address by 2 to 0x5e8 and Line by 0 to 153
-  [0x00000700]  Set column to 1
-  [0x00000702]  Special opcode 34: advance Address by 4 to 0x5ec and Line by 1 to 154
-  [0x00000703]  Advance PC by 16 to 0x5fc
-  [0x00000705]  Extended opcode 1: End of Sequence
+  [0x000006ea]  Set column to 1
+  [0x000006ec]  Extended opcode 2: set Address to 0x5e4
+  [0x000006f3]  Advance Line by 151 to 152
+  [0x000006f6]  Copy
+  [0x000006f7]  Set column to 3
+  [0x000006f9]  Special opcode 76: advance Address by 10 to 0x5ee and Line by 1 to 153
+  [0x000006fa]  Set column to 14
+  [0x000006fc]  Special opcode 19: advance Address by 2 to 0x5f0 and Line by 0 to 153
+  [0x000006fd]  Set column to 1
+  [0x000006ff]  Special opcode 34: advance Address by 4 to 0x5f4 and Line by 1 to 154
+  [0x00000700]  Advance PC by 16 to 0x604
+  [0x00000702]  Extended opcode 1: End of Sequence
 
-  [0x00000708]  Set column to 1
-  [0x0000070a]  Extended opcode 2: set Address to 0x5fc
-  [0x00000711]  Advance Line by 159 to 160
-  [0x00000714]  Copy
-  [0x00000715]  Set column to 18
-  [0x00000717]  Special opcode 192: advance Address by 26 to 0x616 and Line by 5 to 165
-  [0x00000718]  Special opcode 94: advance Address by 12 to 0x622 and Line by 5 to 170
-  [0x00000719]  Set column to 22
-  [0x0000071b]  Special opcode 92: advance Address by 12 to 0x62e and Line by 3 to 173
-  [0x0000071c]  Special opcode 90: advance Address by 12 to 0x63a and Line by 1 to 174
-  [0x0000071d]  Special opcode 90: advance Address by 12 to 0x646 and Line by 1 to 175
-  [0x0000071e]  Special opcode 90: advance Address by 12 to 0x652 and Line by 1 to 176
-  [0x0000071f]  Set column to 7
-  [0x00000721]  Special opcode 92: advance Address by 12 to 0x65e and Line by 3 to 179
-  [0x00000722]  Set column to 3
-  [0x00000724]  Special opcode 76: advance Address by 10 to 0x668 and Line by 1 to 180
-  [0x00000725]  Set column to 22
-  [0x00000727]  Special opcode 19: advance Address by 2 to 0x66a and Line by 0 to 180
-  [0x00000728]  Set column to 16
-  [0x0000072a]  Special opcode 33: advance Address by 4 to 0x66e and Line by 0 to 180
-  [0x0000072b]  Set column to 3
-  [0x0000072d]  Special opcode 20: advance Address by 2 to 0x670 and Line by 1 to 181
-  [0x0000072e]  Set column to 22
-  [0x00000730]  Special opcode 19: advance Address by 2 to 0x672 and Line by 0 to 181
-  [0x00000731]  Set column to 16
-  [0x00000733]  Special opcode 47: advance Address by 6 to 0x678 and Line by 0 to 181
-  [0x00000734]  Set column to 3
-  [0x00000736]  Special opcode 21: advance Address by 2 to 0x67a and Line by 2 to 183
-  [0x00000737]  Set column to 19
-  [0x00000739]  Special opcode 19: advance Address by 2 to 0x67c and Line by 0 to 183
-  [0x0000073a]  Set column to 17
-  [0x0000073c]  Special opcode 75: advance Address by 10 to 0x686 and Line by 0 to 183
-  [0x0000073d]  Set column to 19
-  [0x0000073f]  Special opcode 20: advance Address by 2 to 0x688 and Line by 1 to 184
-  [0x00000740]  Set column to 16
-  [0x00000742]  Special opcode 75: advance Address by 10 to 0x692 and Line by 0 to 184
-  [0x00000743]  Set column to 19
-  [0x00000745]  Special opcode 76: advance Address by 10 to 0x69c and Line by 1 to 185
-  [0x00000746]  Set column to 16
-  [0x00000748]  Special opcode 75: advance Address by 10 to 0x6a6 and Line by 0 to 185
-  [0x00000749]  Set column to 3
-  [0x0000074b]  Special opcode 77: advance Address by 10 to 0x6b0 and Line by 2 to 187
-  [0x0000074c]  Set column to 16
-  [0x0000074e]  Special opcode 35: advance Address by 4 to 0x6b4 and Line by 2 to 189
-  [0x0000074f]  Set column to 1
-  [0x00000751]  Special opcode 118: advance Address by 16 to 0x6c4 and Line by 1 to 190
-  [0x00000752]  Advance PC by 48 to 0x6f4
-  [0x00000754]  Extended opcode 1: End of Sequence
+  [0x00000705]  Set column to 1
+  [0x00000707]  Extended opcode 2: set Address to 0x604
+  [0x0000070e]  Advance Line by 159 to 160
+  [0x00000711]  Copy
+  [0x00000712]  Set column to 18
+  [0x00000714]  Special opcode 192: advance Address by 26 to 0x61e and Line by 5 to 165
+  [0x00000715]  Special opcode 94: advance Address by 12 to 0x62a and Line by 5 to 170
+  [0x00000716]  Set column to 22
+  [0x00000718]  Special opcode 92: advance Address by 12 to 0x636 and Line by 3 to 173
+  [0x00000719]  Special opcode 90: advance Address by 12 to 0x642 and Line by 1 to 174
+  [0x0000071a]  Special opcode 90: advance Address by 12 to 0x64e and Line by 1 to 175
+  [0x0000071b]  Special opcode 90: advance Address by 12 to 0x65a and Line by 1 to 176
+  [0x0000071c]  Set column to 7
+  [0x0000071e]  Special opcode 92: advance Address by 12 to 0x666 and Line by 3 to 179
+  [0x0000071f]  Set column to 3
+  [0x00000721]  Special opcode 76: advance Address by 10 to 0x670 and Line by 1 to 180
+  [0x00000722]  Set column to 22
+  [0x00000724]  Special opcode 19: advance Address by 2 to 0x672 and Line by 0 to 180
+  [0x00000725]  Set column to 16
+  [0x00000727]  Special opcode 33: advance Address by 4 to 0x676 and Line by 0 to 180
+  [0x00000728]  Set column to 3
+  [0x0000072a]  Special opcode 20: advance Address by 2 to 0x678 and Line by 1 to 181
+  [0x0000072b]  Set column to 22
+  [0x0000072d]  Special opcode 19: advance Address by 2 to 0x67a and Line by 0 to 181
+  [0x0000072e]  Set column to 16
+  [0x00000730]  Special opcode 47: advance Address by 6 to 0x680 and Line by 0 to 181
+  [0x00000731]  Set column to 3
+  [0x00000733]  Special opcode 21: advance Address by 2 to 0x682 and Line by 2 to 183
+  [0x00000734]  Set column to 19
+  [0x00000736]  Special opcode 19: advance Address by 2 to 0x684 and Line by 0 to 183
+  [0x00000737]  Set column to 17
+  [0x00000739]  Special opcode 75: advance Address by 10 to 0x68e and Line by 0 to 183
+  [0x0000073a]  Set column to 19
+  [0x0000073c]  Special opcode 20: advance Address by 2 to 0x690 and Line by 1 to 184
+  [0x0000073d]  Set column to 16
+  [0x0000073f]  Special opcode 75: advance Address by 10 to 0x69a and Line by 0 to 184
+  [0x00000740]  Set column to 19
+  [0x00000742]  Special opcode 76: advance Address by 10 to 0x6a4 and Line by 1 to 185
+  [0x00000743]  Set column to 16
+  [0x00000745]  Special opcode 75: advance Address by 10 to 0x6ae and Line by 0 to 185
+  [0x00000746]  Set column to 3
+  [0x00000748]  Special opcode 77: advance Address by 10 to 0x6b8 and Line by 2 to 187
+  [0x00000749]  Set column to 16
+  [0x0000074b]  Special opcode 35: advance Address by 4 to 0x6bc and Line by 2 to 189
+  [0x0000074c]  Set column to 1
+  [0x0000074e]  Special opcode 118: advance Address by 16 to 0x6cc and Line by 1 to 190
+  [0x0000074f]  Advance PC by 48 to 0x6fc
+  [0x00000751]  Extended opcode 1: End of Sequence
 
 
-  Offset:                      0x757
+  Offset:                      0x754
   Length:                      283
   DWARF Version:               3
   Prologue Length:             29
@@ -2523,127 +2523,127 @@ Raw dump of debug contents of section .debug_line:
 
  The Directory Table is empty.
 
- The File Name Table (offset 0x773):
+ The File Name Table (offset 0x770):
   Entry	Dir	Time	Size	Name
   1	0	0	0	uart.c
 
  Line Number Statements:
-  [0x0000077e]  Set column to 25
-  [0x00000780]  Extended opcode 2: set Address to 0x6f4
-  [0x00000787]  Special opcode 7: advance Address by 0 to 0x6f4 and Line by 2 to 3
-  [0x00000788]  Set column to 10
-  [0x0000078a]  Special opcode 76: advance Address by 10 to 0x6fe and Line by 1 to 4
-  [0x0000078b]  Set column to 12
-  [0x0000078d]  Extended opcode 4: set Discriminator to 1
-  [0x00000791]  Special opcode 19: advance Address by 2 to 0x700 and Line by 0 to 4
-  [0x00000792]  Set column to 10
-  [0x00000794]  Extended opcode 4: set Discriminator to 1
-  [0x00000798]  Special opcode 47: advance Address by 6 to 0x706 and Line by 0 to 4
-  [0x00000799]  Set column to 5
-  [0x0000079b]  Special opcode 34: advance Address by 4 to 0x70a and Line by 1 to 5
-  [0x0000079c]  Set column to 1
-  [0x0000079e]  Special opcode 62: advance Address by 8 to 0x712 and Line by 1 to 6
-  [0x0000079f]  Advance PC by 8 to 0x71a
-  [0x000007a1]  Extended opcode 1: End of Sequence
+  [0x0000077b]  Set column to 25
+  [0x0000077d]  Extended opcode 2: set Address to 0x6fc
+  [0x00000784]  Special opcode 7: advance Address by 0 to 0x6fc and Line by 2 to 3
+  [0x00000785]  Set column to 10
+  [0x00000787]  Special opcode 76: advance Address by 10 to 0x706 and Line by 1 to 4
+  [0x00000788]  Set column to 12
+  [0x0000078a]  Extended opcode 4: set Discriminator to 1
+  [0x0000078e]  Special opcode 19: advance Address by 2 to 0x708 and Line by 0 to 4
+  [0x0000078f]  Set column to 10
+  [0x00000791]  Extended opcode 4: set Discriminator to 1
+  [0x00000795]  Special opcode 47: advance Address by 6 to 0x70e and Line by 0 to 4
+  [0x00000796]  Set column to 5
+  [0x00000798]  Special opcode 34: advance Address by 4 to 0x712 and Line by 1 to 5
+  [0x00000799]  Set column to 1
+  [0x0000079b]  Special opcode 62: advance Address by 8 to 0x71a and Line by 1 to 6
+  [0x0000079c]  Advance PC by 8 to 0x722
+  [0x0000079e]  Extended opcode 1: End of Sequence
 
-  [0x000007a4]  Set column to 18
-  [0x000007a6]  Extended opcode 2: set Address to 0x0
-  [0x000007ad]  Special opcode 12: advance Address by 0 to 0x0 and Line by 7 to 8
-  [0x000007ae]  Set column to 10
-  [0x000007b0]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 9
-  [0x000007b1]  Set column to 12
-  [0x000007b3]  Extended opcode 4: set Discriminator to 1
-  [0x000007b7]  Special opcode 19: advance Address by 2 to 0x6 and Line by 0 to 9
-  [0x000007b8]  Set column to 10
-  [0x000007ba]  Extended opcode 4: set Discriminator to 1
-  [0x000007be]  Special opcode 47: advance Address by 6 to 0xc and Line by 0 to 9
-  [0x000007bf]  Set column to 12
-  [0x000007c1]  Special opcode 34: advance Address by 4 to 0x10 and Line by 1 to 10
-  [0x000007c2]  Set column to 1
-  [0x000007c4]  Special opcode 48: advance Address by 6 to 0x16 and Line by 1 to 11
-  [0x000007c5]  Advance PC by 4 to 0x1a
-  [0x000007c7]  Extended opcode 1: End of Sequence
+  [0x000007a1]  Set column to 18
+  [0x000007a3]  Extended opcode 2: set Address to 0x0
+  [0x000007aa]  Special opcode 12: advance Address by 0 to 0x0 and Line by 7 to 8
+  [0x000007ab]  Set column to 10
+  [0x000007ad]  Special opcode 34: advance Address by 4 to 0x4 and Line by 1 to 9
+  [0x000007ae]  Set column to 12
+  [0x000007b0]  Extended opcode 4: set Discriminator to 1
+  [0x000007b4]  Special opcode 19: advance Address by 2 to 0x6 and Line by 0 to 9
+  [0x000007b5]  Set column to 10
+  [0x000007b7]  Extended opcode 4: set Discriminator to 1
+  [0x000007bb]  Special opcode 47: advance Address by 6 to 0xc and Line by 0 to 9
+  [0x000007bc]  Set column to 12
+  [0x000007be]  Special opcode 34: advance Address by 4 to 0x10 and Line by 1 to 10
+  [0x000007bf]  Set column to 1
+  [0x000007c1]  Special opcode 48: advance Address by 6 to 0x16 and Line by 1 to 11
+  [0x000007c2]  Advance PC by 4 to 0x1a
+  [0x000007c4]  Extended opcode 1: End of Sequence
 
-  [0x000007ca]  Set column to 26
-  [0x000007cc]  Extended opcode 2: set Address to 0x0
-  [0x000007d3]  Advance Line by 12 to 13
-  [0x000007d5]  Copy
-  [0x000007d6]  Set column to 11
-  [0x000007d8]  Special opcode 49: advance Address by 6 to 0x6 and Line by 2 to 15
-  [0x000007d9]  Set column to 10
-  [0x000007db]  Special opcode 35: advance Address by 4 to 0xa and Line by 2 to 17
-  [0x000007dc]  Set column to 24
-  [0x000007de]  Extended opcode 4: set Discriminator to 3
-  [0x000007e2]  Special opcode 36: advance Address by 4 to 0xe and Line by 3 to 20
-  [0x000007e3]  Set column to 25
-  [0x000007e5]  Extended opcode 4: set Discriminator to 3
-  [0x000007e9]  Special opcode 62: advance Address by 8 to 0x16 and Line by 1 to 21
-  [0x000007ea]  Set column to 23
-  [0x000007ec]  Extended opcode 4: set Discriminator to 3
-  [0x000007f0]  Special opcode 48: advance Address by 6 to 0x1c and Line by 1 to 22
-  [0x000007f1]  Set column to 5
-  [0x000007f3]  Extended opcode 4: set Discriminator to 3
-  [0x000007f7]  Special opcode 48: advance Address by 6 to 0x22 and Line by 1 to 23
-  [0x000007f8]  Set column to 34
-  [0x000007fa]  Extended opcode 4: set Discriminator to 1
-  [0x000007fe]  Special opcode 47: advance Address by 6 to 0x28 and Line by 0 to 23
-  [0x000007ff]  Set column to 58
-  [0x00000801]  Extended opcode 4: set Discriminator to 2
-  [0x00000805]  Special opcode 47: advance Address by 6 to 0x2e and Line by 0 to 23
-  [0x00000806]  Set column to 21
-  [0x00000808]  Special opcode 49: advance Address by 6 to 0x34 and Line by 2 to 25
-  [0x00000809]  Set column to 12
-  [0x0000080b]  Special opcode 49: advance Address by 6 to 0x3a and Line by 2 to 27
-  [0x0000080c]  Set column to 1
-  [0x0000080e]  Special opcode 20: advance Address by 2 to 0x3c and Line by 1 to 28
-  [0x0000080f]  Advance PC by 12 to 0x48
-  [0x00000811]  Extended opcode 1: End of Sequence
+  [0x000007c7]  Set column to 26
+  [0x000007c9]  Extended opcode 2: set Address to 0x0
+  [0x000007d0]  Advance Line by 12 to 13
+  [0x000007d2]  Copy
+  [0x000007d3]  Set column to 11
+  [0x000007d5]  Special opcode 49: advance Address by 6 to 0x6 and Line by 2 to 15
+  [0x000007d6]  Set column to 10
+  [0x000007d8]  Special opcode 35: advance Address by 4 to 0xa and Line by 2 to 17
+  [0x000007d9]  Set column to 24
+  [0x000007db]  Extended opcode 4: set Discriminator to 3
+  [0x000007df]  Special opcode 36: advance Address by 4 to 0xe and Line by 3 to 20
+  [0x000007e0]  Set column to 25
+  [0x000007e2]  Extended opcode 4: set Discriminator to 3
+  [0x000007e6]  Special opcode 62: advance Address by 8 to 0x16 and Line by 1 to 21
+  [0x000007e7]  Set column to 23
+  [0x000007e9]  Extended opcode 4: set Discriminator to 3
+  [0x000007ed]  Special opcode 48: advance Address by 6 to 0x1c and Line by 1 to 22
+  [0x000007ee]  Set column to 5
+  [0x000007f0]  Extended opcode 4: set Discriminator to 3
+  [0x000007f4]  Special opcode 48: advance Address by 6 to 0x22 and Line by 1 to 23
+  [0x000007f5]  Set column to 34
+  [0x000007f7]  Extended opcode 4: set Discriminator to 1
+  [0x000007fb]  Special opcode 47: advance Address by 6 to 0x28 and Line by 0 to 23
+  [0x000007fc]  Set column to 58
+  [0x000007fe]  Extended opcode 4: set Discriminator to 2
+  [0x00000802]  Special opcode 47: advance Address by 6 to 0x2e and Line by 0 to 23
+  [0x00000803]  Set column to 21
+  [0x00000805]  Special opcode 49: advance Address by 6 to 0x34 and Line by 2 to 25
+  [0x00000806]  Set column to 12
+  [0x00000808]  Special opcode 49: advance Address by 6 to 0x3a and Line by 2 to 27
+  [0x00000809]  Set column to 1
+  [0x0000080b]  Special opcode 20: advance Address by 2 to 0x3c and Line by 1 to 28
+  [0x0000080c]  Advance PC by 12 to 0x48
+  [0x0000080e]  Extended opcode 1: End of Sequence
 
-  [0x00000814]  Set column to 18
-  [0x00000816]  Extended opcode 2: set Address to 0x71a
-  [0x0000081d]  Advance Line by 29 to 30
-  [0x0000081f]  Copy
-  [0x00000820]  Set column to 5
-  [0x00000822]  Special opcode 34: advance Address by 4 to 0x71e and Line by 1 to 31
-  [0x00000823]  Set column to 1
-  [0x00000825]  Special opcode 104: advance Address by 14 to 0x72c and Line by 1 to 32
-  [0x00000826]  Advance PC by 4 to 0x730
-  [0x00000828]  Extended opcode 1: End of Sequence
+  [0x00000811]  Set column to 18
+  [0x00000813]  Extended opcode 2: set Address to 0x722
+  [0x0000081a]  Advance Line by 29 to 30
+  [0x0000081c]  Copy
+  [0x0000081d]  Set column to 5
+  [0x0000081f]  Special opcode 34: advance Address by 4 to 0x726 and Line by 1 to 31
+  [0x00000820]  Set column to 1
+  [0x00000822]  Special opcode 104: advance Address by 14 to 0x734 and Line by 1 to 32
+  [0x00000823]  Advance PC by 4 to 0x738
+  [0x00000825]  Extended opcode 1: End of Sequence
 
-  [0x0000082b]  Set column to 33
-  [0x0000082d]  Extended opcode 2: set Address to 0x730
-  [0x00000834]  Advance Line by 33 to 34
-  [0x00000836]  Copy
-  [0x00000837]  Set column to 10
-  [0x00000839]  Special opcode 62: advance Address by 8 to 0x738 and Line by 1 to 35
-  [0x0000083a]  Set column to 31
-  [0x0000083c]  Extended opcode 4: set Discriminator to 2
-  [0x00000840]  Special opcode 19: advance Address by 2 to 0x73a and Line by 0 to 35
-  [0x00000841]  Set column to 17
-  [0x00000843]  Extended opcode 4: set Discriminator to 2
-  [0x00000847]  Special opcode 47: advance Address by 6 to 0x740 and Line by 0 to 35
-  [0x00000848]  Set column to 11
-  [0x0000084a]  Extended opcode 4: set Discriminator to 1
-  [0x0000084e]  Special opcode 61: advance Address by 8 to 0x748 and Line by 0 to 35
-  [0x0000084f]  Set column to 10
-  [0x00000851]  Extended opcode 4: set Discriminator to 1
-  [0x00000855]  Special opcode 33: advance Address by 4 to 0x74c and Line by 0 to 35
-  [0x00000856]  Set column to 1
-  [0x00000858]  Special opcode 34: advance Address by 4 to 0x750 and Line by 1 to 36
-  [0x00000859]  Advance PC by 10 to 0x75a
-  [0x0000085b]  Extended opcode 1: End of Sequence
+  [0x00000828]  Set column to 33
+  [0x0000082a]  Extended opcode 2: set Address to 0x738
+  [0x00000831]  Advance Line by 33 to 34
+  [0x00000833]  Copy
+  [0x00000834]  Set column to 10
+  [0x00000836]  Special opcode 62: advance Address by 8 to 0x740 and Line by 1 to 35
+  [0x00000837]  Set column to 31
+  [0x00000839]  Extended opcode 4: set Discriminator to 2
+  [0x0000083d]  Special opcode 19: advance Address by 2 to 0x742 and Line by 0 to 35
+  [0x0000083e]  Set column to 17
+  [0x00000840]  Extended opcode 4: set Discriminator to 2
+  [0x00000844]  Special opcode 47: advance Address by 6 to 0x748 and Line by 0 to 35
+  [0x00000845]  Set column to 11
+  [0x00000847]  Extended opcode 4: set Discriminator to 1
+  [0x0000084b]  Special opcode 61: advance Address by 8 to 0x750 and Line by 0 to 35
+  [0x0000084c]  Set column to 10
+  [0x0000084e]  Extended opcode 4: set Discriminator to 1
+  [0x00000852]  Special opcode 33: advance Address by 4 to 0x754 and Line by 0 to 35
+  [0x00000853]  Set column to 1
+  [0x00000855]  Special opcode 34: advance Address by 4 to 0x758 and Line by 1 to 36
+  [0x00000856]  Advance PC by 10 to 0x762
+  [0x00000858]  Extended opcode 1: End of Sequence
 
-  [0x0000085e]  Set column to 35
-  [0x00000860]  Extended opcode 2: set Address to 0x75a
-  [0x00000867]  Advance Line by 37 to 38
-  [0x00000869]  Copy
-  [0x0000086a]  Set column to 5
-  [0x0000086c]  Special opcode 62: advance Address by 8 to 0x762 and Line by 1 to 39
-  [0x0000086d]  Special opcode 48: advance Address by 6 to 0x768 and Line by 1 to 40
-  [0x0000086e]  Set column to 1
-  [0x00000870]  Special opcode 48: advance Address by 6 to 0x76e and Line by 1 to 41
-  [0x00000871]  Advance PC by 8 to 0x776
-  [0x00000873]  Extended opcode 1: End of Sequence
+  [0x0000085b]  Set column to 35
+  [0x0000085d]  Extended opcode 2: set Address to 0x762
+  [0x00000864]  Advance Line by 37 to 38
+  [0x00000866]  Copy
+  [0x00000867]  Set column to 5
+  [0x00000869]  Special opcode 62: advance Address by 8 to 0x76a and Line by 1 to 39
+  [0x0000086a]  Special opcode 48: advance Address by 6 to 0x770 and Line by 1 to 40
+  [0x0000086b]  Set column to 1
+  [0x0000086d]  Special opcode 48: advance Address by 6 to 0x776 and Line by 1 to 41
+  [0x0000086e]  Advance PC by 8 to 0x77e
+  [0x00000870]  Extended opcode 1: End of Sequence
 
 
 Contents of the .debug_str section:
@@ -2745,18 +2745,17 @@ Contents of the .debug_frame section:
   DW_CFA_nop
   DW_CFA_nop
 
-00000038 0000001c 00000000 FDE cie=00000000 pc=000002a0..0000035c
+00000038 0000001c 00000000 FDE cie=00000000 pc=000002a0..00000368
   DW_CFA_advance_loc: 2 to 000002a2
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
   DW_CFA_advance_loc: 2 to 000002a4
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 126 to 00000322
+  DW_CFA_advance_loc1: 134 to 0000032a
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 00000326
+  DW_CFA_advance_loc: 4 to 0000032e
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
-  DW_CFA_nop
 
 00000058 0000000c ffffffff CIE
   Version:               1
@@ -2767,32 +2766,32 @@ Contents of the .debug_frame section:
 
   DW_CFA_def_cfa: r13 ofs 0
 
-00000068 0000001c 00000058 FDE cie=00000058 pc=0000035c..000003ec
-  DW_CFA_advance_loc: 2 to 0000035e
+00000068 0000001c 00000058 FDE cie=00000058 pc=00000368..000003f8
+  DW_CFA_advance_loc: 2 to 0000036a
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000360
+  DW_CFA_advance_loc: 2 to 0000036c
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 92 to 000003bc
+  DW_CFA_advance_loc: 92 to 000003c8
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 000003c0
+  DW_CFA_advance_loc: 4 to 000003cc
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
 
-00000088 00000024 00000058 FDE cie=00000058 pc=000003ec..00000410
-  DW_CFA_advance_loc: 2 to 000003ee
+00000088 00000024 00000058 FDE cie=00000058 pc=000003f8..0000041c
+  DW_CFA_advance_loc: 2 to 000003fa
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 000003f0
+  DW_CFA_advance_loc: 2 to 000003fc
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 000003f2
+  DW_CFA_advance_loc: 2 to 000003fe
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 16 to 00000402
+  DW_CFA_advance_loc: 16 to 0000040e
   DW_CFA_def_cfa_offset: 4
-  DW_CFA_advance_loc: 2 to 00000404
+  DW_CFA_advance_loc: 2 to 00000410
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 00000408
+  DW_CFA_advance_loc: 4 to 00000414
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
@@ -2821,24 +2820,24 @@ Contents of the .debug_frame section:
 
   DW_CFA_def_cfa: r13 ofs 0
 
-000000e0 00000018 000000d0 FDE cie=000000d0 pc=00000410..0000042a
-  DW_CFA_advance_loc: 2 to 00000412
+000000e0 00000018 000000d0 FDE cie=000000d0 pc=0000041c..00000436
+  DW_CFA_advance_loc: 2 to 0000041e
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000414
+  DW_CFA_advance_loc: 2 to 00000420
   DW_CFA_def_cfa_register: r7
   DW_CFA_nop
   DW_CFA_nop
 
-000000fc 0000001c 000000d0 FDE cie=000000d0 pc=0000042c..00000484
-  DW_CFA_advance_loc: 2 to 0000042e
+000000fc 0000001c 000000d0 FDE cie=000000d0 pc=00000438..0000048c
+  DW_CFA_advance_loc: 2 to 0000043a
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000430
+  DW_CFA_advance_loc: 2 to 0000043c
   DW_CFA_def_cfa_offset: 24
-  DW_CFA_advance_loc: 2 to 00000432
+  DW_CFA_advance_loc: 2 to 0000043e
   DW_CFA_def_cfa_register: r7
   DW_CFA_nop
   DW_CFA_nop
@@ -2853,54 +2852,54 @@ Contents of the .debug_frame section:
 
   DW_CFA_def_cfa: r13 ofs 0
 
-0000012c 00000020 0000011c FDE cie=0000011c pc=00000484..000004d8
-  DW_CFA_advance_loc: 2 to 00000486
+0000012c 00000020 0000011c FDE cie=0000011c pc=0000048c..000004e0
+  DW_CFA_advance_loc: 2 to 0000048e
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000488
+  DW_CFA_advance_loc: 2 to 00000490
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 0000048a
+  DW_CFA_advance_loc: 2 to 00000492
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 60 to 000004c6
+  DW_CFA_advance_loc: 60 to 000004ce
   DW_CFA_def_cfa_offset: 8
-  DW_CFA_advance_loc: 2 to 000004c8
+  DW_CFA_advance_loc: 2 to 000004d0
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
 
-00000150 00000014 0000011c FDE cie=0000011c pc=000004e0..000004e6
-  DW_CFA_advance_loc: 2 to 000004e2
-  DW_CFA_def_cfa_offset: 4
-  DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 000004e4
-  DW_CFA_def_cfa_register: r7
-
-00000168 00000014 0000011c FDE cie=0000011c pc=000004e6..000004ec
-  DW_CFA_advance_loc: 2 to 000004e8
-  DW_CFA_def_cfa_offset: 4
-  DW_CFA_offset: r7 at cfa-4
+00000150 00000014 0000011c FDE cie=0000011c pc=000004e8..000004ee
   DW_CFA_advance_loc: 2 to 000004ea
-  DW_CFA_def_cfa_register: r7
-
-00000180 00000014 0000011c FDE cie=0000011c pc=000004ec..000004f2
-  DW_CFA_advance_loc: 2 to 000004ee
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 000004ec
+  DW_CFA_def_cfa_register: r7
+
+00000168 00000014 0000011c FDE cie=0000011c pc=000004ee..000004f4
   DW_CFA_advance_loc: 2 to 000004f0
-  DW_CFA_def_cfa_register: r7
-
-00000198 00000014 0000011c FDE cie=0000011c pc=000004f2..000004f8
-  DW_CFA_advance_loc: 2 to 000004f4
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 000004f2
+  DW_CFA_def_cfa_register: r7
+
+00000180 00000014 0000011c FDE cie=0000011c pc=000004f4..000004fa
   DW_CFA_advance_loc: 2 to 000004f6
-  DW_CFA_def_cfa_register: r7
-
-000001b0 00000014 0000011c FDE cie=0000011c pc=000004f8..000004fe
-  DW_CFA_advance_loc: 2 to 000004fa
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 000004f8
+  DW_CFA_def_cfa_register: r7
+
+00000198 00000014 0000011c FDE cie=0000011c pc=000004fa..00000500
   DW_CFA_advance_loc: 2 to 000004fc
+  DW_CFA_def_cfa_offset: 4
+  DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 000004fe
+  DW_CFA_def_cfa_register: r7
+
+000001b0 00000014 0000011c FDE cie=0000011c pc=00000500..00000506
+  DW_CFA_advance_loc: 2 to 00000502
+  DW_CFA_def_cfa_offset: 4
+  DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 00000504
   DW_CFA_def_cfa_register: r7
 
 000001c8 0000000c ffffffff CIE
@@ -2912,57 +2911,57 @@ Contents of the .debug_frame section:
 
   DW_CFA_def_cfa: r13 ofs 0
 
-000001d8 00000024 000001c8 FDE cie=000001c8 pc=000004fe..0000052a
-  DW_CFA_advance_loc: 2 to 00000500
+000001d8 00000024 000001c8 FDE cie=000001c8 pc=00000506..00000532
+  DW_CFA_advance_loc: 2 to 00000508
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000502
+  DW_CFA_advance_loc: 2 to 0000050a
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 00000504
+  DW_CFA_advance_loc: 2 to 0000050c
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 30 to 00000522
+  DW_CFA_advance_loc: 30 to 0000052a
   DW_CFA_def_cfa_offset: 4
-  DW_CFA_advance_loc: 2 to 00000524
-  DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 00000528
-  DW_CFA_restore: r7
-  DW_CFA_def_cfa_offset: 0
-  DW_CFA_nop
-  DW_CFA_nop
-  DW_CFA_nop
-
-00000200 00000024 000001c8 FDE cie=000001c8 pc=0000052a..0000054c
   DW_CFA_advance_loc: 2 to 0000052c
-  DW_CFA_def_cfa_offset: 4
-  DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 0000052e
-  DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 00000530
-  DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 20 to 00000544
-  DW_CFA_def_cfa_offset: 4
-  DW_CFA_advance_loc: 2 to 00000546
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 0000054a
+  DW_CFA_advance_loc: 4 to 00000530
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
   DW_CFA_nop
   DW_CFA_nop
 
-00000228 00000024 000001c8 FDE cie=000001c8 pc=0000054c..0000059c
-  DW_CFA_advance_loc: 2 to 0000054e
+00000200 00000024 000001c8 FDE cie=000001c8 pc=00000532..00000554
+  DW_CFA_advance_loc: 2 to 00000534
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000550
-  DW_CFA_def_cfa_offset: 24
-  DW_CFA_advance_loc: 2 to 00000552
+  DW_CFA_advance_loc: 2 to 00000536
+  DW_CFA_def_cfa_offset: 16
+  DW_CFA_advance_loc: 2 to 00000538
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 66 to 00000594
+  DW_CFA_advance_loc: 20 to 0000054c
   DW_CFA_def_cfa_offset: 4
-  DW_CFA_advance_loc: 2 to 00000596
+  DW_CFA_advance_loc: 2 to 0000054e
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 0000059a
+  DW_CFA_advance_loc: 4 to 00000552
+  DW_CFA_restore: r7
+  DW_CFA_def_cfa_offset: 0
+  DW_CFA_nop
+  DW_CFA_nop
+  DW_CFA_nop
+
+00000228 00000024 000001c8 FDE cie=000001c8 pc=00000554..000005a4
+  DW_CFA_advance_loc: 2 to 00000556
+  DW_CFA_def_cfa_offset: 4
+  DW_CFA_offset: r7 at cfa-4
+  DW_CFA_advance_loc: 2 to 00000558
+  DW_CFA_def_cfa_offset: 24
+  DW_CFA_advance_loc: 2 to 0000055a
+  DW_CFA_def_cfa_register: r7
+  DW_CFA_advance_loc: 66 to 0000059c
+  DW_CFA_def_cfa_offset: 4
+  DW_CFA_advance_loc: 2 to 0000059e
+  DW_CFA_def_cfa_register: r13
+  DW_CFA_advance_loc: 4 to 000005a2
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
@@ -2982,15 +2981,15 @@ Contents of the .debug_frame section:
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
 
-00000270 0000001c 000001c8 FDE cie=000001c8 pc=0000059c..000005bc
-  DW_CFA_advance_loc: 2 to 0000059e
+00000270 0000001c 000001c8 FDE cie=000001c8 pc=000005a4..000005c4
+  DW_CFA_advance_loc: 2 to 000005a6
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 000005a0
+  DW_CFA_advance_loc: 2 to 000005a8
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 16 to 000005b0
+  DW_CFA_advance_loc: 16 to 000005b8
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 000005b4
+  DW_CFA_advance_loc: 4 to 000005bc
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
@@ -3021,51 +3020,51 @@ Contents of the .debug_frame section:
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
 
-000002d0 0000001c 000001c8 FDE cie=000001c8 pc=000005bc..000005dc
-  DW_CFA_advance_loc: 2 to 000005be
+000002d0 0000001c 000001c8 FDE cie=000001c8 pc=000005c4..000005e4
+  DW_CFA_advance_loc: 2 to 000005c6
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 000005c0
+  DW_CFA_advance_loc: 2 to 000005c8
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 16 to 000005d0
+  DW_CFA_advance_loc: 16 to 000005d8
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 000005d4
+  DW_CFA_advance_loc: 4 to 000005dc
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
 
-000002f0 00000024 000001c8 FDE cie=000001c8 pc=000005dc..000005fc
-  DW_CFA_advance_loc: 2 to 000005de
+000002f0 00000024 000001c8 FDE cie=000001c8 pc=000005e4..00000604
+  DW_CFA_advance_loc: 2 to 000005e6
   DW_CFA_def_cfa_offset: 4
   DW_CFA_offset: r7 at cfa-4
-  DW_CFA_advance_loc: 2 to 000005e0
+  DW_CFA_advance_loc: 2 to 000005e8
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 000005e2
+  DW_CFA_advance_loc: 2 to 000005ea
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 14 to 000005f0
+  DW_CFA_advance_loc: 14 to 000005f8
   DW_CFA_def_cfa_offset: 4
-  DW_CFA_advance_loc: 2 to 000005f2
+  DW_CFA_advance_loc: 2 to 000005fa
   DW_CFA_def_cfa_register: r13
-  DW_CFA_advance_loc: 4 to 000005f6
+  DW_CFA_advance_loc: 4 to 000005fe
   DW_CFA_restore: r7
   DW_CFA_def_cfa_offset: 0
   DW_CFA_nop
   DW_CFA_nop
   DW_CFA_nop
 
-00000318 00000024 000001c8 FDE cie=000001c8 pc=000005fc..000006f4
-  DW_CFA_advance_loc: 2 to 000005fe
+00000318 00000024 000001c8 FDE cie=000001c8 pc=00000604..000006fc
+  DW_CFA_advance_loc: 2 to 00000606
   DW_CFA_def_cfa_offset: 12
   DW_CFA_offset: r4 at cfa-12
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000600
+  DW_CFA_advance_loc: 2 to 00000608
   DW_CFA_def_cfa_offset: 32
-  DW_CFA_advance_loc: 2 to 00000602
+  DW_CFA_advance_loc: 2 to 0000060a
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc1: 198 to 000006c8
+  DW_CFA_advance_loc1: 198 to 000006d0
   DW_CFA_def_cfa_offset: 12
-  DW_CFA_advance_loc: 2 to 000006ca
+  DW_CFA_advance_loc: 2 to 000006d2
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
   DW_CFA_nop
@@ -3079,18 +3078,18 @@ Contents of the .debug_frame section:
 
   DW_CFA_def_cfa: r13 ofs 0
 
-00000350 00000020 00000340 FDE cie=00000340 pc=000006f4..0000071a
-  DW_CFA_advance_loc: 2 to 000006f6
+00000350 00000020 00000340 FDE cie=00000340 pc=000006fc..00000722
+  DW_CFA_advance_loc: 2 to 000006fe
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 000006f8
+  DW_CFA_advance_loc: 2 to 00000700
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 000006fa
+  DW_CFA_advance_loc: 2 to 00000702
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 28 to 00000716
+  DW_CFA_advance_loc: 28 to 0000071e
   DW_CFA_def_cfa_offset: 8
-  DW_CFA_advance_loc: 2 to 00000718
+  DW_CFA_advance_loc: 2 to 00000720
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
 
@@ -3119,43 +3118,43 @@ Contents of the .debug_frame section:
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
 
-000003b4 00000018 00000340 FDE cie=00000340 pc=0000071a..00000730
-  DW_CFA_advance_loc: 2 to 0000071c
+000003b4 00000018 00000340 FDE cie=00000340 pc=00000722..00000738
+  DW_CFA_advance_loc: 2 to 00000724
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 0000071e
+  DW_CFA_advance_loc: 2 to 00000726
   DW_CFA_def_cfa_register: r7
   DW_CFA_nop
   DW_CFA_nop
 
-000003d0 00000020 00000340 FDE cie=00000340 pc=00000730..0000075a
-  DW_CFA_advance_loc: 2 to 00000732
+000003d0 00000020 00000340 FDE cie=00000340 pc=00000738..00000762
+  DW_CFA_advance_loc: 2 to 0000073a
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 00000734
+  DW_CFA_advance_loc: 2 to 0000073c
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 00000736
+  DW_CFA_advance_loc: 2 to 0000073e
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 32 to 00000756
+  DW_CFA_advance_loc: 32 to 0000075e
   DW_CFA_def_cfa_offset: 8
-  DW_CFA_advance_loc: 2 to 00000758
+  DW_CFA_advance_loc: 2 to 00000760
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
 
-000003f4 00000020 00000340 FDE cie=00000340 pc=0000075a..00000776
-  DW_CFA_advance_loc: 2 to 0000075c
+000003f4 00000020 00000340 FDE cie=00000340 pc=00000762..0000077e
+  DW_CFA_advance_loc: 2 to 00000764
   DW_CFA_def_cfa_offset: 8
   DW_CFA_offset: r7 at cfa-8
   DW_CFA_offset: r14 at cfa-4
-  DW_CFA_advance_loc: 2 to 0000075e
+  DW_CFA_advance_loc: 2 to 00000766
   DW_CFA_def_cfa_offset: 16
-  DW_CFA_advance_loc: 2 to 00000760
+  DW_CFA_advance_loc: 2 to 00000768
   DW_CFA_def_cfa_register: r7
-  DW_CFA_advance_loc: 18 to 00000772
+  DW_CFA_advance_loc: 18 to 0000077a
   DW_CFA_def_cfa_offset: 8
-  DW_CFA_advance_loc: 2 to 00000774
+  DW_CFA_advance_loc: 2 to 0000077c
   DW_CFA_def_cfa_register: r13
   DW_CFA_nop
 
@@ -3163,42 +3162,42 @@ Contents of the .debug_frame section:
 Disassembly of section .text:
 
 00000000 <g_pfnVectors>:
-   0:	00 01 00 20 85 04 00 00 e1 04 00 00 e7 04 00 00     ... ............
-  10:	ed 04 00 00 ed 04 00 00 ed 04 00 00 00 00 00 00     ................
+   0:	00 01 00 20 8d 04 00 00 e9 04 00 00 ef 04 00 00     ... ............
+  10:	f5 04 00 00 f5 04 00 00 f5 04 00 00 00 00 00 00     ................
 	...
-  2c:	ed 04 00 00 ed 04 00 00 00 00 00 00 ed 04 00 00     ................
-  3c:	f3 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  4c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  5c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  6c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  7c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  8c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  9c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  ac:	ed 04 00 00 ed 04 00 00 ed 04 00 00 f9 04 00 00     ................
-  bc:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  cc:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  dc:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  ec:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
-  fc:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 10c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 11c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 12c:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 13c:	ed 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00     ................
- 14c:	00 00 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 15c:	ed 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00     ................
+  2c:	f5 04 00 00 f5 04 00 00 00 00 00 00 f5 04 00 00     ................
+  3c:	fb 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  4c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  5c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  6c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  7c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  8c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  9c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  ac:	f5 04 00 00 f5 04 00 00 f5 04 00 00 01 05 00 00     ................
+  bc:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  cc:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  dc:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  ec:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+  fc:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 10c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 11c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 12c:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 13c:	f5 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00     ................
+ 14c:	00 00 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 15c:	f5 04 00 00 00 00 00 00 00 00 00 00 00 00 00 00     ................
 	...
- 1b0:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 1c0:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 1d0:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 1e0:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 1f0:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 200:	ed 04 00 00 ed 04 00 00 ed 04 00 00 00 00 00 00     ................
- 210:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 220:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 230:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 240:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 250:	ed 04 00 00 ed 04 00 00 ed 04 00 00 ed 04 00 00     ................
- 260:	ed 04 00 00 ed 04 00 00 ed 04 00 00                 ............
+ 1b0:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 1c0:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 1d0:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 1e0:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 1f0:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 200:	f5 04 00 00 f5 04 00 00 f5 04 00 00 00 00 00 00     ................
+ 210:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 220:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 230:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 240:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 250:	f5 04 00 00 f5 04 00 00 f5 04 00 00 f5 04 00 00     ................
+ 260:	f5 04 00 00 f5 04 00 00 f5 04 00 00                 ............
 
 0000026c <get_adc>:
 #include <stdint.h>
@@ -3244,854 +3243,857 @@ init_adc()
  2a2:	af00      	add	r7, sp, #0
 
   SYSCTL_RCGC0_R |= SYSCTL_RCGC0_ADC0;
- 2a4:	4b20      	ldr	r3, [pc, #128]	; (328 <init_adc+0x88>)
+ 2a4:	4b22      	ldr	r3, [pc, #136]	; (330 <init_adc+0x90>)
  2a6:	681b      	ldr	r3, [r3, #0]
- 2a8:	4a1f      	ldr	r2, [pc, #124]	; (328 <init_adc+0x88>)
+ 2a8:	4a21      	ldr	r2, [pc, #132]	; (330 <init_adc+0x90>)
  2aa:	f443 3380 	orr.w	r3, r3, #65536	; 0x10000
  2ae:	6013      	str	r3, [r2, #0]
   SYSCTL_RCGC0_R |= SYSCTL_RCGC0_ADC1;
- 2b0:	4b1d      	ldr	r3, [pc, #116]	; (328 <init_adc+0x88>)
+ 2b0:	4b1f      	ldr	r3, [pc, #124]	; (330 <init_adc+0x90>)
  2b2:	681b      	ldr	r3, [r3, #0]
- 2b4:	4a1c      	ldr	r2, [pc, #112]	; (328 <init_adc+0x88>)
+ 2b4:	4a1e      	ldr	r2, [pc, #120]	; (330 <init_adc+0x90>)
  2b6:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
  2ba:	6013      	str	r3, [r2, #0]
 
   SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOB;
- 2bc:	4b1b      	ldr	r3, [pc, #108]	; (32c <init_adc+0x8c>)
+ 2bc:	4b1d      	ldr	r3, [pc, #116]	; (334 <init_adc+0x94>)
  2be:	681b      	ldr	r3, [r3, #0]
- 2c0:	4a1a      	ldr	r2, [pc, #104]	; (32c <init_adc+0x8c>)
+ 2c0:	4a1c      	ldr	r2, [pc, #112]	; (334 <init_adc+0x94>)
  2c2:	f043 0302 	orr.w	r3, r3, #2
  2c6:	6013      	str	r3, [r2, #0]
-  // Set ADC0 Sequencer priorities.
+  // Set ADCn Sequencer priorities.
   // SS3(bit12-13): Priority = 0 ; Highest
   // SS2(bit8-9):   Priority = 1
   // SS1(bit4-5):   Priority = 2
   // SS0(bit0-1):   Priority = 3 ; Lowest
   ADC0_SSPRI_R = 0x00000123;
- 2c8:	4b19      	ldr	r3, [pc, #100]	; (330 <init_adc+0x90>)
+ 2c8:	4b1b      	ldr	r3, [pc, #108]	; (338 <init_adc+0x98>)
  2ca:	f240 1223 	movw	r2, #291	; 0x123
  2ce:	601a      	str	r2, [r3, #0]
+  ADC1_SSPRI_R = 0x00000123;
+ 2d0:	4b1a      	ldr	r3, [pc, #104]	; (33c <init_adc+0x9c>)
+ 2d2:	f240 1223 	movw	r2, #291	; 0x123
+ 2d6:	601a      	str	r2, [r3, #0]
 
   //Disable all sequencers
   ADC0_ACTSS_R = 0;
- 2d0:	4b18      	ldr	r3, [pc, #96]	; (334 <init_adc+0x94>)
- 2d2:	2200      	movs	r2, #0
- 2d4:	601a      	str	r2, [r3, #0]
+ 2d8:	4b19      	ldr	r3, [pc, #100]	; (340 <init_adc+0xa0>)
+ 2da:	2200      	movs	r2, #0
+ 2dc:	601a      	str	r2, [r3, #0]
   ADC1_ACTSS_R = 0;
- 2d6:	4b18      	ldr	r3, [pc, #96]	; (338 <init_adc+0x98>)
- 2d8:	2200      	movs	r2, #0
- 2da:	601a      	str	r2, [r3, #0]
+ 2de:	4b19      	ldr	r3, [pc, #100]	; (344 <init_adc+0xa4>)
+ 2e0:	2200      	movs	r2, #0
+ 2e2:	601a      	str	r2, [r3, #0]
 
   ADC0_EMUX_R = 0x0000F000; // Trigger for Sequencer 3 Always.
- 2dc:	4b17      	ldr	r3, [pc, #92]	; (33c <init_adc+0x9c>)
- 2de:	f44f 4270 	mov.w	r2, #61440	; 0xf000
- 2e2:	601a      	str	r2, [r3, #0]
-  ADC1_EMUX_R = 0x00000F00; // Trigger for Sequencer 2 Always.
- 2e4:	4b16      	ldr	r3, [pc, #88]	; (340 <init_adc+0xa0>)
- 2e6:	f44f 6270 	mov.w	r2, #3840	; 0xf00
+ 2e4:	4b18      	ldr	r3, [pc, #96]	; (348 <init_adc+0xa8>)
+ 2e6:	f44f 4270 	mov.w	r2, #61440	; 0xf000
  2ea:	601a      	str	r2, [r3, #0]
+  ADC1_EMUX_R = 0x0000F000; // Trigger for Sequencer 2 Always.
+ 2ec:	4b17      	ldr	r3, [pc, #92]	; (34c <init_adc+0xac>)
+ 2ee:	f44f 4270 	mov.w	r2, #61440	; 0xf000
+ 2f2:	601a      	str	r2, [r3, #0]
 
   // sample multiplexer input, sequencer 3 select
   ADC0_SSMUX3_R = 10; // Use ACD input 10
- 2ec:	4b15      	ldr	r3, [pc, #84]	; (344 <init_adc+0xa4>)
- 2ee:	220a      	movs	r2, #10
- 2f0:	601a      	str	r2, [r3, #0]
+ 2f4:	4b16      	ldr	r3, [pc, #88]	; (350 <init_adc+0xb0>)
+ 2f6:	220a      	movs	r2, #10
+ 2f8:	601a      	str	r2, [r3, #0]
   ADC1_SSMUX3_R = 11; // Use ACD input 11
- 2f2:	4b15      	ldr	r3, [pc, #84]	; (348 <init_adc+0xa8>)
- 2f4:	220b      	movs	r2, #11
- 2f6:	601a      	str	r2, [r3, #0]
+ 2fa:	4b16      	ldr	r3, [pc, #88]	; (354 <init_adc+0xb4>)
+ 2fc:	220b      	movs	r2, #11
+ 2fe:	601a      	str	r2, [r3, #0]
 
   //ADC sample sequence control 3 = END0
   ADC0_SSCTL3_R =  0x00000002;
- 2f8:	4b14      	ldr	r3, [pc, #80]	; (34c <init_adc+0xac>)
- 2fa:	2202      	movs	r2, #2
- 2fc:	601a      	str	r2, [r3, #0]
+ 300:	4b15      	ldr	r3, [pc, #84]	; (358 <init_adc+0xb8>)
+ 302:	2202      	movs	r2, #2
+ 304:	601a      	str	r2, [r3, #0]
   ADC1_SSCTL3_R =  0x00000002;
- 2fe:	4b14      	ldr	r3, [pc, #80]	; (350 <init_adc+0xb0>)
- 300:	2202      	movs	r2, #2
- 302:	601a      	str	r2, [r3, #0]
+ 306:	4b15      	ldr	r3, [pc, #84]	; (35c <init_adc+0xbc>)
+ 308:	2202      	movs	r2, #2
+ 30a:	601a      	str	r2, [r3, #0]
 
   ADC0_ACTSS_R = 0x00000008; //enable sequencer 3 for ADC0
- 304:	4b0b      	ldr	r3, [pc, #44]	; (334 <init_adc+0x94>)
- 306:	2208      	movs	r2, #8
- 308:	601a      	str	r2, [r3, #0]
-  ADC1_ACTSS_R = 0x00000004; //enable sequencer 2 for ADC1
- 30a:	4b0b      	ldr	r3, [pc, #44]	; (338 <init_adc+0x98>)
- 30c:	2204      	movs	r2, #4
- 30e:	601a      	str	r2, [r3, #0]
+ 30c:	4b0c      	ldr	r3, [pc, #48]	; (340 <init_adc+0xa0>)
+ 30e:	2208      	movs	r2, #8
+ 310:	601a      	str	r2, [r3, #0]
+  ADC1_ACTSS_R = 0x00000008; //enable sequencer 2 for ADC1
+ 312:	4b0c      	ldr	r3, [pc, #48]	; (344 <init_adc+0xa4>)
+ 314:	2208      	movs	r2, #8
+ 316:	601a      	str	r2, [r3, #0]
 
   // Start conversion at sequencer 3
   ADC0_PSSI_R = 0x08;
- 310:	4b10      	ldr	r3, [pc, #64]	; (354 <init_adc+0xb4>)
- 312:	2208      	movs	r2, #8
- 314:	601a      	str	r2, [r3, #0]
-  ADC1_PSSI_R = 0x04;
- 316:	4b10      	ldr	r3, [pc, #64]	; (358 <init_adc+0xb8>)
- 318:	2204      	movs	r2, #4
- 31a:	601a      	str	r2, [r3, #0]
+ 318:	4b11      	ldr	r3, [pc, #68]	; (360 <init_adc+0xc0>)
+ 31a:	2208      	movs	r2, #8
+ 31c:	601a      	str	r2, [r3, #0]
+  ADC1_PSSI_R = 0x08;
+ 31e:	4b11      	ldr	r3, [pc, #68]	; (364 <init_adc+0xc4>)
+ 320:	2208      	movs	r2, #8
+ 322:	601a      	str	r2, [r3, #0]
 }
- 31c:	bf00      	nop
- 31e:	4618      	mov	r0, r3
- 320:	46bd      	mov	sp, r7
- 322:	f85d 7b04 	ldr.w	r7, [sp], #4
- 326:	4770      	bx	lr
- 328:	400fe100 	.word	0x400fe100
- 32c:	400fe108 	.word	0x400fe108
- 330:	40038020 	.word	0x40038020
- 334:	40038000 	.word	0x40038000
- 338:	40039000 	.word	0x40039000
- 33c:	40038014 	.word	0x40038014
- 340:	40039014 	.word	0x40039014
- 344:	400380a0 	.word	0x400380a0
- 348:	400390a0 	.word	0x400390a0
- 34c:	400380a4 	.word	0x400380a4
- 350:	400390a4 	.word	0x400390a4
- 354:	40038028 	.word	0x40038028
- 358:	40039028 	.word	0x40039028
+ 324:	bf00      	nop
+ 326:	4618      	mov	r0, r3
+ 328:	46bd      	mov	sp, r7
+ 32a:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 32e:	4770      	bx	lr
+ 330:	400fe100 	.word	0x400fe100
+ 334:	400fe108 	.word	0x400fe108
+ 338:	40038020 	.word	0x40038020
+ 33c:	40039020 	.word	0x40039020
+ 340:	40038000 	.word	0x40038000
+ 344:	40039000 	.word	0x40039000
+ 348:	40038014 	.word	0x40038014
+ 34c:	40039014 	.word	0x40039014
+ 350:	400380a0 	.word	0x400380a0
+ 354:	400390a0 	.word	0x400390a0
+ 358:	400380a4 	.word	0x400380a4
+ 35c:	400390a4 	.word	0x400390a4
+ 360:	40038028 	.word	0x40038028
+ 364:	40039028 	.word	0x40039028
 
-0000035c <setupPortF>:
+00000368 <setupPortF>:
 #include "gpio.h"
 #include "tm4c123gh6pm.h"
 
 void setupPortF() {
- 35c:	b480      	push	{r7}
- 35e:	af00      	add	r7, sp, #0
+ 368:	b480      	push	{r7}
+ 36a:	af00      	add	r7, sp, #0
   // Enable the GPIO port that is used for the on-board LEDs and switches.
   SYSCTL_RCGC2_R = SYSCTL_RCGC2_GPIOF;
- 360:	4b18      	ldr	r3, [pc, #96]	; (3c4 <setupPortF+0x68>)
- 362:	2220      	movs	r2, #32
- 364:	601a      	str	r2, [r3, #0]
+ 36c:	4b18      	ldr	r3, [pc, #96]	; (3d0 <setupPortF+0x68>)
+ 36e:	2220      	movs	r2, #32
+ 370:	601a      	str	r2, [r3, #0]
   // Set the direction as output (PF1 - PF3).
   GPIO_PORTF_DIR_R = 0b00001110;
- 366:	4b18      	ldr	r3, [pc, #96]	; (3c8 <setupPortF+0x6c>)
- 368:	220e      	movs	r2, #14
- 36a:	601a      	str	r2, [r3, #0]
+ 372:	4b18      	ldr	r3, [pc, #96]	; (3d4 <setupPortF+0x6c>)
+ 374:	220e      	movs	r2, #14
+ 376:	601a      	str	r2, [r3, #0]
   // Enable the GPIO pins for digital function (PF1 - PF4)
   GPIO_PORTF_DEN_R = 0b00011110;
- 36c:	4b17      	ldr	r3, [pc, #92]	; (3cc <setupPortF+0x70>)
- 36e:	221e      	movs	r2, #30
- 370:	601a      	str	r2, [r3, #0]
+ 378:	4b17      	ldr	r3, [pc, #92]	; (3d8 <setupPortF+0x70>)
+ 37a:	221e      	movs	r2, #30
+ 37c:	601a      	str	r2, [r3, #0]
   // Enable internal pull-up (PF4).
   GPIO_PORTF_PUR_R = 0b00010000;
- 372:	4b17      	ldr	r3, [pc, #92]	; (3d0 <setupPortF+0x74>)
- 374:	2210      	movs	r2, #16
- 376:	601a      	str	r2, [r3, #0]
+ 37e:	4b17      	ldr	r3, [pc, #92]	; (3dc <setupPortF+0x74>)
+ 380:	2210      	movs	r2, #16
+ 382:	601a      	str	r2, [r3, #0]
 
   // Set the interrupt type for PF4 (SW1)
   NVIC_EN0_R |= (1 << (INT_GPIOF - 16)); // enable interrupt in NVIC
- 378:	4b16      	ldr	r3, [pc, #88]	; (3d4 <setupPortF+0x78>)
- 37a:	681b      	ldr	r3, [r3, #0]
- 37c:	4a15      	ldr	r2, [pc, #84]	; (3d4 <setupPortF+0x78>)
- 37e:	f043 4380 	orr.w	r3, r3, #1073741824	; 0x40000000
- 382:	6013      	str	r3, [r2, #0]
-  NVIC_PRI7_R = (NVIC_PRI7_R & 0xFF00FFFF) | 0x00A00000; // priority 5
- 384:	4b14      	ldr	r3, [pc, #80]	; (3d8 <setupPortF+0x7c>)
+ 384:	4b16      	ldr	r3, [pc, #88]	; (3e0 <setupPortF+0x78>)
  386:	681b      	ldr	r3, [r3, #0]
- 388:	f423 037f 	bic.w	r3, r3, #16711680	; 0xff0000
- 38c:	4a12      	ldr	r2, [pc, #72]	; (3d8 <setupPortF+0x7c>)
- 38e:	f443 0320 	orr.w	r3, r3, #10485760	; 0xa00000
- 392:	6013      	str	r3, [r2, #0]
-  GPIO_PORTF_IS_R |= 0b00010000;  // PF4 is edge-sensitive
- 394:	4b11      	ldr	r3, [pc, #68]	; (3dc <setupPortF+0x80>)
- 396:	681b      	ldr	r3, [r3, #0]
- 398:	4a10      	ldr	r2, [pc, #64]	; (3dc <setupPortF+0x80>)
- 39a:	f043 0310 	orr.w	r3, r3, #16
+ 388:	4a15      	ldr	r2, [pc, #84]	; (3e0 <setupPortF+0x78>)
+ 38a:	f043 4380 	orr.w	r3, r3, #1073741824	; 0x40000000
+ 38e:	6013      	str	r3, [r2, #0]
+  NVIC_PRI7_R = (NVIC_PRI7_R & 0xFF00FFFF) | 0x00A00000; // priority 5
+ 390:	4b14      	ldr	r3, [pc, #80]	; (3e4 <setupPortF+0x7c>)
+ 392:	681b      	ldr	r3, [r3, #0]
+ 394:	f423 037f 	bic.w	r3, r3, #16711680	; 0xff0000
+ 398:	4a12      	ldr	r2, [pc, #72]	; (3e4 <setupPortF+0x7c>)
+ 39a:	f443 0320 	orr.w	r3, r3, #10485760	; 0xa00000
  39e:	6013      	str	r3, [r2, #0]
-  GPIO_PORTF_IBE_R |= 0b00010000; // PF4 is both edges
- 3a0:	4b0f      	ldr	r3, [pc, #60]	; (3e0 <setupPortF+0x84>)
+  GPIO_PORTF_IS_R |= 0b00010000;  // PF4 is edge-sensitive
+ 3a0:	4b11      	ldr	r3, [pc, #68]	; (3e8 <setupPortF+0x80>)
  3a2:	681b      	ldr	r3, [r3, #0]
- 3a4:	4a0e      	ldr	r2, [pc, #56]	; (3e0 <setupPortF+0x84>)
+ 3a4:	4a10      	ldr	r2, [pc, #64]	; (3e8 <setupPortF+0x80>)
  3a6:	f043 0310 	orr.w	r3, r3, #16
  3aa:	6013      	str	r3, [r2, #0]
+  GPIO_PORTF_IBE_R |= 0b00010000; // PF4 is both edges
+ 3ac:	4b0f      	ldr	r3, [pc, #60]	; (3ec <setupPortF+0x84>)
+ 3ae:	681b      	ldr	r3, [r3, #0]
+ 3b0:	4a0e      	ldr	r2, [pc, #56]	; (3ec <setupPortF+0x84>)
+ 3b2:	f043 0310 	orr.w	r3, r3, #16
+ 3b6:	6013      	str	r3, [r2, #0]
   // GPIO_PORTF_IEV_R |= 0b00010000; // PF4 falling edge event
   GPIO_PORTF_IM_R = 0b00010000;  // Interrupt on PF4
- 3ac:	4b0d      	ldr	r3, [pc, #52]	; (3e4 <setupPortF+0x88>)
- 3ae:	2210      	movs	r2, #16
- 3b0:	601a      	str	r2, [r3, #0]
+ 3b8:	4b0d      	ldr	r3, [pc, #52]	; (3f0 <setupPortF+0x88>)
+ 3ba:	2210      	movs	r2, #16
+ 3bc:	601a      	str	r2, [r3, #0]
   GPIO_PORTF_ICR_R = 0b00010000; // clear flag4
- 3b2:	4b0d      	ldr	r3, [pc, #52]	; (3e8 <setupPortF+0x8c>)
- 3b4:	2210      	movs	r2, #16
- 3b6:	601a      	str	r2, [r3, #0]
+ 3be:	4b0d      	ldr	r3, [pc, #52]	; (3f4 <setupPortF+0x8c>)
+ 3c0:	2210      	movs	r2, #16
+ 3c2:	601a      	str	r2, [r3, #0]
 }
- 3b8:	bf00      	nop
- 3ba:	46bd      	mov	sp, r7
- 3bc:	f85d 7b04 	ldr.w	r7, [sp], #4
- 3c0:	4770      	bx	lr
- 3c2:	bf00      	nop
- 3c4:	400fe108 	.word	0x400fe108
- 3c8:	40025400 	.word	0x40025400
- 3cc:	4002551c 	.word	0x4002551c
- 3d0:	40025510 	.word	0x40025510
- 3d4:	e000e100 	.word	0xe000e100
- 3d8:	e000e41c 	.word	0xe000e41c
- 3dc:	40025404 	.word	0x40025404
- 3e0:	40025408 	.word	0x40025408
- 3e4:	40025410 	.word	0x40025410
- 3e8:	4002541c 	.word	0x4002541c
+ 3c4:	bf00      	nop
+ 3c6:	46bd      	mov	sp, r7
+ 3c8:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 3cc:	4770      	bx	lr
+ 3ce:	bf00      	nop
+ 3d0:	400fe108 	.word	0x400fe108
+ 3d4:	40025400 	.word	0x40025400
+ 3d8:	4002551c 	.word	0x4002551c
+ 3dc:	40025510 	.word	0x40025510
+ 3e0:	e000e100 	.word	0xe000e100
+ 3e4:	e000e41c 	.word	0xe000e41c
+ 3e8:	40025404 	.word	0x40025404
+ 3ec:	40025408 	.word	0x40025408
+ 3f0:	40025410 	.word	0x40025410
+ 3f4:	4002541c 	.word	0x4002541c
 
-000003ec <setLEDColor>:
+000003f8 <setLEDColor>:
 
 void setLEDColor(enum LEDColor color) { GPIO_PORTF_DATA_R = color << 1; }
- 3ec:	b480      	push	{r7}
- 3ee:	b083      	sub	sp, #12
- 3f0:	af00      	add	r7, sp, #0
- 3f2:	4603      	mov	r3, r0
- 3f4:	71fb      	strb	r3, [r7, #7]
- 3f6:	79fb      	ldrb	r3, [r7, #7]
- 3f8:	005a      	lsls	r2, r3, #1
- 3fa:	4b04      	ldr	r3, [pc, #16]	; (40c <setLEDColor+0x20>)
- 3fc:	601a      	str	r2, [r3, #0]
- 3fe:	bf00      	nop
- 400:	370c      	adds	r7, #12
- 402:	46bd      	mov	sp, r7
- 404:	f85d 7b04 	ldr.w	r7, [sp], #4
- 408:	4770      	bx	lr
+ 3f8:	b480      	push	{r7}
+ 3fa:	b083      	sub	sp, #12
+ 3fc:	af00      	add	r7, sp, #0
+ 3fe:	4603      	mov	r3, r0
+ 400:	71fb      	strb	r3, [r7, #7]
+ 402:	79fb      	ldrb	r3, [r7, #7]
+ 404:	005a      	lsls	r2, r3, #1
+ 406:	4b04      	ldr	r3, [pc, #16]	; (418 <setLEDColor+0x20>)
+ 408:	601a      	str	r2, [r3, #0]
  40a:	bf00      	nop
- 40c:	400253fc 	.word	0x400253fc
+ 40c:	370c      	adds	r7, #12
+ 40e:	46bd      	mov	sp, r7
+ 410:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 414:	4770      	bx	lr
+ 416:	bf00      	nop
+ 418:	400253fc 	.word	0x400253fc
 
-00000410 <setup>:
+0000041c <setup>:
 #include "adc.h"
 
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
 
 void setup() {
- 410:	b580      	push	{r7, lr}
- 412:	af00      	add	r7, sp, #0
+ 41c:	b580      	push	{r7, lr}
+ 41e:	af00      	add	r7, sp, #0
     setupPortF();
- 414:	f7ff ffa2 	bl	35c <setupPortF>
+ 420:	f7ff ffa2 	bl	368 <setupPortF>
     setLEDColor(GREEN);
- 418:	2004      	movs	r0, #4
- 41a:	f7ff ffe7 	bl	3ec <setLEDColor>
+ 424:	2004      	movs	r0, #4
+ 426:	f7ff ffe7 	bl	3f8 <setLEDColor>
     uart_init();
- 41e:	f000 f97c 	bl	71a <uart_init>
+ 42a:	f000 f97a 	bl	722 <uart_init>
     init_adc();
- 422:	f7ff ff3d 	bl	2a0 <init_adc>
+ 42e:	f7ff ff37 	bl	2a0 <init_adc>
 }
- 426:	bf00      	nop
- 428:	bd80      	pop	{r7, pc}
+ 432:	bf00      	nop
+ 434:	bd80      	pop	{r7, pc}
 	...
 
-0000042c <main>:
+00000438 <main>:
 
 int main(void) {
- 42c:	b580      	push	{r7, lr}
- 42e:	b084      	sub	sp, #16
- 430:	af00      	add	r7, sp, #0
+ 438:	b580      	push	{r7, lr}
+ 43a:	b084      	sub	sp, #16
+ 43c:	af00      	add	r7, sp, #0
     setup();
- 432:	f7ff ffed 	bl	410 <setup>
+ 43e:	f7ff ffed 	bl	41c <setup>
     uart_put_stringln("Starting...");
- 436:	4812      	ldr	r0, [pc, #72]	; (480 <main+0x54>)
- 438:	f000 f98f 	bl	75a <uart_put_stringln>
+ 442:	4811      	ldr	r0, [pc, #68]	; (488 <main+0x50>)
+ 444:	f000 f98d 	bl	762 <uart_put_stringln>
     setLEDColor(BLUE);
- 43c:	2002      	movs	r0, #2
- 43e:	f7ff ffd5 	bl	3ec <setLEDColor>
+ 448:	2002      	movs	r0, #2
+ 44a:	f7ff ffd5 	bl	3f8 <setLEDColor>
 
     while (69) {
         INT32U input = get_adc();
- 442:	f7ff ff13 	bl	26c <get_adc>
- 446:	4603      	mov	r3, r0
- 448:	60fb      	str	r3, [r7, #12]
+ 44e:	f7ff ff0d 	bl	26c <get_adc>
+ 452:	4603      	mov	r3, r0
+ 454:	60fb      	str	r3, [r7, #12]
 
         INT16U adc0 = input >> 16;
- 44a:	68fb      	ldr	r3, [r7, #12]
- 44c:	0c1b      	lsrs	r3, r3, #16
- 44e:	817b      	strh	r3, [r7, #10]
-        INT16U adc1 = input & 0x00FF;
- 450:	68fb      	ldr	r3, [r7, #12]
- 452:	b29b      	uxth	r3, r3
- 454:	b2db      	uxtb	r3, r3
- 456:	813b      	strh	r3, [r7, #8]
+ 456:	68fb      	ldr	r3, [r7, #12]
+ 458:	0c1b      	lsrs	r3, r3, #16
+ 45a:	817b      	strh	r3, [r7, #10]
+        INT16U adc1 = input & 0x0000FFFF;
+ 45c:	68fb      	ldr	r3, [r7, #12]
+ 45e:	813b      	strh	r3, [r7, #8]
 
         char adc0_high = adc0 >> 8;
- 458:	897b      	ldrh	r3, [r7, #10]
- 45a:	0a1b      	lsrs	r3, r3, #8
- 45c:	b29b      	uxth	r3, r3
- 45e:	71fb      	strb	r3, [r7, #7]
-        char adc1_high = adc1 >> 8;
- 460:	893b      	ldrh	r3, [r7, #8]
+ 460:	897b      	ldrh	r3, [r7, #10]
  462:	0a1b      	lsrs	r3, r3, #8
  464:	b29b      	uxth	r3, r3
- 466:	71bb      	strb	r3, [r7, #6]
+ 466:	71fb      	strb	r3, [r7, #7]
+        char adc1_high = adc1 >> 8;
+ 468:	893b      	ldrh	r3, [r7, #8]
+ 46a:	0a1b      	lsrs	r3, r3, #8
+ 46c:	b29b      	uxth	r3, r3
+ 46e:	71bb      	strb	r3, [r7, #6]
 
         uart_putc(adc0_high << 4 | adc1_high);
- 468:	79fb      	ldrb	r3, [r7, #7]
- 46a:	011b      	lsls	r3, r3, #4
- 46c:	b25a      	sxtb	r2, r3
- 46e:	f997 3006 	ldrsb.w	r3, [r7, #6]
- 472:	4313      	orrs	r3, r2
- 474:	b25b      	sxtb	r3, r3
- 476:	b2db      	uxtb	r3, r3
- 478:	4618      	mov	r0, r3
- 47a:	f000 f93b 	bl	6f4 <uart_putc>
+ 470:	79fb      	ldrb	r3, [r7, #7]
+ 472:	011b      	lsls	r3, r3, #4
+ 474:	b25a      	sxtb	r2, r3
+ 476:	f997 3006 	ldrsb.w	r3, [r7, #6]
+ 47a:	4313      	orrs	r3, r2
+ 47c:	b25b      	sxtb	r3, r3
+ 47e:	b2db      	uxtb	r3, r3
+ 480:	4618      	mov	r0, r3
+ 482:	f000 f93b 	bl	6fc <uart_putc>
     while (69) {
- 47e:	e7e0      	b.n	442 <main+0x16>
- 480:	00000778 	.word	0x00000778
+ 486:	e7e2      	b.n	44e <main+0x16>
+ 488:	00000780 	.word	0x00000780
 
-00000484 <ResetISR>:
+0000048c <ResetISR>:
 // actions (such as making decisions based on the reset cause register, and
 // resetting the bits in that register) are left solely in the hands of the
 // application.
 //
 //*****************************************************************************
 void ResetISR(void) {
- 484:	b580      	push	{r7, lr}
- 486:	b082      	sub	sp, #8
- 488:	af00      	add	r7, sp, #0
+ 48c:	b580      	push	{r7, lr}
+ 48e:	b082      	sub	sp, #8
+ 490:	af00      	add	r7, sp, #0
   unsigned long *pulSrc, *pulDest;
 
   //
   // Copy the data segment initializers from flash to SRAM.
   //
   pulSrc = &_etext;
- 48a:	4b10      	ldr	r3, [pc, #64]	; (4cc <zero_loop+0x18>)
- 48c:	607b      	str	r3, [r7, #4]
+ 492:	4b10      	ldr	r3, [pc, #64]	; (4d4 <zero_loop+0x18>)
+ 494:	607b      	str	r3, [r7, #4]
   for (pulDest = &_data; pulDest < &_edata;) {
- 48e:	4b10      	ldr	r3, [pc, #64]	; (4d0 <zero_loop+0x1c>)
- 490:	603b      	str	r3, [r7, #0]
- 492:	e007      	b.n	4a4 <ResetISR+0x20>
+ 496:	4b10      	ldr	r3, [pc, #64]	; (4d8 <zero_loop+0x1c>)
+ 498:	603b      	str	r3, [r7, #0]
+ 49a:	e007      	b.n	4ac <ResetISR+0x20>
     *pulDest++ = *pulSrc++;
- 494:	687a      	ldr	r2, [r7, #4]
- 496:	1d13      	adds	r3, r2, #4
- 498:	607b      	str	r3, [r7, #4]
- 49a:	683b      	ldr	r3, [r7, #0]
- 49c:	1d19      	adds	r1, r3, #4
- 49e:	6039      	str	r1, [r7, #0]
- 4a0:	6812      	ldr	r2, [r2, #0]
- 4a2:	601a      	str	r2, [r3, #0]
+ 49c:	687a      	ldr	r2, [r7, #4]
+ 49e:	1d13      	adds	r3, r2, #4
+ 4a0:	607b      	str	r3, [r7, #4]
+ 4a2:	683b      	ldr	r3, [r7, #0]
+ 4a4:	1d19      	adds	r1, r3, #4
+ 4a6:	6039      	str	r1, [r7, #0]
+ 4a8:	6812      	ldr	r2, [r2, #0]
+ 4aa:	601a      	str	r2, [r3, #0]
   for (pulDest = &_data; pulDest < &_edata;) {
- 4a4:	683b      	ldr	r3, [r7, #0]
- 4a6:	4a0b      	ldr	r2, [pc, #44]	; (4d4 <zero_loop+0x20>)
- 4a8:	4293      	cmp	r3, r2
- 4aa:	d3f3      	bcc.n	494 <ResetISR+0x10>
+ 4ac:	683b      	ldr	r3, [r7, #0]
+ 4ae:	4a0b      	ldr	r2, [pc, #44]	; (4dc <zero_loop+0x20>)
+ 4b0:	4293      	cmp	r3, r2
+ 4b2:	d3f3      	bcc.n	49c <ResetISR+0x10>
   }
 
   //
   // Zero fill the bss segment.
   //
   __asm("    ldr     r0, =_bss\n"
- 4ac:	480a      	ldr	r0, [pc, #40]	; (4d8 <zero_loop+0x24>)
- 4ae:	490b      	ldr	r1, [pc, #44]	; (4dc <zero_loop+0x28>)
- 4b0:	f04f 0200 	mov.w	r2, #0
+ 4b4:	480a      	ldr	r0, [pc, #40]	; (4e0 <zero_loop+0x24>)
+ 4b6:	490b      	ldr	r1, [pc, #44]	; (4e4 <zero_loop+0x28>)
+ 4b8:	f04f 0200 	mov.w	r2, #0
 
-000004b4 <zero_loop>:
- 4b4:	4288      	cmp	r0, r1
- 4b6:	bfb8      	it	lt
- 4b8:	f840 2b04 	strlt.w	r2, [r0], #4
- 4bc:	dbfa      	blt.n	4b4 <zero_loop>
+000004bc <zero_loop>:
+ 4bc:	4288      	cmp	r0, r1
+ 4be:	bfb8      	it	lt
+ 4c0:	f840 2b04 	strlt.w	r2, [r0], #4
+ 4c4:	dbfa      	blt.n	4bc <zero_loop>
         "        blt     zero_loop");
 
   //
   // Call the application's entry point.
   //
   main();
- 4be:	f7ff ffb5 	bl	42c <main>
+ 4c6:	f7ff ffb7 	bl	438 <main>
 }
- 4c2:	bf00      	nop
- 4c4:	3708      	adds	r7, #8
- 4c6:	46bd      	mov	sp, r7
- 4c8:	bd80      	pop	{r7, pc}
  4ca:	bf00      	nop
- 4cc:	00000784 	.word	0x00000784
- 4d0:	20000000 	.word	0x20000000
- 4d4:	20000000 	.word	0x20000000
+ 4cc:	3708      	adds	r7, #8
+ 4ce:	46bd      	mov	sp, r7
+ 4d0:	bd80      	pop	{r7, pc}
+ 4d2:	bf00      	nop
+ 4d4:	0000078c 	.word	0x0000078c
  4d8:	20000000 	.word	0x20000000
- 4dc:	20000100 	.word	0x20000100
+ 4dc:	20000000 	.word	0x20000000
+ 4e0:	20000000 	.word	0x20000000
+ 4e4:	20000100 	.word	0x20000100
 
-000004e0 <NmiSR>:
+000004e8 <NmiSR>:
 // This is the code that gets called when the processor receives a NMI.  This
 // simply enters an infinite loop, preserving the system state for examination
 // by a debugger.
 //
 //*****************************************************************************
 static void NmiSR(void) {
- 4e0:	b480      	push	{r7}
- 4e2:	af00      	add	r7, sp, #0
+ 4e8:	b480      	push	{r7}
+ 4ea:	af00      	add	r7, sp, #0
   //
   // Enter an infinite loop.
   //
   while (1) {
- 4e4:	e7fe      	b.n	4e4 <NmiSR+0x4>
+ 4ec:	e7fe      	b.n	4ec <NmiSR+0x4>
 
-000004e6 <FaultISR>:
+000004ee <FaultISR>:
 // This is the code that gets called when the processor receives a fault
 // interrupt.  This simply enters an infinite loop, preserving the system state
 // for examination by a debugger.
 //
 //*****************************************************************************
 static void FaultISR(void) {
- 4e6:	b480      	push	{r7}
- 4e8:	af00      	add	r7, sp, #0
+ 4ee:	b480      	push	{r7}
+ 4f0:	af00      	add	r7, sp, #0
   //
   // Enter an infinite loop.
   //
   while (1) {
- 4ea:	e7fe      	b.n	4ea <FaultISR+0x4>
+ 4f2:	e7fe      	b.n	4f2 <FaultISR+0x4>
 
-000004ec <IntDefaultHandler>:
+000004f4 <IntDefaultHandler>:
 // This is the code that gets called when the processor receives an unexpected
 // interrupt.  This simply enters an infinite loop, preserving the system state
 // for examination by a debugger.
 //
 //*****************************************************************************
 static void IntDefaultHandler(void) {
- 4ec:	b480      	push	{r7}
- 4ee:	af00      	add	r7, sp, #0
+ 4f4:	b480      	push	{r7}
+ 4f6:	af00      	add	r7, sp, #0
   //
   // Go into an infinite loop.
   //
   while (1) {
- 4f0:	e7fe      	b.n	4f0 <IntDefaultHandler+0x4>
+ 4f8:	e7fe      	b.n	4f8 <IntDefaultHandler+0x4>
 
-000004f2 <SysTick_Handler>:
+000004fa <SysTick_Handler>:
 //
 // Add default handlers for the following interrupts.
 // Meant to be overridden by the application.
 //
 //*****************************************************************************
 __attribute__((weak)) void SysTick_Handler(void) {
- 4f2:	b480      	push	{r7}
- 4f4:	af00      	add	r7, sp, #0
+ 4fa:	b480      	push	{r7}
+ 4fc:	af00      	add	r7, sp, #0
   while (1) {
- 4f6:	e7fe      	b.n	4f6 <SysTick_Handler+0x4>
+ 4fe:	e7fe      	b.n	4fe <SysTick_Handler+0x4>
 
-000004f8 <GPIOF_Handler>:
+00000500 <GPIOF_Handler>:
   }
 }
 __attribute__((weak)) void GPIOF_Handler(void) {
- 4f8:	b480      	push	{r7}
- 4fa:	af00      	add	r7, sp, #0
+ 500:	b480      	push	{r7}
+ 502:	af00      	add	r7, sp, #0
   while (1) {
- 4fc:	e7fe      	b.n	4fc <GPIOF_Handler+0x4>
+ 504:	e7fe      	b.n	504 <GPIOF_Handler+0x4>
 
-000004fe <lcrh_databits>:
+00000506 <lcrh_databits>:
 *   		    6: bit5 = 1, bit6 = 0.
 *   		    7: bit5 = 0, bit6 = 1.
 *   		    8: bit5 = 1, bit6 = 1  (default).
 *   		   all other bits are returned = 0
 ******************************************************************************/
 {
- 4fe:	b480      	push	{r7}
- 500:	b083      	sub	sp, #12
- 502:	af00      	add	r7, sp, #0
- 504:	4603      	mov	r3, r0
- 506:	71fb      	strb	r3, [r7, #7]
+ 506:	b480      	push	{r7}
+ 508:	b083      	sub	sp, #12
+ 50a:	af00      	add	r7, sp, #0
+ 50c:	4603      	mov	r3, r0
+ 50e:	71fb      	strb	r3, [r7, #7]
   if(( antal_databits < 5 ) || ( antal_databits > 8 ))
- 508:	79fb      	ldrb	r3, [r7, #7]
- 50a:	2b04      	cmp	r3, #4
- 50c:	d902      	bls.n	514 <lcrh_databits+0x16>
- 50e:	79fb      	ldrb	r3, [r7, #7]
- 510:	2b08      	cmp	r3, #8
- 512:	d901      	bls.n	518 <lcrh_databits+0x1a>
+ 510:	79fb      	ldrb	r3, [r7, #7]
+ 512:	2b04      	cmp	r3, #4
+ 514:	d902      	bls.n	51c <lcrh_databits+0x16>
+ 516:	79fb      	ldrb	r3, [r7, #7]
+ 518:	2b08      	cmp	r3, #8
+ 51a:	d901      	bls.n	520 <lcrh_databits+0x1a>
 	antal_databits = 8;
- 514:	2308      	movs	r3, #8
- 516:	71fb      	strb	r3, [r7, #7]
+ 51c:	2308      	movs	r3, #8
+ 51e:	71fb      	strb	r3, [r7, #7]
   return(( (INT32U)antal_databits - 5 ) << 5 );  // Control bit 5-6, WLEN
- 518:	79fb      	ldrb	r3, [r7, #7]
- 51a:	3b05      	subs	r3, #5
- 51c:	015b      	lsls	r3, r3, #5
+ 520:	79fb      	ldrb	r3, [r7, #7]
+ 522:	3b05      	subs	r3, #5
+ 524:	015b      	lsls	r3, r3, #5
 }
- 51e:	4618      	mov	r0, r3
- 520:	370c      	adds	r7, #12
- 522:	46bd      	mov	sp, r7
- 524:	f85d 7b04 	ldr.w	r7, [sp], #4
- 528:	4770      	bx	lr
+ 526:	4618      	mov	r0, r3
+ 528:	370c      	adds	r7, #12
+ 52a:	46bd      	mov	sp, r7
+ 52c:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 530:	4770      	bx	lr
 
-0000052a <lcrh_stopbits>:
+00000532 <lcrh_stopbits>:
 *   Function : sets bit 3 according to the wanted number of stop bits.
 *   		    1 stpobit:  bit3 = 0 (default).
 *   		    2 stopbits: bit3 = 1.
 *   		   all other bits are returned = 0
 ******************************************************************************/
 {
- 52a:	b480      	push	{r7}
- 52c:	b083      	sub	sp, #12
- 52e:	af00      	add	r7, sp, #0
- 530:	4603      	mov	r3, r0
- 532:	71fb      	strb	r3, [r7, #7]
+ 532:	b480      	push	{r7}
+ 534:	b083      	sub	sp, #12
+ 536:	af00      	add	r7, sp, #0
+ 538:	4603      	mov	r3, r0
+ 53a:	71fb      	strb	r3, [r7, #7]
   if( antal_stopbits == 2 )
- 534:	79fb      	ldrb	r3, [r7, #7]
- 536:	2b02      	cmp	r3, #2
- 538:	d101      	bne.n	53e <lcrh_stopbits+0x14>
+ 53c:	79fb      	ldrb	r3, [r7, #7]
+ 53e:	2b02      	cmp	r3, #2
+ 540:	d101      	bne.n	546 <lcrh_stopbits+0x14>
     return( 0x00000008 );  		// return bit 3 = 1
- 53a:	2308      	movs	r3, #8
- 53c:	e000      	b.n	540 <lcrh_stopbits+0x16>
+ 542:	2308      	movs	r3, #8
+ 544:	e000      	b.n	548 <lcrh_stopbits+0x16>
   else
 	return( 0x00000000 );		// return all zeros
- 53e:	2300      	movs	r3, #0
+ 546:	2300      	movs	r3, #0
 }
- 540:	4618      	mov	r0, r3
- 542:	370c      	adds	r7, #12
- 544:	46bd      	mov	sp, r7
- 546:	f85d 7b04 	ldr.w	r7, [sp], #4
- 54a:	4770      	bx	lr
+ 548:	4618      	mov	r0, r3
+ 54a:	370c      	adds	r7, #12
+ 54c:	46bd      	mov	sp, r7
+ 54e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 552:	4770      	bx	lr
 
-0000054c <lcrh_parity>:
+00000554 <lcrh_parity>:
 *   		    '0':  10000110b.
 *   		    '1':  10000010b.
 *   		    'n':  00000000b.
 *   		   all other bits are returned = 0
 ******************************************************************************/
 {
- 54c:	b480      	push	{r7}
- 54e:	b085      	sub	sp, #20
- 550:	af00      	add	r7, sp, #0
- 552:	4603      	mov	r3, r0
- 554:	71fb      	strb	r3, [r7, #7]
+ 554:	b480      	push	{r7}
+ 556:	b085      	sub	sp, #20
+ 558:	af00      	add	r7, sp, #0
+ 55a:	4603      	mov	r3, r0
+ 55c:	71fb      	strb	r3, [r7, #7]
   INT32U result;
 
   switch( parity )
- 556:	79fb      	ldrb	r3, [r7, #7]
- 558:	2b6f      	cmp	r3, #111	; 0x6f
- 55a:	d00d      	beq.n	578 <lcrh_parity+0x2c>
- 55c:	2b6f      	cmp	r3, #111	; 0x6f
- 55e:	dc14      	bgt.n	58a <lcrh_parity+0x3e>
- 560:	2b65      	cmp	r3, #101	; 0x65
- 562:	d006      	beq.n	572 <lcrh_parity+0x26>
- 564:	2b65      	cmp	r3, #101	; 0x65
- 566:	dc10      	bgt.n	58a <lcrh_parity+0x3e>
- 568:	2b30      	cmp	r3, #48	; 0x30
- 56a:	d008      	beq.n	57e <lcrh_parity+0x32>
- 56c:	2b31      	cmp	r3, #49	; 0x31
- 56e:	d009      	beq.n	584 <lcrh_parity+0x38>
- 570:	e00b      	b.n	58a <lcrh_parity+0x3e>
+ 55e:	79fb      	ldrb	r3, [r7, #7]
+ 560:	2b6f      	cmp	r3, #111	; 0x6f
+ 562:	d00d      	beq.n	580 <lcrh_parity+0x2c>
+ 564:	2b6f      	cmp	r3, #111	; 0x6f
+ 566:	dc14      	bgt.n	592 <lcrh_parity+0x3e>
+ 568:	2b65      	cmp	r3, #101	; 0x65
+ 56a:	d006      	beq.n	57a <lcrh_parity+0x26>
+ 56c:	2b65      	cmp	r3, #101	; 0x65
+ 56e:	dc10      	bgt.n	592 <lcrh_parity+0x3e>
+ 570:	2b30      	cmp	r3, #48	; 0x30
+ 572:	d008      	beq.n	586 <lcrh_parity+0x32>
+ 574:	2b31      	cmp	r3, #49	; 0x31
+ 576:	d009      	beq.n	58c <lcrh_parity+0x38>
+ 578:	e00b      	b.n	592 <lcrh_parity+0x3e>
   {
     case 'e':
       result = 0x00000006;
- 572:	2306      	movs	r3, #6
- 574:	60fb      	str	r3, [r7, #12]
+ 57a:	2306      	movs	r3, #6
+ 57c:	60fb      	str	r3, [r7, #12]
       break;
- 576:	e00a      	b.n	58e <lcrh_parity+0x42>
+ 57e:	e00a      	b.n	596 <lcrh_parity+0x42>
     case 'o':
       result = 0x00000002;
- 578:	2302      	movs	r3, #2
- 57a:	60fb      	str	r3, [r7, #12]
+ 580:	2302      	movs	r3, #2
+ 582:	60fb      	str	r3, [r7, #12]
       break;
- 57c:	e007      	b.n	58e <lcrh_parity+0x42>
+ 584:	e007      	b.n	596 <lcrh_parity+0x42>
     case '0':
       result = 0x00000086;
- 57e:	2386      	movs	r3, #134	; 0x86
- 580:	60fb      	str	r3, [r7, #12]
+ 586:	2386      	movs	r3, #134	; 0x86
+ 588:	60fb      	str	r3, [r7, #12]
       break;
- 582:	e004      	b.n	58e <lcrh_parity+0x42>
+ 58a:	e004      	b.n	596 <lcrh_parity+0x42>
     case '1':
       result = 0x00000082;
- 584:	2382      	movs	r3, #130	; 0x82
- 586:	60fb      	str	r3, [r7, #12]
+ 58c:	2382      	movs	r3, #130	; 0x82
+ 58e:	60fb      	str	r3, [r7, #12]
       break;
- 588:	e001      	b.n	58e <lcrh_parity+0x42>
+ 590:	e001      	b.n	596 <lcrh_parity+0x42>
     case 'n':
     default:
       result = 0x00000000;
- 58a:	2300      	movs	r3, #0
- 58c:	60fb      	str	r3, [r7, #12]
+ 592:	2300      	movs	r3, #0
+ 594:	60fb      	str	r3, [r7, #12]
   }
   return( result );
- 58e:	68fb      	ldr	r3, [r7, #12]
+ 596:	68fb      	ldr	r3, [r7, #12]
 }
- 590:	4618      	mov	r0, r3
- 592:	3714      	adds	r7, #20
- 594:	46bd      	mov	sp, r7
- 596:	f85d 7b04 	ldr.w	r7, [sp], #4
- 59a:	4770      	bx	lr
+ 598:	4618      	mov	r0, r3
+ 59a:	3714      	adds	r7, #20
+ 59c:	46bd      	mov	sp, r7
+ 59e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5a2:	4770      	bx	lr
 
-0000059c <uart0_fifos_disable>:
+000005a4 <uart0_fifos_disable>:
 /*****************************************************************************
 *   Input    :
 *   Output   :
 *   Function : Enable the tx and rx fifos
 ******************************************************************************/
 {
- 59c:	b480      	push	{r7}
- 59e:	af00      	add	r7, sp, #0
+ 5a4:	b480      	push	{r7}
+ 5a6:	af00      	add	r7, sp, #0
   UART0_LCRH_R  &= 0xFFFFFFEF;
- 5a0:	4b05      	ldr	r3, [pc, #20]	; (5b8 <uart0_fifos_disable+0x1c>)
- 5a2:	681b      	ldr	r3, [r3, #0]
- 5a4:	4a04      	ldr	r2, [pc, #16]	; (5b8 <uart0_fifos_disable+0x1c>)
- 5a6:	f023 0310 	bic.w	r3, r3, #16
- 5aa:	6013      	str	r3, [r2, #0]
+ 5a8:	4b05      	ldr	r3, [pc, #20]	; (5c0 <uart0_fifos_disable+0x1c>)
+ 5aa:	681b      	ldr	r3, [r3, #0]
+ 5ac:	4a04      	ldr	r2, [pc, #16]	; (5c0 <uart0_fifos_disable+0x1c>)
+ 5ae:	f023 0310 	bic.w	r3, r3, #16
+ 5b2:	6013      	str	r3, [r2, #0]
 }
- 5ac:	bf00      	nop
- 5ae:	46bd      	mov	sp, r7
- 5b0:	f85d 7b04 	ldr.w	r7, [sp], #4
- 5b4:	4770      	bx	lr
- 5b6:	bf00      	nop
- 5b8:	4000c02c 	.word	0x4000c02c
+ 5b4:	bf00      	nop
+ 5b6:	46bd      	mov	sp, r7
+ 5b8:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5bc:	4770      	bx	lr
+ 5be:	bf00      	nop
+ 5c0:	4000c02c 	.word	0x4000c02c
 
-000005bc <uart0_tx_rdy>:
+000005c4 <uart0_tx_rdy>:
 
 extern BOOLEAN uart0_tx_rdy()
 /*****************************************************************************
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
- 5bc:	b480      	push	{r7}
- 5be:	af00      	add	r7, sp, #0
+ 5c4:	b480      	push	{r7}
+ 5c6:	af00      	add	r7, sp, #0
   return( UART0_FR_R & UART_FR_TXFE );
- 5c0:	4b05      	ldr	r3, [pc, #20]	; (5d8 <uart0_tx_rdy+0x1c>)
- 5c2:	681b      	ldr	r3, [r3, #0]
- 5c4:	b2db      	uxtb	r3, r3
- 5c6:	f023 037f 	bic.w	r3, r3, #127	; 0x7f
- 5ca:	b2db      	uxtb	r3, r3
+ 5c8:	4b05      	ldr	r3, [pc, #20]	; (5e0 <uart0_tx_rdy+0x1c>)
+ 5ca:	681b      	ldr	r3, [r3, #0]
+ 5cc:	b2db      	uxtb	r3, r3
+ 5ce:	f023 037f 	bic.w	r3, r3, #127	; 0x7f
+ 5d2:	b2db      	uxtb	r3, r3
 }
- 5cc:	4618      	mov	r0, r3
- 5ce:	46bd      	mov	sp, r7
- 5d0:	f85d 7b04 	ldr.w	r7, [sp], #4
- 5d4:	4770      	bx	lr
- 5d6:	bf00      	nop
- 5d8:	4000c018 	.word	0x4000c018
+ 5d4:	4618      	mov	r0, r3
+ 5d6:	46bd      	mov	sp, r7
+ 5d8:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5dc:	4770      	bx	lr
+ 5de:	bf00      	nop
+ 5e0:	4000c018 	.word	0x4000c018
 
-000005dc <uart0_putc>:
+000005e4 <uart0_putc>:
 
 extern void uart0_putc( INT8U ch )
 /*****************************************************************************
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
- 5dc:	b480      	push	{r7}
- 5de:	b083      	sub	sp, #12
- 5e0:	af00      	add	r7, sp, #0
- 5e2:	4603      	mov	r3, r0
- 5e4:	71fb      	strb	r3, [r7, #7]
+ 5e4:	b480      	push	{r7}
+ 5e6:	b083      	sub	sp, #12
+ 5e8:	af00      	add	r7, sp, #0
+ 5ea:	4603      	mov	r3, r0
+ 5ec:	71fb      	strb	r3, [r7, #7]
   UART0_DR_R = ch;
- 5e6:	4a04      	ldr	r2, [pc, #16]	; (5f8 <uart0_putc+0x1c>)
- 5e8:	79fb      	ldrb	r3, [r7, #7]
- 5ea:	6013      	str	r3, [r2, #0]
+ 5ee:	4a04      	ldr	r2, [pc, #16]	; (600 <uart0_putc+0x1c>)
+ 5f0:	79fb      	ldrb	r3, [r7, #7]
+ 5f2:	6013      	str	r3, [r2, #0]
 }
- 5ec:	bf00      	nop
- 5ee:	370c      	adds	r7, #12
- 5f0:	46bd      	mov	sp, r7
- 5f2:	f85d 7b04 	ldr.w	r7, [sp], #4
- 5f6:	4770      	bx	lr
- 5f8:	4000c000 	.word	0x4000c000
+ 5f4:	bf00      	nop
+ 5f6:	370c      	adds	r7, #12
+ 5f8:	46bd      	mov	sp, r7
+ 5fa:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 5fe:	4770      	bx	lr
+ 600:	4000c000 	.word	0x4000c000
 
-000005fc <uart0_init>:
+00000604 <uart0_init>:
 
 extern void uart0_init( INT32U baud_rate, INT8U databits, INT8U stopbits, INT8U parity )
 /*****************************************************************************
 *   Function : See module specification (.h-file).
 *****************************************************************************/
 {
- 5fc:	b590      	push	{r4, r7, lr}
- 5fe:	b085      	sub	sp, #20
- 600:	af00      	add	r7, sp, #0
- 602:	6078      	str	r0, [r7, #4]
- 604:	4608      	mov	r0, r1
- 606:	4611      	mov	r1, r2
- 608:	461a      	mov	r2, r3
- 60a:	4603      	mov	r3, r0
- 60c:	70fb      	strb	r3, [r7, #3]
- 60e:	460b      	mov	r3, r1
- 610:	70bb      	strb	r3, [r7, #2]
- 612:	4613      	mov	r3, r2
- 614:	707b      	strb	r3, [r7, #1]
+ 604:	b590      	push	{r4, r7, lr}
+ 606:	b085      	sub	sp, #20
+ 608:	af00      	add	r7, sp, #0
+ 60a:	6078      	str	r0, [r7, #4]
+ 60c:	4608      	mov	r0, r1
+ 60e:	4611      	mov	r1, r2
+ 610:	461a      	mov	r2, r3
+ 612:	4603      	mov	r3, r0
+ 614:	70fb      	strb	r3, [r7, #3]
+ 616:	460b      	mov	r3, r1
+ 618:	70bb      	strb	r3, [r7, #2]
+ 61a:	4613      	mov	r3, r2
+ 61c:	707b      	strb	r3, [r7, #1]
   INT32U BRD;
 
   #ifndef E_PORTA
   #define E_PORTA
   SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOA;					// Enable clock for Port A
- 616:	4b2d      	ldr	r3, [pc, #180]	; (6cc <uart0_init+0xd0>)
- 618:	681b      	ldr	r3, [r3, #0]
- 61a:	4a2c      	ldr	r2, [pc, #176]	; (6cc <uart0_init+0xd0>)
- 61c:	f043 0301 	orr.w	r3, r3, #1
- 620:	6013      	str	r3, [r2, #0]
+ 61e:	4b2d      	ldr	r3, [pc, #180]	; (6d4 <uart0_init+0xd0>)
+ 620:	681b      	ldr	r3, [r3, #0]
+ 622:	4a2c      	ldr	r2, [pc, #176]	; (6d4 <uart0_init+0xd0>)
+ 624:	f043 0301 	orr.w	r3, r3, #1
+ 628:	6013      	str	r3, [r2, #0]
   #endif
 
   #ifndef E_UART0
   #define E_UART0
   SYSCTL_RCGC1_R |= SYSCTL_RCGC1_UART0;					// Enable clock for UART 0
- 622:	4b2b      	ldr	r3, [pc, #172]	; (6d0 <uart0_init+0xd4>)
- 624:	681b      	ldr	r3, [r3, #0]
- 626:	4a2a      	ldr	r2, [pc, #168]	; (6d0 <uart0_init+0xd4>)
- 628:	f043 0301 	orr.w	r3, r3, #1
- 62c:	6013      	str	r3, [r2, #0]
+ 62a:	4b2b      	ldr	r3, [pc, #172]	; (6d8 <uart0_init+0xd4>)
+ 62c:	681b      	ldr	r3, [r3, #0]
+ 62e:	4a2a      	ldr	r2, [pc, #168]	; (6d8 <uart0_init+0xd4>)
+ 630:	f043 0301 	orr.w	r3, r3, #1
+ 634:	6013      	str	r3, [r2, #0]
   #endif
 
   GPIO_PORTA_AFSEL_R |= 0x00000003;		// set PA0 og PA1 to alternativ function (uart0)
- 62e:	4b29      	ldr	r3, [pc, #164]	; (6d4 <uart0_init+0xd8>)
- 630:	681b      	ldr	r3, [r3, #0]
- 632:	4a28      	ldr	r2, [pc, #160]	; (6d4 <uart0_init+0xd8>)
- 634:	f043 0303 	orr.w	r3, r3, #3
- 638:	6013      	str	r3, [r2, #0]
+ 636:	4b29      	ldr	r3, [pc, #164]	; (6dc <uart0_init+0xd8>)
+ 638:	681b      	ldr	r3, [r3, #0]
+ 63a:	4a28      	ldr	r2, [pc, #160]	; (6dc <uart0_init+0xd8>)
+ 63c:	f043 0303 	orr.w	r3, r3, #3
+ 640:	6013      	str	r3, [r2, #0]
   GPIO_PORTA_DIR_R   |= 0x00000002;     // set PA1 (uart0 tx) to output
- 63a:	4b27      	ldr	r3, [pc, #156]	; (6d8 <uart0_init+0xdc>)
- 63c:	681b      	ldr	r3, [r3, #0]
- 63e:	4a26      	ldr	r2, [pc, #152]	; (6d8 <uart0_init+0xdc>)
- 640:	f043 0302 	orr.w	r3, r3, #2
- 644:	6013      	str	r3, [r2, #0]
+ 642:	4b27      	ldr	r3, [pc, #156]	; (6e0 <uart0_init+0xdc>)
+ 644:	681b      	ldr	r3, [r3, #0]
+ 646:	4a26      	ldr	r2, [pc, #152]	; (6e0 <uart0_init+0xdc>)
+ 648:	f043 0302 	orr.w	r3, r3, #2
+ 64c:	6013      	str	r3, [r2, #0]
   GPIO_PORTA_DIR_R   &= 0xFFFFFFFE;     // set PA0 (uart0 rx) to input
- 646:	4b24      	ldr	r3, [pc, #144]	; (6d8 <uart0_init+0xdc>)
- 648:	681b      	ldr	r3, [r3, #0]
- 64a:	4a23      	ldr	r2, [pc, #140]	; (6d8 <uart0_init+0xdc>)
- 64c:	f023 0301 	bic.w	r3, r3, #1
- 650:	6013      	str	r3, [r2, #0]
+ 64e:	4b24      	ldr	r3, [pc, #144]	; (6e0 <uart0_init+0xdc>)
+ 650:	681b      	ldr	r3, [r3, #0]
+ 652:	4a23      	ldr	r2, [pc, #140]	; (6e0 <uart0_init+0xdc>)
+ 654:	f023 0301 	bic.w	r3, r3, #1
+ 658:	6013      	str	r3, [r2, #0]
   GPIO_PORTA_DEN_R   |= 0x00000003;		// enable digital operation of PA0 and PA1
- 652:	4b22      	ldr	r3, [pc, #136]	; (6dc <uart0_init+0xe0>)
- 654:	681b      	ldr	r3, [r3, #0]
- 656:	4a21      	ldr	r2, [pc, #132]	; (6dc <uart0_init+0xe0>)
- 658:	f043 0303 	orr.w	r3, r3, #3
- 65c:	6013      	str	r3, [r2, #0]
+ 65a:	4b22      	ldr	r3, [pc, #136]	; (6e4 <uart0_init+0xe0>)
+ 65c:	681b      	ldr	r3, [r3, #0]
+ 65e:	4a21      	ldr	r2, [pc, #132]	; (6e4 <uart0_init+0xe0>)
+ 660:	f043 0303 	orr.w	r3, r3, #3
+ 664:	6013      	str	r3, [r2, #0]
   //GPIO_PORTA_PUR_R   |= 0x00000002;
 
   BRD = 64000000 / baud_rate;   	// X-sys*64/(16*baudrate) = 16M*4/baudrate
- 65e:	4a20      	ldr	r2, [pc, #128]	; (6e0 <uart0_init+0xe4>)
- 660:	687b      	ldr	r3, [r7, #4]
- 662:	fbb2 f3f3 	udiv	r3, r2, r3
- 666:	60fb      	str	r3, [r7, #12]
+ 666:	4a20      	ldr	r2, [pc, #128]	; (6e8 <uart0_init+0xe4>)
+ 668:	687b      	ldr	r3, [r7, #4]
+ 66a:	fbb2 f3f3 	udiv	r3, r2, r3
+ 66e:	60fb      	str	r3, [r7, #12]
   UART0_IBRD_R = BRD / 64;
- 668:	4a1e      	ldr	r2, [pc, #120]	; (6e4 <uart0_init+0xe8>)
- 66a:	68fb      	ldr	r3, [r7, #12]
- 66c:	099b      	lsrs	r3, r3, #6
- 66e:	6013      	str	r3, [r2, #0]
-  UART0_FBRD_R = BRD & 0x0000003F;
- 670:	4a1d      	ldr	r2, [pc, #116]	; (6e8 <uart0_init+0xec>)
+ 670:	4a1e      	ldr	r2, [pc, #120]	; (6ec <uart0_init+0xe8>)
  672:	68fb      	ldr	r3, [r7, #12]
- 674:	f003 033f 	and.w	r3, r3, #63	; 0x3f
- 678:	6013      	str	r3, [r2, #0]
+ 674:	099b      	lsrs	r3, r3, #6
+ 676:	6013      	str	r3, [r2, #0]
+  UART0_FBRD_R = BRD & 0x0000003F;
+ 678:	4a1d      	ldr	r2, [pc, #116]	; (6f0 <uart0_init+0xec>)
+ 67a:	68fb      	ldr	r3, [r7, #12]
+ 67c:	f003 033f 	and.w	r3, r3, #63	; 0x3f
+ 680:	6013      	str	r3, [r2, #0]
 
   UART0_LCRH_R  = lcrh_databits( databits );
- 67a:	4c1c      	ldr	r4, [pc, #112]	; (6ec <uart0_init+0xf0>)
- 67c:	78fb      	ldrb	r3, [r7, #3]
- 67e:	4618      	mov	r0, r3
- 680:	f7ff ff3d 	bl	4fe <lcrh_databits>
- 684:	4603      	mov	r3, r0
- 686:	6023      	str	r3, [r4, #0]
+ 682:	4c1c      	ldr	r4, [pc, #112]	; (6f4 <uart0_init+0xf0>)
+ 684:	78fb      	ldrb	r3, [r7, #3]
+ 686:	4618      	mov	r0, r3
+ 688:	f7ff ff3d 	bl	506 <lcrh_databits>
+ 68c:	4603      	mov	r3, r0
+ 68e:	6023      	str	r3, [r4, #0]
   UART0_LCRH_R += lcrh_stopbits( stopbits );
- 688:	78bb      	ldrb	r3, [r7, #2]
- 68a:	4618      	mov	r0, r3
- 68c:	f7ff ff4d 	bl	52a <lcrh_stopbits>
- 690:	4602      	mov	r2, r0
- 692:	4b16      	ldr	r3, [pc, #88]	; (6ec <uart0_init+0xf0>)
- 694:	681b      	ldr	r3, [r3, #0]
- 696:	4915      	ldr	r1, [pc, #84]	; (6ec <uart0_init+0xf0>)
- 698:	4413      	add	r3, r2
- 69a:	600b      	str	r3, [r1, #0]
+ 690:	78bb      	ldrb	r3, [r7, #2]
+ 692:	4618      	mov	r0, r3
+ 694:	f7ff ff4d 	bl	532 <lcrh_stopbits>
+ 698:	4602      	mov	r2, r0
+ 69a:	4b16      	ldr	r3, [pc, #88]	; (6f4 <uart0_init+0xf0>)
+ 69c:	681b      	ldr	r3, [r3, #0]
+ 69e:	4915      	ldr	r1, [pc, #84]	; (6f4 <uart0_init+0xf0>)
+ 6a0:	4413      	add	r3, r2
+ 6a2:	600b      	str	r3, [r1, #0]
   UART0_LCRH_R += lcrh_parity( parity );
- 69c:	787b      	ldrb	r3, [r7, #1]
- 69e:	4618      	mov	r0, r3
- 6a0:	f7ff ff54 	bl	54c <lcrh_parity>
- 6a4:	4602      	mov	r2, r0
- 6a6:	4b11      	ldr	r3, [pc, #68]	; (6ec <uart0_init+0xf0>)
- 6a8:	681b      	ldr	r3, [r3, #0]
- 6aa:	4910      	ldr	r1, [pc, #64]	; (6ec <uart0_init+0xf0>)
- 6ac:	4413      	add	r3, r2
- 6ae:	600b      	str	r3, [r1, #0]
+ 6a4:	787b      	ldrb	r3, [r7, #1]
+ 6a6:	4618      	mov	r0, r3
+ 6a8:	f7ff ff54 	bl	554 <lcrh_parity>
+ 6ac:	4602      	mov	r2, r0
+ 6ae:	4b11      	ldr	r3, [pc, #68]	; (6f4 <uart0_init+0xf0>)
+ 6b0:	681b      	ldr	r3, [r3, #0]
+ 6b2:	4910      	ldr	r1, [pc, #64]	; (6f4 <uart0_init+0xf0>)
+ 6b4:	4413      	add	r3, r2
+ 6b6:	600b      	str	r3, [r1, #0]
 
   uart0_fifos_disable();
- 6b0:	f7ff ff74 	bl	59c <uart0_fifos_disable>
+ 6b8:	f7ff ff74 	bl	5a4 <uart0_fifos_disable>
 
   UART0_CTL_R  |= (UART_CTL_UARTEN | UART_CTL_TXE );  // Enable UART
- 6b4:	4b0e      	ldr	r3, [pc, #56]	; (6f0 <uart0_init+0xf4>)
- 6b6:	681b      	ldr	r3, [r3, #0]
- 6b8:	4a0d      	ldr	r2, [pc, #52]	; (6f0 <uart0_init+0xf4>)
- 6ba:	f443 7380 	orr.w	r3, r3, #256	; 0x100
- 6be:	f043 0301 	orr.w	r3, r3, #1
- 6c2:	6013      	str	r3, [r2, #0]
+ 6bc:	4b0e      	ldr	r3, [pc, #56]	; (6f8 <uart0_init+0xf4>)
+ 6be:	681b      	ldr	r3, [r3, #0]
+ 6c0:	4a0d      	ldr	r2, [pc, #52]	; (6f8 <uart0_init+0xf4>)
+ 6c2:	f443 7380 	orr.w	r3, r3, #256	; 0x100
+ 6c6:	f043 0301 	orr.w	r3, r3, #1
+ 6ca:	6013      	str	r3, [r2, #0]
 }
- 6c4:	bf00      	nop
- 6c6:	3714      	adds	r7, #20
- 6c8:	46bd      	mov	sp, r7
- 6ca:	bd90      	pop	{r4, r7, pc}
- 6cc:	400fe108 	.word	0x400fe108
- 6d0:	400fe104 	.word	0x400fe104
- 6d4:	40004420 	.word	0x40004420
- 6d8:	40004400 	.word	0x40004400
- 6dc:	4000451c 	.word	0x4000451c
- 6e0:	03d09000 	.word	0x03d09000
- 6e4:	4000c024 	.word	0x4000c024
- 6e8:	4000c028 	.word	0x4000c028
- 6ec:	4000c02c 	.word	0x4000c02c
- 6f0:	4000c030 	.word	0x4000c030
+ 6cc:	bf00      	nop
+ 6ce:	3714      	adds	r7, #20
+ 6d0:	46bd      	mov	sp, r7
+ 6d2:	bd90      	pop	{r4, r7, pc}
+ 6d4:	400fe108 	.word	0x400fe108
+ 6d8:	400fe104 	.word	0x400fe104
+ 6dc:	40004420 	.word	0x40004420
+ 6e0:	40004400 	.word	0x40004400
+ 6e4:	4000451c 	.word	0x4000451c
+ 6e8:	03d09000 	.word	0x03d09000
+ 6ec:	4000c024 	.word	0x4000c024
+ 6f0:	4000c028 	.word	0x4000c028
+ 6f4:	4000c02c 	.word	0x4000c02c
+ 6f8:	4000c030 	.word	0x4000c030
 
-000006f4 <uart_putc>:
+000006fc <uart_putc>:
 #include "uart0.h"
 
 void uart_putc(char ch) {
- 6f4:	b580      	push	{r7, lr}
- 6f6:	b082      	sub	sp, #8
- 6f8:	af00      	add	r7, sp, #0
- 6fa:	4603      	mov	r3, r0
- 6fc:	71fb      	strb	r3, [r7, #7]
+ 6fc:	b580      	push	{r7, lr}
+ 6fe:	b082      	sub	sp, #8
+ 700:	af00      	add	r7, sp, #0
+ 702:	4603      	mov	r3, r0
+ 704:	71fb      	strb	r3, [r7, #7]
     while(!uart0_tx_rdy());
- 6fe:	bf00      	nop
- 700:	f7ff ff5c 	bl	5bc <uart0_tx_rdy>
- 704:	4603      	mov	r3, r0
- 706:	2b00      	cmp	r3, #0
- 708:	d0fa      	beq.n	700 <uart_putc+0xc>
+ 706:	bf00      	nop
+ 708:	f7ff ff5c 	bl	5c4 <uart0_tx_rdy>
+ 70c:	4603      	mov	r3, r0
+ 70e:	2b00      	cmp	r3, #0
+ 710:	d0fa      	beq.n	708 <uart_putc+0xc>
     uart0_putc(ch);
- 70a:	79fb      	ldrb	r3, [r7, #7]
- 70c:	4618      	mov	r0, r3
- 70e:	f7ff ff65 	bl	5dc <uart0_putc>
+ 712:	79fb      	ldrb	r3, [r7, #7]
+ 714:	4618      	mov	r0, r3
+ 716:	f7ff ff65 	bl	5e4 <uart0_putc>
 }
- 712:	bf00      	nop
- 714:	3708      	adds	r7, #8
- 716:	46bd      	mov	sp, r7
- 718:	bd80      	pop	{r7, pc}
+ 71a:	bf00      	nop
+ 71c:	3708      	adds	r7, #8
+ 71e:	46bd      	mov	sp, r7
+ 720:	bd80      	pop	{r7, pc}
 
-0000071a <uart_init>:
+00000722 <uart_init>:
     *buffer_pointer = '\0';
 
     return buffer;
 }
 
 void uart_init() {
- 71a:	b580      	push	{r7, lr}
- 71c:	af00      	add	r7, sp, #0
+ 722:	b580      	push	{r7, lr}
+ 724:	af00      	add	r7, sp, #0
     uart0_init(9600, 8, 0, 0);
- 71e:	2300      	movs	r3, #0
- 720:	2200      	movs	r2, #0
- 722:	2108      	movs	r1, #8
- 724:	f44f 5016 	mov.w	r0, #9600	; 0x2580
- 728:	f7ff ff68 	bl	5fc <uart0_init>
+ 726:	2300      	movs	r3, #0
+ 728:	2200      	movs	r2, #0
+ 72a:	2108      	movs	r1, #8
+ 72c:	f44f 5016 	mov.w	r0, #9600	; 0x2580
+ 730:	f7ff ff68 	bl	604 <uart0_init>
 }
- 72c:	bf00      	nop
- 72e:	bd80      	pop	{r7, pc}
+ 734:	bf00      	nop
+ 736:	bd80      	pop	{r7, pc}
 
-00000730 <uart_put_string>:
+00000738 <uart_put_string>:
 
 void uart_put_string(char* str) {
- 730:	b580      	push	{r7, lr}
- 732:	b082      	sub	sp, #8
- 734:	af00      	add	r7, sp, #0
- 736:	6078      	str	r0, [r7, #4]
+ 738:	b580      	push	{r7, lr}
+ 73a:	b082      	sub	sp, #8
+ 73c:	af00      	add	r7, sp, #0
+ 73e:	6078      	str	r0, [r7, #4]
     while(*str) uart_putc(*str++);
- 738:	e006      	b.n	748 <uart_put_string+0x18>
- 73a:	687b      	ldr	r3, [r7, #4]
- 73c:	1c5a      	adds	r2, r3, #1
- 73e:	607a      	str	r2, [r7, #4]
- 740:	781b      	ldrb	r3, [r3, #0]
- 742:	4618      	mov	r0, r3
- 744:	f7ff ffd6 	bl	6f4 <uart_putc>
- 748:	687b      	ldr	r3, [r7, #4]
- 74a:	781b      	ldrb	r3, [r3, #0]
- 74c:	2b00      	cmp	r3, #0
- 74e:	d1f4      	bne.n	73a <uart_put_string+0xa>
+ 740:	e006      	b.n	750 <uart_put_string+0x18>
+ 742:	687b      	ldr	r3, [r7, #4]
+ 744:	1c5a      	adds	r2, r3, #1
+ 746:	607a      	str	r2, [r7, #4]
+ 748:	781b      	ldrb	r3, [r3, #0]
+ 74a:	4618      	mov	r0, r3
+ 74c:	f7ff ffd6 	bl	6fc <uart_putc>
+ 750:	687b      	ldr	r3, [r7, #4]
+ 752:	781b      	ldrb	r3, [r3, #0]
+ 754:	2b00      	cmp	r3, #0
+ 756:	d1f4      	bne.n	742 <uart_put_string+0xa>
 }
- 750:	bf00      	nop
- 752:	bf00      	nop
- 754:	3708      	adds	r7, #8
- 756:	46bd      	mov	sp, r7
- 758:	bd80      	pop	{r7, pc}
+ 758:	bf00      	nop
+ 75a:	bf00      	nop
+ 75c:	3708      	adds	r7, #8
+ 75e:	46bd      	mov	sp, r7
+ 760:	bd80      	pop	{r7, pc}
 
-0000075a <uart_put_stringln>:
+00000762 <uart_put_stringln>:
 
 void uart_put_stringln(char* str) {
- 75a:	b580      	push	{r7, lr}
- 75c:	b082      	sub	sp, #8
- 75e:	af00      	add	r7, sp, #0
- 760:	6078      	str	r0, [r7, #4]
+ 762:	b580      	push	{r7, lr}
+ 764:	b082      	sub	sp, #8
+ 766:	af00      	add	r7, sp, #0
+ 768:	6078      	str	r0, [r7, #4]
     uart_put_string(str);
- 762:	6878      	ldr	r0, [r7, #4]
- 764:	f7ff ffe4 	bl	730 <uart_put_string>
+ 76a:	6878      	ldr	r0, [r7, #4]
+ 76c:	f7ff ffe4 	bl	738 <uart_put_string>
     uart_putc('\n');
- 768:	200a      	movs	r0, #10
- 76a:	f7ff ffc3 	bl	6f4 <uart_putc>
+ 770:	200a      	movs	r0, #10
+ 772:	f7ff ffc3 	bl	6fc <uart_putc>
 }
- 76e:	bf00      	nop
- 770:	3708      	adds	r7, #8
- 772:	46bd      	mov	sp, r7
- 774:	bd80      	pop	{r7, pc}
- 776:	0000      	movs	r0, r0
- 778:	72617453 	.word	0x72617453
- 77c:	676e6974 	.word	0x676e6974
- 780:	002e2e2e 	.word	0x002e2e2e
+ 776:	bf00      	nop
+ 778:	3708      	adds	r7, #8
+ 77a:	46bd      	mov	sp, r7
+ 77c:	bd80      	pop	{r7, pc}
+ 77e:	0000      	movs	r0, r0
+ 780:	72617453 	.word	0x72617453
+ 784:	676e6974 	.word	0x676e6974
+ 788:	002e2e2e 	.word	0x002e2e2e
