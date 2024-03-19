@@ -5,12 +5,12 @@
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
 
-INT32U get_adc()
-{
-    INT16U ADC0 = ADC0_SSFIFO3_R;
-    INT16U ADC1 = ADC1_SSFIFO3_R;
-    INT32U output = (ADC0 << 16) | ADC1;
-    return(output);
+INT16U get_adc0() {
+    return ADC0_SSFIFO3_R;
+}
+
+INT16U get_adc1() {
+    return ADC1_SSFIFO3_R;
 }
 
 init_adc()

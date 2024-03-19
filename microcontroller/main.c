@@ -1,33 +1,33 @@
 #include "emp_type.h"
 #include "gpio.h"
 #include "uart.h"
-#include "adc.h"
+#include "joystick.h"
 
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
 
 void setup() {
     setupPortF();
-    setLEDColor(GREEN);
+    setLEDColor(RED);
     uart_init();
-    init_adc();
+    init_joystick();
 }
 
 int main(void) {
     setup();
     uart_put_stringln("Starting...");
-    setLEDColor(BLUE);
+    setLEDColor(OFF);
+
+    struct Joystick stick = {0};
 
     while (69) {
-        INT32U input = get_adc();
 
-        INT16U adc0 = input >> 16;
-        INT16U adc1 = input & 0x0000FFFF;
+        update_joystick(&stick);
 
-        char adc0_high = adc0 >> 8;
-        char adc1_high = adc1 >> 8;
+        char x_high = stick.x >> 8;
+        char y_high = stick.y >> 8;
 
-        uart_putc(adc0_high << 4 | adc1_high);
+        uart_putc(x_high << 4 | y_high);
     }
 
     return (0);
