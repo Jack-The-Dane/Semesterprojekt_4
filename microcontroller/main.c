@@ -19,11 +19,15 @@ int main(void) {
     setLEDColor(BLUE);
 
     while (69) {
-        INT16U input = get_adc();
-        char high_byte = input >> 8;
-        char low_byte = input & 0x00FF;
-        uart_putc(high_byte);
-        //uart_putc(low_byte);
+        INT32U input = get_adc();
+
+        INT16U adc0 = input >> 16;
+        INT16U adc1 = input & 0x00FF;
+
+        char adc0_high = adc0 >> 8;
+        char adc1_high = adc1 >> 8;
+
+        uart_putc(adc0_high << 4 | adc1_high);
     }
 
     return (0);
