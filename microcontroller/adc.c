@@ -5,14 +5,20 @@
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
 
-INT16U get_adc()
+INT32U get_adc()
 {
-  return( ADC0_SSFIFO3_R );
+    INT16U ADC0 = ADC0_SSFIFO3_R;
+    INT16U ADC1 = ADC1_SSFIFO3_R;
+    INT32U output = (ADC0 << 16) | ADC1;
+    return(output);
 }
 
 init_adc()
 {
+
   SYSCTL_RCGC0_R |= SYSCTL_RCGC0_ADC0;
+  SYSCTL_RCGC0_R |= SYSCTL_RCGC0_ADC1;
+
   SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOB;
 
   // Set ADC0 Sequencer priorities.
@@ -24,19 +30,23 @@ init_adc()
 
   //Disable all sequencers
   ADC0_ACTSS_R = 0;
+  ADC1_ACTSS_R = 0;
 
-  // Trigger for Sequencer 3 (bit 12-15) = 0xF = Always.
-  ADC0_EMUX_R = 0x0000F000;
+  ADC0_EMUX_R = 0x0000F000; // Trigger for Sequencer 3 Always.
+  ADC1_EMUX_R = 0x00000F00; // Trigger for Sequencer 2 Always.
 
-  //sample multiplexer input, sequencer 3 select, ADC 11 (0x0B) enable.
-  ADC0_SSMUX3_R = 0x0B;
+  // sample multiplexer input, sequencer 3 select
+  ADC0_SSMUX3_R = 10; // Use ACD input 10
+  ADC1_SSMUX3_R = 11; // Use ACD input 11
 
   //ADC sample sequence control 3 = END0
   ADC0_SSCTL3_R =  0x00000002;
+  ADC1_SSCTL3_R =  0x00000002;
 
-  //enable sequencer 3
-  ADC0_ACTSS_R = 0x00000008;
+  ADC0_ACTSS_R = 0x00000008; //enable sequencer 3 for ADC0
+  ADC1_ACTSS_R = 0x00000004; //enable sequencer 2 for ADC1
 
   // Start conversion at sequencer 3
   ADC0_PSSI_R = 0x08;
+  ADC1_PSSI_R = 0x04;
 }
