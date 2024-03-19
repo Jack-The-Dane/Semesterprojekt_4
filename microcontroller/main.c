@@ -22,7 +22,7 @@ int main(void) {
         INT32U input = get_adc();
 
         INT16U adc0 = input >> 16;
-        INT16U adc1 = input & 0x00FF;
+        INT16U adc1 = input & 0x0000FFFF;
 
         char adc0_high = adc0 >> 8;
         char adc1_high = adc1 >> 8;
