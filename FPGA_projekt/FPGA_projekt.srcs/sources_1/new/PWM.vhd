@@ -32,8 +32,9 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity pwm_gen is
-    Port ( cnt : in std_logic_vector(15 downto 0) := (others => '0');
-           duty : in std_logic_vector(15 downto 0) := (others => '0');
+    generic( n_bits : positive := 16);
+    Port ( cnt : in std_logic_vector(n_bits-1 downto 0) := (others => '0');
+           duty : in std_logic_vector(n_bits-1 downto 0) := (others => '0');
            pwm : out STD_LOGIC
            );
 end pwm_gen;

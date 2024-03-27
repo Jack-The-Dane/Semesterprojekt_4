@@ -1,32 +1,23 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 19 12:46:50 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 27 09:51:44 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="pwm_generator" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_0" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+    <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="counter_0" PORT="clk"/>
+        <CONNECTION INSTANCE="counter_1" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="duty_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_duty_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="pwm_gen_0" PORT="duty"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="en_0" SIGIS="undef" SIGNAME="External_Ports_en_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="counter_0" PORT="en"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="pwm_0" SIGIS="undef" SIGNAME="pwm_gen_0_pwm">
+    <PORT DIR="O" NAME="ja0" SIGIS="undef" SIGNAME="pwm_gen_0_pwm">
       <CONNECTIONS>
         <CONNECTION INSTANCE="pwm_gen_0" PORT="pwm"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="rst_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+    <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="pwm_gen_1_pwm">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="counter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="pwm_gen_1" PORT="pwm"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -37,29 +28,60 @@
     <MODULE COREREVISION="1" FULLNAME="/counter_0" HWVERSION="1.0" INSTANCE="counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="n_bits" VALUE="16"/>
+        <PARAMETER NAME="n_bits" VALUE="21"/>
         <PARAMETER NAME="Component_Name" VALUE="pwm_generator_counter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk_0">
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="clk_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
+        <PORT DIR="O" LEFT="20" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pwm_gen_0" PORT="cnt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_en_0">
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="xlconstant_1_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="en_0"/>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_0">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_2_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_0"/>
+            <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/counter_1" HWVERSION="1.0" INSTANCE="counter_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="counter" VLNV="xilinx.com:module_ref:counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="27"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_counter_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="125000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="26" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_1_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_gen_1" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_1" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_2" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -68,23 +90,120 @@
     <MODULE COREREVISION="1" FULLNAME="/pwm_gen_0" HWVERSION="1.0" INSTANCE="pwm_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="21"/>
         <PARAMETER NAME="Component_Name" VALUE="pwm_generator_pwm_gen_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="15" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
+        <PORT DIR="I" LEFT="20" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_0_cnt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="counter_0" PORT="cnt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_duty_0">
+        <PORT DIR="I" LEFT="20" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="duty_0"/>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_gen_0_pwm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pwm_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="ja0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pwm_gen_1" HWVERSION="1.0" INSTANCE="pwm_gen_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="27"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_pwm_gen_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="26" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_1_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_1" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="26" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_gen_1_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x095894"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="21"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="20" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_gen_0" PORT="duty"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_1" HWVERSION="1.1" INSTANCE="xlconstant_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x1"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_1_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="en"/>
+            <CONNECTION INSTANCE="counter_1" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_2" HWVERSION="1.1" INSTANCE="xlconstant_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_xlconstant_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_2_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_0" PORT="rst"/>
+            <CONNECTION INSTANCE="counter_1" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="8" FULLNAME="/xlconstant_3" HWVERSION="1.1" INSTANCE="xlconstant_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x4000000"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="27"/>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_generator_xlconstant_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="26" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_gen_1" PORT="duty"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

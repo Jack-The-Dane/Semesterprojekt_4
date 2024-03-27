@@ -55,8 +55,8 @@ USE ieee.numeric_std.ALL;
 
 ENTITY pwm_generator_pwm_gen_0_0 IS
   PORT (
-    cnt : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    duty : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    cnt : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
+    duty : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
     pwm : OUT STD_LOGIC
   );
 END pwm_generator_pwm_gen_0_0;
@@ -65,14 +65,20 @@ ARCHITECTURE pwm_generator_pwm_gen_0_0_arch OF pwm_generator_pwm_gen_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF pwm_generator_pwm_gen_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT pwm_gen IS
+    GENERIC (
+      n_bits : INTEGER
+    );
     PORT (
-      cnt : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      duty : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      cnt : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
+      duty : IN STD_LOGIC_VECTOR(20 DOWNTO 0);
       pwm : OUT STD_LOGIC
     );
   END COMPONENT pwm_gen;
 BEGIN
   U0 : pwm_gen
+    GENERIC MAP (
+      n_bits => 21
+    )
     PORT MAP (
       cnt => cnt,
       duty => duty,

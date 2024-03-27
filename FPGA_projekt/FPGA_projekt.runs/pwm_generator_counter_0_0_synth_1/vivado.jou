@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar 27 09:37:19 2024
+# Process ID: 20231
+# Current directory: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_counter_0_0_synth_1
+# Command line: vivado -log pwm_generator_counter_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm_generator_counter_0_0.tcl
+# Log file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_counter_0_0_synth_1/pwm_generator_counter_0_0.vds
+# Journal file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_counter_0_0_synth_1/vivado.jou
+# Running On: Laptop, OS: Linux, CPU Frequency: 4184.375 MHz, CPU Physical cores: 8, Host memory: 16109 MB
+#-----------------------------------------------------------
+source pwm_generator_counter_0_0.tcl -notrace

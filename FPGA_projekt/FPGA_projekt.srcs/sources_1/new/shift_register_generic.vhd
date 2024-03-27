@@ -41,12 +41,16 @@ end shift_register_generic;
 
 architecture Behavioral of shift_register_generic is
 signal register_data : std_logic_vector(register_length-1 downto 0) := (others => '0');
+signal temp : std_logic := '0';
 begin
 process(clk)
 begin
 if(rising_edge(clk)) then
+    temp <= register_data(register_length-1);
     register_data <= register_data(register_length-2 downto 0) & data;
-    carry_out <= register_data(register_length-1);
+end if;
+if(falling_edge(clk)) then
+    carry_out <= temp;
 end if;
 end process;
 register_out <= register_data;

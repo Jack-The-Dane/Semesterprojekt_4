@@ -2,6 +2,9 @@
 #include "gpio.h"
 #include "uart.h"
 #include "joystick.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 #include "tm4c123gh6pm.h"
 #include <stdint.h>
@@ -23,11 +26,14 @@ int main(void) {
     while (69) {
 
         update_joystick(&stick);
-
-        char x_high = stick.x >> 8;
-        char y_high = stick.y >> 8;
-
-        uart_putc(x_high << 4 | y_high);
+        
+        float x_percent = (stick.x / 4096) * 100;
+        float y_percent = (stick.y / 4096) * 100;
+        char buf1[6];
+        char buf2[6];
+        sprintf(buf2,"%f",y_percent);
+        uart_put_string(buf1);
+        uart_put_stringln(buf2);
     }
 
     return (0);

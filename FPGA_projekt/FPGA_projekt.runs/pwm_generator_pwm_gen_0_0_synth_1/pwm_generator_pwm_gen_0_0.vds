@@ -1,0 +1,197 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Mar 27 09:37:19 2024
+# Process ID: 20229
+# Current directory: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_pwm_gen_0_0_synth_1
+# Command line: vivado -log pwm_generator_pwm_gen_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pwm_generator_pwm_gen_0_0.tcl
+# Log file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_pwm_gen_0_0_synth_1/pwm_generator_pwm_gen_0_0.vds
+# Journal file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_pwm_gen_0_0_synth_1/vivado.jou
+# Running On: Laptop, OS: Linux, CPU Frequency: 4184.389 MHz, CPU Physical cores: 8, Host memory: 16109 MB
+#-----------------------------------------------------------
+source pwm_generator_pwm_gen_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1315.336 ; gain = 0.023 ; free physical = 3631 ; free virtual = 11731
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/jacob/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: pwm_generator_pwm_gen_0_0
+Command: synth_design -top pwm_generator_pwm_gen_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20279
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1703.113 ; gain = 387.777 ; free physical = 2329 ; free virtual = 10435
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'pwm_generator_pwm_gen_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/pwm_generator/ip/pwm_generator_pwm_gen_0_0/synth/pwm_generator_pwm_gen_0_0.vhd:64]
+	Parameter n_bits bound to: 21 - type: integer 
+INFO: [Synth 8-3491] module 'pwm_gen' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/PWM.vhd:34' bound to instance 'U0' of component 'pwm_gen' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/pwm_generator/ip/pwm_generator_pwm_gen_0_0/synth/pwm_generator_pwm_gen_0_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'pwm_gen' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/PWM.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pwm_gen' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/PWM.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'pwm_generator_pwm_gen_0_0' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/pwm_generator/ip/pwm_generator_pwm_gen_0_0/synth/pwm_generator_pwm_gen_0_0.vhd:64]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1778.051 ; gain = 462.715 ; free physical = 2135 ; free virtual = 10243
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1795.863 ; gain = 480.527 ; free physical = 2132 ; free virtual = 10241
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1803.867 ; gain = 488.531 ; free physical = 2132 ; free virtual = 10241
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1803.867 ; gain = 488.531 ; free physical = 2124 ; free virtual = 10234
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1823 ; free virtual = 9959
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1821 ; free virtual = 9957
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1820 ; free virtual = 9956
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     3|
+|2     |LUT2   |     2|
+|3     |LUT4   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |    25|
+|2     |  U0     |pwm_gen |    25|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1819 ; free virtual = 9955
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.117 ; gain = 624.781 ; free physical = 1818 ; free virtual = 9954
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.125 ; gain = 624.781 ; free physical = 1818 ; free virtual = 9954
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1955.961 ; gain = 0.000 ; free physical = 2282 ; free virtual = 10419
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2037.617 ; gain = 0.000 ; free physical = 2207 ; free virtual = 10358
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 9ed5d122
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2037.652 ; gain = 722.316 ; free physical = 2208 ; free virtual = 10358
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1485.693; main = 1275.973; forked = 343.127
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2930.773; main = 2037.621; forked = 990.652
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2360.598 ; gain = 0.000 ; free physical = 1780 ; free virtual = 9954
+INFO: [Common 17-1381] The checkpoint '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_pwm_gen_0_0_synth_1/pwm_generator_pwm_gen_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2392.613 ; gain = 354.961 ; free physical = 1779 ; free virtual = 9952
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP pwm_generator_pwm_gen_0_0, cache-ID = be172b02e7040227
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2416.625 ; gain = 0.000 ; free physical = 1780 ; free virtual = 9953
+INFO: [Common 17-1381] The checkpoint '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/pwm_generator_pwm_gen_0_0_synth_1/pwm_generator_pwm_gen_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pwm_generator_pwm_gen_0_0_utilization_synth.rpt -pb pwm_generator_pwm_gen_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 27 09:37:48 2024...
