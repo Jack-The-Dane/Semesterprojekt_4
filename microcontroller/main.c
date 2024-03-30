@@ -26,14 +26,17 @@ int main(void) {
     while (69) {
 
         update_joystick(&stick);
-        
-        float x_percent = (stick.x / 4096) * 100;
-        float y_percent = (stick.y / 4096) * 100;
-        char buf1[6];
-        char buf2[6];
-        sprintf(buf2,"%f",y_percent);
-        uart_put_string(buf1);
-        uart_put_stringln(buf2);
+
+        uint8_t x_low  = (uint8_t) (stick.x >> 8); // High x bits
+        uint8_t x_high = (uint8_t) stick.x;        // Low x bits
+        uint8_t y_low  = (uint8_t) (stick.y >> 8); // High y bits
+        uint8_t y_high = (uint8_t) stick.y;        // Low y bits
+
+        uart_putc(x_low);
+        uart_putc(x_high);
+        uart_putc(y_low);
+        uart_putc(y_high);
+
     }
 
     return (0);
