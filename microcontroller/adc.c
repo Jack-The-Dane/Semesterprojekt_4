@@ -34,8 +34,8 @@ void init_adc()
     ADC1_EMUX_R = 0x0000F000; // Trigger for Sequencer 2 Always.
 
     // sample multiplexer input, sequencer 3 select
-    ADC0_SSMUX3_R = 10; // Use ACD input 10
-    ADC1_SSMUX3_R = 11; // Use ACD input 11
+    ADC0_SSMUX3_R = 10; // Use ACD input 10 (PB4)
+    ADC1_SSMUX3_R = 11; // Use ACD input 11 (PB5)
 
     //ADC sample sequence control 3 = END0
     ADC0_SSCTL3_R =  0x00000002;

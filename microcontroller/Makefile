@@ -31,7 +31,7 @@ test:
 	echo "DEPENDS: $(DEPENDS)"
 
 flash: all
-	lm4flash build/main.bin
+	sudo lm4flash build/main.bin
 
 clean:
 	rm -rf build

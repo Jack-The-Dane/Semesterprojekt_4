@@ -3,13 +3,16 @@
 
 void setupPortF() {
   // Enable the GPIO port that is used for the on-board LEDs and switches.
-  SYSCTL_RCGC2_R = SYSCTL_RCGC2_GPIOF;
+  SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOF;
+
   // Set the direction as output (PF1 - PF3).
-  GPIO_PORTF_DIR_R = 0b00001110;
+  GPIO_PORTF_DIR_R |= 0b00001110;
+
   // Enable the GPIO pins for digital function (PF1 - PF4)
-  GPIO_PORTF_DEN_R = 0b00011110;
+  GPIO_PORTF_DEN_R |= 0b00011110;
+
   // Enable internal pull-up (PF4).
-  GPIO_PORTF_PUR_R = 0b00010000;
+  GPIO_PORTF_PUR_R |= 0b00010000;
 
   // Set the interrupt type for PF4 (SW1)
   NVIC_EN0_R |= (1 << (INT_GPIOF - 16)); // enable interrupt in NVIC
@@ -21,6 +24,9 @@ void setupPortF() {
   GPIO_PORTF_ICR_R = 0b00010000; // clear flag4
 }
 
-void setLEDColor(enum LEDColor color) { GPIO_PORTF_DATA_R = color << 1; }
+void setLEDColor(enum LEDColor color) {
+    GPIO_PORTF_DATA_R &= 0b11110001;
+    GPIO_PORTF_DATA_R |= (color << 1);
+}
 
 int button_sw1_pressed() { return ~(GPIO_PORTF_DATA_R) & 0b00010000; }
