@@ -26,7 +26,7 @@ extern int main(void);
 // Add handlers for the various interrupt sources.
 //
 //*****************************************************************************
-extern void SysTick_Handler(void);
+extern void systick_handler(void);
 extern void GPIOF_Handler(void);
 
 //*****************************************************************************
@@ -59,7 +59,7 @@ __attribute__((section(".isr_vector"))) void (*const g_pfnVectors[])(void) = {
     IntDefaultHandler, // Debug monitor handler
     0,                 // Reserved
     IntDefaultHandler, // The PendSV handler
-    SysTick_Handler,   // The SysTick handler
+    systick_handler,   // The SysTick handler
     IntDefaultHandler, // GPIO Port A
     IntDefaultHandler, // GPIO Port B
     IntDefaultHandler, // GPIO Port C
@@ -305,7 +305,7 @@ static void IntDefaultHandler(void) {
 // Meant to be overridden by the application.
 //
 //*****************************************************************************
-__attribute__((weak)) void SysTick_Handler(void) {
+__attribute__((weak)) void systick_handler(void) {
   while (1) {
   }
 }

@@ -13,7 +13,7 @@
 #define SPI_MOSI_PIN 0 // Master out, slave in
 
 // Setup in pins on PORTE for SPI
-void setup_spi();
+void init_spi();
 
 // Sends and receives data over SPI
 void spi_tranceive(SPI_TYPE * data_send, SPI_TYPE * data_recieve);

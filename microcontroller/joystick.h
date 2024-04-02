@@ -1,5 +1,7 @@
 #include "adc.h"
 #include "emp_type.h"
+#include "rtcs.h"
+#include "tmodel.h"
 #include "tm4c123gh6pm.h"
 
 #ifndef JOYSTICK
@@ -7,10 +9,13 @@
 
 #define JOYSTICK_BUTTON_PIN 0
 
-struct Joystick {
+typedef struct {
     INT16U x, y;
     BOOLEAN button;
-};
+} Joystick ;
+
+// Global joystick for now
+Joystick joystick = {0};
 
 void init_joystick() {
     init_adc();
@@ -23,10 +28,12 @@ void init_joystick() {
 
 }
 
-void update_joystick(struct Joystick * stick) {
-    stick->x = get_adc0();
-    stick->y = get_adc1();
-    stick->button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
+void joystick_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
+    if(!wait_sem(SEM_JOYSTICK, WAIT_FOREVER)) return;
+    joystick.x = get_adc0();
+    joystick.y = get_adc1();
+    joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
+    signal_sem(SEM_JOYSTICK);
 }
 
 #endif

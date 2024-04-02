@@ -1,12 +1,57 @@
-// Include guard for systick.h
-#ifndef SYSTICK_H
-#define SYSTICK_H
-// Implement EVERYTHING for systick
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded Programming (EMP)
+*
+* MODULENAME.: systick.h
+*
+* PROJECT....: EMP
+*
+* DESCRIPTION: Initialize the systick interrupt.
+*
+* Change Log:
+******************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 150215  MoH    Module created.
+*
+*****************************************************************************/
 
-#include "tm4c123gh6pm.h"
-// Volatile because it is changed in an ISR
+#ifndef _EMP_H
+  #define _EMP_H
 
-#define SYSTICK_RELOAD_VALUE 16000 // SysTick interrupt every 1ms
+/***************************** Include files *******************************/
 
-void init_systick(void);
+/*****************************    Defines    *******************************/
+
+/*****************************   Constants   *******************************/
+
+/*****************************   Functions   *******************************/
+void enable_global_int();
+/*****************************************************************************
+*   Input    : -
+*   Output   : -
+*   Function : Enable global interrupt.
+******************************************************************************/
+
+
+void disable_global_int();
+/*****************************************************************************
+*   Input    : -
+*   Output   : -
+*   Function : Disable global interrupt.
+******************************************************************************/
+
+
+void init_systick();
+/*****************************************************************************
+*   Input    : -
+*   Output   : -
+*   Function : Initialize the systick interrupt.
+******************************************************************************/
+
+
+/****************************** End Of Module *******************************/
 #endif
+
+

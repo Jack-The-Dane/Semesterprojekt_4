@@ -27,7 +27,7 @@ char * uart_get_string() {
     return buffer;
 }
 
-void uart_init() {
+void init_uart() {
     uart0_init(9600, 8, 0, 0);
 }
 

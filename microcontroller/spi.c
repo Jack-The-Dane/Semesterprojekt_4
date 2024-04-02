@@ -3,7 +3,7 @@
 #include "spi.h"
 #include "delay.h"
 
-void setup_spi() {
+void init_spi() {
     // Enable the GPIO port that is used for the on-board LEDs and switches.
     SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOE;
 
@@ -27,7 +27,7 @@ void spi_tranceive(SPI_TYPE * data_send, SPI_TYPE * data_recieve) {
     // Pull CS low to select the device. This is the start of the SPI frame.
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
-    for (uint8_t i = SPI_WORD_LEN; i > 0; i--) {
+    for (uint8_t i = SPI_WORD_LENGTH; i > 0; i--) {
 
         // Set output bit
         if (*data_send & (1 << (i - 1))) {

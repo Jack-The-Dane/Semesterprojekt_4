@@ -1,4 +1,28 @@
-// LED colors
+/*****************************************************************************
+* University of Southern Denmark
+* Embedded C Programming (ECP)
+*
+* MODULENAME.: gpio.h
+*
+* PROJECT....: ECP
+*
+* DESCRIPTION: Test.
+*
+* Change Log:
+******************************************************************************
+* Date    Id    Change
+* YYMMDD
+* --------------------
+* 090215  MoH   Module created.
+*
+*****************************************************************************/
+
+#ifndef GPIO_H_
+#define GPIO_H_
+
+/***************************** Include files *******************************/
+
+/*****************************    Defines    *******************************/
 enum LEDColor {
   OFF = 0b000,
   GREEN = 0b100,
@@ -10,10 +34,20 @@ enum LEDColor {
   WHITE = 0b111
 };
 
-// Setup PORTF as output
-void setupPortF();
+/*****************************   Constants   *******************************/
 
-// Set the color of the LED
+/*****************************   Functions   *******************************/
+
+void init_gpio(void);
+
 void setLEDColor(enum LEDColor color);
 
-int button_sw1_pressed();
+/*****************************************************************************
+*   Input    : -
+*   Output   : -
+*   Function : Test function
+******************************************************************************/
+
+
+/****************************** End Of Module *******************************/
+#endif /*GPIO_H_*/
