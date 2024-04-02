@@ -1,7 +1,7 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Wed Mar 27 09:53:21 2024
-| Host         : Laptop
+| Date         : Tue Apr  2 12:46:19 2024
+| Host         : Cornelia
 | Design       : design_1
 | Device       : xc7z020-clg400-1--
 -------------------------------------
