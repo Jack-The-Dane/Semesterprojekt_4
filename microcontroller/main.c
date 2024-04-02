@@ -21,7 +21,11 @@ int main(void) {
 
     init_rtcs();
 
+    signal_sem(SEM_JOYSTICK);
+    signal_sem(SEM_SPI);
+
     start_task(TASK_JOYSTICK, joystick_task);
+    start_task(TASK_SPI, spi_task);
 
     schedule();
 

@@ -25,7 +25,7 @@
 // Tasks.
 // ------
 #define TASK_JOYSTICK USER_TASK
-#define TASK_GPIO     USER_TASK+1
+#define TASK_SPI      USER_TASK+1
 
 // Interrupt Service Routines.
 // ---------------------------
@@ -34,11 +34,16 @@
 // Semaphores.
 // -----------
 #define SEM_JOYSTICK USER_SEM
+#define SEM_SPI      USER_SEM+1 // Guards SPI variables for sending and receiving data from FPGA.
 
 
 // Shared State Memory.
 // --------------------
-#define SSM_JOYSTICK 0
+#define SSM_SPI_PAN_MOTOR    0
+#define SSM_SPI_TILT_MOTOR   1
+#define SSM_SPI_PAN_ENCODER  2
+#define SSM_SPI_TILT_ENCODER 3
+
 
 // QUEUEs.
 // -------
