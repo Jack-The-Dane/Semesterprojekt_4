@@ -14,9 +14,9 @@
 // Pins within PORTE
 #define SPI_CS_PIN 3   // Chip select (Active low)
 #define SPI_CLK_PIN 2  // Clock
-#define SPI_MISO_PIN 1 // Master in, slave out
-#define SPI_MOSI_PIN 0 // Master out, slave in
-                       //
+#define SPI_MISO_PIN 1 // Main in, sub out
+#define SPI_MOSI_PIN 0 // Main out, sub in
+
 // Global variables for now guarded by the `SEM_SPI` semaphore
 SPI_MOTOR_TYPE spi_pan_motor;
 SPI_MOTOR_TYPE spi_tilt_motor;
