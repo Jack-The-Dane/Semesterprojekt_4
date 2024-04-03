@@ -32,8 +32,9 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity shift_register_generic is
-    generic(register_length : positive := 8);
+    generic(register_length : positive := 16);
     Port ( clk : in STD_LOGIC := '0';
+           rst : in std_logic := '0';
            data : in STD_LOGIC := '0';
            register_out : out std_logic_vector(register_length-1 downto 0);
            carry_out : out std_logic := '0');
@@ -43,8 +44,12 @@ architecture Behavioral of shift_register_generic is
 signal register_data : std_logic_vector(register_length-1 downto 0) := (others => '0');
 signal temp : std_logic := '0';
 begin
-process(clk)
+process(clk, rst)
 begin
+if(rst = '1') then
+    register_data <= (others => '0');
+    temp <= '0';
+end if;
 if(rising_edge(clk)) then
     temp <= register_data(register_length-1);
     register_data <= register_data(register_length-2 downto 0) & data;
