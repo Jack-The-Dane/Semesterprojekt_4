@@ -7,7 +7,7 @@ NOTE: Pins are counted from the red wire.
 5  : Encoder 2b Tilt
 6  : Encoder 2a Tilt
 7  : +5V (for encoders)
-8  : LOGIC_VCC (sæt til 5V)
+8  : LOGIC_VCC (sæt til 3.3V)
 9  : GND (for encoders)
 10 : GND (for encoders)
 
