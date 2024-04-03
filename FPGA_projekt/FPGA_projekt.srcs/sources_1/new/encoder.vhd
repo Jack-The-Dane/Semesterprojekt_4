@@ -32,32 +32,39 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity encoder is
-    Port ( btn_0 : in STD_LOGIC;
-           btn_1 : in STD_LOGIC;
-           led : out std_logic_vector(3 downto 0));
+    Port ( enc_a : in STD_LOGIC;
+           enc_b : in STD_LOGIC;
+           rst : in STD_LOGIC;
+           pulses : out std_logic_vector(8 downto 0));
 end encoder;
 
 architecture Behavioral of encoder is
 
-signal count: unsigned(3 downto 0) := (others => '0');
+signal rot: unsigned(8 downto 0) := (others => '0');
 
 begin
-    process(btn_0, btn_1)
+    process(enc_a, enc_b, rst)
     begin
-    
-        if(falling_edge(btn_0)) then
-            if(btn_1 = '0') then
-                count <= count + 1;
+        if(rising_edge(rst)) then
+            rot <= (others => '0');
+        end if;
+        if(rising_edge(enc_a)) then
+            if(enc_b = '0') then
+                rot <= rot + 1;
             end if;
         end if;
-        if(falling_edge (btn_1)) then
-            if(btn_0 = '0') then
-                count <= count - 1;
+        if(rising_edge(enc_b)) then
+            if(enc_a = '0') then
+                rot <= rot - 1;
             end if;
         end if;
-        
+        if(rot = 360) then
+            rot <= (others => '0');
+        elsif(rot > 360) then
+            rot <= 359;
+        end if;
      end process;
      
-     led <= std_logic_vector(count);
+     pulses <= std_logic_vector(rot);
 
 end Behavioral;
