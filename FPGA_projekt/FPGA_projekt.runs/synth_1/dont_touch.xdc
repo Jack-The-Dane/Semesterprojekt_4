@@ -6,4 +6,10 @@
 # Block Designs: bd/Encoder_bd/Encoder_bd.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Encoder_bd || ORIG_REF_NAME==Encoder_bd} -quiet] -quiet
 
+# IP: bd/Encoder_bd/ip/Encoder_bd_encoder_0_0/Encoder_bd_encoder_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Encoder_bd_encoder_0_0 || ORIG_REF_NAME==Encoder_bd_encoder_0_0} -quiet] -quiet
+
+# IP: bd/Encoder_bd/ip/Encoder_bd_xlslice_0_0/Encoder_bd_xlslice_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Encoder_bd_xlslice_0_0 || ORIG_REF_NAME==Encoder_bd_xlslice_0_0} -quiet] -quiet
+
 # XDC: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/Encoder_bd/Encoder_bd_ooc.xdc

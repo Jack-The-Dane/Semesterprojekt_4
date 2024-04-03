@@ -22,11 +22,11 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
+-- Uncomment the +following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
 
--- Uncomment the following library declaration if instantiating
+-- Uncommen+t the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
@@ -40,28 +40,23 @@ end encoder;
 
 architecture Behavioral of encoder is
 
-signal rot: unsigned(8 downto 0) := (others => '0');
+signal rot: unsigned(8 downto 0) := "111110111";
 
 begin
-    process(enc_a, enc_b, rst)
+    process(enc_a, rst)
     begin
-        if(rising_edge(rst)) then
+        if(rst = '1') then
             rot <= (others => '0');
-        end if;
-        if(rising_edge(enc_a)) then
+        elsif(rising_edge(enc_a)) then
             if(enc_b = '0') then
                 rot <= rot + 1;
-            end if;
-        end if;
-        if(rising_edge(enc_b)) then
-            if(enc_a = '0') then
-                rot <= rot - 1;
+            else rot <= rot - 1;
             end if;
         end if;
         if(rot = 360) then
             rot <= (others => '0');
         elsif(rot > 360) then
-            rot <= 359;
+            rot <= "101100111"; -- 359 in binary
         end if;
      end process;
      
