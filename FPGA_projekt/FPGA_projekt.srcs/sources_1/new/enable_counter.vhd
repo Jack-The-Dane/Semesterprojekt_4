@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03.04.2024 11:09:52
+-- Create Date: 05.04.2024 13:51:36
 -- Design Name: 
--- Module Name: latch - Behavioral
+-- Module Name: enable_counter - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,31 +31,38 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity latch is
+entity enable_counter is
     generic( data_length : positive := 16);
-    Port ( rst : in std_logic;
-           cnt : in std_logic;
-           D : in std_logic_vector(data_length - 1 downto 0);
-           Q : out std_logic_vector(data_length - 1 downto 0)
-           );
-end latch;
+    Port ( en : in STD_LOGIC;
+           rst : in STD_LOGIC;
+           clk : in STD_LOGIC;
+           cnt : out STD_LOGIC);
+end enable_counter;
 
-architecture Behavioral of latch is
-    signal data : std_logic_vector(data_length -1 downto 0);
+architecture Behavioral of enable_counter is
+signal cnt_temp : unsigned(5 downto 0);
+signal out_temp : std_logic := '0';
 
 begin
-    process(cnt, rst)
+    process(en, rst, clk)
     begin
         if(rst = '1') then
-            data <= (others => '0');
+            cnt_temp <= (others => '0');
         end if;
-        if(cnt = '1') then
-           data <= D;
+        if(en = '0') then
+            if(rising_edge(clk)) then
+                cnt_temp <= cnt_temp + 1;
+                if(cnt_temp = data_length) then
+                    out_temp <= '1';
+                    cnt_temp <= (others => '0');
+                else
+                    out_temp <= '0';
                 end if;
-        
-        end process;
-        
-        Q <= data;
+            end if;
+        end if;
+    end process;
+    
+    cnt <= out_temp;
 
 
 end Behavioral;
