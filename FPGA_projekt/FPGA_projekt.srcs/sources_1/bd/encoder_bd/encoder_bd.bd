@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB56D4304129DCB31",
+      "boundary_crc": "0xC5CD13F6AFE7168A",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/encoder_bd",
       "name": "encoder_bd",
@@ -20,10 +20,10 @@
         "left": "3",
         "right": "0"
       },
-      "btn_0": {
+      "ja_0": {
         "direction": "I"
       },
-      "btn_1": {
+      "ja_1": {
         "direction": "I"
       },
       "btn_2": {
@@ -79,7 +79,10 @@
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
-            "value": "3"
+            "value": "8"
+          },
+          "DIN_TO": {
+            "value": "5"
           },
           "DIN_WIDTH": {
             "value": "9"
@@ -90,13 +93,13 @@
     "nets": {
       "enc_a_0_1": {
         "ports": [
-          "btn_0",
+          "ja_0",
           "encoder_0/enc_a"
         ]
       },
       "enc_b_0_1": {
         "ports": [
-          "btn_1",
+          "ja_1",
           "encoder_0/enc_b"
         ]
       },

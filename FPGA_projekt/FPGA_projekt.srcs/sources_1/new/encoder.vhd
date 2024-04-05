@@ -45,13 +45,14 @@ signal rot: unsigned(8 downto 0) := "111110111";
 begin
     process(enc_a, rst)
     begin
-        if(rst = '1') then
-            rot <= (others => '0');
-        elsif(rising_edge(enc_a)) then
+        if(rising_edge(enc_a)) then
             if(enc_b = '0') then
                 rot <= rot + 1;
             else rot <= rot - 1;
             end if;
+        end if;
+        if(rst = '1') then
+            rot <= (others => '0');
         end if;
         if(rot = 360) then
             rot <= (others => '0');

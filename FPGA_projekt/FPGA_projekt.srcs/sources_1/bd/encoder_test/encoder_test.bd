@@ -1,0 +1,113 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x5C818C6B5C818C6B",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/encoder_test",
+      "name": "encoder_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "block_encoder_0": "",
+      "xlconstant_0": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "led": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "btn_0": {
+        "direction": "I"
+      },
+      "btn_1": {
+        "direction": "I"
+      },
+      "btn_2": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "block_encoder_0": {
+        "vlnv": "user.org:user:block_encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "encoder_test_block_encoder_0_0",
+        "xci_path": "ip/encoder_test_block_encoder_0_0/encoder_test_block_encoder_0_0.xci",
+        "inst_hier_path": "block_encoder_0"
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "encoder_test_xlconstant_0_0",
+        "xci_path": "ip/encoder_test_xlconstant_0_0/encoder_test_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "encoder_test_xlslice_0_0",
+        "xci_path": "ip/encoder_test_xlslice_0_0/encoder_test_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "9"
+          }
+        }
+      }
+    },
+    "nets": {
+      "block_encoder_0_pulse_cnt": {
+        "ports": [
+          "block_encoder_0/pulse_cnt",
+          "xlslice_0/Din"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "block_encoder_0/clk"
+        ]
+      },
+      "encoder_a_0_1": {
+        "ports": [
+          "btn_0",
+          "block_encoder_0/encoder_a"
+        ]
+      },
+      "encoder_b_0_1": {
+        "ports": [
+          "btn_1",
+          "block_encoder_0/encoder_b"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "btn_2",
+          "block_encoder_0/rst"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "block_encoder_0/enable"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "led"
+        ]
+      }
+    }
+  }
+}

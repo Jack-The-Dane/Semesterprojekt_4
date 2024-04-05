@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Fri Apr  5 13:04:28 2024
+--Date        : Fri Apr  5 14:02:48 2024
 --Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target encoder_bd.bd
 --Design      : encoder_bd
@@ -14,9 +14,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity encoder_bd is
   port (
-    btn_0 : in STD_LOGIC;
-    btn_1 : in STD_LOGIC;
     btn_2 : in STD_LOGIC;
+    ja_0 : in STD_LOGIC;
+    ja_1 : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
@@ -50,8 +50,8 @@ architecture STRUCTURE of encoder_bd is
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of btn_2 : signal is "XIL_INTERFACENAME RST.BTN_2, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
-  enc_a_0_1 <= btn_0;
-  enc_b_0_1 <= btn_1;
+  enc_a_0_1 <= ja_0;
+  enc_b_0_1 <= ja_1;
   led(3 downto 0) <= xlslice_0_Dout(3 downto 0);
   rst_0_1 <= btn_2;
 encoder_0: component encoder_bd_encoder_0_0
