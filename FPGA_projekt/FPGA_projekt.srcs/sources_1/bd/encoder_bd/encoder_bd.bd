@@ -1,0 +1,123 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB56D4304129DCB31",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/encoder_bd",
+      "name": "encoder_bd",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "encoder_0": "",
+      "xlslice_0": ""
+    },
+    "ports": {
+      "led": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "btn_0": {
+        "direction": "I"
+      },
+      "btn_1": {
+        "direction": "I"
+      },
+      "btn_2": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "encoder_0": {
+        "vlnv": "xilinx.com:module_ref:encoder:1.0",
+        "ip_revision": "1",
+        "xci_name": "encoder_bd_encoder_0_0",
+        "xci_path": "ip/encoder_bd_encoder_0_0/encoder_bd_encoder_0_0.xci",
+        "inst_hier_path": "encoder_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "encoder",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "enc_a": {
+            "direction": "I"
+          },
+          "enc_b": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "pulses": {
+            "direction": "O",
+            "left": "8",
+            "right": "0"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "encoder_bd_xlslice_0_0",
+        "xci_path": "ip/encoder_bd_xlslice_0_0/encoder_bd_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "9"
+          }
+        }
+      }
+    },
+    "nets": {
+      "enc_a_0_1": {
+        "ports": [
+          "btn_0",
+          "encoder_0/enc_a"
+        ]
+      },
+      "enc_b_0_1": {
+        "ports": [
+          "btn_1",
+          "encoder_0/enc_b"
+        ]
+      },
+      "encoder_0_pulses": {
+        "ports": [
+          "encoder_0/pulses",
+          "xlslice_0/Din"
+        ]
+      },
+      "rst_0_1": {
+        "ports": [
+          "btn_2",
+          "encoder_0/rst"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "led"
+        ]
+      }
+    }
+  }
+}
