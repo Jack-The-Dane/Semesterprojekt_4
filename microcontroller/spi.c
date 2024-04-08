@@ -62,6 +62,9 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     }
   }
 
+  // Set MOSI low
+  GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN);
+
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
 }
