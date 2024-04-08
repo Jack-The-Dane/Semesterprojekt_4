@@ -9,10 +9,10 @@
 #include "systick.h"
 
 void setup() {
+    init_systick();
     init_spi();
     init_uart();
     init_joystick();
-    init_systick();
     init_gpio();
 }
 
@@ -25,6 +25,7 @@ int main(void) {
     signal_sem(SEM_SPI);
 
     start_task(TASK_JOYSTICK, joystick_task);
+    start_task(TASK_JOYSTICK_UART_ECHO, joystick_uart_echo_task);
     start_task(TASK_SPI, spi_task);
 
     schedule();

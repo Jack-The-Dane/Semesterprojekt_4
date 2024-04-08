@@ -5,25 +5,23 @@
 #include "tm4c123gh6pm.h"
 #include "tmodel.h"
 #include <stdint.h>
+#include "gpio.h"
 
 void init_spi() {
   // Enable the GPIO port that is used for the on-board LEDs and switches.
   SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOE;
 
   // Set the direction as output
-  GPIO_PORTE_DIR_R =
-      (1 << SPI_MOSI_PIN) | (1 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
+  GPIO_PORTE_DIR_R = (1 << SPI_MOSI_PIN) | (1 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
   // Enable the GPIO pins for digital function
-  GPIO_PORTE_DEN_R = (1 << SPI_MOSI_PIN) | (1 << SPI_MISO_PIN) |
-                     (1 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
+  GPIO_PORTE_DEN_R = (1 << SPI_MOSI_PIN) | (1 << SPI_MISO_PIN) | (1 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
   // Enable internal pull-up
   GPIO_PORTE_PUR_R = 1 << SPI_MISO_PIN;
 
   // Set the initial values
-  GPIO_PORTE_DATA_R =
-      (0 << SPI_MOSI_PIN) | (0 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
+  GPIO_PORTE_DATA_R = (0 << SPI_MOSI_PIN) | (0 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
   spi_pan_motor = 0;
   spi_tilt_motor = 0;
@@ -33,9 +31,12 @@ void init_spi() {
 
 // https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Bit-banging_the_protocol
 void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
+  setLEDColor(RED);
 
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
+
+  setLEDColor(GREEN);
 
   for (uint8_t i = SPI_WORD_LENGTH; i > 0; i--) {
 
@@ -67,6 +68,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
 
 void spi_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
   if (!wait_sem(SEM_SPI, WAIT_FOREVER)) return;
+
 
   // Create a word where the left-most bits are the pan motor and the right-most bits are the tilt motor
   SPI_TYPE send_message = ((SPI_TYPE)spi_pan_motor) << (SPI_WORD_LENGTH / 2) | ((SPI_TYPE)spi_tilt_motor);
