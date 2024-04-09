@@ -24,8 +24,10 @@
 
 // Tasks.
 // ------
-#define TASK_JOYSTICK USER_TASK
-#define TASK_SPI      USER_TASK+1
+#define TASK_JOYSTICK           USER_TASK
+#define TASK_SPI                USER_TASK+1
+#define TASK_JOYSTICK_UART_ECHO USER_TASK+2
+#define TASK_CONTROLLER         USER_TASK+3
 
 // Interrupt Service Routines.
 // ---------------------------
