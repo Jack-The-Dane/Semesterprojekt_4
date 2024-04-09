@@ -4,7 +4,7 @@
 # - [GHDL frontend for yosys](https://github.com/ghdl/ghdl-yosys-plugin)
 
 # Replace with the name of the main VHDL entity
-main=spi
+main=main
 
 # The vhdl files to include
 sources=*.vhd
