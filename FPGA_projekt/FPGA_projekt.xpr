@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="856457c4186c47b6b81a62ef2c48ef08"/>
@@ -93,116 +93,6 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/shift_register_generic.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/PWM.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Semesterprojekt/Semesterprojekt.srcs/sources_1/new/PWM.vhd"/>
-          <Attr Name="ImportTime" Val="1710846831"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/Downloads/counter.vhd">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/counter.vhd"/>
-          <Attr Name="ImportTime" Val="1710753117"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/latch.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/enable_counter.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/SPI/SPI.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="SPI.bd" FileRelPathName="ip/SPI_enable_counter_0_0/SPI_enable_counter_0_0.xci">
-          <Proxy FileSetName="SPI_enable_counter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="SPI.bd" FileRelPathName="ip/SPI_shift_register_input_1/SPI_shift_register_input_1.xci">
-          <Proxy FileSetName="SPI_shift_register_input_1"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/SPI/hdl/SPI_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/edge_detector.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/buildup/buildup.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_SPI_wrapper_0_1/buildup_SPI_wrapper_0_1.xci">
-          <Proxy FileSetName="buildup_SPI_wrapper_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_edge_detector_0_0/buildup_edge_detector_0_0.xci">
-          <Proxy FileSetName="buildup_edge_detector_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/buildup/hdl/buildup_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/encoder_sampling.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/encoder_sample/encoder_sample.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="encoder_sample.bd" FileRelPathName="ip/encoder_sample_encoder_sampling_0_0/encoder_sample_encoder_sampling_0_0.xci">
-          <Proxy FileSetName="encoder_sample_encoder_sampling_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/encoder_sample/hdl/encoder_sample_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/bd/encoder_test/encoder_test.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -210,18 +100,21 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="encoder_test.bd" FileRelPathName="ip/encoder_test_block_encoder_0_0/encoder_test_block_encoder_0_0.xci">
-          <Proxy FileSetName="encoder_test_block_encoder_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/encoder_test/hdl/encoder_test_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/uo_down_counter.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/uo_down_counter.vhd">
+      <File Path="$PSRCDIR/sources_1/new/edge_detector.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -249,8 +142,64 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_NOT_gate_a_0_1/block_encoder_NOT_gate_a_0.xci">
+          <Proxy FileSetName="block_encoder_NOT_gate_a_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_NOT_gate_b_0_1/block_encoder_NOT_gate_b_0.xci">
+          <Proxy FileSetName="block_encoder_NOT_gate_b_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_down_signal_0_1/block_encoder_down_signal_0.xci">
+          <Proxy FileSetName="block_encoder_down_signal_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_edge_detector_a_0_1/block_encoder_edge_detector_a_0.xci">
+          <Proxy FileSetName="block_encoder_edge_detector_a_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_edge_detector_b_0_1/block_encoder_edge_detector_b_0.xci">
+          <Proxy FileSetName="block_encoder_edge_detector_b_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_up_down_counter_0_0/block_encoder_up_down_counter_0_0.xci">
+          <Proxy FileSetName="block_encoder_up_down_counter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="block_encoder.bd" FileRelPathName="ip/block_encoder_up_signal_0_1/block_encoder_up_signal_0.xci">
+          <Proxy FileSetName="block_encoder_up_signal_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/block_encoder/hdl/block_encoder_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/shift_register_generic.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/latch.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/enable_counter.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/encoder_sampling.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -264,20 +213,20 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/encoder_bd/encoder_bd.bd">
+      <File Path="$PSRCDIR/sources_1/imports/Downloads/counter.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/counter.vhd"/>
+          <Attr Name="ImportTime" Val="1710753117"/>
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="encoder_bd.bd" FileRelPathName="ip/encoder_bd_encoder_0_0/encoder_bd_encoder_0_0.xci">
-          <Proxy FileSetName="encoder_bd_encoder_0_0"/>
-        </CompFileExtendedInfo>
       </File>
-      <File Path="$PGENDIR/sources_1/bd/encoder_bd/hdl/encoder_bd_wrapper.vhd">
+      <File Path="$PSRCDIR/sources_1/new/PWM.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Semesterprojekt/Semesterprojekt.srcs/sources_1/new/PWM.vhd"/>
+          <Attr Name="ImportTime" Val="1710846831"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -311,9 +260,48 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/SPI/SPI.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/SPI/hdl/SPI_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/Pan_Tilt_Controller/Pan_Tilt_Controller.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip/block_encoder/block_encoder_0/block_encoder_0.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/ip/block_encoder/src/block_encoder_1/block_encoder_1.xci">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="buildup_wrapper"/>
+        <Option Name="TopModule" Val="encoder_test_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -383,45 +371,45 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="encoder_bd_encoder_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/encoder_bd_encoder_0_0" RelGenDir="$PGENDIR/encoder_bd_encoder_0_0">
+    <FileSet Name="block_encoder_up_down_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_up_down_counter_0_0" RelGenDir="$PGENDIR/block_encoder_up_down_counter_0_0">
       <Config>
-        <Option Name="TopModule" Val="encoder_bd_encoder_0_0"/>
+        <Option Name="TopModule" Val="block_encoder_up_down_counter_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="encoder_sample_encoder_sampling_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/encoder_sample_encoder_sampling_0_0" RelGenDir="$PGENDIR/encoder_sample_encoder_sampling_0_0">
+    <FileSet Name="block_encoder_edge_detector_b_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_edge_detector_b_0" RelGenDir="$PGENDIR/block_encoder_edge_detector_b_0">
       <Config>
-        <Option Name="TopModule" Val="encoder_sample_encoder_sampling_0_0"/>
+        <Option Name="TopModule" Val="block_encoder_edge_detector_b_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="encoder_test_block_encoder_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/encoder_test_block_encoder_0_0" RelGenDir="$PGENDIR/encoder_test_block_encoder_0_0">
+    <FileSet Name="block_encoder_NOT_gate_a_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_NOT_gate_a_0" RelGenDir="$PGENDIR/block_encoder_NOT_gate_a_0">
       <Config>
-        <Option Name="TopModule" Val="encoder_test_block_encoder_0_0"/>
+        <Option Name="TopModule" Val="block_encoder_NOT_gate_a_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="SPI_shift_register_input_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/SPI_shift_register_input_1" RelGenDir="$PGENDIR/SPI_shift_register_input_1">
+    <FileSet Name="block_encoder_NOT_gate_b_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_NOT_gate_b_0" RelGenDir="$PGENDIR/block_encoder_NOT_gate_b_0">
       <Config>
-        <Option Name="TopModule" Val="SPI_shift_register_input_1"/>
+        <Option Name="TopModule" Val="block_encoder_NOT_gate_b_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="SPI_enable_counter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/SPI_enable_counter_0_0" RelGenDir="$PGENDIR/SPI_enable_counter_0_0">
+    <FileSet Name="block_encoder_up_signal_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_up_signal_0" RelGenDir="$PGENDIR/block_encoder_up_signal_0">
       <Config>
-        <Option Name="TopModule" Val="SPI_enable_counter_0_0"/>
+        <Option Name="TopModule" Val="block_encoder_up_signal_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="buildup_edge_detector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_edge_detector_0_0" RelGenDir="$PGENDIR/buildup_edge_detector_0_0">
+    <FileSet Name="block_encoder_edge_detector_a_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_edge_detector_a_0" RelGenDir="$PGENDIR/block_encoder_edge_detector_a_0">
       <Config>
-        <Option Name="TopModule" Val="buildup_edge_detector_0_0"/>
+        <Option Name="TopModule" Val="block_encoder_edge_detector_a_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="buildup_SPI_wrapper_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_SPI_wrapper_0_1" RelGenDir="$PGENDIR/buildup_SPI_wrapper_0_1">
+    <FileSet Name="block_encoder_down_signal_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/block_encoder_down_signal_0" RelGenDir="$PGENDIR/block_encoder_down_signal_0">
       <Config>
-        <Option Name="TopModule" Val="buildup_SPI_wrapper_0_1"/>
+        <Option Name="TopModule" Val="block_encoder_down_signal_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -437,23 +425,19 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="Xcelium">
-      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
     </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
   </Simulators>
   <Runs Version="1" Minor="21">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -498,37 +482,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="encoder_bd_encoder_0_0_synth_1" Type="Ft3:Synth" SrcSet="encoder_bd_encoder_0_0" Part="xc7z020clg400-1" ConstrsSet="encoder_bd_encoder_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/encoder_bd_encoder_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_bd_encoder_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_bd_encoder_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="encoder_sample_encoder_sampling_0_0_synth_1" Type="Ft3:Synth" SrcSet="encoder_sample_encoder_sampling_0_0" Part="xc7z020clg400-1" ConstrsSet="encoder_sample_encoder_sampling_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/encoder_sample_encoder_sampling_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_sample_encoder_sampling_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_sample_encoder_sampling_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="encoder_test_block_encoder_0_0_synth_1" Type="Ft3:Synth" SrcSet="encoder_test_block_encoder_0_0" Part="xc7z020clg400-1" ConstrsSet="encoder_test_block_encoder_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/encoder_test_block_encoder_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="SPI_shift_register_input_1_synth_1" Type="Ft3:Synth" SrcSet="SPI_shift_register_input_1" Part="xc7z020clg400-1" ConstrsSet="SPI_shift_register_input_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/SPI_shift_register_input_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/SPI_shift_register_input_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/SPI_shift_register_input_1_synth_1">
+    <Run Id="block_encoder_up_down_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_up_down_counter_0_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_up_down_counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_up_down_counter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_up_down_counter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_up_down_counter_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -540,7 +494,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="SPI_enable_counter_0_0_synth_1" Type="Ft3:Synth" SrcSet="SPI_enable_counter_0_0" Part="xc7z020clg400-1" ConstrsSet="SPI_enable_counter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/SPI_enable_counter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/SPI_enable_counter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/SPI_enable_counter_0_0_synth_1">
+    <Run Id="block_encoder_edge_detector_b_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_edge_detector_b_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_edge_detector_b_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_edge_detector_b_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_b_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_b_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -552,7 +506,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_edge_detector_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_edge_detector_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_edge_detector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_edge_detector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_edge_detector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_edge_detector_0_0_synth_1">
+    <Run Id="block_encoder_NOT_gate_a_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_NOT_gate_a_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_NOT_gate_a_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_NOT_gate_a_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_a_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_a_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -564,7 +518,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_SPI_wrapper_0_1_synth_1" Type="Ft3:Synth" SrcSet="buildup_SPI_wrapper_0_1" Part="xc7z020clg400-1" ConstrsSet="buildup_SPI_wrapper_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_SPI_wrapper_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_SPI_wrapper_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_SPI_wrapper_0_1_synth_1">
+    <Run Id="block_encoder_NOT_gate_b_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_NOT_gate_b_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_NOT_gate_b_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_NOT_gate_b_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_b_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_b_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -576,7 +530,43 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="block_encoder_up_signal_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_up_signal_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_up_signal_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_up_signal_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_up_signal_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_up_signal_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="block_encoder_edge_detector_a_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_edge_detector_a_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_edge_detector_a_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_edge_detector_a_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_a_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_a_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="block_encoder_down_signal_0_synth_1" Type="Ft3:Synth" SrcSet="block_encoder_down_signal_0" Part="xc7z020clg400-1" ConstrsSet="block_encoder_down_signal_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/block_encoder_down_signal_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_down_signal_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_down_signal_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -589,7 +579,6 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -662,58 +651,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="encoder_bd_encoder_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="encoder_bd_encoder_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="encoder_bd_encoder_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_bd_encoder_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_bd_encoder_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="encoder_sample_encoder_sampling_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="encoder_sample_encoder_sampling_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="encoder_sample_encoder_sampling_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_sample_encoder_sampling_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_sample_encoder_sampling_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="encoder_test_block_encoder_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="encoder_test_block_encoder_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="encoder_test_block_encoder_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="SPI_shift_register_input_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="SPI_shift_register_input_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="SPI_shift_register_input_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/SPI_shift_register_input_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/SPI_shift_register_input_1_impl_1">
+    <Run Id="block_encoder_up_down_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_up_down_counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_up_down_counter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_up_down_counter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_up_down_counter_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -732,7 +670,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="SPI_enable_counter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="SPI_enable_counter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="SPI_enable_counter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/SPI_enable_counter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/SPI_enable_counter_0_0_impl_1">
+    <Run Id="block_encoder_edge_detector_b_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_edge_detector_b_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_edge_detector_b_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_b_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_b_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -751,7 +689,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_edge_detector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_edge_detector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_edge_detector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_edge_detector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_edge_detector_0_0_impl_1">
+    <Run Id="block_encoder_NOT_gate_a_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_NOT_gate_a_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_NOT_gate_a_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_a_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_a_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
@@ -770,7 +708,64 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_SPI_wrapper_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_SPI_wrapper_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_SPI_wrapper_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_SPI_wrapper_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_SPI_wrapper_0_1_impl_1">
+    <Run Id="block_encoder_NOT_gate_b_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_NOT_gate_b_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_NOT_gate_b_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_b_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_NOT_gate_b_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="block_encoder_up_signal_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_up_signal_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_up_signal_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_up_signal_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_up_signal_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="block_encoder_edge_detector_a_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_edge_detector_a_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_edge_detector_a_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_a_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_edge_detector_a_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="block_encoder_down_signal_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="block_encoder_down_signal_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="block_encoder_down_signal_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/block_encoder_down_signal_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/block_encoder_down_signal_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
