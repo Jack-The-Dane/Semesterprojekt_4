@@ -1,0 +1,360 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD4878B2B6E95BBD6",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
+      "name": "buildup",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlslice_0": "",
+      "xlconcat_0": "",
+      "block_encoder_0": "",
+      "xlconstant_1": "",
+      "SPI_wrapper_0": "",
+      "edge_detector_0": ""
+    },
+    "ports": {
+      "btn_0": {
+        "direction": "I"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "btn_2",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "buildup_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "btn_2": {
+        "direction": "I"
+      },
+      "btn_1": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "led": {
+        "direction": "O",
+        "left": "1",
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "2",
+            "value_src": "ip_prop"
+          }
+        }
+      },
+      "ja_0": {
+        "direction": "O"
+      },
+      "ja_1": {
+        "direction": "I"
+      },
+      "ja_2": {
+        "direction": "I"
+      },
+      "ja_3": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "buildup_ja_3",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "buildup_xlslice_0_0",
+        "xci_path": "ip/buildup_xlslice_0_0/buildup_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "buildup_xlconcat_0_0",
+        "xci_path": "ip/buildup_xlconcat_0_0/buildup_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0"
+      },
+      "block_encoder_0": {
+        "vlnv": "user.org:user:block_encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_block_encoder_0_0",
+        "xci_path": "ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0.xci",
+        "inst_hier_path": "block_encoder_0"
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "ip_revision": "8",
+        "xci_name": "buildup_xlconstant_1_0",
+        "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1"
+      },
+      "SPI_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:SPI_wrapper:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_SPI_wrapper_0_1",
+        "xci_path": "ip/buildup_SPI_wrapper_0_1/buildup_SPI_wrapper_0_1.xci",
+        "inst_hier_path": "SPI_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SPI_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Motor": {
+            "direction": "O"
+          },
+          "SPI_chip_select": {
+            "direction": "I"
+          },
+          "SPI_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "SPI_sample": {
+            "direction": "I"
+          },
+          "encoder_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "fpga_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "miso": {
+            "direction": "O"
+          },
+          "mosi": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "edge_detector_0": {
+        "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_edge_detector_0_0",
+        "xci_path": "ip/buildup_edge_detector_0_0/buildup_edge_detector_0_0.xci",
+        "inst_hier_path": "edge_detector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "edge_detector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "d": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_ja_3",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "result": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "SPI_wrapper_0_Motor": {
+        "ports": [
+          "SPI_wrapper_0/Motor",
+          "ja_0"
+        ]
+      },
+      "SPI_wrapper_0_SPI_out": {
+        "ports": [
+          "SPI_wrapper_0/SPI_out",
+          "xlslice_0/Din"
+        ]
+      },
+      "SPI_wrapper_0_miso": {
+        "ports": [
+          "SPI_wrapper_0/miso",
+          "xlconcat_0/In1"
+        ]
+      },
+      "block_encoder_0_pulse_cnt": {
+        "ports": [
+          "block_encoder_0/pulse_cnt",
+          "SPI_wrapper_0/encoder_in"
+        ]
+      },
+      "btn_0_1": {
+        "ports": [
+          "btn_0",
+          "SPI_wrapper_0/SPI_chip_select"
+        ]
+      },
+      "btn_1_1": {
+        "ports": [
+          "btn_1",
+          "SPI_wrapper_0/mosi"
+        ]
+      },
+      "btn_2_1": {
+        "ports": [
+          "btn_2",
+          "block_encoder_0/rst",
+          "SPI_wrapper_0/rst"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "block_encoder_0/clk",
+          "SPI_wrapper_0/fpga_clk",
+          "edge_detector_0/clk"
+        ]
+      },
+      "edge_detector_0_result": {
+        "ports": [
+          "edge_detector_0/result",
+          "SPI_wrapper_0/SPI_sample"
+        ]
+      },
+      "encoder_a_0_1": {
+        "ports": [
+          "ja_1",
+          "block_encoder_0/encoder_a"
+        ]
+      },
+      "encoder_b_0_1": {
+        "ports": [
+          "ja_2",
+          "block_encoder_0/encoder_b"
+        ]
+      },
+      "ja_3_1": {
+        "ports": [
+          "ja_3",
+          "edge_detector_0/d"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "led"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "block_encoder_0/enable"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "xlconcat_0/In0"
+        ]
+      }
+    }
+  }
+}

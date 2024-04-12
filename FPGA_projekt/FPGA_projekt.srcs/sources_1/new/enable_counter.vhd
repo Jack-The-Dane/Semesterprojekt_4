@@ -35,7 +35,7 @@ entity enable_counter is
     generic( data_length : positive := 16);
     Port ( en : in STD_LOGIC;
            rst : in STD_LOGIC;
-           clk : in STD_LOGIC;
+           sample : in STD_LOGIC;
            cnt : out STD_LOGIC);
 end enable_counter;
 
@@ -44,13 +44,13 @@ signal cnt_temp : unsigned(5 downto 0);
 signal out_temp : std_logic := '0';
 
 begin
-    process(en, rst, clk)
+    process(en, rst, sample)
     begin
         if(rst = '1') then
             cnt_temp <= (others => '0');
         end if;
         if(en = '0') then
-            if(rising_edge(clk)) then
+            if(rising_edge(sample)) then
                 cnt_temp <= cnt_temp + 1;
                 if(cnt_temp = data_length) then
                     out_temp <= '1';
