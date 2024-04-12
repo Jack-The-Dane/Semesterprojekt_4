@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xD4878B2B6E95BBD6",
+      "boundary_crc": "0xDFF037E18F6E3BC5",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -11,12 +11,13 @@
       "validated": "true"
     },
     "design_tree": {
-      "xlslice_0": "",
-      "xlconcat_0": "",
       "block_encoder_0": "",
       "xlconstant_1": "",
-      "SPI_wrapper_0": "",
-      "edge_detector_0": ""
+      "edge_detector_0": "",
+      "pwm_gen_0": "",
+      "counter_0": "",
+      "clock_divider_0": "",
+      "SPI_0": ""
     },
     "ports": {
       "btn_0": {
@@ -69,17 +70,6 @@
           }
         }
       },
-      "led": {
-        "direction": "O",
-        "left": "1",
-        "right": "0",
-        "parameters": {
-          "PortWidth": {
-            "value": "2",
-            "value_src": "ip_prop"
-          }
-        }
-      },
       "ja_0": {
         "direction": "O"
       },
@@ -114,31 +104,12 @@
             "value_src": "default"
           }
         }
+      },
+      "led_0": {
+        "direction": "O"
       }
     },
     "components": {
-      "xlslice_0": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "3",
-        "xci_name": "buildup_xlslice_0_0",
-        "xci_path": "ip/buildup_xlslice_0_0/buildup_xlslice_0_0.xci",
-        "inst_hier_path": "xlslice_0",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "0"
-          },
-          "DIN_WIDTH": {
-            "value": "16"
-          }
-        }
-      },
-      "xlconcat_0": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "ip_revision": "5",
-        "xci_name": "buildup_xlconcat_0_0",
-        "xci_path": "ip/buildup_xlconcat_0_0/buildup_xlconcat_0_0.xci",
-        "inst_hier_path": "xlconcat_0"
-      },
       "block_encoder_0": {
         "vlnv": "user.org:user:block_encoder:1.0",
         "ip_revision": "2",
@@ -152,69 +123,6 @@
         "xci_name": "buildup_xlconstant_1_0",
         "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
         "inst_hier_path": "xlconstant_1"
-      },
-      "SPI_wrapper_0": {
-        "vlnv": "xilinx.com:module_ref:SPI_wrapper:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_SPI_wrapper_0_1",
-        "xci_path": "ip/buildup_SPI_wrapper_0_1/buildup_SPI_wrapper_0_1.xci",
-        "inst_hier_path": "SPI_wrapper_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "SPI_wrapper",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Motor": {
-            "direction": "O"
-          },
-          "SPI_chip_select": {
-            "direction": "I"
-          },
-          "SPI_out": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "SPI_sample": {
-            "direction": "I"
-          },
-          "encoder_in": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "fpga_clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "buildup_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "miso": {
-            "direction": "O"
-          },
-          "mosi": {
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          }
-        }
       },
       "edge_detector_0": {
         "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
@@ -259,64 +167,182 @@
             "direction": "O"
           }
         }
+      },
+      "pwm_gen_0": {
+        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_pwm_gen_0_0",
+        "xci_path": "ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0.xci",
+        "inst_hier_path": "pwm_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwm_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "cnt": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      },
+      "counter_0": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_counter_0_0",
+        "xci_path": "ip/buildup_counter_0_0/buildup_counter_0_0.xci",
+        "inst_hier_path": "counter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "clock_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_clock_divider_0_0",
+        "xci_path": "ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci",
+        "inst_hier_path": "clock_divider_0",
+        "parameters": {
+          "n_bits": {
+            "value": "4"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "clk_div": {
+            "direction": "O"
+          }
+        }
+      },
+      "SPI_0": {
+        "vlnv": "user.org:user:SPI:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_SPI_0_0",
+        "xci_path": "ip/buildup_SPI_0_0/buildup_SPI_0_0.xci",
+        "inst_hier_path": "SPI_0"
       }
     },
     "nets": {
-      "SPI_wrapper_0_Motor": {
+      "SPI_0_SPI_out": {
         "ports": [
-          "SPI_wrapper_0/Motor",
-          "ja_0"
+          "SPI_0/SPI_out",
+          "pwm_gen_0/duty"
         ]
       },
-      "SPI_wrapper_0_SPI_out": {
+      "SPI_0_miso": {
         "ports": [
-          "SPI_wrapper_0/SPI_out",
-          "xlslice_0/Din"
-        ]
-      },
-      "SPI_wrapper_0_miso": {
-        "ports": [
-          "SPI_wrapper_0/miso",
-          "xlconcat_0/In1"
+          "SPI_0/miso",
+          "led_0"
         ]
       },
       "block_encoder_0_pulse_cnt": {
         "ports": [
           "block_encoder_0/pulse_cnt",
-          "SPI_wrapper_0/encoder_in"
+          "SPI_0/encoder_in"
         ]
       },
       "btn_0_1": {
         "ports": [
           "btn_0",
-          "SPI_wrapper_0/SPI_chip_select"
+          "SPI_0/SPI_chip_select"
         ]
       },
       "btn_1_1": {
         "ports": [
           "btn_1",
-          "SPI_wrapper_0/mosi"
+          "SPI_0/mosi"
         ]
       },
       "btn_2_1": {
         "ports": [
           "btn_2",
           "block_encoder_0/rst",
-          "SPI_wrapper_0/rst"
+          "clock_divider_0/rst",
+          "SPI_0/rst",
+          "counter_0/rst"
         ]
       },
       "clk_1": {
         "ports": [
           "clk",
           "block_encoder_0/clk",
-          "SPI_wrapper_0/fpga_clk",
-          "edge_detector_0/clk"
+          "edge_detector_0/clk",
+          "clock_divider_0/clk"
+        ]
+      },
+      "clock_divider_0_clk_div": {
+        "ports": [
+          "clock_divider_0/clk_div",
+          "counter_0/clk"
+        ]
+      },
+      "counter_0_cnt": {
+        "ports": [
+          "counter_0/cnt",
+          "pwm_gen_0/cnt"
         ]
       },
       "edge_detector_0_result": {
         "ports": [
           "edge_detector_0/result",
-          "SPI_wrapper_0/SPI_sample"
+          "SPI_0/SPI_sample"
         ]
       },
       "encoder_a_0_1": {
@@ -337,22 +363,17 @@
           "edge_detector_0/d"
         ]
       },
-      "xlconcat_0_dout": {
+      "pwm_gen_0_pwm": {
         "ports": [
-          "xlconcat_0/dout",
-          "led"
+          "pwm_gen_0/pwm",
+          "ja_0"
         ]
       },
       "xlconstant_1_dout": {
         "ports": [
           "xlconstant_1/dout",
-          "block_encoder_0/enable"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "xlconcat_0/In0"
+          "block_encoder_0/enable",
+          "counter_0/en"
         ]
       }
     }

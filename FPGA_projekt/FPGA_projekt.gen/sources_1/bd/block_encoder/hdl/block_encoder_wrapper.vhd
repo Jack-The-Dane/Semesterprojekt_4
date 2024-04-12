@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Tue Apr  9 13:00:05 2024
---Host        : Cornelia running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+--Date        : Fri Apr  5 23:00:20 2024
+--Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target block_encoder_wrapper.bd
 --Design      : block_encoder_wrapper
 --Purpose     : IP block netlist

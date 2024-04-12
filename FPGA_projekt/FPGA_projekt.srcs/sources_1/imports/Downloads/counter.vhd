@@ -51,7 +51,7 @@ begin
         if (rst = '1') then
             cnt_int     <=  (others => '0');
         elsif(rising_edge(clk)) then
-            if (en = '0') then
+            if (en = '1') then
                 cnt_int <=  cnt_int + 1;
             end if;
         end if;

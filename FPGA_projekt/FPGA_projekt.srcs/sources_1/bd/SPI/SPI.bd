@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x16E44CCFCB31A731",
+      "boundary_crc": "0x11799A968303D6EE",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/SPI",
       "name": "SPI",
@@ -12,18 +12,12 @@
     },
     "design_tree": {
       "shift_register_input": "",
-      "pwm_gen_0": "",
-      "counter_0": "",
       "latch_0": "",
-      "enable_counter_0": "",
-      "always_true": ""
+      "Prescaler": ""
     },
     "ports": {
       "mosi": {
         "direction": "I"
-      },
-      "Motor": {
-        "direction": "O"
       },
       "SPI_chip_select": {
         "direction": "I"
@@ -45,9 +39,6 @@
       },
       "miso": {
         "direction": "O"
-      },
-      "fpga_clk": {
-        "direction": "I"
       },
       "SPI_sample": {
         "direction": "I"
@@ -105,73 +96,6 @@
           }
         }
       },
-      "pwm_gen_0": {
-        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
-        "ip_revision": "1",
-        "xci_name": "SPI_pwm_gen_0_0",
-        "xci_path": "ip/SPI_pwm_gen_0_0/SPI_pwm_gen_0_0.xci",
-        "inst_hier_path": "pwm_gen_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pwm_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "cnt": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "duty": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "pwm": {
-            "direction": "O"
-          }
-        }
-      },
-      "counter_0": {
-        "vlnv": "xilinx.com:module_ref:counter:1.0",
-        "ip_revision": "1",
-        "xci_name": "SPI_counter_0_0",
-        "xci_path": "ip/SPI_counter_0_0/SPI_counter_0_0.xci",
-        "inst_hier_path": "counter_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "SPI_fpga_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "en": {
-            "direction": "I"
-          },
-          "cnt": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
       "latch_0": {
         "vlnv": "xilinx.com:module_ref:latch:1.0",
         "ip_revision": "1",
@@ -203,12 +127,12 @@
           }
         }
       },
-      "enable_counter_0": {
+      "Prescaler": {
         "vlnv": "xilinx.com:module_ref:enable_counter:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_enable_counter_0_0",
         "xci_path": "ip/SPI_enable_counter_0_0/SPI_enable_counter_0_0.xci",
-        "inst_hier_path": "enable_counter_0",
+        "inst_hier_path": "Prescaler",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "enable_counter",
@@ -229,21 +153,6 @@
             "direction": "O"
           }
         }
-      },
-      "always_true": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "8",
-        "xci_name": "SPI_xlconstant_0_0",
-        "xci_path": "ip/SPI_xlconstant_0_0/SPI_xlconstant_0_0.xci",
-        "inst_hier_path": "always_true",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "9323"
-          },
-          "CONST_WIDTH": {
-            "value": "16"
-          }
-        }
       }
     },
     "nets": {
@@ -253,35 +162,23 @@
           "shift_register_input/data"
         ]
       },
-      "always_true_dout": {
-        "ports": [
-          "always_true/dout",
-          "counter_0/en"
-        ]
-      },
       "chip_select_1": {
         "ports": [
           "SPI_chip_select",
           "shift_register_input/chip_select",
-          "enable_counter_0/en"
+          "Prescaler/en"
         ]
       },
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "enable_counter_0/sample",
+          "Prescaler/sample",
           "shift_register_input/sample"
-        ]
-      },
-      "counter_0_cnt": {
-        "ports": [
-          "counter_0/cnt",
-          "pwm_gen_0/cnt"
         ]
       },
       "enable_counter_0_cnt": {
         "ports": [
-          "enable_counter_0/cnt",
+          "Prescaler/cnt",
           "latch_0/cnt"
         ]
       },
@@ -291,31 +188,18 @@
           "shift_register_input/register_in"
         ]
       },
-      "fpga_clk_1": {
-        "ports": [
-          "fpga_clk",
-          "counter_0/clk"
-        ]
-      },
       "latch_0_Q": {
         "ports": [
           "latch_0/Q",
-          "pwm_gen_0/duty"
-        ]
-      },
-      "pwm_gen_0_pwm": {
-        "ports": [
-          "pwm_gen_0/pwm",
-          "Motor"
+          "SPI_out"
         ]
       },
       "rst_1": {
         "ports": [
           "rst",
-          "counter_0/rst",
-          "latch_0/rst",
           "shift_register_input/rst",
-          "enable_counter_0/rst"
+          "Prescaler/rst",
+          "latch_0/rst"
         ]
       },
       "shift_register_input_carry_out": {
@@ -327,8 +211,7 @@
       "shift_register_input_register_out": {
         "ports": [
           "shift_register_input/register_out",
-          "latch_0/D",
-          "SPI_out"
+          "latch_0/D"
         ]
       }
     }

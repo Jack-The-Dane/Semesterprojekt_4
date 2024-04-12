@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Tue Apr  9 13:00:05 2024
---Host        : Cornelia running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+--Date        : Fri Apr  5 23:00:20 2024
+--Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target block_encoder.bd
 --Design      : block_encoder
 --Purpose     : IP block netlist
@@ -28,13 +28,13 @@ entity block_encoder is
 end block_encoder;
 
 architecture STRUCTURE of block_encoder is
-  component block_encoder_edge_detector_a_0 is
+  component block_encoder_edge_detector_0_0 is
   port (
     clk : in STD_LOGIC;
     d : in STD_LOGIC;
     result : out STD_LOGIC
   );
-  end component block_encoder_edge_detector_a_0;
+  end component block_encoder_edge_detector_0_0;
   component block_encoder_up_down_counter_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -45,39 +45,39 @@ architecture STRUCTURE of block_encoder is
     cnt : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component block_encoder_up_down_counter_0_0;
-  component block_encoder_edge_detector_b_0 is
+  component block_encoder_edge_detector_0_1 is
   port (
     clk : in STD_LOGIC;
     d : in STD_LOGIC;
     result : out STD_LOGIC
   );
-  end component block_encoder_edge_detector_b_0;
-  component block_encoder_NOT_gate_b_0 is
+  end component block_encoder_edge_detector_0_1;
+  component block_encoder_NOT_gate_0_0 is
   port (
     A : in STD_LOGIC;
     B : out STD_LOGIC
   );
-  end component block_encoder_NOT_gate_b_0;
-  component block_encoder_up_signal_0 is
+  end component block_encoder_NOT_gate_0_0;
+  component block_encoder_AND_gate_0_0 is
   port (
     A : in STD_LOGIC;
     B : in STD_LOGIC;
     C : out STD_LOGIC
   );
-  end component block_encoder_up_signal_0;
-  component block_encoder_NOT_gate_a_0 is
+  end component block_encoder_AND_gate_0_0;
+  component block_encoder_NOT_gate_0_1 is
   port (
     A : in STD_LOGIC;
     B : out STD_LOGIC
   );
-  end component block_encoder_NOT_gate_a_0;
-  component block_encoder_down_signal_0 is
+  end component block_encoder_NOT_gate_0_1;
+  component block_encoder_AND_gate_1_0 is
   port (
     A : in STD_LOGIC;
     B : in STD_LOGIC;
     C : out STD_LOGIC
   );
-  end component block_encoder_down_signal_0;
+  end component block_encoder_AND_gate_1_0;
   signal AND_gate_0_C : STD_LOGIC;
   signal AND_gate_1_C : STD_LOGIC;
   signal NOT_gate_0_B : STD_LOGIC;
@@ -97,29 +97,29 @@ begin
   encoder_b_1 <= encoder_b;
   pulse_cnt(8 downto 0) <= up_down_counter_0_cnt(8 downto 0);
   rst_1 <= rst;
-NOT_gate_a: component block_encoder_NOT_gate_a_0
+NOT_gate_a: component block_encoder_NOT_gate_0_1
      port map (
       A => encoder_a_1,
       B => NOT_gate_0_B
     );
-NOT_gate_b: component block_encoder_NOT_gate_b_0
+NOT_gate_b: component block_encoder_NOT_gate_0_0
      port map (
       A => encoder_b_1,
       B => NOT_gate_b_B
     );
-down_signal: component block_encoder_down_signal_0
+down_signal: component block_encoder_AND_gate_1_0
      port map (
       A => edge_detector_b_edge,
       B => NOT_gate_0_B,
       C => AND_gate_1_C
     );
-edge_detector_a: component block_encoder_edge_detector_a_0
+edge_detector_a: component block_encoder_edge_detector_0_0
      port map (
       clk => clk_1,
       d => encoder_a_1,
       result => edge_detector_a_edge
     );
-edge_detector_b: component block_encoder_edge_detector_b_0
+edge_detector_b: component block_encoder_edge_detector_0_1
      port map (
       clk => clk_1,
       d => encoder_b_1,
@@ -134,7 +134,7 @@ up_down_counter_0: component block_encoder_up_down_counter_0_0
       rst => rst_1,
       up => AND_gate_0_C
     );
-up_signal: component block_encoder_up_signal_0
+up_signal: component block_encoder_AND_gate_0_0
      port map (
       A => edge_detector_a_edge,
       B => NOT_gate_b_B,
