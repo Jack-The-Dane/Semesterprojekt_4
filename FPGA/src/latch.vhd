@@ -21,13 +21,12 @@ begin
 
         if rst = '1' then
             data <= (others => '0');
-        end if;
-
-        if set = '1' then
+        elsif set = '1' then
             data <= D;
+        else
+            data <= data; -- latch
         end if;
 
-        data <= data; -- latch
 
     end process;
 

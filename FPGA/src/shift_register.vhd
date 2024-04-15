@@ -35,10 +35,11 @@ architecture Behavioral of shift_register is
             if(falling_edge(clk)) then
                 carry_out <= temp;
             end if;
+        else
+            register_data <= register_data; -- latch
         end if;
-        register_data <= register_data; -- latch
     end process;
 
-    register_out <= register_data;
+    register_out <= std_logic_vector(register_data);
 
 end Behavioral;

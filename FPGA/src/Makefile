@@ -12,7 +12,7 @@ sources=*.vhd
 # If the GHDL is installed as a module, set the path to the module
 # ghdl-module=-m path/to/ghdl.so
 
-make: work-obj%.cf
+make: build/$(main).json
 
 work-obj%.cf: *.vhd
 	ghdl -a $(sources)
@@ -39,3 +39,18 @@ flash: build/$(main)_packed.fs
 	# NOTE: This does not flash the program permanently. It will be lost after power off.
 	# If you want to flash the program permanently, you need to add the '-f' flag
 	sudo openFPGALoader -b tangnano9k build/$(main)_packed.fs
+
+build/tests/: build/
+	[[ -d "build/tests" ]] || mkdir build/tests
+
+build/tests/shift_register.ghw: tests/shift_register_tb.vhd shift_register.vhd
+	ghdl -a *.vhd tests/shift_register_tb.vhd
+	ghdl -e shift_register_tb
+	ghdl -r shift_register_tb --wave=build/tests/shift_register.ghw
+
+build/tests/latch.ghw: tests/latch_tb.vhd latch.vhd
+	ghdl -a *.vhd tests/latch_tb.vhd
+	ghdl -e latch_tb
+	ghdl -r latch_tb --wave=build/tests/latch.ghw
+
+test: build/tests/shift_register.ghw build/tests/latch.ghw
