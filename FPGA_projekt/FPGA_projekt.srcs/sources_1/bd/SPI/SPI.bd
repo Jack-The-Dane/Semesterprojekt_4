@@ -13,7 +13,8 @@
     "design_tree": {
       "shift_register_input": "",
       "latch_0": "",
-      "Prescaler": ""
+      "Prescaler": "",
+      "NOT_gate_0": ""
     },
     "ports": {
       "mosi": {
@@ -153,6 +154,26 @@
             "direction": "O"
           }
         }
+      },
+      "NOT_gate_0": {
+        "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
+        "ip_revision": "1",
+        "xci_name": "SPI_NOT_gate_0_0",
+        "xci_path": "ip/SPI_NOT_gate_0_0/SPI_NOT_gate_0_0.xci",
+        "inst_hier_path": "NOT_gate_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "NOT_gate",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -162,18 +183,24 @@
           "shift_register_input/data"
         ]
       },
-      "chip_select_1": {
+      "NOT_gate_0_B": {
+        "ports": [
+          "NOT_gate_0/B",
+          "Prescaler/en"
+        ]
+      },
+      "SPI_chip_select_1": {
         "ports": [
           "SPI_chip_select",
           "shift_register_input/chip_select",
-          "Prescaler/en"
+          "NOT_gate_0/A"
         ]
       },
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "Prescaler/sample",
-          "shift_register_input/sample"
+          "shift_register_input/sample",
+          "Prescaler/sample"
         ]
       },
       "enable_counter_0_cnt": {
@@ -198,8 +225,8 @@
         "ports": [
           "rst",
           "shift_register_input/rst",
-          "Prescaler/rst",
-          "latch_0/rst"
+          "latch_0/rst",
+          "Prescaler/rst"
         ]
       },
       "shift_register_input_carry_out": {

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Fri Apr 12 13:18:49 2024
+--Date        : Mon Apr 15 10:30:19 2024
 --Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target SPI_wrapper.bd
 --Design      : SPI_wrapper
@@ -18,7 +18,6 @@ entity SPI_wrapper is
     SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
     SPI_sample : in STD_LOGIC;
     encoder_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    fpga_clk : in STD_LOGIC;
     miso : out STD_LOGIC;
     mosi : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -32,8 +31,8 @@ architecture STRUCTURE of SPI_wrapper is
     SPI_chip_select : in STD_LOGIC;
     rst : in STD_LOGIC;
     encoder_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    SPI_sample : in STD_LOGIC;
     miso : out STD_LOGIC;
+    SPI_sample : in STD_LOGIC;
     SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component SPI;
@@ -44,7 +43,6 @@ SPI_i: component SPI
       SPI_out(15 downto 0) => SPI_out(15 downto 0),
       SPI_sample => SPI_sample,
       encoder_in(15 downto 0) => encoder_in(15 downto 0),
-      fpga_clk => fpga_clk,
       miso => miso,
       mosi => mosi,
       rst => rst

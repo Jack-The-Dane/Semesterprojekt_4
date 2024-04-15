@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03.04.2024 11:09:52
+-- Create Date: 02/21/2024 02:35:48 PM
 -- Design Name: 
--- Module Name: latch - Behavioral
+-- Module Name: NOT_gate - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -24,38 +24,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
-use IEEE.NUMERIC_STD.ALL;
+--use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity latch is
-    generic( data_length : positive := 16);
-    Port ( rst : in std_logic;
-           cnt : in std_logic;
-           D : in std_logic_vector(data_length - 1 downto 0);
-           Q : out std_logic_vector(data_length - 1 downto 0)
-           );
-end latch;
+entity NOT_gate is
+    Port ( A : in STD_LOGIC := '0';
+           B : out STD_LOGIC);
+end NOT_gate;
 
-architecture Behavioral of latch is
-    signal data : std_logic_vector(data_length -1 downto 0) := x"0000";
+architecture Behavioral of NOT_gate is
 
 begin
-    process(cnt, rst)
-    begin
-        if(rst = '1') then
-            data <= (others => '0');
-        end if;
-        if(cnt = '1') then
-           data <= D;
-                end if;
-        
-        end process;
-        
-        Q <= data;
-
+B <= not(A);
 
 end Behavioral;

@@ -40,7 +40,7 @@ entity enable_counter is
 end enable_counter;
 
 architecture Behavioral of enable_counter is
-signal cnt_temp : unsigned(5 downto 0);
+signal cnt_temp : unsigned(5 downto 0) := "000000";
 signal out_temp : std_logic := '0';
 
 begin
@@ -48,9 +48,8 @@ begin
     begin
         if(rst = '1') then
             cnt_temp <= (others => '0');
-        end if;
-        if(en = '0') then
-            if(rising_edge(sample)) then
+        elsif(rising_edge(sample)) then
+            if(en = '1') then
                 cnt_temp <= cnt_temp + 1;
                 if(cnt_temp = data_length) then
                     out_temp <= '1';

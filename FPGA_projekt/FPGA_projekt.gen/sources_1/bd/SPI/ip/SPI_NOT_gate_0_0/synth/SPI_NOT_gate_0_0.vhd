@@ -46,49 +46,41 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:enable_counter:1.0
+-- IP VLNV: xilinx.com:module_ref:NOT_gate:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY SPI_enable_counter_0_0 IS
+ENTITY SPI_NOT_gate_0_0 IS
   PORT (
-    en : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
-    sample : IN STD_LOGIC;
-    cnt : OUT STD_LOGIC
+    A : IN STD_LOGIC;
+    B : OUT STD_LOGIC
   );
-END SPI_enable_counter_0_0;
+END SPI_NOT_gate_0_0;
 
-ARCHITECTURE SPI_enable_counter_0_0_arch OF SPI_enable_counter_0_0 IS
+ARCHITECTURE SPI_NOT_gate_0_0_arch OF SPI_NOT_gate_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF SPI_enable_counter_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT enable_counter IS
-    GENERIC (
-      data_length : INTEGER
-    );
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF SPI_NOT_gate_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT NOT_gate IS
     PORT (
-      en : IN STD_LOGIC;
-      rst : IN STD_LOGIC;
-      sample : IN STD_LOGIC;
-      cnt : OUT STD_LOGIC
+      A : IN STD_LOGIC;
+      B : OUT STD_LOGIC
     );
-  END COMPONENT enable_counter;
-  ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
+  END COMPONENT NOT_gate;
+  ATTRIBUTE X_CORE_INFO : STRING;
+  ATTRIBUTE X_CORE_INFO OF SPI_NOT_gate_0_0_arch: ARCHITECTURE IS "NOT_gate,Vivado 2023.2";
+  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
+  ATTRIBUTE CHECK_LICENSE_TYPE OF SPI_NOT_gate_0_0_arch : ARCHITECTURE IS "SPI_NOT_gate_0_0,NOT_gate,{}";
+  ATTRIBUTE CORE_GENERATION_INFO : STRING;
+  ATTRIBUTE CORE_GENERATION_INFO OF SPI_NOT_gate_0_0_arch: ARCHITECTURE IS "SPI_NOT_gate_0_0,NOT_gate,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=NOT_gate,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
+  ATTRIBUTE IP_DEFINITION_SOURCE OF SPI_NOT_gate_0_0_arch: ARCHITECTURE IS "module_ref";
 BEGIN
-  U0 : enable_counter
-    GENERIC MAP (
-      data_length => 16
-    )
+  U0 : NOT_gate
     PORT MAP (
-      en => en,
-      rst => rst,
-      sample => sample,
-      cnt => cnt
+      A => A,
+      B => B
     );
-END SPI_enable_counter_0_0_arch;
+END SPI_NOT_gate_0_0_arch;

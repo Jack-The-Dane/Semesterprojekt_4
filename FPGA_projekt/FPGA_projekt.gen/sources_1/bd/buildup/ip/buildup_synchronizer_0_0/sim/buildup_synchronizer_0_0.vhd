@@ -46,49 +46,40 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:enable_counter:1.0
+-- IP VLNV: xilinx.com:module_ref:synchronizer:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY SPI_enable_counter_0_0 IS
+ENTITY buildup_synchronizer_0_0 IS
   PORT (
-    en : IN STD_LOGIC;
-    rst : IN STD_LOGIC;
-    sample : IN STD_LOGIC;
-    cnt : OUT STD_LOGIC
+    clk : IN STD_LOGIC;
+    D : IN STD_LOGIC;
+    Q : OUT STD_LOGIC
   );
-END SPI_enable_counter_0_0;
+END buildup_synchronizer_0_0;
 
-ARCHITECTURE SPI_enable_counter_0_0_arch OF SPI_enable_counter_0_0 IS
+ARCHITECTURE buildup_synchronizer_0_0_arch OF buildup_synchronizer_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF SPI_enable_counter_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT enable_counter IS
-    GENERIC (
-      data_length : INTEGER
-    );
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF buildup_synchronizer_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT synchronizer IS
     PORT (
-      en : IN STD_LOGIC;
-      rst : IN STD_LOGIC;
-      sample : IN STD_LOGIC;
-      cnt : OUT STD_LOGIC
+      clk : IN STD_LOGIC;
+      D : IN STD_LOGIC;
+      Q : OUT STD_LOGIC
     );
-  END COMPONENT enable_counter;
+  END COMPONENT synchronizer;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
-  ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN buildup_clk, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
-  U0 : enable_counter
-    GENERIC MAP (
-      data_length => 16
-    )
+  U0 : synchronizer
     PORT MAP (
-      en => en,
-      rst => rst,
-      sample => sample,
-      cnt => cnt
+      clk => clk,
+      D => D,
+      Q => Q
     );
-END SPI_enable_counter_0_0_arch;
+END buildup_synchronizer_0_0_arch;

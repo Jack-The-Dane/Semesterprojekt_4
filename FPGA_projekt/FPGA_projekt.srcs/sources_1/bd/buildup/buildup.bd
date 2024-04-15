@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xDFF037E18F6E3BC5",
+      "boundary_crc": "0xEB49D8E152E3B072",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -13,14 +13,14 @@
     "design_tree": {
       "block_encoder_0": "",
       "xlconstant_1": "",
-      "edge_detector_0": "",
       "pwm_gen_0": "",
       "counter_0": "",
       "clock_divider_0": "",
-      "SPI_0": ""
+      "SPI_0": "",
+      "synchronizer_0": ""
     },
     "ports": {
-      "btn_0": {
+      "CS": {
         "direction": "I"
       },
       "clk": {
@@ -28,7 +28,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "btn_2",
+            "value": "btn_2:rst",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
@@ -53,10 +53,10 @@
           }
         }
       },
-      "btn_2": {
+      "rst": {
         "direction": "I"
       },
-      "btn_1": {
+      "mosi": {
         "type": "rst",
         "direction": "I",
         "parameters": {
@@ -70,16 +70,16 @@
           }
         }
       },
-      "ja_0": {
+      "pwm": {
         "direction": "O"
       },
-      "ja_1": {
+      "encoder_a": {
         "direction": "I"
       },
-      "ja_2": {
+      "encoder_b": {
         "direction": "I"
       },
-      "ja_3": {
+      "sclk": {
         "type": "clk",
         "direction": "I",
         "parameters": {
@@ -105,7 +105,7 @@
           }
         }
       },
-      "led_0": {
+      "miso": {
         "direction": "O"
       }
     },
@@ -123,50 +123,6 @@
         "xci_name": "buildup_xlconstant_1_0",
         "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
         "inst_hier_path": "xlconstant_1"
-      },
-      "edge_detector_0": {
-        "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_edge_detector_0_0",
-        "xci_path": "ip/buildup_edge_detector_0_0/buildup_edge_detector_0_0.xci",
-        "inst_hier_path": "edge_detector_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "edge_detector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "buildup_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "d": {
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "buildup_ja_3",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "result": {
-            "direction": "O"
-          }
-        }
       },
       "pwm_gen_0": {
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
@@ -277,6 +233,50 @@
         "xci_name": "buildup_SPI_0_0",
         "xci_path": "ip/buildup_SPI_0_0/buildup_SPI_0_0.xci",
         "inst_hier_path": "SPI_0"
+      },
+      "synchronizer_0": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_0",
+        "xci_path": "ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0.xci",
+        "inst_hier_path": "synchronizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_ja_3",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
@@ -289,7 +289,7 @@
       "SPI_0_miso": {
         "ports": [
           "SPI_0/miso",
-          "led_0"
+          "miso"
         ]
       },
       "block_encoder_0_pulse_cnt": {
@@ -300,31 +300,22 @@
       },
       "btn_0_1": {
         "ports": [
-          "btn_0",
+          "CS",
           "SPI_0/SPI_chip_select"
         ]
       },
       "btn_1_1": {
         "ports": [
-          "btn_1",
+          "mosi",
           "SPI_0/mosi"
-        ]
-      },
-      "btn_2_1": {
-        "ports": [
-          "btn_2",
-          "block_encoder_0/rst",
-          "clock_divider_0/rst",
-          "SPI_0/rst",
-          "counter_0/rst"
         ]
       },
       "clk_1": {
         "ports": [
           "clk",
           "block_encoder_0/clk",
-          "edge_detector_0/clk",
-          "clock_divider_0/clk"
+          "clock_divider_0/clk",
+          "synchronizer_0/clk"
         ]
       },
       "clock_divider_0_clk_div": {
@@ -339,34 +330,43 @@
           "pwm_gen_0/cnt"
         ]
       },
-      "edge_detector_0_result": {
-        "ports": [
-          "edge_detector_0/result",
-          "SPI_0/SPI_sample"
-        ]
-      },
       "encoder_a_0_1": {
         "ports": [
-          "ja_1",
+          "encoder_a",
           "block_encoder_0/encoder_a"
         ]
       },
       "encoder_b_0_1": {
         "ports": [
-          "ja_2",
+          "encoder_b",
           "block_encoder_0/encoder_b"
         ]
       },
       "ja_3_1": {
         "ports": [
-          "ja_3",
-          "edge_detector_0/d"
+          "sclk",
+          "synchronizer_0/D"
         ]
       },
       "pwm_gen_0_pwm": {
         "ports": [
           "pwm_gen_0/pwm",
-          "ja_0"
+          "pwm"
+        ]
+      },
+      "rst": {
+        "ports": [
+          "rst",
+          "block_encoder_0/rst",
+          "clock_divider_0/rst",
+          "counter_0/rst",
+          "SPI_0/rst"
+        ]
+      },
+      "synchronizer_0_Q": {
+        "ports": [
+          "synchronizer_0/Q",
+          "SPI_0/SPI_sample"
         ]
       },
       "xlconstant_1_dout": {
