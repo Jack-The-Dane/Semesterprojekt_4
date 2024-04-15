@@ -15,7 +15,7 @@ void init_joystick() {
 
     // Setup PB0 as input for the joystick button
     SYSCTL_RCGC2_R |= SYSCTL_RCGC2_GPIOB;            // Enable the GPIO port
-    GPIO_PORTB_DIR_R |=  (1 << JOYSTICK_BUTTON_PIN); // Set the direction as output
+    GPIO_PORTB_DIR_R &=  (1 << JOYSTICK_BUTTON_PIN); // Set the direction as output
     GPIO_PORTB_DEN_R |=  (1 << JOYSTICK_BUTTON_PIN); // Enable the GPIO pin
     GPIO_PORTB_PUR_R |=  (1 << JOYSTICK_BUTTON_PIN); // Enable internal pull-up
 
