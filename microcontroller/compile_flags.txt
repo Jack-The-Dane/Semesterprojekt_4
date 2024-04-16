@@ -1,1 +1,3 @@
 -I/nix/store/hkj250rjsvxcbr31fr1v81cv88cdfp4l-glibc-2.37-8-dev/include
+-I ./frt10/inc
+-I ./frt10/port/TivaM4

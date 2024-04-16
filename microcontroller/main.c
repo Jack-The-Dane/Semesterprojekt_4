@@ -8,6 +8,7 @@
 #include "tmodel.h"
 #include "systick.h"
 #include "controller.h"
+#include "FreeRTOS.h"
 
 void setup() {
     init_systick();

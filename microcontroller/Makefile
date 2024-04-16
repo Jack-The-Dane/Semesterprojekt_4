@@ -14,7 +14,9 @@ CFLAGS := -mthumb \
 	-fdata-sections \
 	-std=c99 -Wall -pedantic \
 	-Os -O0 -g \
-	-DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RA1 -Dgcc
+	-DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RA1 -Dgcc \
+	-I ./frt10/inc \
+	-I ./frt10/port/TivaM4
 
 LDFLAGS := -T tm4c123.ld --entry ResetISR --gc-sections
 OBJCOPYFLAGS := -O binary
