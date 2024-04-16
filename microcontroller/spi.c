@@ -3,7 +3,6 @@
 #include "glob_def.h"
 #include "spi.h"
 #include "tm4c123gh6pm.h"
-#include "tmodel.h"
 #include <stdint.h>
 #include "gpio.h"
 
@@ -70,8 +69,6 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
 }
 
 void spi_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
-  if (!wait_sem(SEM_SPI, WAIT_FOREVER)) return;
-
 
   // Create a word where the left-most bits are the pan motor and the right-most bits are the tilt motor
   SPI_TYPE send_message = ((SPI_TYPE)spi_pan_motor) << (SPI_WORD_LENGTH / 2) | ((SPI_TYPE)spi_tilt_motor);
@@ -85,5 +82,4 @@ void spi_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
   spi_pan_encoder = (SPI_ENCODER_TYPE)(recieve_message >> (SPI_WORD_LENGTH / 2));
   spi_tilt_encoder = (SPI_ENCODER_TYPE)(recieve_message);
 
-  signal_sem(SEM_SPI);
 }
