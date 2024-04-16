@@ -33,12 +33,20 @@ test:
 flash: all
 	sudo lm4flash build/main.bin
 
-clean:
+clean: ./frt10/Makefile
 	rm -rf build
+	rm -rf frt10/build
 
 -include $(DEPENDS)
 
-build/%.o: %.c Makefile
+build/:
+	mkdir -p build
+
+build/frt10.o: ./frt10/Makefile build/
+	make -C ./frt10
+	cp ./frt10/build/frt10.o build/frt10.o
+
+build/%.o: %.c Makefile build/frt10.o build/
 	mkdir -p build
 	$(CC) $(CFLAGS) -MD -MF build/$(notdir $*.d) -c $< -o build/$(notdir $@)
 
