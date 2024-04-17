@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 16 14:39:06 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 17 09:44:52 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="buildup" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -50,9 +50,9 @@
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
         <CONNECTION INSTANCE="block_encoder_0" PORT="rst"/>
-        <CONNECTION INSTANCE="clock_divider_0" PORT="rst"/>
-        <CONNECTION INSTANCE="counter_0" PORT="rst"/>
         <CONNECTION INSTANCE="SPI_0" PORT="rst"/>
+        <CONNECTION INSTANCE="counter_0" PORT="rst"/>
+        <CONNECTION INSTANCE="clock_divider_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sclk" SIGIS="clk" SIGNAME="External_Ports_sclk">

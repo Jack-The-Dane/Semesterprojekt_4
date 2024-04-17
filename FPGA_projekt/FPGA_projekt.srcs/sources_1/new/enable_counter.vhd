@@ -51,7 +51,7 @@ begin
         elsif(rising_edge(sample)) then
             if(en = '1') then
                 cnt_temp <= cnt_temp + 1;
-                if(cnt_temp = data_length) then
+                if(cnt_temp = data_length - 1) then
                     out_temp <= '1';
                     cnt_temp <= (others => '0');
                 else

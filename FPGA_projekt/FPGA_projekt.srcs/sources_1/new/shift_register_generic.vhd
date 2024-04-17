@@ -55,11 +55,9 @@ if(chip_select = '1') then
     register_data <= register_in;
 elsif(chip_select = '0') then
     if(rising_edge(sample)) then
-        temp <= register_data(register_length-1);
         register_data <= register_data(register_length-2 downto 0) & data;
-    end if;
-    if(falling_edge(sample)) then
-        carry_out <= temp;
+    elsif(falling_edge(sample)) then
+        carry_out <= register_data(register_length-1);
     end if;
 end if;
 end process;

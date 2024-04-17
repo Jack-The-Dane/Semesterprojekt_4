@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 15 10:30:19 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 17 14:22:14 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="SPI" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="SPI_chip_select" SIGIS="undef" SIGNAME="External_Ports_SPI_chip_select">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="shift_register_input" PORT="chip_select"/>
         <CONNECTION INSTANCE="NOT_gate_0" PORT="A"/>
+        <CONNECTION INSTANCE="shift_register_input" PORT="chip_select"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="15" NAME="SPI_out" RIGHT="0" SIGIS="undef" SIGNAME="latch_0_Q">
@@ -38,8 +38,8 @@
     </PORT>
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="shift_register_input" PORT="rst"/>
         <CONNECTION INSTANCE="latch_0" PORT="rst"/>
+        <CONNECTION INSTANCE="shift_register_input" PORT="rst"/>
         <CONNECTION INSTANCE="Prescaler" PORT="rst"/>
       </CONNECTIONS>
     </PORT>

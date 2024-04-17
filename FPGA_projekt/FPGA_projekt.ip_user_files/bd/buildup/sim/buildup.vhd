@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Mon Apr 15 10:45:39 2024
---Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+--Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+--Date        : Wed Apr 17 09:44:51 2024
+--Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target buildup.bd
 --Design      : buildup
 --Purpose     : IP block netlist
@@ -18,12 +18,12 @@ entity buildup is
     clk : in STD_LOGIC;
     encoder_a : in STD_LOGIC;
     encoder_b : in STD_LOGIC;
+    led_0 : out STD_LOGIC;
     miso : out STD_LOGIC;
     mosi : in STD_LOGIC;
     pwm : out STD_LOGIC;
     rst : in STD_LOGIC;
-    sclk : in STD_LOGIC;
-    spi_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    sclk : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=2,bdsource=USER,synth_mode=Hierarchical}";
@@ -116,9 +116,9 @@ begin
   encoder_a_0_1 <= encoder_a;
   encoder_b_0_1 <= encoder_b;
   ja_3_1 <= sclk;
+  led_0 <= btn_0_1;
   miso <= SPI_0_miso;
   pwm <= pwm_gen_0_pwm;
-  spi_out(15 downto 0) <= SPI_0_SPI_out(15 downto 0);
 SPI_0: component buildup_SPI_0_0
      port map (
       SPI_chip_select => btn_0_1,

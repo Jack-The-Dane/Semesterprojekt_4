@@ -117,21 +117,21 @@
         "vlnv": "user.org:user:block_encoder:1.0",
         "ip_revision": "2",
         "xci_name": "buildup_block_encoder_0_0",
-        "xci_path": "ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0.xci",
+        "xci_path": "ip\\buildup_block_encoder_0_0\\buildup_block_encoder_0_0.xci",
         "inst_hier_path": "block_encoder_0"
       },
       "xlconstant_1": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "8",
         "xci_name": "buildup_xlconstant_1_0",
-        "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
+        "xci_path": "ip\\buildup_xlconstant_1_0\\buildup_xlconstant_1_0.xci",
         "inst_hier_path": "xlconstant_1"
       },
       "pwm_gen_0": {
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_pwm_gen_0_0",
-        "xci_path": "ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0.xci",
+        "xci_path": "ip\\buildup_pwm_gen_0_0\\buildup_pwm_gen_0_0.xci",
         "inst_hier_path": "pwm_gen_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -158,7 +158,7 @@
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_counter_0_0",
-        "xci_path": "ip/buildup_counter_0_0/buildup_counter_0_0.xci",
+        "xci_path": "ip\\buildup_counter_0_0\\buildup_counter_0_0.xci",
         "inst_hier_path": "counter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -194,7 +194,7 @@
         "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_clock_divider_0_0",
-        "xci_path": "ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci",
+        "xci_path": "ip\\buildup_clock_divider_0_0\\buildup_clock_divider_0_0.xci",
         "inst_hier_path": "clock_divider_0",
         "parameters": {
           "n_bits": {
@@ -234,14 +234,14 @@
         "vlnv": "user.org:user:SPI:1.0",
         "ip_revision": "2",
         "xci_name": "buildup_SPI_0_0",
-        "xci_path": "ip/buildup_SPI_0_0/buildup_SPI_0_0.xci",
+        "xci_path": "ip\\buildup_SPI_0_0\\buildup_SPI_0_0.xci",
         "inst_hier_path": "SPI_0"
       },
       "synchronizer_0": {
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_0",
-        "xci_path": "ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0.xci",
+        "xci_path": "ip\\buildup_synchronizer_0_0\\buildup_synchronizer_0_0.xci",
         "inst_hier_path": "synchronizer_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -362,9 +362,9 @@
         "ports": [
           "rst",
           "block_encoder_0/rst",
-          "clock_divider_0/rst",
+          "SPI_0/rst",
           "counter_0/rst",
-          "SPI_0/rst"
+          "clock_divider_0/rst"
         ]
       },
       "synchronizer_0_Q": {

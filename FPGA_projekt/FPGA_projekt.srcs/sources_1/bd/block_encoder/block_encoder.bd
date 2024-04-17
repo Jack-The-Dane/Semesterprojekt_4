@@ -7,8 +7,7 @@
       "name": "block_encoder",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "edge_detector_a": "",
@@ -46,7 +45,7 @@
         "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_edge_detector_0_0",
-        "xci_path": "ip/block_encoder_edge_detector_0_0/block_encoder_edge_detector_0_0.xci",
+        "xci_path": "ip\\block_encoder_edge_detector_0_0\\block_encoder_edge_detector_0_0.xci",
         "inst_hier_path": "edge_detector_a",
         "reference_info": {
           "ref_type": "hdl",
@@ -70,7 +69,7 @@
         "vlnv": "xilinx.com:module_ref:up_down_counter:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_up_down_counter_0_0",
-        "xci_path": "ip/block_encoder_up_down_counter_0_0/block_encoder_up_down_counter_0_0.xci",
+        "xci_path": "ip\\block_encoder_up_down_counter_0_0\\block_encoder_up_down_counter_0_0.xci",
         "inst_hier_path": "up_down_counter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -112,7 +111,7 @@
         "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_edge_detector_0_1",
-        "xci_path": "ip/block_encoder_edge_detector_0_1/block_encoder_edge_detector_0_1.xci",
+        "xci_path": "ip\\block_encoder_edge_detector_0_1\\block_encoder_edge_detector_0_1.xci",
         "inst_hier_path": "edge_detector_b",
         "reference_info": {
           "ref_type": "hdl",
@@ -136,7 +135,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_0",
-        "xci_path": "ip/block_encoder_NOT_gate_0_0/block_encoder_NOT_gate_0_0.xci",
+        "xci_path": "ip\\block_encoder_NOT_gate_0_0\\block_encoder_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_b",
         "reference_info": {
           "ref_type": "hdl",
@@ -156,7 +155,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_0_0",
-        "xci_path": "ip/block_encoder_AND_gate_0_0/block_encoder_AND_gate_0_0.xci",
+        "xci_path": "ip\\block_encoder_AND_gate_0_0\\block_encoder_AND_gate_0_0.xci",
         "inst_hier_path": "up_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -179,7 +178,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_1",
-        "xci_path": "ip/block_encoder_NOT_gate_0_1/block_encoder_NOT_gate_0_1.xci",
+        "xci_path": "ip\\block_encoder_NOT_gate_0_1\\block_encoder_NOT_gate_0_1.xci",
         "inst_hier_path": "NOT_gate_a",
         "reference_info": {
           "ref_type": "hdl",
@@ -199,7 +198,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_1_0",
-        "xci_path": "ip/block_encoder_AND_gate_1_0/block_encoder_AND_gate_1_0.xci",
+        "xci_path": "ip\\block_encoder_AND_gate_1_0\\block_encoder_AND_gate_1_0.xci",
         "inst_hier_path": "down_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -248,8 +247,8 @@
         "ports": [
           "clk",
           "edge_detector_a/clk",
-          "edge_detector_b/clk",
-          "up_down_counter_0/clk"
+          "up_down_counter_0/clk",
+          "edge_detector_b/clk"
         ]
       },
       "edge_detector_a_edge": {
@@ -273,15 +272,15 @@
       "encoder_a_1": {
         "ports": [
           "encoder_a",
-          "NOT_gate_a/A",
-          "edge_detector_a/d"
+          "edge_detector_a/d",
+          "NOT_gate_a/A"
         ]
       },
       "encoder_b_1": {
         "ports": [
           "encoder_b",
-          "NOT_gate_b/A",
-          "edge_detector_b/d"
+          "edge_detector_b/d",
+          "NOT_gate_b/A"
         ]
       },
       "rst_1": {

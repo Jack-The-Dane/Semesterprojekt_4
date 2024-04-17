@@ -1,24 +1,26 @@
 #-----------------------------------------------------------
 # Vivado v2023.2 (64-bit)
-# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Tue Apr 16 14:39:09 2024
-# Process ID: 34914
-# Current directory: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1
-# Command line: vivado -log buildup_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buildup_wrapper.tcl
-# Log file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.vds
-# Journal file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/vivado.jou
-# Running On: Laptop, OS: Linux, CPU Frequency: 1996.081 MHz, CPU Physical cores: 8, Host memory: 16109 MB
+# Start of session at: Wed Apr 17 09:45:55 2024
+# Process ID: 14896
+# Current directory: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1
+# Command line: vivado.exe -log buildup_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buildup_wrapper.tcl
+# Log file: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.vds
+# Journal file: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1\vivado.jou
+# Running On: Cornelia, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16890 MB
 #-----------------------------------------------------------
 source buildup_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1317.242 ; gain = 0.023 ; free physical = 1865 ; free virtual = 10174
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 475.988 ; gain = 185.133
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/ip/SPI'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/ip/block_encoder'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/jacob/Xilinx/Vivado/2023.2/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/utils_1/imports/synth_1/pwm_generator_wrapper.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/utils_1/imports/synth_1/pwm_generator_wrapper.dcp for incremental synthesis
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/SPI'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/block_encoder'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/ip 
+Command: read_checkpoint -auto_incremental -incremental {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/utils_1/imports/synth_1/pwm_generator_wrapper.dcp}
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/utils_1/imports/synth_1/pwm_generator_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top buildup_wrapper -part xc7z020clg400-1
 Starting synth_design
@@ -27,89 +29,89 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 34976
+INFO: [Synth 8-7075] Helper process launched with PID 11880
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2045.488 ; gain = 403.715 ; free physical = 830 ; free virtual = 9169
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1349.172 ; gain = 439.781
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'buildup_wrapper' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
-INFO: [Synth 8-3491] module 'buildup' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:15' bound to instance 'buildup_i' of component 'buildup' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'buildup' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
-INFO: [Synth 8-3491] module 'buildup_SPI_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_SPI_0_0_stub.vhdl:6' bound to instance 'SPI_0' of component 'buildup_SPI_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:122]
-INFO: [Synth 8-638] synthesizing module 'buildup_SPI_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_SPI_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'buildup_block_encoder_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_block_encoder_0_0_stub.vhdl:6' bound to instance 'block_encoder_0' of component 'buildup_block_encoder_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:133]
-INFO: [Synth 8-638] synthesizing module 'buildup_block_encoder_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_block_encoder_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'buildup_clock_divider_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_clock_divider_0_0_stub.vhdl:6' bound to instance 'clock_divider_0' of component 'buildup_clock_divider_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:142]
-INFO: [Synth 8-638] synthesizing module 'buildup_clock_divider_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_clock_divider_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_counter_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_counter_0_0_stub.vhdl:6' bound to instance 'counter_0' of component 'buildup_counter_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'buildup_counter_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_counter_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'buildup_pwm_gen_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_pwm_gen_0_0_stub.vhdl:6' bound to instance 'pwm_gen_0' of component 'buildup_pwm_gen_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'buildup_pwm_gen_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_pwm_gen_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_synchronizer_0_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_synchronizer_0_0_stub.vhdl:6' bound to instance 'synchronizer_0' of component 'buildup_synchronizer_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'buildup_synchronizer_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-34914-Laptop/realtime/buildup_synchronizer_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_xlconstant_1_0' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'buildup_xlconstant_1_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:167]
-INFO: [Synth 8-6157] synthesizing module 'buildup_xlconstant_1_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'buildup_xlconstant_1_0' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'buildup' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'buildup_wrapper' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'buildup_wrapper' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
+INFO: [Synth 8-3491] module 'buildup' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:15' bound to instance 'buildup_i' of component 'buildup' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:46]
+INFO: [Synth 8-638] synthesizing module 'buildup' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
+INFO: [Synth 8-3491] module 'buildup_SPI_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_SPI_0_0_stub.vhdl:6' bound to instance 'SPI_0' of component 'buildup_SPI_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:122]
+INFO: [Synth 8-638] synthesizing module 'buildup_SPI_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_SPI_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'buildup_block_encoder_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:6' bound to instance 'block_encoder_0' of component 'buildup_block_encoder_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:133]
+INFO: [Synth 8-638] synthesizing module 'buildup_block_encoder_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'buildup_clock_divider_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:6' bound to instance 'clock_divider_0' of component 'buildup_clock_divider_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'buildup_clock_divider_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_counter_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_counter_0_0_stub.vhdl:6' bound to instance 'counter_0' of component 'buildup_counter_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'buildup_counter_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_counter_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'buildup_pwm_gen_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_pwm_gen_0_0_stub.vhdl:6' bound to instance 'pwm_gen_0' of component 'buildup_pwm_gen_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'buildup_pwm_gen_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_pwm_gen_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_synchronizer_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:6' bound to instance 'synchronizer_0' of component 'buildup_synchronizer_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:161]
+INFO: [Synth 8-638] synthesizing module 'buildup_synchronizer_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_xlconstant_1_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'buildup_xlconstant_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:167]
+INFO: [Synth 8-6157] synthesizing module 'buildup_xlconstant_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'buildup_xlconstant_1_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'buildup' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'buildup_wrapper' (0#1) [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2120.457 ; gain = 478.684 ; free physical = 744 ; free virtual = 9085
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.270 ; gain = 496.496 ; free physical = 740 ; free virtual = 9082
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2138.270 ; gain = 496.496 ; free physical = 740 ; free virtual = 9082
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2138.270 ; gain = 0.000 ; free physical = 740 ; free virtual = 9082
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1457.086 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/SPI_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/SPI_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
-WARNING: [Vivado 12-584] No ports matched 'sysclk'. [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc:9]
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/buildup_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/buildup_wrapper_propImpl.xdc].
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
+Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sysclk'. [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc:9]
+Finished Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/buildup_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/buildup_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/buildup_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2211.207 ; gain = 0.000 ; free physical = 715 ; free virtual = 9071
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2211.242 ; gain = 0.000 ; free physical = 716 ; free virtual = 9073
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1469.809 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 703 ; free virtual = 9063
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 702 ; free virtual = 9063
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -123,10 +125,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/clock_divider_0. (const
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/SPI_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/synchronizer_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 694 ; free virtual = 9055
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 691 ; free virtual = 9053
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -149,25 +151,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 679 ; free virtual = 9047
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 693 ; free virtual = 9067
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 693 ; free virtual = 9067
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 693 ; free virtual = 9067
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -185,37 +187,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -247,27 +249,25 @@ Report Cell Usage:
 |8     |OBUF                           |     3|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2211.242 ; gain = 496.496 ; free physical = 704 ; free virtual = 9075
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2211.242 ; gain = 569.469 ; free physical = 704 ; free virtual = 9075
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1469.809 ; gain = 547.695
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2211.242 ; gain = 0.000 ; free physical = 703 ; free virtual = 9075
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2211.242 ; gain = 0.000 ; free physical = 986 ; free virtual = 9361
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 155cbc0b
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+45 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 2211.242 ; gain = 894.000 ; free physical = 986 ; free virtual = 9361
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1801.388; main = 1474.858; forked = 374.019
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3169.844; main = 2179.195; forked = 990.648
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2211.242 ; gain = 0.000 ; free physical = 986 ; free virtual = 9361
-INFO: [Common 17-1381] The checkpoint '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1469.809 ; gain = 980.676
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.809 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file buildup_wrapper_utilization_synth.rpt -pb buildup_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 16 14:39:41 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 17 09:46:26 2024...

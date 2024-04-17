@@ -7,8 +7,7 @@
       "name": "encoder_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "encoder_0": "",
@@ -28,17 +27,7 @@
       },
       "btn_2": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       }
     },
     "components": {
@@ -46,7 +35,7 @@
         "vlnv": "xilinx.com:module_ref:encoder:1.0",
         "ip_revision": "1",
         "xci_name": "encoder_bd_encoder_0_0",
-        "xci_path": "ip/encoder_bd_encoder_0_0/encoder_bd_encoder_0_0.xci",
+        "xci_path": "ip\\encoder_bd_encoder_0_0\\encoder_bd_encoder_0_0.xci",
         "inst_hier_path": "encoder_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -75,7 +64,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "encoder_bd_xlslice_0_0",
-        "xci_path": "ip/encoder_bd_xlslice_0_0/encoder_bd_xlslice_0_0.xci",
+        "xci_path": "ip\\encoder_bd_xlslice_0_0\\encoder_bd_xlslice_0_0.xci",
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {

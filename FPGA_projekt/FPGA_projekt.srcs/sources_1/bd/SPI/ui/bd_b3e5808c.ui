@@ -1,33 +1,33 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.655666",
-   "Default View_TopLeft":"-212,-55",
+   "Default View_ScaleFactor":"1.04031",
+   "Default View_TopLeft":"-194,-193",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
 preplace port port-id_mosi -pg 1 -lvl 0 -x -40 -y 390 -defaultsOSRD
 preplace port port-id_SPI_chip_select -pg 1 -lvl 0 -x -40 -y 110 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -40 -y 370 -defaultsOSRD
-preplace port port-id_miso -pg 1 -lvl 3 -x 1460 -y 430 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -40 -y 360 -defaultsOSRD
+preplace port port-id_miso -pg 1 -lvl 3 -x 1460 -y 450 -defaultsOSRD
 preplace port port-id_SPI_sample -pg 1 -lvl 0 -x -40 -y 150 -defaultsOSRD
-preplace portBus encoder_in -pg 1 -lvl 0 -x -40 -y 350 -defaultsOSRD
+preplace portBus encoder_in -pg 1 -lvl 0 -x -40 -y 330 -defaultsOSRD
 preplace portBus SPI_out -pg 1 -lvl 3 -x 1460 -y 300 -defaultsOSRD
 preplace inst shift_register_input -pg 1 -lvl 1 -x 440 -y 370 -defaultsOSRD
 preplace inst latch_0 -pg 1 -lvl 2 -x 740 -y 300 -defaultsOSRD
 preplace inst Prescaler -pg 1 -lvl 2 -x 740 -y 130 -defaultsOSRD
 preplace inst NOT_gate_0 -pg 1 -lvl 1 -x 440 -y 110 -defaultsOSRD
 preplace netloc MC_data_1 1 0 1 -20J 390n
-preplace netloc clock_1 1 0 2 260 170 610
-preplace netloc enable_counter_0_cnt 1 1 2 630 210 850
-preplace netloc encoder_in_1 1 0 1 260J 350n
-preplace netloc latch_0_Q 1 2 1 NJ 300
-preplace netloc rst_1 1 0 2 250 270 620
-preplace netloc shift_register_input_carry_out 1 1 2 NJ 380 850J
-preplace netloc shift_register_input_register_out 1 1 1 610 320n
 preplace netloc NOT_gate_0_B 1 1 1 N 110
-preplace netloc SPI_chip_select_1 1 0 1 270 110n
+preplace netloc SPI_chip_select_1 1 0 1 280 110n
+preplace netloc clock_1 1 0 2 270 170 600
+preplace netloc enable_counter_0_cnt 1 1 2 630 50 850
+preplace netloc encoder_in_1 1 0 1 -20J 330n
+preplace netloc latch_0_Q 1 2 1 NJ 300
+preplace netloc rst_1 1 0 2 260 270 620
+preplace netloc shift_register_input_carry_out 1 1 2 620J 450 NJ
+preplace netloc shift_register_input_register_out 1 1 1 600 320n
 levelinfo -pg 1 -40 440 740 1460
-pagesize -pg 1 -db -bbox -sgen -220 -100 1610 610
+pagesize -pg 1 -db -bbox -sgen -220 -140 1710 610
 "
 }
 0

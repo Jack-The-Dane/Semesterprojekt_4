@@ -3,16 +3,16 @@
    "Default View_ScaleFactor":"1.0",
    "Default View_TopLeft":"-363,-119",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_ja_0 -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
-preplace port port-id_ja_1 -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace port port-id_ja_0 -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
+preplace port port-id_ja_1 -pg 1 -lvl 0 -x -20 -y 90 -defaultsOSRD
 preplace port port-id_btn_2 -pg 1 -lvl 0 -x -20 -y 120 -defaultsOSRD
 preplace portBus led -pg 1 -lvl 3 -x 470 -y 90 -defaultsOSRD
 preplace inst encoder_0 -pg 1 -lvl 1 -x 120 -y 100 -defaultsOSRD
 preplace inst xlslice_0 -pg 1 -lvl 2 -x 350 -y 100 -defaultsOSRD
-preplace netloc enc_a_0_1 1 0 1 NJ 80
-preplace netloc enc_b_0_1 1 0 1 NJ 100
+preplace netloc enc_a_0_1 1 0 1 0J 60n
+preplace netloc enc_b_0_1 1 0 1 0J 90n
 preplace netloc encoder_0_pulses 1 1 1 N 100
 preplace netloc rst_0_1 1 0 1 NJ 120
 preplace netloc xlslice_0_Dout 1 2 1 450 90n
