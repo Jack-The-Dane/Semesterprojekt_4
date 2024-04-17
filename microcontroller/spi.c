@@ -23,8 +23,8 @@ void init_spi() {
   // Set the initial values
   GPIO_PORTE_DATA_R = (0 << SPI_MOSI_PIN) | (0 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
-  spi_pan_motor = 0;
-  spi_tilt_motor = 0;
+  spi_pan_motor = 0b00101010;
+  spi_tilt_motor = 0b10101010;
   spi_pan_encoder = 0;
   spi_tilt_encoder = 0;
 }
@@ -37,8 +37,8 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
   setLEDColor(GREEN);
-
-  for (uint8_t i = SPI_WORD_LENGTH; i > 0; i--) {
+  uint8_t i;
+  for ( i = SPI_WORD_LENGTH; i > 0; i--) {
 
     // Set output bit
     if (*data_send & (1 << (i - 1))) {
@@ -47,11 +47,11 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
       GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN); // Set 0
     }
 
-    delay_us(1);
+    delay_us(2);
 
     // Pulse the clock
     GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
-    delay_us(1); // This should be as long as the FPGA needs to shift out a bit
+    delay_us(2); // This should be as long as the FPGA needs to shift out a bit
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
 
     // Read input bit

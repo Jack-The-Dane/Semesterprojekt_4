@@ -12,6 +12,7 @@ typedef enum {
 } State;
 
 void controller_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
+    extern Joystick joystick;
     switch (my_state) {
         case INIT:
             set_state(RUNNING);

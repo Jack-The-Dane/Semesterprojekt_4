@@ -8,7 +8,7 @@
 #include "uart.h"
 
 // Global joystick for now
-Joystick joystick = {0};
+volatile Joystick joystick = {0};
 
 void init_joystick() {
     init_adc();

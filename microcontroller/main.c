@@ -27,7 +27,7 @@ int main(void) {
 
     start_task(TASK_JOYSTICK, joystick_task);
     start_task(TASK_JOYSTICK_UART_ECHO, joystick_uart_echo_task);
-    // start_task(TASK_SPI, spi_task);
+    start_task(TASK_SPI, spi_task);
     start_task(TASK_CONTROLLER, controller_task);
 
     schedule();
