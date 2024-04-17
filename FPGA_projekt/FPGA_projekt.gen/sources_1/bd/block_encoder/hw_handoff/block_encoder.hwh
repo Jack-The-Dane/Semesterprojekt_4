@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Apr  5 23:00:21 2024" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="block_encoder" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="edge_detector_a" PORT="clk"/>
+        <CONNECTION INSTANCE="edge_detector_b" PORT="clk"/>
+        <CONNECTION INSTANCE="up_down_counter_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="enable" SIGIS="undef" SIGNAME="External_Ports_enable">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="up_down_counter_0" PORT="en"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="encoder_a" SIGIS="undef" SIGNAME="External_Ports_encoder_a">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="NOT_gate_a" PORT="A"/>
+        <CONNECTION INSTANCE="edge_detector_a" PORT="d"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="encoder_b" SIGIS="undef" SIGNAME="External_Ports_encoder_b">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="NOT_gate_b" PORT="A"/>
+        <CONNECTION INSTANCE="edge_detector_b" PORT="d"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="8" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="up_down_counter_0" PORT="cnt"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="up_down_counter_0" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/NOT_gate_a" HWVERSION="1.0" INSTANCE="NOT_gate_a" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="NOT_gate" VLNV="xilinx.com:module_ref:NOT_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_NOT_gate_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_encoder_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="encoder_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_a_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="down_signal" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/NOT_gate_b" HWVERSION="1.0" INSTANCE="NOT_gate_b" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="NOT_gate" VLNV="xilinx.com:module_ref:NOT_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_NOT_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_encoder_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="encoder_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_b_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="up_signal" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/down_signal" HWVERSION="1.0" INSTANCE="down_signal" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_AND_gate_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="edge_detector_b_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="edge_detector_b" PORT="result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_a_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NOT_gate_a" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="down_signal_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="up_down_counter_0" PORT="down"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/edge_detector_a" HWVERSION="1.0" INSTANCE="edge_detector_a" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="edge_detector" VLNV="xilinx.com:module_ref:edge_detector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_edge_detector_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="External_Ports_encoder_a">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="encoder_a"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="result" SIGIS="undef" SIGNAME="edge_detector_a_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="up_signal" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/edge_detector_b" HWVERSION="1.0" INSTANCE="edge_detector_b" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="edge_detector" VLNV="xilinx.com:module_ref:edge_detector:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_edge_detector_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="d" SIGIS="undef" SIGNAME="External_Ports_encoder_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="encoder_b"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="result" SIGIS="undef" SIGNAME="edge_detector_b_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="down_signal" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/up_down_counter_0" HWVERSION="1.0" INSTANCE="up_down_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="up_down_counter" VLNV="xilinx.com:module_ref:up_down_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="max_val_binary" VALUE="&quot;101100111&quot;"/>
+        <PARAMETER NAME="n_bits" VALUE="9"/>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_up_down_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="8" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pulse_cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="down" SIGIS="undef" SIGNAME="down_signal_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="down_signal" PORT="C"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="External_Ports_enable">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="enable"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="up" SIGIS="undef" SIGNAME="up_signal_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="up_signal" PORT="C"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/up_signal" HWVERSION="1.0" INSTANCE="up_signal" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="block_encoder_AND_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="edge_detector_a_result">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="edge_detector_a" PORT="result"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_b_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NOT_gate_b" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="up_signal_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="up_down_counter_0" PORT="up"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

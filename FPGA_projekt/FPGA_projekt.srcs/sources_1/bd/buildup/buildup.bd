@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEB49D8E152E3B072",
+      "boundary_crc": "0xB5ADE255D5C785E4",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -106,6 +106,9 @@
         }
       },
       "miso": {
+        "direction": "O"
+      },
+      "led_0": {
         "direction": "O"
       }
     },
@@ -301,7 +304,8 @@
       "btn_0_1": {
         "ports": [
           "CS",
-          "SPI_0/SPI_chip_select"
+          "SPI_0/SPI_chip_select",
+          "led_0"
         ]
       },
       "btn_1_1": {

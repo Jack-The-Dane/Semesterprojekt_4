@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Mon Apr 15 11:18:13 2024
+--Date        : Tue Apr 16 14:39:06 2024
 --Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target buildup.bd
 --Design      : buildup
@@ -18,6 +18,7 @@ entity buildup is
     clk : in STD_LOGIC;
     encoder_a : in STD_LOGIC;
     encoder_b : in STD_LOGIC;
+    led_0 : out STD_LOGIC;
     miso : out STD_LOGIC;
     mosi : in STD_LOGIC;
     pwm : out STD_LOGIC;
@@ -115,6 +116,7 @@ begin
   encoder_a_0_1 <= encoder_a;
   encoder_b_0_1 <= encoder_b;
   ja_3_1 <= sclk;
+  led_0 <= btn_0_1;
   miso <= SPI_0_miso;
   pwm <= pwm_gen_0_pwm;
 SPI_0: component buildup_SPI_0_0

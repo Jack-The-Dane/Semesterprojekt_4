@@ -1,0 +1,221 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Fri Apr  5 15:11:38 2024
+# Process ID: 79106
+# Current directory: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/encoder_sample_encoder_sampling_0_0_synth_1
+# Command line: vivado -log encoder_sample_encoder_sampling_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source encoder_sample_encoder_sampling_0_0.tcl
+# Log file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/encoder_sample_encoder_sampling_0_0_synth_1/encoder_sample_encoder_sampling_0_0.vds
+# Journal file: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/encoder_sample_encoder_sampling_0_0_synth_1/vivado.jou
+# Running On: Laptop, OS: Linux, CPU Frequency: 1397.090 MHz, CPU Physical cores: 8, Host memory: 16109 MB
+#-----------------------------------------------------------
+source encoder_sample_encoder_sampling_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1317.242 ; gain = 0.023 ; free physical = 3907 ; free virtual = 9985
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/jacob/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: encoder_sample_encoder_sampling_0_0
+Command: synth_design -top encoder_sample_encoder_sampling_0_0 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 79160
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1703.020 ; gain = 385.777 ; free physical = 3252 ; free virtual = 9330
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'encoder_sample_encoder_sampling_0_0' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/encoder_sample/ip/encoder_sample_encoder_sampling_0_0/synth/encoder_sample_encoder_sampling_0_0.vhd:66]
+INFO: [Synth 8-3491] module 'encoder_sampling' declared at '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:34' bound to instance 'U0' of component 'encoder_sampling' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/encoder_sample/ip/encoder_sample_encoder_sampling_0_0/synth/encoder_sample_encoder_sampling_0_0.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'encoder_sampling' [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:42]
+WARNING: [Synth 8-614] signal 'rising_a' is read in the process but is not in the sensitivity list [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:49]
+WARNING: [Synth 8-614] signal 'enc_b' is read in the process but is not in the sensitivity list [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:49]
+WARNING: [Synth 8-614] signal 'cnt' is read in the process but is not in the sensitivity list [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:49]
+WARNING: [Synth 8-614] signal 'rising_b' is read in the process but is not in the sensitivity list [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:49]
+WARNING: [Synth 8-614] signal 'enc_a' is read in the process but is not in the sensitivity list [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'encoder_sampling' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'encoder_sample_encoder_sampling_0_0' (0#1) [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/encoder_sample/ip/encoder_sample_encoder_sampling_0_0/synth/encoder_sample_encoder_sampling_0_0.vhd:66]
+WARNING: [Synth 8-3848] Net pulse_cnt in module/entity encoder_sampling does not have driver. [/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/encoder_sampling.vhd:39]
+WARNING: [Synth 8-7129] Port pulse_cnt[8] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[7] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[6] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[5] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[4] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[3] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[2] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[1] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[0] in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enc_a in module encoder_sampling is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enc_b in module encoder_sampling is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1777.957 ; gain = 460.715 ; free physical = 3156 ; free virtual = 9234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1795.770 ; gain = 478.527 ; free physical = 3156 ; free virtual = 9235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1803.773 ; gain = 486.531 ; free physical = 3156 ; free virtual = 9235
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1812.680 ; gain = 495.438 ; free physical = 3149 ; free virtual = 9228
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design encoder_sample_encoder_sampling_0_0 has an empty top module
+WARNING: [Synth 8-7129] Port pulse_cnt[8] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[7] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[6] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[5] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[4] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[3] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[2] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[1] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port pulse_cnt[0] in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enc_a in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port enc_b in module encoder_sample_encoder_sampling_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3024 ; free virtual = 9104
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3021 ; free virtual = 9101
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3016 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1939.992 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1940.000 ; gain = 622.750 ; free physical = 3015 ; free virtual = 9095
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1940.000 ; gain = 0.000 ; free physical = 3013 ; free virtual = 9092
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2035.523 ; gain = 0.000 ; free physical = 3206 ; free virtual = 9285
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: f783e174
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 34 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 2041.496 ; gain = 724.254 ; free physical = 3199 ; free virtual = 9279
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1570.117; main = 1348.499; forked = 373.275
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2930.645; main = 2041.465; forked = 990.648
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/encoder_sample_encoder_sampling_0_0_synth_1/encoder_sample_encoder_sampling_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2344.637 ; gain = 303.141 ; free physical = 3009 ; free virtual = 9088
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP encoder_sample_encoder_sampling_0_0, cache-ID = e1832717b659e4a2
+INFO: [Common 17-1381] The checkpoint '/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/encoder_sample_encoder_sampling_0_0_synth_1/encoder_sample_encoder_sampling_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file encoder_sample_encoder_sampling_0_0_utilization_synth.rpt -pb encoder_sample_encoder_sampling_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  5 15:12:08 2024...

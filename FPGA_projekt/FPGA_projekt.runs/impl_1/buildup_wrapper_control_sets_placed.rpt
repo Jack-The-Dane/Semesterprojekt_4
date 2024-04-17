@@ -1,0 +1,114 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Tue Apr 16 14:40:15 2024
+| Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
+| Command      : report_control_sets -verbose -file buildup_wrapper_control_sets_placed.rpt
+| Design       : buildup_wrapper
+| Device       : xc7z020
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    36 |
+|    Minimum number of control sets                        |    36 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   219 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    36 |
+| >= 0 to < 4        |    29 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |            9 |
+| No           | No                    | Yes                    |              45 |           26 |
+| No           | Yes                   | No                     |               9 |            9 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              15 |            6 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|                                 Clock Signal                                 |                     Enable Signal                    |                               Set/Reset Signal                              | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+| ~buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      |                                                                             |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_1_n_0 |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_2_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      |                                                                             |                2 |              2 |         1.00 |
+|  clk_IBUF                                                                    |                                                      | rst_IBUF                                                                    |                1 |              4 |         4.00 |
+|  clk_IBUF                                                                    |                                                      |                                                                             |                2 |              5 |         2.50 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          | buildup_i/SPI_0/U0/Prescaler/U0/NOT_gate_0_B         | rst_IBUF                                                                    |                2 |              6 |         3.00 |
+|  buildup_i/synchronizer_0/U0/Q_BUFG                                          |                                                      | CS_IBUF                                                                     |                3 |              7 |         2.33 |
+|  clk_IBUF                                                                    | buildup_i/block_encoder_0/U0/edge_detector_b/U0/E[0] | rst_IBUF                                                                    |                4 |              9 |         2.25 |
+|  buildup_i/SPI_0/U0/Prescaler/U0/E[0]                                        |                                                      |                                                                             |                4 |             16 |         4.00 |
+|  buildup_i/clock_divider_0/U0/clk_div                                        |                                                      | rst_IBUF                                                                    |                4 |             16 |         4.00 |
++------------------------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

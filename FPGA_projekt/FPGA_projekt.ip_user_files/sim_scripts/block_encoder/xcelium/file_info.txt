@@ -1,0 +1,8 @@
+block_encoder_edge_detector_0_0.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_edge_detector_0_0/sim/block_encoder_edge_detector_0_0.vhd,
+block_encoder_up_down_counter_0_0.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_up_down_counter_0_0/sim/block_encoder_up_down_counter_0_0.vhd,
+block_encoder_edge_detector_0_1.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_edge_detector_0_1/sim/block_encoder_edge_detector_0_1.vhd,
+block_encoder_NOT_gate_0_0.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_NOT_gate_0_0/sim/block_encoder_NOT_gate_0_0.vhd,
+block_encoder_AND_gate_0_0.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_AND_gate_0_0/sim/block_encoder_AND_gate_0_0.vhd,
+block_encoder_NOT_gate_0_1.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_NOT_gate_0_1/sim/block_encoder_NOT_gate_0_1.vhd,
+block_encoder_AND_gate_1_0.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/ip/block_encoder_AND_gate_1_0/sim/block_encoder_AND_gate_1_0.vhd,
+block_encoder.vhd,vhdl,xil_defaultlib,../../../bd/block_encoder/sim/block_encoder.vhd,

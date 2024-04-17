@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 15 10:30:19 2024" VIVADOVERSION="2023.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="SPI" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="SPI_chip_select" SIGIS="undef" SIGNAME="External_Ports_SPI_chip_select">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="chip_select"/>
+        <CONNECTION INSTANCE="NOT_gate_0" PORT="A"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="15" NAME="SPI_out" RIGHT="0" SIGIS="undef" SIGNAME="latch_0_Q">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="latch_0" PORT="Q"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="SPI_sample" SIGIS="undef" SIGNAME="External_Ports_SPI_sample">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="sample"/>
+        <CONNECTION INSTANCE="Prescaler" PORT="sample"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="encoder_in" RIGHT="0" SIGIS="data" SIGNAME="External_Ports_encoder_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="register_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="miso" SIGIS="undef" SIGNAME="shift_register_input_carry_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="carry_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="mosi" SIGIS="undef" SIGNAME="External_Ports_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="shift_register_input" PORT="rst"/>
+        <CONNECTION INSTANCE="latch_0" PORT="rst"/>
+        <CONNECTION INSTANCE="Prescaler" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/NOT_gate_0" HWVERSION="1.0" INSTANCE="NOT_gate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="NOT_gate" VLNV="xilinx.com:module_ref:NOT_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="SPI_NOT_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="External_Ports_SPI_chip_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_chip_select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_0_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Prescaler" PORT="en"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Prescaler" HWVERSION="1.0" INSTANCE="Prescaler" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="enable_counter" VLNV="xilinx.com:module_ref:enable_counter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_length" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="SPI_enable_counter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="cnt" SIGIS="undef" SIGNAME="Prescaler_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="latch_0" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="NOT_gate_0_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NOT_gate_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sample" SIGIS="undef" SIGNAME="External_Ports_SPI_sample">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_sample"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/latch_0" HWVERSION="1.0" INSTANCE="latch_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="latch" VLNV="xilinx.com:module_ref:latch:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="data_length" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="SPI_latch_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="D" RIGHT="0" SIGIS="undef" SIGNAME="shift_register_input_register_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="shift_register_input" PORT="register_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="Q" RIGHT="0" SIGIS="undef" SIGNAME="latch_0_Q">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="cnt" SIGIS="undef" SIGNAME="Prescaler_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Prescaler" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/shift_register_input" HWVERSION="1.0" INSTANCE="shift_register_input" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="shift_register_generic" VLNV="xilinx.com:module_ref:shift_register_generic:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="register_length" VALUE="16"/>
+        <PARAMETER NAME="Component_Name" VALUE="SPI_shift_register_input_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" NAME="carry_out" SIGIS="undef" SIGNAME="shift_register_input_carry_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="miso"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="chip_select" SIGIS="undef" SIGNAME="External_Ports_SPI_chip_select">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_chip_select"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="data" SIGIS="undef" SIGNAME="External_Ports_mosi">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="mosi"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="register_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_encoder_in">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="encoder_in"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="register_out" RIGHT="0" SIGIS="undef" SIGNAME="shift_register_input_register_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="latch_0" PORT="D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="sample" SIGIS="undef" SIGNAME="External_Ports_SPI_sample">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_sample"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
