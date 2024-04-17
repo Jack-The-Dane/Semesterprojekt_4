@@ -13,7 +13,7 @@ typedef struct {
 Joystick joystick;
 
 void init_joystick();
-void joystick_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data);
-void joystick_uart_echo_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data);
+void joystick_task(void * pvParameters);
+void joystick_uart_echo_task(void * pvParameters);
 
 #endif

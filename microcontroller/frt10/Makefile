@@ -15,44 +15,28 @@ CFLAGS := -mthumb \
 	-std=c99 -Wall -pedantic \
 	-Os -O0 -g \
 	-DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RA1 -Dgcc \
-	-I ./frt10/inc \
-	-I ./frt10/port/TivaM4
+	-I ./inc \
+	-I ./port/TivaM4
 
-LDFLAGS := -T tm4c123.ld --entry ResetISR --gc-sections
+# LDFLAGS := -T tm4c123.ld --entry ResetISR --gc-sections
+LDFLAGS := --gc-sections
 OBJCOPYFLAGS := -O binary
 
 SOURCES := $(wildcard *.c)
-OBJECTS := $(patsubst %.c, build/%.o, $(SOURCES))
-DEPENDS := $(patsubst %.c, build/%.d, $(SOURCES))
+DEPENDS := build/frt10.d
 
 all: main
 
-test:
-	echo "SOURCES: $(SOURCES)"
-	echo "OBJECTS: $(OBJECTS)"
-	echo "DEPENDS: $(DEPENDS)"
-
-flash: all
-	sudo lm4flash build/main.bin
-
-clean: ./frt10/Makefile
+clean:
 	rm -rf build
-	rm -rf frt10/build
 
 -include $(DEPENDS)
 
-build/:
-	mkdir -p build
-
-build/frt10.o: ./frt10/Makefile build/
-	make -C ./frt10
-	cp ./frt10/build/frt10.o build/frt10.o
-
-build/%.o: %.c Makefile build/frt10.o build/
+build/frt10.o: src/*.c
 	mkdir -p build
 	$(CC) $(CFLAGS) -MD -MF build/$(notdir $*.d) -c $< -o build/$(notdir $@)
 
-main: $(OBJECTS)
+main: build/frt10.o
 	$(LD) $(addprefix build/, $(notdir $^)) $(LDFLAGS) -o build/main.axf
 	$(OC) $(OBJCOPYFLAGS) build/main.axf build/main.bin
 	$(OD) -Sd -W build/main.axf > build/main.lss
