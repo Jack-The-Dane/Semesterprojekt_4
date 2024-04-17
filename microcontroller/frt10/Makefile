@@ -5,6 +5,7 @@ LD := arm-none-eabi-ld
 OC := arm-none-eabi-objcopy
 OD := arm-none-eabi-objdump
 SZ := arm-none-eabi-size
+NM := arm-none-eabi-nm
 
 CFLAGS := -mthumb \
 	-mcpu=cortex-m4 \
@@ -14,30 +15,37 @@ CFLAGS := -mthumb \
 	-fdata-sections \
 	-std=c99 -Wall -pedantic \
 	-Os -O0 -g \
-	-DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RA1 -Dgcc \
+	-DPART_TM4C123GH6PM -Dgcc \
 	-I ./inc \
-	-I ./port/TivaM4
+	-I ./port/TivaM4 \
+	-D__TI_VFP_SUPPORT__
 
 # LDFLAGS := -T tm4c123.ld --entry ResetISR --gc-sections
 LDFLAGS := --gc-sections
 OBJCOPYFLAGS := -O binary
 
-SOURCES := $(wildcard *.c)
-DEPENDS := build/frt10.d
+SOURCES := $(wildcard src/*.c)
+EXTRA_SOURCES := $(wildcard port/TivaM4/*.c)
+OBJECTS := $(patsubst src/%.c,build/%.o,$(SOURCES))
+EXTRA_OBJECTS := $(patsubst port/TivaM4/%.c,build/%.o,$(EXTRA_SOURCES))
 
 all: main
 
 clean:
 	rm -rf build
 
--include $(DEPENDS)
-
-build/frt10.o: src/*.c
+$(OBJECTS): $(SOURCES)
 	mkdir -p build
 	$(CC) $(CFLAGS) -MD -MF build/$(notdir $*.d) -c $< -o build/$(notdir $@)
 
-main: build/frt10.o
-	$(LD) $(addprefix build/, $(notdir $^)) $(LDFLAGS) -o build/main.axf
-	$(OC) $(OBJCOPYFLAGS) build/main.axf build/main.bin
-	$(OD) -Sd -W build/main.axf > build/main.lss
-	$(SZ) build/main.axf
+$(EXTRA_OBJECTS): $(EXTRA_SOURCES)
+	mkdir -p build
+	$(CC) $(CFLAGS) -MD -MF build/$(notdir $*.d) -c $< -o build/$(notdir $@)
+
+build/frt10.a: $(OBJECTS) $(EXTRA_OBJECTS)
+	ar rcs $@ $^
+
+main: build/frt10.a
+
+info: build/frt10.a
+	$(NM) build/frt10.a -a
