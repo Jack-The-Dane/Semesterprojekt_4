@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB5ADE255D5C785E4",
+      "boundary_crc": "0x8E4DC67A4078B961",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -110,6 +110,11 @@
       },
       "led_0": {
         "direction": "O"
+      },
+      "spi_out": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
       }
     },
     "components": {
@@ -286,7 +291,8 @@
       "SPI_0_SPI_out": {
         "ports": [
           "SPI_0/SPI_out",
-          "pwm_gen_0/duty"
+          "pwm_gen_0/duty",
+          "spi_out"
         ]
       },
       "SPI_0_miso": {

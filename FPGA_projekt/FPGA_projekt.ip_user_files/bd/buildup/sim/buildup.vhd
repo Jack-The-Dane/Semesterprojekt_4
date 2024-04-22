@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Wed Apr 17 09:44:51 2024
+--Date        : Mon Apr 22 09:17:59 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target buildup.bd
 --Design      : buildup
@@ -23,7 +23,8 @@ entity buildup is
     mosi : in STD_LOGIC;
     pwm : out STD_LOGIC;
     rst : in STD_LOGIC;
-    sclk : in STD_LOGIC
+    sclk : in STD_LOGIC;
+    spi_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
   attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=2,bdsource=USER,synth_mode=Hierarchical}";
@@ -119,6 +120,7 @@ begin
   led_0 <= btn_0_1;
   miso <= SPI_0_miso;
   pwm <= pwm_gen_0_pwm;
+  spi_out(15 downto 0) <= SPI_0_SPI_out(15 downto 0);
 SPI_0: component buildup_SPI_0_0
      port map (
       SPI_chip_select => btn_0_1,

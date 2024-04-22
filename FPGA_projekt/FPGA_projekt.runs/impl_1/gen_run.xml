@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1713339906">
-  <File Type="ROUTE-PWR" Name="buildup_wrapper_power_routed.rpt"/>
+  <File Type="ROUTE-PWR" Name="SPI_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="buildup_wrapper.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="buildup_wrapper_power_summary_routed.pb"/>
+  <File Type="ROUTE-PWR-SUM" Name="SPI_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="buildup_wrapper_reports.tcl"/>
   <File Type="BITSTR-MSK" Name="buildup_wrapper.msk"/>
-  <File Type="ROUTE-CLK" Name="buildup_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="SPI_wrapper_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="buildup_wrapper.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="buildup_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="SPI_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="buildup_wrapper.bit"/>
   <File Type="BG-DRC" Name="buildup_wrapper.drc"/>
   <File Type="BG-BGN" Name="buildup_wrapper.bgn"/>
@@ -16,37 +16,37 @@
   <File Type="BITSTR-NKY" Name="buildup_wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="buildup_wrapper_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="buildup_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="buildup_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SPI_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="buildup_wrapper.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="buildup_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SPI_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="buildup_wrapper.ltx"/>
   <File Type="BOOT-PDI-FILE" Name="buildup_wrapper_boot.pdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="NPI_FILE" Name="buildup_wrapper.npi"/>
-  <File Type="OPT-DRC" Name="buildup_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-DRC" Name="SPI_wrapper_drc_opted.rpt"/>
   <File Type="RBD_FILE" Name="buildup_wrapper.rbd"/>
   <File Type="OPT-HWDEF" Name="buildup_wrapper.hwdef"/>
-  <File Type="PLACE-IO" Name="buildup_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="buildup_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="buildup_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="buildup_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-IO" Name="SPI_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="SPI_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="SPI_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="SPI_wrapper_control_sets_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="buildup_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="buildup_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="buildup_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="buildup_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="buildup_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="buildup_wrapper_route_status.pb"/>
+  <File Type="ROUTE-DRC" Name="SPI_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="SPI_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="SPI_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="SPI_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="SPI_wrapper_route_status.pb"/>
   <File Type="ROUTE-DCP" Name="buildup_wrapper_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="buildup_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="buildup_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="buildup_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="SPI_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="buildup_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="buildup_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="buildup_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="buildup_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="buildup_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="buildup_wrapper_bus_skew_routed.rpx"/>
+  <File Type="ROUTE-TIMING-RPX" Name="SPI_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="SPI_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="SPI_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="SPI_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="SPI_wrapper_bus_skew_routed.rpx"/>
   <File Type="OPT-DCP" Name="buildup_wrapper_opt.dcp"/>
   <File Type="PLACE-DCP" Name="buildup_wrapper_placed.dcp"/>
   <File Type="PWROPT-DCP" Name="buildup_wrapper_pwropt.dcp"/>
@@ -54,13 +54,13 @@
   <File Type="PHYSOPT-DCP" Name="buildup_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="buildup_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="buildup_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="buildup_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="buildup_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="buildup_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="buildup_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="buildup_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-DRC-RPX" Name="buildup_wrapper_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="buildup_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SPI_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SPI_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SPI_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="SPI_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="SPI_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-DRC-RPX" Name="SPI_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SPI_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="buildup_wrapper.pdi"/>
   <File Type="PL-PDI-FILE" Name="buildup_wrapper_pld.pdi"/>
   <File Type="RCFI_FILE" Name="buildup_wrapper.rcfi"/>

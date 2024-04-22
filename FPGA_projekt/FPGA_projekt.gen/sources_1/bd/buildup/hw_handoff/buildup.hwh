@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Apr 17 09:44:52 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 22 09:18:00 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="buildup" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -60,6 +60,11 @@
         <CONNECTION INSTANCE="synchronizer_0" PORT="D"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" LEFT="15" NAME="spi_out" RIGHT="0" SIGIS="undef" SIGNAME="SPI_0_SPI_out">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SPI_0" PORT="SPI_out"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES/>
@@ -80,6 +85,7 @@
         <PORT DIR="O" LEFT="15" NAME="SPI_out" RIGHT="0" SIGIS="undef" SIGNAME="SPI_0_SPI_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="pwm_gen_0" PORT="duty"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi_out"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="SPI_sample" SIGIS="undef" SIGNAME="synchronizer_0_Q">
