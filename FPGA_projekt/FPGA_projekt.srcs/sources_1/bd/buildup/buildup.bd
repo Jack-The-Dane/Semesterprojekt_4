@@ -16,8 +16,8 @@
       "pwm_gen_0": "",
       "counter_0": "",
       "clock_divider_0": "",
-      "SPI_0": "",
-      "synchronizer_0": ""
+      "synchronizer_0": "",
+      "SPI_0": ""
     },
     "ports": {
       "CS": {
@@ -235,13 +235,6 @@
           }
         }
       },
-      "SPI_0": {
-        "vlnv": "user.org:user:SPI:1.0",
-        "ip_revision": "2",
-        "xci_name": "buildup_SPI_0_0",
-        "xci_path": "ip\\buildup_SPI_0_0\\buildup_SPI_0_0.xci",
-        "inst_hier_path": "SPI_0"
-      },
       "synchronizer_0": {
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
@@ -285,6 +278,13 @@
             "direction": "O"
           }
         }
+      },
+      "SPI_0": {
+        "vlnv": "xilinx.com:user:SPI:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_SPI_0_1",
+        "xci_path": "ip\\buildup_SPI_0_1\\buildup_SPI_0_1.xci",
+        "inst_hier_path": "SPI_0"
       }
     },
     "nets": {
@@ -310,14 +310,8 @@
       "btn_0_1": {
         "ports": [
           "CS",
-          "SPI_0/SPI_chip_select",
-          "led_0"
-        ]
-      },
-      "btn_1_1": {
-        "ports": [
-          "mosi",
-          "SPI_0/mosi"
+          "led_0",
+          "SPI_0/SPI_chip_select"
         ]
       },
       "clk_1": {
@@ -358,6 +352,12 @@
           "synchronizer_0/D"
         ]
       },
+      "mosi_1": {
+        "ports": [
+          "mosi",
+          "SPI_0/mosi"
+        ]
+      },
       "pwm_gen_0_pwm": {
         "ports": [
           "pwm_gen_0/pwm",
@@ -368,9 +368,9 @@
         "ports": [
           "rst",
           "block_encoder_0/rst",
-          "SPI_0/rst",
           "counter_0/rst",
-          "clock_divider_0/rst"
+          "clock_divider_0/rst",
+          "SPI_0/rst"
         ]
       },
       "synchronizer_0_Q": {

@@ -239,10 +239,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_SPI_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buildup_counter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_clock_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_pwm_gen_0_0"/>
 </GenRun>

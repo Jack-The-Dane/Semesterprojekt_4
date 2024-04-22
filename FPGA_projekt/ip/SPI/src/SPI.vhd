@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Mon Apr 15 10:30:19 2024
---Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+--Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+--Date        : Mon Apr 22 14:32:12 2024
+--Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target SPI.bd
 --Design      : SPI
 --Purpose     : IP block netlist

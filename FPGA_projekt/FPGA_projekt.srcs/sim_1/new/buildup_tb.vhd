@@ -314,29 +314,20 @@ begin
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '0';                 -- 38.5
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '0';
     CS_tb <= '1';
     mosi_tb <= '0';                 -- 39
     
     -- Keep the clock running for a while...
     
+    l_parity : for k in 0 to 10000000 loop
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    
+    end loop l_parity;
     
     wait;
         
