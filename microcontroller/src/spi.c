@@ -67,16 +67,18 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
 
 void spi_task(INT8U my_id, INT8U my_state, INT8U event, INT8U data) {
 
-  // Create a word where the left-most bits are the pan motor and the right-most bits are the tilt motor
-  SPI_TYPE send_message = ((SPI_TYPE)spi_pan_motor) << (SPI_WORD_LENGTH / 2) | ((SPI_TYPE)spi_tilt_motor);
+  while (1) {
+      // Create a word where the left-most bits are the pan motor and the right-most bits are the tilt motor
+      SPI_TYPE send_message = ((SPI_TYPE)spi_pan_motor) << (SPI_WORD_LENGTH / 2) | ((SPI_TYPE)spi_tilt_motor);
 
-  // Create a blank word to store the received data
-  SPI_TYPE recieve_message = 0;
+      // Create a blank word to store the received data
+      SPI_TYPE recieve_message = 0;
 
-  spi_tranceive(&send_message, &recieve_message);
+      spi_tranceive(&send_message, &recieve_message);
 
-  // Extract the pan and tilt encoder values from the received message
-  spi_pan_encoder = (SPI_ENCODER_TYPE)(recieve_message >> (SPI_WORD_LENGTH / 2));
-  spi_tilt_encoder = (SPI_ENCODER_TYPE)(recieve_message);
+      // Extract the pan and tilt encoder values from the received message
+      spi_pan_encoder = (SPI_ENCODER_TYPE)(recieve_message >> (SPI_WORD_LENGTH / 2));
+      spi_tilt_encoder = (SPI_ENCODER_TYPE)(recieve_message);
+  }
 
 }
