@@ -1,3 +1,4 @@
--I/nix/store/hkj250rjsvxcbr31fr1v81cv88cdfp4l-glibc-2.37-8-dev/include
--I ./frt10/inc
--I ./frt10/port/TivaM4
+-I./freeRTOS/include/
+-I./freeRTOS/portable/GCC/ARM_CM4F/
+-I./src/inc/
+-I./tm4c123/
