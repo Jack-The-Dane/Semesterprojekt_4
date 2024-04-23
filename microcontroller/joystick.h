@@ -3,12 +3,13 @@
 #ifndef JOYSTICK
 #define JOYSTICK
 
+// Pin on PORTB
 #define JOYSTICK_BUTTON_PIN 0
 
 typedef struct {
     INT16U x, y;
     BOOLEAN button;
-} Joystick ;
+} Joystick;
 
 Joystick joystick;
 

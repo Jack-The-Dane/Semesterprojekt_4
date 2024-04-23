@@ -20,8 +20,8 @@
 // Global variables for now guarded by the `SEM_SPI` semaphore
 SPI_MOTOR_TYPE spi_pan_motor;
 SPI_MOTOR_TYPE spi_tilt_motor;
-SPI_MOTOR_TYPE spi_pan_encoder;
-SPI_MOTOR_TYPE spi_tilt_encoder;
+SPI_ENCODER_TYPE spi_pan_encoder;
+SPI_ENCODER_TYPE spi_tilt_encoder;
 
 // Setup in pins on PORTE for SPI
 void init_spi();

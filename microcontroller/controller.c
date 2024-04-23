@@ -2,14 +2,6 @@
 #include "joystick.h"
 #include "spi.h"
 
-typedef enum {
-    INIT = 0,
-    JOYSTICK_WAIT,
-    SPI_WAIT,
-    RUNNING,
-} State;
-
-
 // TODO: Use mutex to protect joystick
 void controller_task(void * pvParameters) {
 
