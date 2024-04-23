@@ -30,12 +30,9 @@ void init_spi() {
 
 // https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Bit-banging_the_protocol
 void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
-  setLEDColor(RED);
 
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
-
-  setLEDColor(GREEN);
 
   for (uint8_t i = SPI_WORD_LENGTH; i > 0; i--) {
 
@@ -61,7 +58,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     }
   }
 
-  // Set MOSI low
+  // Set MOSI low (for **AESTHETICS**)
   GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN);
 
   // Set CS high to end the SPI frame.

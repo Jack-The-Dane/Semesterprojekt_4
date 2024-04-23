@@ -30,20 +30,18 @@ void setup() {
 }
 
 void * joystick_mutex;
-void * joystick_uart_mutex; 
+void * joystick_uart_mutex;
 
 int main(void) {
     setup();
 
-    joystick_mutex      = xSemaphoreCreateMutex();
+    joystick_mutex = xSemaphoreCreateMutex();
     joystick_uart_mutex = xSemaphoreCreateMutex();
 
     if (!joystick_mutex) error();
     if (!joystick_uart_mutex) error();
 
     setLEDColor(GREEN);
-
-
 
     xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
     xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );

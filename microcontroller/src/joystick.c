@@ -24,28 +24,20 @@ void init_joystick() {
 
 }
 
-typedef enum {
-    INIT,
-    WATING,
-    RUNNING,
-} State;
-
 void joystick_task(void * pvParameters) {
-    // Mutex here
     xSemaphoreTake(joystick_mutex, portMAX_DELAY);
     joystick.x = get_adc0();
     joystick.y = get_adc1();
     joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
     xSemaphoreGive(joystick_mutex);
-    // Mutex end here
 }
 
 void joystick_uart_echo_task(void * pvParameters) {
-    // Mutex here
     xSemaphoreTake(joystick_uart_mutex, portMAX_DELAY);
+    xSemaphoreTake(joystick_mutex, portMAX_DELAY);
     uart_putc(joystick.x >> 4);
     uart_putc(joystick.y >> 4);
     uart_putc(joystick.button);
+    xSemaphoreGive(joystick_mutex);
     xSemaphoreGive(joystick_uart_mutex);
-    // Mutex end here
 }
