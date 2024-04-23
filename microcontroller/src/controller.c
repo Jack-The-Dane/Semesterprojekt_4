@@ -5,12 +5,14 @@
 // TODO: Use mutex to protect joystick
 void controller_task(void * pvParameters) {
 
-    SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
-    SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
+    while (1) {
+        SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
+        SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
 
-    INT16U motors = motor1 << 8 | motor2;
-    INT16U encoders = 0;
+        INT16U motors = motor1 << 8 | motor2;
+        INT16U encoders = 0;
 
-    spi_tranceive(&motors, &encoders);
+        spi_tranceive(&motors, &encoders);
+    }
 
 }
