@@ -282,8 +282,8 @@
       "SPI_0": {
         "vlnv": "xilinx.com:user:SPI:1.0",
         "ip_revision": "2",
-        "xci_name": "buildup_SPI_0_1",
-        "xci_path": "ip\\buildup_SPI_0_1\\buildup_SPI_0_1.xci",
+        "xci_name": "buildup_SPI_0_2",
+        "xci_path": "ip\\buildup_SPI_0_2\\buildup_SPI_0_2.xci",
         "inst_hier_path": "SPI_0"
       }
     },

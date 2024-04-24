@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Apr 22 14:36:53 2024
+--Date        : Wed Apr 24 13:04:00 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target buildup.bd
 --Design      : buildup
@@ -77,7 +77,7 @@ architecture STRUCTURE of buildup is
     Q : out STD_LOGIC
   );
   end component buildup_synchronizer_0_0;
-  component buildup_SPI_0_1 is
+  component buildup_SPI_0_2 is
   port (
     SPI_chip_select : in STD_LOGIC;
     SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -87,7 +87,7 @@ architecture STRUCTURE of buildup is
     mosi : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  end component buildup_SPI_0_1;
+  end component buildup_SPI_0_2;
   signal SPI_0_SPI_out : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal SPI_0_miso : STD_LOGIC;
   signal block_encoder_0_pulse_cnt : STD_LOGIC_VECTOR ( 8 downto 0 );
@@ -121,7 +121,7 @@ begin
   mosi_1 <= mosi;
   pwm <= pwm_gen_0_pwm;
   spi_out(15 downto 0) <= SPI_0_SPI_out(15 downto 0);
-SPI_0: component buildup_SPI_0_1
+SPI_0: component buildup_SPI_0_2
      port map (
       SPI_chip_select => btn_0_1,
       SPI_out(15 downto 0) => SPI_0_SPI_out(15 downto 0),

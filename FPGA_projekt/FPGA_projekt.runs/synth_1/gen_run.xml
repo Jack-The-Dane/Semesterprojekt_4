@@ -3,8 +3,8 @@
   <File Type="PA-TCL" Name="buildup_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="buildup_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="buildup_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="SPI_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="SPI_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="block_encoder_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="block_encoder_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="buildup_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -239,10 +239,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_SPI_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="buildup_SPI_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_clock_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_pwm_gen_0_0"/>
 </GenRun>

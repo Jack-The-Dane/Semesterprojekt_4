@@ -53,7 +53,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY buildup_SPI_0_1 IS
+ENTITY buildup_SPI_0_2 IS
   PORT (
     SPI_chip_select : IN STD_LOGIC;
     SPI_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -63,11 +63,11 @@ ENTITY buildup_SPI_0_1 IS
     mosi : IN STD_LOGIC;
     rst : IN STD_LOGIC
   );
-END buildup_SPI_0_1;
+END buildup_SPI_0_2;
 
-ARCHITECTURE buildup_SPI_0_1_arch OF buildup_SPI_0_1 IS
+ARCHITECTURE buildup_SPI_0_2_arch OF buildup_SPI_0_2 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF buildup_SPI_0_1_arch: ARCHITECTURE IS "yes";
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF buildup_SPI_0_2_arch: ARCHITECTURE IS "yes";
   COMPONENT SPI IS
     PORT (
       SPI_chip_select : IN STD_LOGIC;
@@ -94,4 +94,4 @@ BEGIN
       mosi => mosi,
       rst => rst
     );
-END buildup_SPI_0_1_arch;
+END buildup_SPI_0_2_arch;
