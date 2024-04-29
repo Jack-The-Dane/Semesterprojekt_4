@@ -57,8 +57,8 @@ ENTITY SPI_latch_0_0 IS
   PORT (
     rst : IN STD_LOGIC;
     cnt : IN STD_LOGIC;
-    D : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    D : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+    Q : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
   );
 END SPI_latch_0_0;
 
@@ -72,8 +72,8 @@ ARCHITECTURE SPI_latch_0_0_arch OF SPI_latch_0_0 IS
     PORT (
       rst : IN STD_LOGIC;
       cnt : IN STD_LOGIC;
-      D : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+      D : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      Q : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
     );
   END COMPONENT latch;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -83,7 +83,7 @@ ARCHITECTURE SPI_latch_0_0_arch OF SPI_latch_0_0 IS
 BEGIN
   U0 : latch
     GENERIC MAP (
-      data_length => 16
+      data_length => 20
     )
     PORT MAP (
       rst => rst,

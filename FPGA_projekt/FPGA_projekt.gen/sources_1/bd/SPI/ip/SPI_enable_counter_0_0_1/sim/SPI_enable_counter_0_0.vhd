@@ -83,7 +83,7 @@ ARCHITECTURE SPI_enable_counter_0_0_arch OF SPI_enable_counter_0_0 IS
 BEGIN
   U0 : enable_counter
     GENERIC MAP (
-      data_length => 16
+      data_length => 20
     )
     PORT MAP (
       en => en,

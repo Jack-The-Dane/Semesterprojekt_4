@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -94,7 +95,8 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {{C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd}}
 add_files {{C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/bd/buildup/buildup.bd}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/src/block_encoder_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/src/SPI_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/src/SPI_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_1_0/src/block_encoder_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/buildup_ooc.xdc}}]
 
 OPTRACE "Adding files" END { }

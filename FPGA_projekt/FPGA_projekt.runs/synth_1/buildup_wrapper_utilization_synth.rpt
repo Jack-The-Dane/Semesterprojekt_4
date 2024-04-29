@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Apr 17 09:46:26 2024
+| Date         : Mon Apr 29 18:08:41 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_utilization -file buildup_wrapper_utilization_synth.rpt -pb buildup_wrapper_utilization_synth.pb
 | Design       : buildup_wrapper
@@ -92,7 +92,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   10 |     0 |          0 |       125 |  8.00 |
+| Bonded IOB                  |   15 |     0 |          0 |       125 | 12.00 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -148,8 +148,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |    7 |                  IO |
-| OBUF     |    3 |                  IO |
+| IBUF     |   11 |                  IO |
+| OBUF     |    4 |                  IO |
 +----------+------+---------------------+
 
 
@@ -160,11 +160,13 @@ Warning! LUT value is adjusted to account for LUT combining.
 |          Ref Name         | Used |
 +---------------------------+------+
 | buildup_synchronizer_0_0  |    1 |
-| buildup_pwm_gen_0_0       |    1 |
-| buildup_counter_0_0       |    1 |
+| buildup_pwm_gen_1_0       |    1 |
+| buildup_pwm_gen_0_1       |    1 |
+| buildup_counter_1_0       |    1 |
 | buildup_clock_divider_0_0 |    1 |
+| buildup_block_encoder_1_0 |    1 |
 | buildup_block_encoder_0_0 |    1 |
-| buildup_SPI_0_0           |    1 |
+| buildup_SPI_0_2           |    1 |
 +---------------------------+------+
 
 

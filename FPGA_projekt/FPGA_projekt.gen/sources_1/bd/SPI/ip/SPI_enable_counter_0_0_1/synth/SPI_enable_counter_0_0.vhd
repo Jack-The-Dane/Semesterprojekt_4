@@ -81,7 +81,7 @@ ARCHITECTURE SPI_enable_counter_0_0_arch OF SPI_enable_counter_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF SPI_enable_counter_0_0_arch : ARCHITECTURE IS "SPI_enable_counter_0_0,enable_counter,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF SPI_enable_counter_0_0_arch: ARCHITECTURE IS "SPI_enable_counter_0_0,enable_counter,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=16}";
+  ATTRIBUTE CORE_GENERATION_INFO OF SPI_enable_counter_0_0_arch: ARCHITECTURE IS "SPI_enable_counter_0_0,enable_counter,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=enable_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=20}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF SPI_enable_counter_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -91,7 +91,7 @@ ARCHITECTURE SPI_enable_counter_0_0_arch OF SPI_enable_counter_0_0 IS
 BEGIN
   U0 : enable_counter
     GENERIC MAP (
-      data_length => 16
+      data_length => 20
     )
     PORT MAP (
       en => en,

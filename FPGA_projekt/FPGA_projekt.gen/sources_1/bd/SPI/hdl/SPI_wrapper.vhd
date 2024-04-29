@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Apr 22 14:32:12 2024
+--Date        : Mon Apr 29 10:09:39 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target SPI_wrapper.bd
 --Design      : SPI_wrapper
@@ -15,9 +15,9 @@ use UNISIM.VCOMPONENTS.ALL;
 entity SPI_wrapper is
   port (
     SPI_chip_select : in STD_LOGIC;
-    SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    SPI_in : in STD_LOGIC_VECTOR ( 19 downto 0 );
+    SPI_out : out STD_LOGIC_VECTOR ( 19 downto 0 );
     SPI_sample : in STD_LOGIC;
-    encoder_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     miso : out STD_LOGIC;
     mosi : in STD_LOGIC;
     rst : in STD_LOGIC
@@ -30,19 +30,19 @@ architecture STRUCTURE of SPI_wrapper is
     mosi : in STD_LOGIC;
     SPI_chip_select : in STD_LOGIC;
     rst : in STD_LOGIC;
-    encoder_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
     miso : out STD_LOGIC;
     SPI_sample : in STD_LOGIC;
-    SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    SPI_in : in STD_LOGIC_VECTOR ( 19 downto 0 );
+    SPI_out : out STD_LOGIC_VECTOR ( 19 downto 0 )
   );
   end component SPI;
 begin
 SPI_i: component SPI
      port map (
       SPI_chip_select => SPI_chip_select,
-      SPI_out(15 downto 0) => SPI_out(15 downto 0),
+      SPI_in(19 downto 0) => SPI_in(19 downto 0),
+      SPI_out(19 downto 0) => SPI_out(19 downto 0),
       SPI_sample => SPI_sample,
-      encoder_in(15 downto 0) => encoder_in(15 downto 0),
       miso => miso,
       mosi => mosi,
       rst => rst

@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Apr 17 09:45:55 2024
-# Process ID: 14896
+# Start of session at: Mon Apr 29 18:07:53 2024
+# Process ID: 19196
 # Current directory: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1
 # Command line: vivado.exe -log buildup_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buildup_wrapper.tcl
 # Log file: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.vds
@@ -12,7 +12,7 @@
 # Running On: Cornelia, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16890 MB
 #-----------------------------------------------------------
 source buildup_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 475.988 ; gain = 185.133
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 475.371 ; gain = 183.578
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/SPI'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/block_encoder'.
@@ -27,65 +27,187 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11880
+INFO: [Synth 8-7075] Helper process launched with PID 13216
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1349.172 ; gain = 439.781
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1348.527 ; gain = 439.469
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'buildup_wrapper' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
-INFO: [Synth 8-3491] module 'buildup' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:15' bound to instance 'buildup_i' of component 'buildup' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:46]
-INFO: [Synth 8-638] synthesizing module 'buildup' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
-INFO: [Synth 8-3491] module 'buildup_SPI_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_SPI_0_0_stub.vhdl:6' bound to instance 'SPI_0' of component 'buildup_SPI_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:122]
-INFO: [Synth 8-638] synthesizing module 'buildup_SPI_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_SPI_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'buildup_block_encoder_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:6' bound to instance 'block_encoder_0' of component 'buildup_block_encoder_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:133]
-INFO: [Synth 8-638] synthesizing module 'buildup_block_encoder_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'buildup_clock_divider_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:6' bound to instance 'clock_divider_0' of component 'buildup_clock_divider_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:142]
-INFO: [Synth 8-638] synthesizing module 'buildup_clock_divider_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_counter_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_counter_0_0_stub.vhdl:6' bound to instance 'counter_0' of component 'buildup_counter_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'buildup_counter_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_counter_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'buildup_pwm_gen_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_pwm_gen_0_0_stub.vhdl:6' bound to instance 'pwm_gen_0' of component 'buildup_pwm_gen_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:155]
-INFO: [Synth 8-638] synthesizing module 'buildup_pwm_gen_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_pwm_gen_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_synchronizer_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:6' bound to instance 'synchronizer_0' of component 'buildup_synchronizer_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:161]
-INFO: [Synth 8-638] synthesizing module 'buildup_synchronizer_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-14896-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'buildup_xlconstant_1_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'buildup_xlconstant_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'buildup_wrapper' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:35]
+INFO: [Synth 8-3491] module 'buildup' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:15' bound to instance 'buildup_i' of component 'buildup' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'buildup' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:39]
+INFO: [Synth 8-3491] module 'buildup_SPI_0_2' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_SPI_0_2_stub.vhdl:6' bound to instance 'SPI_0' of component 'buildup_SPI_0_2' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:179]
+INFO: [Synth 8-638] synthesizing module 'buildup_SPI_0_2' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_SPI_0_2_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'buildup_block_encoder_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:6' bound to instance 'block_encoder_0' of component 'buildup_block_encoder_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:189]
+INFO: [Synth 8-638] synthesizing module 'buildup_block_encoder_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_block_encoder_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'buildup_block_encoder_1_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_block_encoder_1_0_stub.vhdl:6' bound to instance 'block_encoder_1' of component 'buildup_block_encoder_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'buildup_block_encoder_1_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_block_encoder_1_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'buildup_clock_divider_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:6' bound to instance 'clock_divider_0' of component 'buildup_clock_divider_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'buildup_clock_divider_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_clock_divider_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_counter_1_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_counter_1_0_stub.vhdl:6' bound to instance 'counter_1' of component 'buildup_counter_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'buildup_counter_1_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_counter_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'buildup_pwm_gen_0_1' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_pwm_gen_0_1_stub.vhdl:6' bound to instance 'pwm_gen_0' of component 'buildup_pwm_gen_0_1' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'buildup_pwm_gen_0_1' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_pwm_gen_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_pwm_gen_1_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_pwm_gen_1_0_stub.vhdl:6' bound to instance 'pwm_gen_1' of component 'buildup_pwm_gen_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'buildup_pwm_gen_1_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_pwm_gen_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_synchronizer_0_0' declared at 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:6' bound to instance 'synchronizer_0' of component 'buildup_synchronizer_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'buildup_synchronizer_0_0' [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/.Xil/Vivado-19196-Cornelia/realtime/buildup_synchronizer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'buildup_xlconcat_0_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconcat_0_0/synth/buildup_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'buildup_xlconcat_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:238]
+INFO: [Synth 8-6157] synthesizing module 'buildup_xlconcat_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconcat_0_0/synth/buildup_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_5_xlconcat' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_5_xlconcat' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/147b/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'buildup_xlconcat_0_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconcat_0_0/synth/buildup_xlconcat_0_0.v:53]
+INFO: [Synth 8-3491] module 'buildup_xlconstant_1_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53' bound to instance 'xlconstant_1' of component 'buildup_xlconstant_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:246]
 INFO: [Synth 8-6157] synthesizing module 'buildup_xlconstant_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
 INFO: [Synth 8-6155] done synthesizing module 'buildup_xlconstant_1_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0/synth/buildup_xlconstant_1_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'buildup' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'buildup_wrapper' (0#1) [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:30]
+INFO: [Synth 8-3491] module 'buildup_xlslice_0_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_0_0/synth/buildup_xlslice_0_0.v:53' bound to instance 'xlslice_0' of component 'buildup_xlslice_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:250]
+INFO: [Synth 8-6157] synthesizing module 'buildup_xlslice_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_0_0/synth/buildup_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_3_xlslice' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_3_xlslice' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'buildup_xlslice_0_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_0_0/synth/buildup_xlslice_0_0.v:53]
+INFO: [Synth 8-3491] module 'buildup_xlslice_1_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_1_0/synth/buildup_xlslice_1_0.v:53' bound to instance 'xlslice_1' of component 'buildup_xlslice_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:255]
+INFO: [Synth 8-6157] synthesizing module 'buildup_xlslice_1_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_1_0/synth/buildup_xlslice_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_3_xlslice__parameterized0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_3_xlslice__parameterized0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/217a/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'buildup_xlslice_1_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlslice_1_0/synth/buildup_xlslice_1_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'buildup' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/synth/buildup.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'buildup_wrapper' (0#1) [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/hdl/buildup_wrapper.vhd:35]
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_3_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_3_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_5_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1457.625 ; gain = 548.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1457.625 ; gain = 548.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1457.086 ; gain = 547.695
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1457.625 ; gain = 548.566
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1457.086 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1457.625 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
 Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0/encoder_test_block_encoder_0_0_in_context.xdc] for cell 'buildup_i/block_encoder_0'
-Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
-Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0/buildup_pwm_gen_0_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
-Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
-Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_0_0/buildup_counter_0_0/buildup_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_0'
 Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
 Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0/buildup_clock_divider_0_0_in_context.xdc] for cell 'buildup_i/clock_divider_0'
-Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
-Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_0/buildup_SPI_0_0/buildup_SPI_0_0_in_context.xdc] for cell 'buildup_i/SPI_0'
 Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
 Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0/buildup_synchronizer_0_0_in_context.xdc] for cell 'buildup_i/synchronizer_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2/buildup_SPI_0_2_in_context.xdc] for cell 'buildup_i/SPI_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2/buildup_SPI_0_2_in_context.xdc] for cell 'buildup_i/SPI_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_1_0/buildup_block_encoder_1_0/buildup_block_encoder_1_0_in_context.xdc] for cell 'buildup_i/block_encoder_1'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_1_0/buildup_block_encoder_1_0/buildup_block_encoder_1_0_in_context.xdc] for cell 'buildup_i/block_encoder_1'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_1_0/buildup_counter_1_0/design_1_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_1'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_counter_1_0/buildup_counter_1_0/design_1_counter_0_0_in_context.xdc] for cell 'buildup_i/counter_1'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_1/buildup_pwm_gen_0_1/design_1_pwm_gen_1_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_0_1/buildup_pwm_gen_0_1/design_1_pwm_gen_1_0_in_context.xdc] for cell 'buildup_i/pwm_gen_0'
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_1_0/buildup_pwm_gen_1_0/design_1_pwm_gen_1_0_in_context.xdc] for cell 'buildup_i/pwm_gen_1'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_pwm_gen_1_0/buildup_pwm_gen_1_0/design_1_pwm_gen_1_0_in_context.xdc] for cell 'buildup_i/pwm_gen_1'
 Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
 WARNING: [Vivado 12-584] No ports matched 'sysclk'. [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc:9]
 Finished Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc]
@@ -96,22 +218,20 @@ Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Seme
 Finished Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1470.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1469.809 ; gain = 0.000
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1470.172 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -119,17 +239,42 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/block_encoder_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/xlconstant_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/pwm_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/counter_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/clock_divider_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/SPI_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/synchronizer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/SPI_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/block_encoder_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/xlslice_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/counter_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/pwm_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for buildup_i/pwm_gen_1. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/utils_1/imports/synth_1/pwm_generator_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1470.172 ; gain = 561.113
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -151,25 +296,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -187,37 +332,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -227,47 +372,52 @@ Report BlackBoxes:
 +------+--------------------------+----------+
 |      |BlackBox name             |Instances |
 +------+--------------------------+----------+
-|1     |buildup_SPI_0_0           |         1|
+|1     |buildup_SPI_0_2           |         1|
 |2     |buildup_block_encoder_0_0 |         1|
-|3     |buildup_clock_divider_0_0 |         1|
-|4     |buildup_counter_0_0       |         1|
-|5     |buildup_pwm_gen_0_0       |         1|
-|6     |buildup_synchronizer_0_0  |         1|
+|3     |buildup_block_encoder_1_0 |         1|
+|4     |buildup_clock_divider_0_0 |         1|
+|5     |buildup_counter_1_0       |         1|
+|6     |buildup_pwm_gen_0_1       |         1|
+|7     |buildup_pwm_gen_1_0       |         1|
+|8     |buildup_synchronizer_0_0  |         1|
 +------+--------------------------+----------+
 
 Report Cell Usage: 
 +------+-------------------------------+------+
 |      |Cell                           |Count |
 +------+-------------------------------+------+
-|1     |buildup_SPI_0_0_bbox           |     1|
+|1     |buildup_SPI_0_2_bbox           |     1|
 |2     |buildup_block_encoder_0_0_bbox |     1|
-|3     |buildup_clock_divider_0_0_bbox |     1|
-|4     |buildup_counter_0_0_bbox       |     1|
-|5     |buildup_pwm_gen_0_0_bbox       |     1|
-|6     |buildup_synchronizer_0_0_bbox  |     1|
-|7     |IBUF                           |     7|
-|8     |OBUF                           |     3|
+|3     |buildup_block_encoder_1_0_bbox |     1|
+|4     |buildup_clock_divider_0_0_bbox |     1|
+|5     |buildup_counter_1_0_bbox       |     1|
+|6     |buildup_pwm_gen_0_1_bbox       |     1|
+|7     |buildup_pwm_gen_1_0_bbox       |     1|
+|8     |buildup_synchronizer_0_0_bbox  |     1|
+|9     |IBUF                           |    11|
+|10    |OBUF                           |     4|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1469.809 ; gain = 547.695
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1469.809 ; gain = 560.418
+Synthesis finished with 0 errors, 1 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:29 . Memory (MB): peak = 1470.172 ; gain = 548.566
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1470.172 ; gain = 561.113
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1473.234 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1469.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1476.855 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 155cbc0b
+Synth Design complete | Checksum: 7decef91
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+62 Infos, 104 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1469.809 ; gain = 980.676
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1469.809 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:37 . Memory (MB): peak = 1476.855 ; gain = 988.590
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1476.855 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1/buildup_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file buildup_wrapper_utilization_synth.rpt -pb buildup_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 17 09:46:26 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 29 18:08:41 2024...

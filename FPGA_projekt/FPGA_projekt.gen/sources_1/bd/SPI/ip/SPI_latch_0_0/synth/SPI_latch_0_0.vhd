@@ -57,8 +57,8 @@ ENTITY SPI_latch_0_0 IS
   PORT (
     rst : IN STD_LOGIC;
     cnt : IN STD_LOGIC;
-    D : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    D : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+    Q : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
   );
 END SPI_latch_0_0;
 
@@ -72,8 +72,8 @@ ARCHITECTURE SPI_latch_0_0_arch OF SPI_latch_0_0 IS
     PORT (
       rst : IN STD_LOGIC;
       cnt : IN STD_LOGIC;
-      D : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      Q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+      D : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      Q : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
     );
   END COMPONENT latch;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -81,7 +81,7 @@ ARCHITECTURE SPI_latch_0_0_arch OF SPI_latch_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF SPI_latch_0_0_arch : ARCHITECTURE IS "SPI_latch_0_0,latch,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF SPI_latch_0_0_arch: ARCHITECTURE IS "SPI_latch_0_0,latch,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=latch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=16}";
+  ATTRIBUTE CORE_GENERATION_INFO OF SPI_latch_0_0_arch: ARCHITECTURE IS "SPI_latch_0_0,latch,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=latch,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,data_length=20}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF SPI_latch_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -91,7 +91,7 @@ ARCHITECTURE SPI_latch_0_0_arch OF SPI_latch_0_0 IS
 BEGIN
   U0 : latch
     GENERIC MAP (
-      data_length => 16
+      data_length => 20
     )
     PORT MAP (
       rst => rst,

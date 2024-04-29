@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Apr 29 10:10:10 2024
+# Process ID: 28092
+# Current directory: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1
+# Command line: vivado.exe -log buildup_SPI_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source buildup_SPI_0_2.tcl
+# Log file: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/buildup_SPI_0_2.vds
+# Journal file: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1\vivado.jou
+# Running On: Cornelia, OS: Windows, CPU Frequency: 3110 MHz, CPU Physical cores: 12, Host memory: 16890 MB
+#-----------------------------------------------------------
+source buildup_SPI_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/SPI'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/block_encoder'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: buildup_SPI_0_2
+Command: synth_design -top buildup_SPI_0_2 -part xc7z020clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22720
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1346.250 ; gain = 437.578
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'buildup_SPI_0_2' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/synth/buildup_SPI_0_2.vhd:68]
+INFO: [Synth 8-3491] module 'SPI' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:15' bound to instance 'U0' of component 'SPI' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/synth/buildup_SPI_0_2.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'SPI' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:31]
+INFO: [Synth 8-3491] module 'SPI_NOT_gate_0_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_NOT_gate_0_0.vhd:56' bound to instance 'NOT_gate_0' of component 'SPI_NOT_gate_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'SPI_NOT_gate_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_NOT_gate_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'NOT_gate' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/NOT_gate.vhd:34' bound to instance 'U0' of component 'NOT_gate' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_NOT_gate_0_0.vhd:81]
+INFO: [Synth 8-638] synthesizing module 'NOT_gate' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/NOT_gate.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'NOT_gate' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/NOT_gate.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'SPI_NOT_gate_0_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_NOT_gate_0_0.vhd:63]
+INFO: [Synth 8-3491] module 'SPI_enable_counter_0_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_enable_counter_0_0.vhd:56' bound to instance 'Prescaler' of component 'SPI_enable_counter_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'SPI_enable_counter_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_enable_counter_0_0.vhd:65]
+	Parameter data_length bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'enable_counter' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/enable_counter.vhd:34' bound to instance 'U0' of component 'enable_counter' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_enable_counter_0_0.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'enable_counter' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/enable_counter.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'enable_counter' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/enable_counter.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'SPI_enable_counter_0_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_enable_counter_0_0.vhd:65]
+INFO: [Synth 8-3491] module 'SPI_shift_register_input_1' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_shift_register_input_1.vhd:56' bound to instance 'spi_in_RnM' of component 'SPI_shift_register_input_1' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'SPI_shift_register_input_1' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_shift_register_input_1.vhd:68]
+	Parameter register_length bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'shift_register_generic' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/shift_register_generic.vhd:34' bound to instance 'U0' of component 'shift_register_generic' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_shift_register_input_1.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'shift_register_generic' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/shift_register_generic.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'shift_register_generic' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/shift_register_generic.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'SPI_shift_register_input_1' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_shift_register_input_1.vhd:68]
+INFO: [Synth 8-3491] module 'SPI_latch_0_0' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_latch_0_0.vhd:56' bound to instance 'latch_0' of component 'SPI_latch_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'SPI_latch_0_0' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_latch_0_0.vhd:65]
+	Parameter data_length bound to: 20 - type: integer 
+INFO: [Synth 8-3491] module 'latch' declared at 'c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/latch.vhd:34' bound to instance 'U0' of component 'latch' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_latch_0_0.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'latch' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/latch.vhd:43]
+WARNING: [Synth 8-614] signal 'D' is read in the process but is not in the sensitivity list [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/latch.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'latch' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/latch.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'SPI_latch_0_0' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI_latch_0_0.vhd:65]
+INFO: [Synth 8-256] done synthesizing module 'SPI' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/SPI.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'buildup_SPI_0_2' (0#1) [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/synth/buildup_SPI_0_2.vhd:68]
+WARNING: [Synth 8-7129] Port rst in module shift_register_generic is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1453.129 ; gain = 544.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1453.129 ; gain = 544.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1453.129 ; gain = 544.457
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1453.129 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/src/SPI_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/src/SPI_ooc.xdc] for cell 'U0'
+Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1523.445 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1523.473 ; gain = 0.027
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ipshared/b76a/src/latch.vhd:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input   20 Bit        Muxes := 3     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:18 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:25 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    42|
+|3     |LUT3 |    19|
+|4     |LUT4 |    22|
+|5     |LUT5 |     1|
+|6     |LUT6 |     4|
+|7     |FDCE |    26|
+|8     |FDPE |    20|
+|9     |FDRE |     2|
+|10    |LD   |    20|
+|11    |LDC  |    20|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:28 . Memory (MB): peak = 1523.473 ; gain = 544.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.473 ; gain = 614.801
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1523.473 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1523.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 40 instances were transformed.
+  LD => LDCE: 20 instances
+  LDC => LDCE: 20 instances
+
+Synth Design complete | Checksum: 97f0574
+INFO: [Common 17-83] Releasing license: Synthesis
+49 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.statsThreshold
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1523.473 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/buildup_SPI_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP buildup_SPI_0_2, cache-ID = f7dce044b682196b
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1523.473 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_SPI_0_2_synth_1/buildup_SPI_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file buildup_SPI_0_2_utilization_synth.rpt -pb buildup_SPI_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 29 10:10:55 2024...

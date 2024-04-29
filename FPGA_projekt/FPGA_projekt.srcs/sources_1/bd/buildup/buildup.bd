@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8E4DC67A4078B961",
+      "boundary_crc": "0x67D7474328C9CC99",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -13,11 +13,16 @@
     "design_tree": {
       "block_encoder_0": "",
       "xlconstant_1": "",
-      "pwm_gen_0": "",
-      "counter_0": "",
       "clock_divider_0": "",
       "synchronizer_0": "",
-      "SPI_0": ""
+      "SPI_0": "",
+      "block_encoder_1": "",
+      "xlconcat_0": "",
+      "xlslice_0": "",
+      "xlslice_1": "",
+      "counter_1": "",
+      "pwm_gen_0": "",
+      "pwm_gen_1": ""
     },
     "ports": {
       "CS": {
@@ -28,7 +33,7 @@
         "direction": "I",
         "parameters": {
           "ASSOCIATED_RESET": {
-            "value": "btn_2:rst",
+            "value": "rst",
             "value_src": "default"
           },
           "CLK_DOMAIN": {
@@ -70,13 +75,13 @@
           }
         }
       },
-      "pwm": {
+      "pwm_0": {
         "direction": "O"
       },
-      "encoder_a": {
+      "encoder_a_tilt": {
         "direction": "I"
       },
-      "encoder_b": {
+      "encoder_b_tilt": {
         "direction": "I"
       },
       "sclk": {
@@ -84,7 +89,7 @@
         "direction": "I",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "buildup_ja_3",
+            "value": "buildup_sclk",
             "value_src": "default"
           },
           "FREQ_HZ": {
@@ -111,10 +116,20 @@
       "led_0": {
         "direction": "O"
       },
-      "spi_out": {
-        "direction": "O",
-        "left": "15",
-        "right": "0"
+      "encoder_a_pan": {
+        "direction": "I"
+      },
+      "encoder_b_pan": {
+        "direction": "I"
+      },
+      "Hall_effect_sensor_0": {
+        "direction": "I"
+      },
+      "Hall_effect_sensor_1": {
+        "direction": "I"
+      },
+      "pwm_1": {
+        "direction": "O"
       }
     },
     "components": {
@@ -131,69 +146,6 @@
         "xci_name": "buildup_xlconstant_1_0",
         "xci_path": "ip\\buildup_xlconstant_1_0\\buildup_xlconstant_1_0.xci",
         "inst_hier_path": "xlconstant_1"
-      },
-      "pwm_gen_0": {
-        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_pwm_gen_0_0",
-        "xci_path": "ip\\buildup_pwm_gen_0_0\\buildup_pwm_gen_0_0.xci",
-        "inst_hier_path": "pwm_gen_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pwm_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "cnt": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "duty": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "pwm": {
-            "direction": "O"
-          }
-        }
-      },
-      "counter_0": {
-        "vlnv": "xilinx.com:module_ref:counter:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_counter_0_0",
-        "xci_path": "ip\\buildup_counter_0_0\\buildup_counter_0_0.xci",
-        "inst_hier_path": "counter_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "counter",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "en": {
-            "direction": "I"
-          },
-          "cnt": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
       },
       "clock_divider_0": {
         "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
@@ -269,7 +221,7 @@
                 "value_src": "default_prop"
               },
               "CLK_DOMAIN": {
-                "value": "buildup_ja_3",
+                "value": "buildup_sclk",
                 "value_src": "default_prop"
               }
             }
@@ -285,14 +237,192 @@
         "xci_name": "buildup_SPI_0_2",
         "xci_path": "ip\\buildup_SPI_0_2\\buildup_SPI_0_2.xci",
         "inst_hier_path": "SPI_0"
+      },
+      "block_encoder_1": {
+        "vlnv": "user.org:user:block_encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_block_encoder_1_0",
+        "xci_path": "ip\\buildup_block_encoder_1_0\\buildup_block_encoder_1_0.xci",
+        "inst_hier_path": "block_encoder_1"
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "ip_revision": "5",
+        "xci_name": "buildup_xlconcat_0_0",
+        "xci_path": "ip\\buildup_xlconcat_0_0\\buildup_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "IN2_WIDTH": {
+            "value": "9"
+          },
+          "IN3_WIDTH": {
+            "value": "9"
+          },
+          "NUM_PORTS": {
+            "value": "4"
+          }
+        }
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "buildup_xlslice_0_0",
+        "xci_path": "ip\\buildup_xlslice_0_0\\buildup_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "7"
+          },
+          "DIN_TO": {
+            "value": "0"
+          },
+          "DIN_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "xlslice_1": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "buildup_xlslice_1_0",
+        "xci_path": "ip\\buildup_xlslice_1_0\\buildup_xlslice_1_0.xci",
+        "inst_hier_path": "xlslice_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "15"
+          },
+          "DIN_TO": {
+            "value": "8"
+          },
+          "DIN_WIDTH": {
+            "value": "20"
+          }
+        }
+      },
+      "counter_1": {
+        "vlnv": "xilinx.com:module_ref:counter:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_counter_1_0",
+        "xci_path": "ip\\buildup_counter_1_0\\buildup_counter_1_0.xci",
+        "inst_hier_path": "counter_1",
+        "parameters": {
+          "n_bits": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "en": {
+            "direction": "I"
+          },
+          "cnt": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "pwm_gen_0": {
+        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_pwm_gen_0_1",
+        "xci_path": "ip\\buildup_pwm_gen_0_1\\buildup_pwm_gen_0_1.xci",
+        "inst_hier_path": "pwm_gen_0",
+        "parameters": {
+          "n_bits": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwm_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "cnt": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
+      },
+      "pwm_gen_1": {
+        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_pwm_gen_1_0",
+        "xci_path": "ip\\buildup_pwm_gen_1_0\\buildup_pwm_gen_1_0.xci",
+        "inst_hier_path": "pwm_gen_1",
+        "parameters": {
+          "n_bits": {
+            "value": "8"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pwm_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "cnt": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "duty": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "pwm": {
+            "direction": "O"
+          }
+        }
       }
     },
     "nets": {
+      "Hall_effect_sensor_0_1": {
+        "ports": [
+          "Hall_effect_sensor_0",
+          "xlconcat_0/In0"
+        ]
+      },
+      "Hall_effect_sensor_1_1": {
+        "ports": [
+          "Hall_effect_sensor_1",
+          "xlconcat_0/In1"
+        ]
+      },
       "SPI_0_SPI_out": {
         "ports": [
           "SPI_0/SPI_out",
-          "pwm_gen_0/duty",
-          "spi_out"
+          "xlslice_1/Din",
+          "xlslice_0/Din"
         ]
       },
       "SPI_0_miso": {
@@ -304,7 +434,13 @@
       "block_encoder_0_pulse_cnt": {
         "ports": [
           "block_encoder_0/pulse_cnt",
-          "SPI_0/encoder_in"
+          "xlconcat_0/In2"
+        ]
+      },
+      "block_encoder_1_pulse_cnt": {
+        "ports": [
+          "block_encoder_1/pulse_cnt",
+          "xlconcat_0/In3"
         ]
       },
       "btn_0_1": {
@@ -319,31 +455,45 @@
           "clk",
           "block_encoder_0/clk",
           "clock_divider_0/clk",
-          "synchronizer_0/clk"
+          "synchronizer_0/clk",
+          "block_encoder_1/clk"
         ]
       },
       "clock_divider_0_clk_div": {
         "ports": [
           "clock_divider_0/clk_div",
-          "counter_0/clk"
+          "counter_1/clk"
         ]
       },
       "counter_0_cnt": {
         "ports": [
-          "counter_0/cnt",
-          "pwm_gen_0/cnt"
+          "counter_1/cnt",
+          "pwm_gen_0/cnt",
+          "pwm_gen_1/cnt"
         ]
       },
       "encoder_a_0_1": {
         "ports": [
-          "encoder_a",
+          "encoder_a_tilt",
           "block_encoder_0/encoder_a"
+        ]
+      },
+      "encoder_a_0_2": {
+        "ports": [
+          "encoder_a_pan",
+          "block_encoder_1/encoder_a"
         ]
       },
       "encoder_b_0_1": {
         "ports": [
-          "encoder_b",
+          "encoder_b_tilt",
           "block_encoder_0/encoder_b"
+        ]
+      },
+      "encoder_b_0_2": {
+        "ports": [
+          "encoder_b_pan",
+          "block_encoder_1/encoder_b"
         ]
       },
       "ja_3_1": {
@@ -361,16 +511,23 @@
       "pwm_gen_0_pwm": {
         "ports": [
           "pwm_gen_0/pwm",
-          "pwm"
+          "pwm_0"
+        ]
+      },
+      "pwm_gen_1_pwm": {
+        "ports": [
+          "pwm_gen_1/pwm",
+          "pwm_1"
         ]
       },
       "rst": {
         "ports": [
           "rst",
           "block_encoder_0/rst",
-          "counter_0/rst",
           "clock_divider_0/rst",
-          "SPI_0/rst"
+          "block_encoder_1/rst",
+          "SPI_0/rst",
+          "counter_1/rst"
         ]
       },
       "synchronizer_0_Q": {
@@ -379,11 +536,30 @@
           "SPI_0/SPI_sample"
         ]
       },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "SPI_0/SPI_in"
+        ]
+      },
       "xlconstant_1_dout": {
         "ports": [
           "xlconstant_1/dout",
           "block_encoder_0/enable",
-          "counter_0/en"
+          "block_encoder_1/enable",
+          "counter_1/en"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "pwm_gen_1/duty"
+        ]
+      },
+      "xlslice_1_Dout": {
+        "ports": [
+          "xlslice_1/Dout",
+          "pwm_gen_0/duty"
         ]
       }
     }

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Apr 17 09:47:14 2024
+| Date         : Mon Apr 29 18:09:50 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_methodology -file buildup_wrapper_methodology_drc_routed.rpt -pb buildup_wrapper_methodology_drc_routed.pb -rpx buildup_wrapper_methodology_drc_routed.rpx
 | Design       : buildup_wrapper
@@ -23,16 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 113
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 68         |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 18         |
-| TIMING-20 | Warning          | Non-clocked latch                                                | 25         |
-| LATCH-1   | Advisory         | Existing latches in the design                                   | 1          |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Violations found: 164
++-----------+------------------+--------------------------------+------------+
+| Rule      | Severity         | Description                    | Violations |
++-----------+------------------+--------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell    | 87         |
+| LUTAR-1   | Warning          | LUT drives async reset alert   | 40         |
+| TIMING-20 | Warning          | Non-clocked latch              | 36         |
+| LATCH-1   | Advisory         | Existing latches in the design | 1          |
++-----------+------------------+--------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -73,411 +72,622 @@ Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/carry_out_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[10]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[11]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[12]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[13]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[14]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[15]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_P/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[9]_C/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/SPI_0/U0/shift_register_input/U0/temp_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_2_reg/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/clock_divider_0/U0/cnt_reg[0]/C is not reached by a timing clock
+The clock pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/clock_divider_0/U0/cnt_reg[1]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/clock_divider_0/U0/cnt_reg[2]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/clock_divider_0/U0/cnt_reg[3]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[0]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[10]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[11]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[12]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[13]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[14]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[15]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[1]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[2]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[3]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[4]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[5]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[6]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[7]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[8]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/counter_0/U0/cnt_int_reg[9]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/synchronizer_0/U0/Q_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): buildup_i/clk, clk_IBUF_inst/O
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/clock_divider_0/U0/cnt_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/clock_divider_0/U0/cnt_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/clock_divider_0/U0/cnt_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/clock_divider_0/U0/cnt_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/counter_1/U0/cnt_int_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin buildup_i/synchronizer_0/U0/Q_reg/C is not reached by a timing clock
 Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#6 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#7 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#10 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#11 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#12 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#13 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#14 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#15 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#16 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#17 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#18 Warning
 LUT drives async reset alert  
-LUT cell buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_C/CLR
-buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_C/CLR
+buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
@@ -562,52 +772,107 @@ Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[0]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[1]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[2]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[3]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[4]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[5]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[6]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[7]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/shift_register_input/U0/register_data_reg[8]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 25 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 36 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

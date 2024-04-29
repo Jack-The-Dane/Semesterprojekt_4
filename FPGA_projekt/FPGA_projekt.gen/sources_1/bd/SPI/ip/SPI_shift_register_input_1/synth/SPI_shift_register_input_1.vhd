@@ -57,10 +57,10 @@ ENTITY SPI_shift_register_input_1 IS
   PORT (
     sample : IN STD_LOGIC;
     chip_select : IN STD_LOGIC;
-    register_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    register_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     rst : IN STD_LOGIC;
     data : IN STD_LOGIC;
-    register_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    register_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
     carry_out : OUT STD_LOGIC
   );
 END SPI_shift_register_input_1;
@@ -75,10 +75,10 @@ ARCHITECTURE SPI_shift_register_input_1_arch OF SPI_shift_register_input_1 IS
     PORT (
       sample : IN STD_LOGIC;
       chip_select : IN STD_LOGIC;
-      register_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      register_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       rst : IN STD_LOGIC;
       data : IN STD_LOGIC;
-      register_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      register_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
       carry_out : OUT STD_LOGIC
     );
   END COMPONENT shift_register_generic;
@@ -87,7 +87,7 @@ ARCHITECTURE SPI_shift_register_input_1_arch OF SPI_shift_register_input_1 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF SPI_shift_register_input_1_arch : ARCHITECTURE IS "SPI_shift_register_input_1,shift_register_generic,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF SPI_shift_register_input_1_arch: ARCHITECTURE IS "SPI_shift_register_input_1,shift_register_generic,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=shift_register_generic,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,register_length=16}";
+  ATTRIBUTE CORE_GENERATION_INFO OF SPI_shift_register_input_1_arch: ARCHITECTURE IS "SPI_shift_register_input_1,shift_register_generic,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=shift_register_generic,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,register_length=20}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF SPI_shift_register_input_1_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -97,7 +97,7 @@ ARCHITECTURE SPI_shift_register_input_1_arch OF SPI_shift_register_input_1 IS
 BEGIN
   U0 : shift_register_generic
     GENERIC MAP (
-      register_length => 16
+      register_length => 20
     )
     PORT MAP (
       sample => sample,

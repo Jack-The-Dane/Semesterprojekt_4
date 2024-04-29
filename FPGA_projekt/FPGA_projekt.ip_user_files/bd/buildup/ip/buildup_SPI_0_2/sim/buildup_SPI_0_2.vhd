@@ -56,9 +56,9 @@ USE ieee.numeric_std.ALL;
 ENTITY buildup_SPI_0_2 IS
   PORT (
     SPI_chip_select : IN STD_LOGIC;
-    SPI_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    SPI_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+    SPI_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
     SPI_sample : IN STD_LOGIC;
-    encoder_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     miso : OUT STD_LOGIC;
     mosi : IN STD_LOGIC;
     rst : IN STD_LOGIC
@@ -71,25 +71,21 @@ ARCHITECTURE buildup_SPI_0_2_arch OF buildup_SPI_0_2 IS
   COMPONENT SPI IS
     PORT (
       SPI_chip_select : IN STD_LOGIC;
-      SPI_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      SPI_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
+      SPI_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
       SPI_sample : IN STD_LOGIC;
-      encoder_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       miso : OUT STD_LOGIC;
       mosi : IN STD_LOGIC;
       rst : IN STD_LOGIC
     );
   END COMPONENT SPI;
-  ATTRIBUTE X_INTERFACE_INFO : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
-  ATTRIBUTE X_INTERFACE_PARAMETER OF encoder_in: SIGNAL IS "XIL_INTERFACENAME DATA.ENCODER_IN, LAYERED_METADATA undef";
-  ATTRIBUTE X_INTERFACE_INFO OF encoder_in: SIGNAL IS "xilinx.com:signal:data:1.0 DATA.ENCODER_IN DATA";
 BEGIN
   U0 : SPI
     PORT MAP (
       SPI_chip_select => SPI_chip_select,
+      SPI_in => SPI_in,
       SPI_out => SPI_out,
       SPI_sample => SPI_sample,
-      encoder_in => encoder_in,
       miso => miso,
       mosi => mosi,
       rst => rst

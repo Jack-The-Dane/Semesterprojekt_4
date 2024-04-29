@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x11799A968303D6EE",
+      "boundary_crc": "0xEB30DEABF1BDBB89",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/SPI",
       "name": "SPI",
@@ -11,7 +11,7 @@
       "validated": "true"
     },
     "design_tree": {
-      "shift_register_input": "",
+      "SPI_in": "",
       "latch_0": "",
       "Prescaler": "",
       "NOT_gate_0": ""
@@ -26,37 +26,41 @@
       "rst": {
         "direction": "I"
       },
-      "encoder_in": {
-        "type": "data",
-        "direction": "I",
-        "left": "15",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default"
-          }
-        }
-      },
       "miso": {
         "direction": "O"
       },
       "SPI_sample": {
         "direction": "I"
       },
+      "SPI_in": {
+        "direction": "I",
+        "left": "19",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default_prop"
+          }
+        }
+      },
       "SPI_out": {
         "direction": "O",
-        "left": "15",
+        "left": "19",
         "right": "0"
       }
     },
     "components": {
-      "shift_register_input": {
+      "SPI_in": {
         "vlnv": "xilinx.com:module_ref:shift_register_generic:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_shift_register_input_1",
         "xci_path": "ip\\SPI_shift_register_input_1\\SPI_shift_register_input_1.xci",
-        "inst_hier_path": "shift_register_input",
+        "inst_hier_path": "SPI_in",
+        "parameters": {
+          "register_length": {
+            "value": "20"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "shift_register_generic",
@@ -71,7 +75,7 @@
           },
           "register_in": {
             "direction": "I",
-            "left": "15",
+            "left": "19",
             "right": "0",
             "parameters": {
               "LAYERED_METADATA": {
@@ -89,7 +93,7 @@
           },
           "register_out": {
             "direction": "O",
-            "left": "15",
+            "left": "19",
             "right": "0"
           },
           "carry_out": {
@@ -103,6 +107,11 @@
         "xci_name": "SPI_latch_0_0",
         "xci_path": "ip\\SPI_latch_0_0\\SPI_latch_0_0.xci",
         "inst_hier_path": "latch_0",
+        "parameters": {
+          "data_length": {
+            "value": "20"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "latch",
@@ -118,12 +127,12 @@
           },
           "D": {
             "direction": "I",
-            "left": "15",
+            "left": "19",
             "right": "0"
           },
           "Q": {
             "direction": "O",
-            "left": "15",
+            "left": "19",
             "right": "0"
           }
         }
@@ -134,6 +143,11 @@
         "xci_name": "SPI_enable_counter_0_0",
         "xci_path": "ip\\SPI_enable_counter_0_0\\SPI_enable_counter_0_0.xci",
         "inst_hier_path": "Prescaler",
+        "parameters": {
+          "data_length": {
+            "value": "20"
+          }
+        },
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "enable_counter",
@@ -180,7 +194,7 @@
       "MC_data_1": {
         "ports": [
           "mosi",
-          "shift_register_input/data"
+          "SPI_in/data"
         ]
       },
       "NOT_gate_0_B": {
@@ -193,14 +207,14 @@
         "ports": [
           "SPI_chip_select",
           "NOT_gate_0/A",
-          "shift_register_input/chip_select"
+          "SPI_in/chip_select"
         ]
       },
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "shift_register_input/sample",
-          "Prescaler/sample"
+          "Prescaler/sample",
+          "SPI_in/sample"
         ]
       },
       "enable_counter_0_cnt": {
@@ -209,35 +223,35 @@
           "latch_0/cnt"
         ]
       },
-      "encoder_in_1": {
-        "ports": [
-          "encoder_in",
-          "shift_register_input/register_in"
-        ]
-      },
       "latch_0_Q": {
         "ports": [
           "latch_0/Q",
           "SPI_out"
         ]
       },
+      "register_in_0_1": {
+        "ports": [
+          "SPI_in",
+          "SPI_in/register_in"
+        ]
+      },
       "rst_1": {
         "ports": [
           "rst",
+          "Prescaler/rst",
           "latch_0/rst",
-          "shift_register_input/rst",
-          "Prescaler/rst"
+          "SPI_in/rst"
         ]
       },
       "shift_register_input_carry_out": {
         "ports": [
-          "shift_register_input/carry_out",
+          "SPI_in/carry_out",
           "miso"
         ]
       },
       "shift_register_input_register_out": {
         "ports": [
-          "shift_register_input/register_out",
+          "SPI_in/register_out",
           "latch_0/D"
         ]
       }
