@@ -42,7 +42,7 @@ void init_gpio(void);
 
 void setLEDColor(enum LEDColor color);
 
-
+void alive_blink();
 
 /*****************************************************************************
 *   Input    : -
