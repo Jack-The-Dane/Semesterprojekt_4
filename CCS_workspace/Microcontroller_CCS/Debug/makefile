@@ -8,14 +8,6 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./adc.obj" \
-"./controller.obj" \
-"./gpio.obj" \
-"./joystick.obj" \
-"./main.obj" \
-"./spi.obj" \
-"./uart.obj" \
-"./uart0.obj" \
 "./frt10/port/MemMang/heap_2.obj" \
 "./frt10/port/TivaM4/port.obj" \
 "./frt10/port/TivaM4/portasm.obj" \
@@ -28,6 +20,14 @@ ORDERED_OBJS += \
 "./frt10/src/stream_buffer.obj" \
 "./frt10/src/tasks.obj" \
 "./frt10/src/timers.obj" \
+"./src/adc.obj" \
+"./src/controller.obj" \
+"./src/gpio.obj" \
+"./src/joystick.obj" \
+"./src/main.obj" \
+"./src/spi.obj" \
+"./src/uart.obj" \
+"./src/uart0.obj" \
 "../tm4c123gh6pm.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -43,10 +43,12 @@ RMDIR := rm -rf
 -include frt10/port/MemMang/subdir_vars.mk
 -include frt10/port/TivaM4/subdir_vars.mk
 -include frt10/src/subdir_vars.mk
+-include src/subdir_vars.mk
 -include subdir_rules.mk
 -include frt10/port/MemMang/subdir_rules.mk
 -include frt10/port/TivaM4/subdir_rules.mk
 -include frt10/src/subdir_rules.mk
+-include src/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -164,8 +166,8 @@ Microcontroller_CCS.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adc.obj" "controller.obj" "gpio.obj" "joystick.obj" "main.obj" "spi.obj" "uart.obj" "uart0.obj" "frt10/port/MemMang/heap_2.obj" "frt10/port/TivaM4/port.obj" "frt10/port/TivaM4/portasm.obj" "frt10/port/TivaM4/startup_frt.obj" "frt10/port/TivaM4/systick_frt.obj" "frt10/src/croutine.obj" "frt10/src/event_groups.obj" "frt10/src/list.obj" "frt10/src/queue.obj" "frt10/src/stream_buffer.obj" "frt10/src/tasks.obj" "frt10/src/timers.obj" 
-	-$(RM) "adc.d" "controller.d" "gpio.d" "joystick.d" "main.d" "spi.d" "uart.d" "uart0.d" "frt10/port/MemMang/heap_2.d" "frt10/port/TivaM4/port.d" "frt10/port/TivaM4/startup_frt.d" "frt10/port/TivaM4/systick_frt.d" "frt10/src/croutine.d" "frt10/src/event_groups.d" "frt10/src/list.d" "frt10/src/queue.d" "frt10/src/stream_buffer.d" "frt10/src/tasks.d" "frt10/src/timers.d" 
+	-$(RM) "frt10/port/MemMang/heap_2.obj" "frt10/port/TivaM4/port.obj" "frt10/port/TivaM4/portasm.obj" "frt10/port/TivaM4/startup_frt.obj" "frt10/port/TivaM4/systick_frt.obj" "frt10/src/croutine.obj" "frt10/src/event_groups.obj" "frt10/src/list.obj" "frt10/src/queue.obj" "frt10/src/stream_buffer.obj" "frt10/src/tasks.obj" "frt10/src/timers.obj" "src/adc.obj" "src/controller.obj" "src/gpio.obj" "src/joystick.obj" "src/main.obj" "src/spi.obj" "src/uart.obj" "src/uart0.obj" 
+	-$(RM) "frt10/port/MemMang/heap_2.d" "frt10/port/TivaM4/port.d" "frt10/port/TivaM4/startup_frt.d" "frt10/port/TivaM4/systick_frt.d" "frt10/src/croutine.d" "frt10/src/event_groups.d" "frt10/src/list.d" "frt10/src/queue.d" "frt10/src/stream_buffer.d" "frt10/src/tasks.d" "frt10/src/timers.d" "src/adc.d" "src/controller.d" "src/gpio.d" "src/joystick.d" "src/main.d" "src/spi.d" "src/uart.d" "src/uart0.d" 
 	-$(RM) "frt10/port/TivaM4/portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

@@ -6,13 +6,12 @@
 #include "uart.h"
 #include "FreeRTOS.h"
 #include "semphr.h"
-#include "task.h"
 
 extern SemaphoreHandle_t joystick_mutex;
 extern SemaphoreHandle_t joystick_uart_mutex;
 
 // Global joystick for now
-volatile Joystick joystick = {0};
+Joystick joystick = {0};
 
 void init_joystick() {
     init_adc();
@@ -25,34 +24,25 @@ void init_joystick() {
 
 }
 
-typedef enum {
-    INIT,
-    WATING,
-    RUNNING,
-} State;
-
 void joystick_task(void * pvParameters) {
-    while(1){
-    // Mutex here
-    xSemaphoreTake(joystick_mutex, portMAX_DELAY);
-    joystick.x = get_adc();
-    joystick.y = get_adc();
-    joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
-    xSemaphoreGive(joystick_mutex);
-    vTaskDelay(600);
+    while (1) {
+        xSemaphoreTake(joystick_mutex, portMAX_DELAY);
+        joystick.x = get_adc0();
+        joystick.y = get_adc1();
+        joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
+        xSemaphoreGive(joystick_mutex);
     }
-    // Mutex end here
 }
 
 void joystick_uart_echo_task(void * pvParameters) {
-    while(1){
-    // Mutex here
-    xSemaphoreTake(joystick_uart_mutex, portMAX_DELAY);
-    uart_putc(joystick.x >> 4);
-    uart_putc(joystick.y >> 4);
-    uart_putc(joystick.button);
-    xSemaphoreGive(joystick_uart_mutex);
-    vTaskDelay(600);
+    while (1) {
+        xSemaphoreTake(joystick_uart_mutex, portMAX_DELAY);
+        xSemaphoreTake(joystick_mutex, portMAX_DELAY);
+        setLEDColor(BLUE);
+        uart_putc(joystick.x >> 4);
+        uart_putc(joystick.y >> 4);
+        uart_putc(joystick.button);
+        xSemaphoreGive(joystick_mutex);
+        xSemaphoreGive(joystick_uart_mutex);
     }
-    // Mutex end here
 }

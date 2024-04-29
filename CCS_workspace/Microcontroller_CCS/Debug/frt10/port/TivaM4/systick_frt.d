@@ -11,8 +11,8 @@ frt10/port/TivaM4/systick_frt.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compi
 frt10/port/TivaM4/systick_frt.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_types.h
 frt10/port/TivaM4/systick_frt.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/machine/_stdint.h
 frt10/port/TivaM4/systick_frt.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
-frt10/port/TivaM4/systick_frt.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/tm4c123gh6pm.h
-frt10/port/TivaM4/systick_frt.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/emp_type.h
+frt10/port/TivaM4/systick_frt.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/tm4c123gh6pm.h
+frt10/port/TivaM4/systick_frt.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/emp_type.h
 
 ../frt10/port/TivaM4/systick_frt.c:
 
@@ -36,7 +36,7 @@ frt10/port/TivaM4/systick_frt.obj: /home/jacob/Documents/Semester4/Semesterproje
 
 /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h:
 
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/tm4c123gh6pm.h:
+/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/tm4c123gh6pm.h:
 
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/emp_type.h:
+/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/emp_type.h:
 

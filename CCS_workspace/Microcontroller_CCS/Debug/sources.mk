@@ -115,4 +115,5 @@ SUBDIRS := \
 frt10/port/MemMang \
 frt10/port/TivaM4 \
 frt10/src \
+src \
 

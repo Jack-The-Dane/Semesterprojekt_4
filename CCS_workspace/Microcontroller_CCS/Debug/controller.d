@@ -14,16 +14,6 @@ controller.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2
 controller.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/sys/_stdint.h
 controller.obj: ../joystick.h
 controller.obj: ../spi.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/FreeRTOS.h
-controller.obj: /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/port/TivaM4/FreeRTOSConfig.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/projdefs.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/portable.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/deprecated_definitions.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/port/TivaM4/portmacro.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/mpu_wrappers.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h
-controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h
 
 ../controller.c:
 
@@ -52,24 +42,4 @@ controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/
 ../joystick.h:
 
 ../spi.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/FreeRTOS.h:
-
-/home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include/stddef.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/port/TivaM4/FreeRTOSConfig.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/projdefs.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/portable.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/deprecated_definitions.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/port/TivaM4/portmacro.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/mpu_wrappers.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h:
-
-/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h:
 

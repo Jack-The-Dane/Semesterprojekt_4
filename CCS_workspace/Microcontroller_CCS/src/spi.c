@@ -83,6 +83,6 @@ void spi_task() {
   // Extract the pan and tilt encoder values from the received message
   spi_pan_encoder = (SPI_ENCODER_TYPE)(recieve_message >> (SPI_WORD_LENGTH / 2));
   spi_tilt_encoder = (SPI_ENCODER_TYPE)(recieve_message);
-  //vTaskDelay(300);
+  vTaskDelay(300);
     }
 }
