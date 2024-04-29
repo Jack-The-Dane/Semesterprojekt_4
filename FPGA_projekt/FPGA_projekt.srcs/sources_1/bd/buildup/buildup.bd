@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB5ADE255D5C785E4",
+      "boundary_crc": "0x8E4DC67A4078B961",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
@@ -16,8 +16,8 @@
       "pwm_gen_0": "",
       "counter_0": "",
       "clock_divider_0": "",
-      "SPI_0": "",
-      "synchronizer_0": ""
+      "synchronizer_0": "",
+      "SPI_0": ""
     },
     "ports": {
       "CS": {
@@ -110,6 +110,11 @@
       },
       "led_0": {
         "direction": "O"
+      },
+      "spi_out": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
       }
     },
     "components": {
@@ -230,13 +235,6 @@
           }
         }
       },
-      "SPI_0": {
-        "vlnv": "user.org:user:SPI:1.0",
-        "ip_revision": "2",
-        "xci_name": "buildup_SPI_0_0",
-        "xci_path": "ip\\buildup_SPI_0_0\\buildup_SPI_0_0.xci",
-        "inst_hier_path": "SPI_0"
-      },
       "synchronizer_0": {
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
@@ -280,13 +278,21 @@
             "direction": "O"
           }
         }
+      },
+      "SPI_0": {
+        "vlnv": "xilinx.com:user:SPI:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_SPI_0_2",
+        "xci_path": "ip\\buildup_SPI_0_2\\buildup_SPI_0_2.xci",
+        "inst_hier_path": "SPI_0"
       }
     },
     "nets": {
       "SPI_0_SPI_out": {
         "ports": [
           "SPI_0/SPI_out",
-          "pwm_gen_0/duty"
+          "pwm_gen_0/duty",
+          "spi_out"
         ]
       },
       "SPI_0_miso": {
@@ -304,14 +310,8 @@
       "btn_0_1": {
         "ports": [
           "CS",
-          "SPI_0/SPI_chip_select",
-          "led_0"
-        ]
-      },
-      "btn_1_1": {
-        "ports": [
-          "mosi",
-          "SPI_0/mosi"
+          "led_0",
+          "SPI_0/SPI_chip_select"
         ]
       },
       "clk_1": {
@@ -352,6 +352,12 @@
           "synchronizer_0/D"
         ]
       },
+      "mosi_1": {
+        "ports": [
+          "mosi",
+          "SPI_0/mosi"
+        ]
+      },
       "pwm_gen_0_pwm": {
         "ports": [
           "pwm_gen_0/pwm",
@@ -362,9 +368,9 @@
         "ports": [
           "rst",
           "block_encoder_0/rst",
-          "SPI_0/rst",
           "counter_0/rst",
-          "clock_divider_0/rst"
+          "clock_divider_0/rst",
+          "SPI_0/rst"
         ]
       },
       "synchronizer_0_Q": {

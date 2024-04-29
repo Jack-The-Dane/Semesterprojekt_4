@@ -1,59 +1,72 @@
 .PHONY: all flash clean
 
 CC := arm-none-eabi-gcc
+AS := arm-none-eabi-as
 LD := arm-none-eabi-ld
 OC := arm-none-eabi-objcopy
 OD := arm-none-eabi-objdump
 SZ := arm-none-eabi-size
 
 CFLAGS := -mthumb \
-	-mcpu=cortex-m4 \
-	-mfpu=fpv4-sp-d16 \
-	-mfloat-abi=softfp \
-	-ffunction-sections \
-	-fdata-sections \
-	-std=c99 -Wall -pedantic \
-	-Os -O0 -g \
-	-DPART_TM4C123GH6PM -DTARGET_IS_BLIZZARD_RA1 -Dgcc \
-	-I ./frt10/inc \
-	-I ./frt10/port/TivaM4
+    -mcpu=cortex-m4 \
+    -mfpu=fpv4-sp-d16 \
+    -mfloat-abi=softfp \
+		-ffunction-sections \
+		-fdata-sections \
+		-MD \
+		-std=c99 \
+		-Wall \
+		-pedantic \
+		-DPART_TM4C123GH6PM \
+		-c \
+		-Os \
+		-DTARGET_IS_TM4C123_RB1 \
+		-Dgcc
 
-LDFLAGS := -T tm4c123.ld --entry ResetISR --gc-sections
+LDFLAGS := -T ./tm4c123/tm4c123.ld --entry ResetISR --gc-sections
 OBJCOPYFLAGS := -O binary
 
-SOURCES := $(wildcard *.c)
+# If there is no stdlib in the project for FreeRTOS
+# Get the location of libgcc.a from the GCC front-end.
+LIBGCC:=${shell ${CC} ${CFLAGS} -print-libgcc-file-name}
+# Get the location of libc.a from the GCC front-end.
+LIBC:=${shell ${CC} ${CFLAGS} -print-file-name=libc.a}
+# Get the location of libm.a from the GCC front-end.
+LIBM:=${shell ${CC} ${CFLAGS} -print-file-name=libm.a}
+# Use stdlibs or costum memory management
+USE_STDLIB := 0
+ifeq ($(USE_STDLIB),1)
+	STDLIBS := '${LIBGCC}' '${LIBC}' '${LIBM}'
+else
+	STDLIBS :=
+endif
+
+MEMORY := ./freeRTOS/portable/MemMang/heap_4.c
+PORT := ./freeRTOS/portable/GCC/ARM_CM4F/port.c
+
+SOURCES := $(wildcard ./src/*.c) $(wildcard ./tm4c123/*.c) $(wildcard ./freeRTOS/*.c) $(PORT) $(MEMORY)
 OBJECTS := $(patsubst %.c, build/%.o, $(SOURCES))
 DEPENDS := $(patsubst %.c, build/%.d, $(SOURCES))
 
-all: main
+INCLUDES := -I./freeRTOS/include/ \
+		-I./freeRTOS/portable/GCC/ARM_CM4F/ \
+		-I./src/inc/ \
+		-I./tm4c123/
 
-test:
-	echo "SOURCES: $(SOURCES)"
-	echo "OBJECTS: $(OBJECTS)"
-	echo "DEPENDS: $(DEPENDS)"
+all: main
 
 flash: all
 	sudo lm4flash build/main.bin
 
-clean: ./frt10/Makefile
+clean:
 	rm -rf build
-	rm -rf frt10/build
 
 -include $(DEPENDS)
 
-build/:
+build/%.o: %.c Makefile
 	mkdir -p build
-
-build/frt10.o: ./frt10/Makefile build/
-	make -C ./frt10
-	cp ./frt10/build/frt10.o build/frt10.o
-
-build/%.o: %.c Makefile build/frt10.o build/
-	mkdir -p build
-	$(CC) $(CFLAGS) -MD -MF build/$(notdir $*.d) -c $< -o build/$(notdir $@)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o build/$(notdir $@)
 
 main: $(OBJECTS)
-	$(LD) $(addprefix build/, $(notdir $^)) $(LDFLAGS) -o build/main.axf
-	$(OC) $(OBJCOPYFLAGS) build/main.axf build/main.bin
-	$(OD) -Sd -W build/main.axf > build/main.lss
-	$(SZ) build/main.axf
+	$(LD) $(LDFLAGS) $(addprefix build/, $(notdir $^)) -o build/main.elf $(STDLIBS)
+	$(OC) $(OBJCOPYFLAGS) build/main.elf build/main.bin
