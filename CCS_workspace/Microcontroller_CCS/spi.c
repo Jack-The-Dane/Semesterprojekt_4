@@ -24,8 +24,8 @@ void init_spi() {
   // Set the initial values
   GPIO_PORTE_DATA_R = (0 << SPI_MOSI_PIN) | (0 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
-  spi_pan_motor = 0;
-  spi_tilt_motor = 0;
+  spi_pan_motor = 0b10101010;
+  spi_tilt_motor = 0b10101010;
   spi_pan_encoder = 0;
   spi_tilt_encoder = 0;
 }
@@ -83,6 +83,6 @@ void spi_task() {
   // Extract the pan and tilt encoder values from the received message
   spi_pan_encoder = (SPI_ENCODER_TYPE)(recieve_message >> (SPI_WORD_LENGTH / 2));
   spi_tilt_encoder = (SPI_ENCODER_TYPE)(recieve_message);
-  vTaskDelay(600);
+  //vTaskDelay(300);
     }
 }

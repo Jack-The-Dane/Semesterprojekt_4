@@ -1,17 +1,17 @@
 ******************************************************************************
                   TI ARM Linker Unix v20.2.7                   
 ******************************************************************************
->> Linked Wed Apr 17 22:06:25 2024
+>> Linked Mon Apr 29 10:41:18 2024
 
 OUTPUT FILE NAME:   <Microcontroller_CCS.out>
-ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00003a91
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00003a89
 
 
 MEMORY CONFIGURATION
 
          name            origin    length      used     unused   attr    fill
 ----------------------  --------  ---------  --------  --------  ----  --------
-  FLASH                 00000000   00040000  00003b32  0003c4ce  R  X
+  FLASH                 00000000   00040000  00003b2a  0003c4d6  R  X
   SRAM                  20000000   00008000  00001ff0  00006010  RW X
 
 
@@ -19,11 +19,11 @@ SEGMENT ALLOCATION MAP
 
 run origin  load origin   length   init length attrs members
 ----------  ----------- ---------- ----------- ----- -------
-00000000    00000000    00003b38   00003b38    r-x
+00000000    00000000    00003b30   00003b30    r-x
   00000000    00000000    0000026c   0000026c    r-- .intvecs
-  0000026c    0000026c    00003886   00003886    r-x .text
-  00003af4    00003af4    00000008   00000008    r-- .const
-  00003b00    00003b00    00000038   00000038    r-- .cinit
+  0000026c    0000026c    0000387e   0000387e    r-x .text
+  00003aec    00003aec    00000008   00000008    r-- .const
+  00003af8    00003af8    00000038   00000038    r-- .cinit
 20000000    20000000    00001ff0   00000000    rw-
   20000000    20000000    00001da8   00000000    rw- .bss
   20001da8    20001da8    00000200   00000000    rw- .stack
@@ -38,48 +38,48 @@ section   page    origin      length       input sections
 .intvecs   0    00000000    0000026c     
                   00000000    0000026c     startup_frt.obj (.intvecs)
 
-.text      0    0000026c    00003886     
+.text      0    0000026c    0000387e     
                   0000026c    00001d30     tasks.obj (.text)
                   00001f9c    00000bea     queue.obj (.text)
                   00002b86    00000002     --HOLE-- [fill = 0]
-                  00002b88    000001dc     spi.obj (.text)
-                  00002d64    000001d8     heap_2.obj (.text)
-                  00002f3c    000001ac     uart0.obj (.text)
-                  000030e8    0000013c     port.obj (.text)
-                  00003224    00000134     main.obj (.text)
-                  00003358    0000012a     list.obj (.text)
-                  00003482    00000002     --HOLE-- [fill = 0]
-                  00003484    000000f0     joystick.obj (.text)
-                  00003574    000000da     portasm.obj (.text)
-                  0000364e    00000002     --HOLE-- [fill = 0]
-                  00003650    000000b0     uart.obj (.text)
-                  00003700    000000a4     gpio.obj (.text)
-                  000037a4    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
-                  00003840    0000007a                                   : memset_t2.asm.obj (.text)
-                  000038ba    00000002     --HOLE-- [fill = 0]
-                  000038bc    00000070     adc.obj (.text)
-                  0000392c    0000006c     systick_frt.obj (.text)
-                  00003998    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
-                  00003a00    0000004c     controller.obj (.text)
-                  00003a4c    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
-                  00003a90    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
-                  00003ac4    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
-                  00003ad2    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
-                  00003ade    0000000c     startup_frt.obj (.text)
-                  00003aea    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
-                  00003aee    00000004                                   : exit.c.obj (.text:abort:abort)
+                  00002b88    000001d8     heap_2.obj (.text)
+                  00002d60    000001d4     spi.obj (.text)
+                  00002f34    000001ac     uart0.obj (.text)
+                  000030e0    0000013c     port.obj (.text)
+                  0000321c    00000134     main.obj (.text)
+                  00003350    0000012a     list.obj (.text)
+                  0000347a    00000002     --HOLE-- [fill = 0]
+                  0000347c    000000f0     joystick.obj (.text)
+                  0000356c    000000da     portasm.obj (.text)
+                  00003646    00000002     --HOLE-- [fill = 0]
+                  00003648    000000b0     uart.obj (.text)
+                  000036f8    000000a4     gpio.obj (.text)
+                  0000379c    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00003838    0000007a                                   : memset_t2.asm.obj (.text)
+                  000038b2    00000002     --HOLE-- [fill = 0]
+                  000038b4    00000070     adc.obj (.text)
+                  00003924    0000006c     systick_frt.obj (.text)
+                  00003990    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  000039f8    0000004c     controller.obj (.text)
+                  00003a44    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  00003a88    00000034                                   : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00003abc    0000000e                                   : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  00003aca    0000000c                                   : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00003ad6    0000000c     startup_frt.obj (.text)
+                  00003ae2    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00003ae6    00000004                                   : exit.c.obj (.text:abort:abort)
 
-.const     0    00003af4    00000008     
-                  00003af4    00000004     port.obj (.const)
-                  00003af8    00000004     tasks.obj (.const)
+.const     0    00003aec    00000008     
+                  00003aec    00000004     port.obj (.const)
+                  00003af0    00000004     tasks.obj (.const)
 
-.cinit     0    00003b00    00000038     
-                  00003b00    0000000f     (.cinit..data.load) [load image, compression = lzss]
-                  00003b0f    00000001     --HOLE-- [fill = 0]
-                  00003b10    0000000c     (__TI_handler_table)
-                  00003b1c    00000004     --HOLE-- [fill = 0]
-                  00003b20    00000008     (.cinit..bss.load) [load image, compression = zero_init]
-                  00003b28    00000010     (__TI_cinit_table)
+.cinit     0    00003af8    00000038     
+                  00003af8    0000000f     (.cinit..data.load) [load image, compression = lzss]
+                  00003b07    00000001     --HOLE-- [fill = 0]
+                  00003b08    0000000c     (__TI_handler_table)
+                  00003b14    00000004     --HOLE-- [fill = 0]
+                  00003b18    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00003b20    00000010     (__TI_cinit_table)
 
 .init_array 
 *          0    00000000    00000000     UNINITIALIZED
@@ -122,7 +122,7 @@ MODULE SUMMARY
        Module                       code    ro data   rw data
        ------                       ----    -------   -------
     ./
-       spi.obj                      476     0         0      
+       spi.obj                      468     0         0      
        uart.obj                     176     0         256    
        uart0.obj                    428     0         0      
        main.obj                     308     0         8      
@@ -131,7 +131,7 @@ MODULE SUMMARY
        adc.obj                      112     0         0      
        controller.obj               76      0         4      
     +--+----------------------------+-------+---------+---------+
-       Total:                       1980    0         274    
+       Total:                       1972    0         274    
                                                              
     ./frt10/port/MemMang/
        heap_2.obj                   472     0         7024   
@@ -169,19 +169,19 @@ MODULE SUMMARY
        Stack:                       0       0         512    
        Linker Generated:            0       51        0      
     +--+----------------------------+-------+---------+---------+
-       Grand Total:                 14462   679       8174   
+       Grand Total:                 14454   679       8174   
 
 
 LINKER GENERATED COPY TABLES
 
-__TI_cinit_table @ 00003b28 records: 2, size/record: 8, table size: 16
-	.data: load addr=00003b00, load size=0000000f bytes, run addr=20001fa8, run size=00000048 bytes, compression=lzss
-	.bss: load addr=00003b20, load size=00000008 bytes, run addr=20000000, run size=00001da8 bytes, compression=zero_init
+__TI_cinit_table @ 00003b20 records: 2, size/record: 8, table size: 16
+	.data: load addr=00003af8, load size=0000000f bytes, run addr=20001fa8, run size=00000048 bytes, compression=lzss
+	.bss: load addr=00003b18, load size=00000008 bytes, run addr=20000000, run size=00001da8 bytes, compression=zero_init
 
 
 LINKER GENERATED HANDLER TABLE
 
-__TI_handler_table @ 00003b10 records: 3, size/record: 4, table size: 12
+__TI_handler_table @ 00003b08 records: 3, size/record: 4, table size: 12
 	index: 0, handler: __TI_decompress_lzss
 	index: 1, handler: __TI_decompress_none
 	index: 2, handler: __TI_zero_init
@@ -191,97 +191,97 @@ GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name
 
 address   name                               
 -------   ----                               
-00003aef  C$$EXIT                            
-00003adf  ResetISR                           
+00003ae7  C$$EXIT                            
+00003ad7  ResetISR                           
 20001fa8  __STACK_END                        
 00000200  __STACK_SIZE                       
 20001fa8  __STACK_TOP                        
-00003b28  __TI_CINIT_Base                    
-00003b38  __TI_CINIT_Limit                   
-00003b10  __TI_Handler_Table_Base            
-00003b1c  __TI_Handler_Table_Limit           
-00003a4d  __TI_auto_init_nobinit_nopinit     
-00003999  __TI_decompress_lzss               
-00003ac5  __TI_decompress_none               
+00003b20  __TI_CINIT_Base                    
+00003b30  __TI_CINIT_Limit                   
+00003b08  __TI_Handler_Table_Base            
+00003b14  __TI_Handler_Table_Limit           
+00003a45  __TI_auto_init_nobinit_nopinit     
+00003991  __TI_decompress_lzss               
+00003abd  __TI_decompress_none               
 ffffffff  __TI_pprof_out_hndl                
 ffffffff  __TI_prof_data_size                
 ffffffff  __TI_prof_data_start               
 00000000  __TI_static_base__                 
-00003ad3  __TI_zero_init                     
-00003841  __aeabi_memclr                     
-00003841  __aeabi_memclr4                    
-00003841  __aeabi_memclr8                    
-000037a5  __aeabi_memcpy                     
-000037a5  __aeabi_memcpy4                    
-000037a5  __aeabi_memcpy8                    
-00003843  __aeabi_memset                     
-00003843  __aeabi_memset4                    
-00003843  __aeabi_memset8                    
+00003acb  __TI_zero_init                     
+00003839  __aeabi_memclr                     
+00003839  __aeabi_memclr4                    
+00003839  __aeabi_memclr8                    
+0000379d  __aeabi_memcpy                     
+0000379d  __aeabi_memcpy4                    
+0000379d  __aeabi_memcpy8                    
+0000383b  __aeabi_memset                     
+0000383b  __aeabi_memset4                    
+0000383b  __aeabi_memset8                    
 ffffffff  __binit__                          
 ffffffff  __c_args__                         
 UNDEFED   __mpu_init                         
 20001da8  __stack                            
 20000000  __start___llvm_prf_cnts            
 20000000  __stop___llvm_prf_cnts             
-00003a91  _c_int00_noargs                    
+00003a89  _c_int00_noargs                    
 UNDEFED   _system_post_cinit                 
-00003aeb  _system_pre_init                   
-00003aef  abort                              
-00003763  alive_blink                        
+00003ae3  _system_pre_init                   
+00003ae7  abort                              
+0000375b  alive_blink                        
 ffffffff  binit                              
-00003a01  controller_task                    
-00002bdd  delay_ms                           
-00002b89  delay_us                           
-00003225  error                              
+000039f9  controller_task                    
+00002db5  delay_ms                           
+00002d61  delay_us                           
+0000321d  error                              
 00000000  g_pfnVectors                       
-000038bd  get_adc                            
-000038c5  init_adc                           
-00003701  init_gpio                          
-00003485  init_joystick                      
-00002c0b  init_spi                           
-0000392d  init_systick                       
-000036bd  init_uart                          
+000038b5  get_adc                            
+000038bd  init_adc                           
+000036f9  init_gpio                          
+0000347d  init_joystick                      
+00002de3  init_spi                           
+00003925  init_systick                       
+000036b5  init_uart                          
 20001fe4  joystick                           
 20001d9c  joystick_mutex                     
-000034b5  joystick_task                      
-00003503  joystick_uart_echo_task            
+000034ad  joystick_task                      
+000034fb  joystick_uart_echo_task            
 20001da0  joystick_uart_mutex                
-00002f3d  lcrh_databits                      
-00002f81  lcrh_parity                        
-00002f67  lcrh_stopbits                      
-00003247  main                               
-000037a5  memcpy                             
-00003849  memset                             
+00002f35  lcrh_databits                      
+00002f79  lcrh_parity                        
+00002f5f  lcrh_stopbits                      
+0000323f  main                               
+0000379d  memcpy                             
+00003841  memset                             
 00000d11  pcTaskGetName                      
-00002d65  pvPortMalloc                       
+00002b89  pvPortMalloc                       
 000017c9  pvTaskIncrementMutexHeldCount      
 20001fa8  pxCurrentTCB                       
-000030e9  pxPortInitialiseStack              
-0000374d  setLEDColor                        
-0000322f  setup                              
+000030e1  pxPortInitialiseStack              
+00003745  setLEDColor                        
+00003227  setup                              
 20001da4  spi_pan_encoder                    
 20001da5  spi_pan_motor                      
-00002d03  spi_task                           
+00002edb  spi_task                           
 20001da6  spi_tilt_encoder                   
 20001da7  spi_tilt_motor                     
-00002c47  spi_tranceive                      
-00002fd5  uart0_fifos_disable                
-00002fc9  uart0_fifos_enable                 
-00002feb  uart0_getc                         
-00003013  uart0_init                         
-00002fff  uart0_putc                         
-00002fe1  uart0_rx_rdy                       
-00002ff3  uart0_tx_rdy                       
-00003679  uart_get_string                    
-00003669  uart_getc                          
-000036cf  uart_put_string                    
-000036eb  uart_put_stringln                  
-00003651  uart_putc                          
-00003af4  ulMaxSyscallInterruptPriority      
-00003585  ulPortGetIPSR                      
+00002e1f  spi_tranceive                      
+00002fcd  uart0_fifos_disable                
+00002fc1  uart0_fifos_enable                 
+00002fe3  uart0_getc                         
+0000300b  uart0_init                         
+00002ff7  uart0_putc                         
+00002fd9  uart0_rx_rdy                       
+00002feb  uart0_tx_rdy                       
+00003671  uart_get_string                    
+00003661  uart_getc                          
+000036c7  uart_put_string                    
+000036e3  uart_put_stringln                  
+00003649  uart_putc                          
+00003aec  ulMaxSyscallInterruptPriority      
+0000357d  ulPortGetIPSR                      
 000017e9  ulTaskGenericNotifyTake            
 00001e59  ulTaskGenericNotifyValueClear      
-0000343b  uxListRemove                       
+00003433  uxListRemove                       
 000028d5  uxQueueMessagesWaiting             
 0000290b  uxQueueMessagesWaitingFromISR      
 000028eb  uxQueueSpacesAvailable             
@@ -289,20 +289,20 @@ ffffffff  binit
 00000621  uxTaskPriorityGet                  
 0000064d  uxTaskPriorityGetFromISR           
 000017a1  uxTaskResetEventItemValue          
-00003af8  uxTopUsedPriority                  
-00003359  vListInitialise                    
-00003389  vListInitialiseItem                
-000033d5  vListInsert                        
-00003399  vListInsertEnd                     
-00003641  vPortEnableVFP                     
-00003189  vPortEndScheduler                  
-0000318b  vPortEnterCritical                 
-000031ab  vPortExitCritical                  
-00002e7d  vPortFree                          
-00002ee1  vPortInitialiseBlocks              
-000035fd  vPortSVCHandler                    
-000031e7  vPortSetupTimerInterrupt           
-0000361d  vPortStartFirstTask                
+00003af0  uxTopUsedPriority                  
+00003351  vListInitialise                    
+00003381  vListInitialiseItem                
+000033cd  vListInsert                        
+00003391  vListInsertEnd                     
+00003639  vPortEnableVFP                     
+00003181  vPortEndScheduler                  
+00003183  vPortEnterCritical                 
+000031a3  vPortExitCritical                  
+00002ca1  vPortFree                          
+00002d05  vPortInitialiseBlocks              
+000035f5  vPortSVCHandler                    
+000031df  vPortSetupTimerInterrupt           
+00003615  vPortStartFirstTask                
 00002921  vQueueDelete                       
 000005eb  vTaskDelay                         
 000004a3  vTaskDelete                        
@@ -321,10 +321,10 @@ ffffffff  binit
 00000801  vTaskSuspend                       
 00000b33  vTaskSuspendAll                    
 00000f39  vTaskSwitchContext                 
-00002edb  xPortGetFreeHeapSize               
-0000359d  xPortPendSVHandler                 
-00003153  xPortStartScheduler                
-000031c1  xPortSysTickHandler                
+00002cff  xPortGetFreeHeapSize               
+00003595  xPortPendSVHandler                 
+0000314b  xPortStartScheduler                
+000031b9  xPortSysTickHandler                
 0000213f  xQueueCreateMutex                  
 0000206f  xQueueGenericCreate                
 00001f9d  xQueueGenericReset                 
@@ -427,87 +427,87 @@ address   name
 00002921  vQueueDelete                       
 00002b1b  xQueueIsQueueEmptyFromISR          
 00002b61  xQueueIsQueueFullFromISR           
-00002b89  delay_us                           
-00002bdd  delay_ms                           
-00002c0b  init_spi                           
-00002c47  spi_tranceive                      
-00002d03  spi_task                           
-00002d65  pvPortMalloc                       
-00002e7d  vPortFree                          
-00002edb  xPortGetFreeHeapSize               
-00002ee1  vPortInitialiseBlocks              
-00002f3d  lcrh_databits                      
-00002f67  lcrh_stopbits                      
-00002f81  lcrh_parity                        
-00002fc9  uart0_fifos_enable                 
-00002fd5  uart0_fifos_disable                
-00002fe1  uart0_rx_rdy                       
-00002feb  uart0_getc                         
-00002ff3  uart0_tx_rdy                       
-00002fff  uart0_putc                         
-00003013  uart0_init                         
-000030e9  pxPortInitialiseStack              
-00003153  xPortStartScheduler                
-00003189  vPortEndScheduler                  
-0000318b  vPortEnterCritical                 
-000031ab  vPortExitCritical                  
-000031c1  xPortSysTickHandler                
-000031e7  vPortSetupTimerInterrupt           
-00003225  error                              
-0000322f  setup                              
-00003247  main                               
-00003359  vListInitialise                    
-00003389  vListInitialiseItem                
-00003399  vListInsertEnd                     
-000033d5  vListInsert                        
-0000343b  uxListRemove                       
-00003485  init_joystick                      
-000034b5  joystick_task                      
-00003503  joystick_uart_echo_task            
-00003585  ulPortGetIPSR                      
-0000359d  xPortPendSVHandler                 
-000035fd  vPortSVCHandler                    
-0000361d  vPortStartFirstTask                
-00003641  vPortEnableVFP                     
-00003651  uart_putc                          
-00003669  uart_getc                          
-00003679  uart_get_string                    
-000036bd  init_uart                          
-000036cf  uart_put_string                    
-000036eb  uart_put_stringln                  
-00003701  init_gpio                          
-0000374d  setLEDColor                        
-00003763  alive_blink                        
-000037a5  __aeabi_memcpy                     
-000037a5  __aeabi_memcpy4                    
-000037a5  __aeabi_memcpy8                    
-000037a5  memcpy                             
-00003841  __aeabi_memclr                     
-00003841  __aeabi_memclr4                    
-00003841  __aeabi_memclr8                    
-00003843  __aeabi_memset                     
-00003843  __aeabi_memset4                    
-00003843  __aeabi_memset8                    
-00003849  memset                             
-000038bd  get_adc                            
-000038c5  init_adc                           
-0000392d  init_systick                       
-00003999  __TI_decompress_lzss               
-00003a01  controller_task                    
-00003a4d  __TI_auto_init_nobinit_nopinit     
-00003a91  _c_int00_noargs                    
-00003ac5  __TI_decompress_none               
-00003ad3  __TI_zero_init                     
-00003adf  ResetISR                           
-00003aeb  _system_pre_init                   
-00003aef  C$$EXIT                            
-00003aef  abort                              
-00003af4  ulMaxSyscallInterruptPriority      
-00003af8  uxTopUsedPriority                  
-00003b10  __TI_Handler_Table_Base            
-00003b1c  __TI_Handler_Table_Limit           
-00003b28  __TI_CINIT_Base                    
-00003b38  __TI_CINIT_Limit                   
+00002b89  pvPortMalloc                       
+00002ca1  vPortFree                          
+00002cff  xPortGetFreeHeapSize               
+00002d05  vPortInitialiseBlocks              
+00002d61  delay_us                           
+00002db5  delay_ms                           
+00002de3  init_spi                           
+00002e1f  spi_tranceive                      
+00002edb  spi_task                           
+00002f35  lcrh_databits                      
+00002f5f  lcrh_stopbits                      
+00002f79  lcrh_parity                        
+00002fc1  uart0_fifos_enable                 
+00002fcd  uart0_fifos_disable                
+00002fd9  uart0_rx_rdy                       
+00002fe3  uart0_getc                         
+00002feb  uart0_tx_rdy                       
+00002ff7  uart0_putc                         
+0000300b  uart0_init                         
+000030e1  pxPortInitialiseStack              
+0000314b  xPortStartScheduler                
+00003181  vPortEndScheduler                  
+00003183  vPortEnterCritical                 
+000031a3  vPortExitCritical                  
+000031b9  xPortSysTickHandler                
+000031df  vPortSetupTimerInterrupt           
+0000321d  error                              
+00003227  setup                              
+0000323f  main                               
+00003351  vListInitialise                    
+00003381  vListInitialiseItem                
+00003391  vListInsertEnd                     
+000033cd  vListInsert                        
+00003433  uxListRemove                       
+0000347d  init_joystick                      
+000034ad  joystick_task                      
+000034fb  joystick_uart_echo_task            
+0000357d  ulPortGetIPSR                      
+00003595  xPortPendSVHandler                 
+000035f5  vPortSVCHandler                    
+00003615  vPortStartFirstTask                
+00003639  vPortEnableVFP                     
+00003649  uart_putc                          
+00003661  uart_getc                          
+00003671  uart_get_string                    
+000036b5  init_uart                          
+000036c7  uart_put_string                    
+000036e3  uart_put_stringln                  
+000036f9  init_gpio                          
+00003745  setLEDColor                        
+0000375b  alive_blink                        
+0000379d  __aeabi_memcpy                     
+0000379d  __aeabi_memcpy4                    
+0000379d  __aeabi_memcpy8                    
+0000379d  memcpy                             
+00003839  __aeabi_memclr                     
+00003839  __aeabi_memclr4                    
+00003839  __aeabi_memclr8                    
+0000383b  __aeabi_memset                     
+0000383b  __aeabi_memset4                    
+0000383b  __aeabi_memset8                    
+00003841  memset                             
+000038b5  get_adc                            
+000038bd  init_adc                           
+00003925  init_systick                       
+00003991  __TI_decompress_lzss               
+000039f9  controller_task                    
+00003a45  __TI_auto_init_nobinit_nopinit     
+00003a89  _c_int00_noargs                    
+00003abd  __TI_decompress_none               
+00003acb  __TI_zero_init                     
+00003ad7  ResetISR                           
+00003ae3  _system_pre_init                   
+00003ae7  C$$EXIT                            
+00003ae7  abort                              
+00003aec  ulMaxSyscallInterruptPriority      
+00003af0  uxTopUsedPriority                  
+00003b08  __TI_Handler_Table_Base            
+00003b14  __TI_Handler_Table_Limit           
+00003b20  __TI_CINIT_Base                    
+00003b30  __TI_CINIT_Limit                   
 20000000  __start___llvm_prf_cnts            
 20000000  __stop___llvm_prf_cnts             
 20001d9c  joystick_mutex                     
