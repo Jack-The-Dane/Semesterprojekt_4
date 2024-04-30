@@ -42,8 +42,12 @@ end pwm_gen;
 architecture Behavioral of pwm_gen is
 
 begin
-     
-    pwm <= '1' when unsigned(cnt) < unsigned(duty) else '0';
-
+     process(cnt, duty) begin
+    if(unsigned(cnt) < unsigned(duty)) then
+        pwm <= '1';
+    else
+     pwm <= '0';
+    end if;
+    end process;
 
 end Behavioral;

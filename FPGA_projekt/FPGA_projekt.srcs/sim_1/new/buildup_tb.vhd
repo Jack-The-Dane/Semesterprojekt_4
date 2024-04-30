@@ -15,9 +15,8 @@
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- pan sendes først, så tilt, så hall_effect_1, tilsidst hall_effect_0
 ----------------------------------------------------------------------------------
-
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -40,16 +39,20 @@ architecture Behavioral of buildup_tb is
     component buildup is
     port (
     CS : in STD_LOGIC;
+    Hall_effect_sensor_0 : in STD_LOGIC;
+    Hall_effect_sensor_1 : in STD_LOGIC;
     clk : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    mosi : in STD_LOGIC;
-    pwm : out STD_LOGIC;
-    encoder_a : in STD_LOGIC;
-    encoder_b : in STD_LOGIC;
-    sclk : in STD_LOGIC;
-    miso : out STD_LOGIC;
+    encoder_a_pan : in STD_LOGIC;
+    encoder_a_tilt : in STD_LOGIC;
+    encoder_b_pan : in STD_LOGIC;
+    encoder_b_tilt : in STD_LOGIC;
     led_0 : out STD_LOGIC;
-    spi_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    miso : out STD_LOGIC;
+    mosi : in STD_LOGIC;
+    pwm_0 : out STD_LOGIC;
+    pwm_1 : out STD_LOGIC;
+    rst : in STD_LOGIC;
+    sclk : in STD_LOGIC
   );
   end component buildup;
   
@@ -58,13 +61,17 @@ architecture Behavioral of buildup_tb is
   signal clk_tb : STD_LOGIC;
   signal rst_tb : STD_LOGIC;
   signal mosi_tb : STD_LOGIC;
-  signal pwm_tb : STD_LOGIC;
-  signal encoder_a_tb : STD_LOGIC;
-  signal encoder_b_tb : STD_LOGIC;
+  signal pwm_0_tb : STD_LOGIC;
+  signal pwm_1_tb : STD_LOGIC;
+  signal encoder_a_tilt_tb : STD_LOGIC;
+  signal encoder_b_tilt_tb : STD_LOGIC;
+  signal encoder_a_pan_tb : STD_LOGIC;
+  signal encoder_b_pan_tb : STD_LOGIC;
   signal sclk_tb : STD_LOGIC;
   signal miso_tb : STD_LOGIC;
   signal led_0_tb : STD_LOGIC;
-  signal spi_out_tb : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal Hall_effect_sensor_0_tb : STD_LOGIC;
+  signal Hall_effect_sensor_1_tb : STD_LOGIC;
 
 begin
 
@@ -74,13 +81,17 @@ begin
             clk => clk_tb,
             rst => rst_tb,
             mosi => mosi_tb,
-            pwm => pwm_tb,
-            encoder_a => encoder_a_tb,
-            encoder_b => encoder_b_tb,
+            pwm_0 => pwm_0_tb,
+            pwm_1 => pwm_1_tb,
+            encoder_a_tilt => encoder_a_tilt_tb,
+            encoder_b_tilt => encoder_b_tilt_tb,
+            encoder_a_pan => encoder_a_pan_tb,
+            encoder_b_pan => encoder_b_pan_tb,
             sclk => sclk_tb,
             miso => miso_tb,
             led_0 => led_0_tb,
-            spi_out => spi_out_tb
+            Hall_effect_sensor_0 => Hall_effect_sensor_0_tb,
+            Hall_effect_sensor_1 => Hall_effect_sensor_1_tb
         );
         
     simulation: process
@@ -89,149 +100,319 @@ begin
     clk_tb <= '0';
     rst_tb <= '0';
     mosi_tb <= '0';
-    encoder_a_tb <= '0';
-    encoder_b_tb <= '0';
+    encoder_a_tilt_tb <= '0';
+    encoder_b_tilt_tb <= '0';
+    encoder_a_pan_tb <= '0';
+    encoder_b_pan_tb <= '0';
     sclk_tb <= '1';
+    Hall_effect_sensor_0_tb <= '0';
+    Hall_effect_sensor_1_tb <= '1';
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 1
+    encoder_a_tilt_tb <= '1';            -- 1
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 2
+    encoder_a_tilt_tb <= '0';            -- 2
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 3
+    encoder_a_tilt_tb <= '1';            -- 3
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 4
+    encoder_a_tilt_tb <= '0';            -- 4
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 5
+    encoder_a_tilt_tb <= '1';            -- 5
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 6
+    encoder_a_tilt_tb <= '0';            -- 6
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 7
+    encoder_a_tilt_tb <= '1';            -- 7
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 8
+    encoder_a_tilt_tb <= '0';            -- 8
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 9
+    encoder_a_tilt_tb <= '1';            -- 9
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 10
+    encoder_a_tilt_tb <= '0';            -- 10
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 11
+    encoder_a_tilt_tb <= '1';            -- 11
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 12
+    encoder_a_tilt_tb <= '0';            -- 12
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 13
+    encoder_a_tilt_tb <= '1';            -- 13
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 14
+    encoder_a_tilt_tb <= '0';            -- 14
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 15
+    encoder_a_tilt_tb <= '1';            -- 15
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 16
+    encoder_a_tilt_tb <= '0';            -- 16
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 17
+    encoder_a_tilt_tb <= '1';            -- 17
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 18
+    encoder_a_tilt_tb <= '0';            -- 18
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 19
+    encoder_a_tilt_tb <= '1';            -- 19
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 20
+    encoder_a_tilt_tb <= '0';            -- 20
     
     -- add more to make the encodervalue higher than 10
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 1
+    encoder_a_tilt_tb <= '1';            -- 1
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 2
+    encoder_a_tilt_tb <= '0';            -- 2
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 3
+    encoder_a_tilt_tb <= '1';            -- 3
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 4
+    encoder_a_tilt_tb <= '0';            -- 4
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 5
+    encoder_a_tilt_tb <= '1';            -- 5
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 6
+    encoder_a_tilt_tb <= '0';            -- 6
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 7
+    encoder_a_tilt_tb <= '1';            -- 7
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 8
+    encoder_a_tilt_tb <= '0';            -- 8
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 9
+    encoder_a_tilt_tb <= '1';            -- 9
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 10
+    encoder_a_tilt_tb <= '0';            -- 10
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 11
+    encoder_a_tilt_tb <= '1';            -- 11
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 12
+    encoder_a_tilt_tb <= '0';            -- 12
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 13
+    encoder_a_tilt_tb <= '1';            -- 13
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 14
+    encoder_a_tilt_tb <= '0';            -- 14
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 15
+    encoder_a_tilt_tb <= '1';            -- 15
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 16
+    encoder_a_tilt_tb <= '0';            -- 16
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 17
+    encoder_a_tilt_tb <= '1';            -- 17
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 18
+    encoder_a_tilt_tb <= '0';            -- 18
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 19
+    encoder_a_tilt_tb <= '1';            -- 19
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 20
+    encoder_a_tilt_tb <= '0';            -- 20
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 15
+    encoder_a_tilt_tb <= '1';            -- 15
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 16
+    encoder_a_tilt_tb <= '0';            -- 16
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 17
+    encoder_a_tilt_tb <= '1';            -- 17
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 18
+    encoder_a_tilt_tb <= '0';            -- 18
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '1';            -- 19
+    encoder_a_tilt_tb <= '1';            -- 19
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    encoder_a_tb <= '0';            -- 20
+    encoder_a_tilt_tb <= '0';            -- 20
+    
+    ------------
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 1
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 2
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 3
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 4
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 5
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 6
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 7
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 8
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 9
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 10
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 11
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 12
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 13
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 14
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 15
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 16
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 17
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 18
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 19
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 20
+    
+    -- add more to make the encodervalue higher than 10
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 1
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 2
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 3
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 4
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 5
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 6
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 7
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 8
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 9
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 10
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 11
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 12
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 13
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 14
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 15
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 16
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 17
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 18
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 19
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 20
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 15
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 16
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 17
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 18
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 19
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 20
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 19
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 20
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 15
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 16
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 17
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 18
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '1';            -- 19
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    encoder_a_pan_tb <= '0';            -- 20
+    ----------
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
                                     -- 21
@@ -315,6 +496,22 @@ begin
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '0';                 -- 38.5
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '0';                 -- 36
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '0';                 -- 36
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '0';                 -- 36
+    
+    wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
+    sclk_tb <= '0';                 -- 36
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';

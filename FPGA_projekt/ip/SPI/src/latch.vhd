@@ -41,7 +41,7 @@ entity latch is
 end latch;
 
 architecture Behavioral of latch is
-    signal data : std_logic_vector(data_length -1 downto 0) := x"0000";
+    signal data : std_logic_vector(data_length -1 downto 0) := (others => '0');
 
 begin
     process(cnt, rst)

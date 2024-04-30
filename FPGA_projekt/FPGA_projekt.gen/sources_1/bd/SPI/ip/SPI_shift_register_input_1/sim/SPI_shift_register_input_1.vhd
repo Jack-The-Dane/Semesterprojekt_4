@@ -57,10 +57,10 @@ ENTITY SPI_shift_register_input_1 IS
   PORT (
     sample : IN STD_LOGIC;
     chip_select : IN STD_LOGIC;
-    register_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    register_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     rst : IN STD_LOGIC;
     data : IN STD_LOGIC;
-    register_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    register_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
     carry_out : OUT STD_LOGIC
   );
 END SPI_shift_register_input_1;
@@ -75,10 +75,10 @@ ARCHITECTURE SPI_shift_register_input_1_arch OF SPI_shift_register_input_1 IS
     PORT (
       sample : IN STD_LOGIC;
       chip_select : IN STD_LOGIC;
-      register_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      register_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       rst : IN STD_LOGIC;
       data : IN STD_LOGIC;
-      register_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      register_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0);
       carry_out : OUT STD_LOGIC
     );
   END COMPONENT shift_register_generic;
@@ -89,7 +89,7 @@ ARCHITECTURE SPI_shift_register_input_1_arch OF SPI_shift_register_input_1 IS
 BEGIN
   U0 : shift_register_generic
     GENERIC MAP (
-      register_length => 16
+      register_length => 20
     )
     PORT MAP (
       sample => sample,
