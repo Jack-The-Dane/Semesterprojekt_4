@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Apr 29 10:09:39 2024
+--Date        : Wed May  1 10:44:02 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target SPI_wrapper.bd
 --Design      : SPI_wrapper

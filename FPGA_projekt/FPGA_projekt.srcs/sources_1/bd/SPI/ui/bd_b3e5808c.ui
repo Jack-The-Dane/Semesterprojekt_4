@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.04617",
-   "Default View_TopLeft":"-184,-184",
+   "Default View_TopLeft":"-184,-185",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
@@ -18,16 +18,16 @@ preplace inst Prescaler -pg 1 -lvl 2 -x 740 -y 130 -defaultsOSRD
 preplace inst NOT_gate_0 -pg 1 -lvl 1 -x 440 -y 110 -defaultsOSRD
 preplace netloc MC_data_1 1 0 1 NJ 410
 preplace netloc NOT_gate_0_B 1 1 1 N 110
-preplace netloc SPI_chip_select_1 1 0 1 280 110n
-preplace netloc clock_1 1 0 2 270 170 600
-preplace netloc enable_counter_0_cnt 1 1 2 630 50 850
+preplace netloc SPI_chip_select_1 1 0 2 280 170 600
+preplace netloc clock_1 1 0 2 270 180 610
+preplace netloc enable_counter_0_cnt 1 1 2 630 210 850
 preplace netloc latch_0_Q 1 2 1 N 300
 preplace netloc register_in_0_1 1 0 1 N 370
-preplace netloc rst_1 1 0 2 260 270 620
-preplace netloc shift_register_input_carry_out 1 1 2 620J 450 NJ
-preplace netloc shift_register_input_register_out 1 1 1 600 320n
+preplace netloc rst_1 1 0 2 260 270 600
+preplace netloc shift_register_input_carry_out 1 1 2 NJ 380 850J
+preplace netloc shift_register_input_register_out 1 1 1 610 320n
 levelinfo -pg 1 -40 440 740 1460
-pagesize -pg 1 -db -bbox -sgen -220 -140 1710 610
+pagesize -pg 1 -db -bbox -sgen -220 -170 1710 610
 "
 }
 0

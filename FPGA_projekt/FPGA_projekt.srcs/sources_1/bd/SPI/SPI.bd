@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xEB30DEABF1BDBB89",
+      "boundary_crc": "0xEB30DEAB7048FC3B",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/SPI",
       "name": "SPI",
@@ -207,14 +207,15 @@
         "ports": [
           "SPI_chip_select",
           "NOT_gate_0/A",
-          "SPI_in/chip_select"
+          "SPI_in/chip_select",
+          "Prescaler/rst"
         ]
       },
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "Prescaler/sample",
-          "SPI_in/sample"
+          "SPI_in/sample",
+          "Prescaler/sample"
         ]
       },
       "enable_counter_0_cnt": {
@@ -238,9 +239,8 @@
       "rst_1": {
         "ports": [
           "rst",
-          "Prescaler/rst",
-          "latch_0/rst",
-          "SPI_in/rst"
+          "SPI_in/rst",
+          "latch_0/rst"
         ]
       },
       "shift_register_input_carry_out": {

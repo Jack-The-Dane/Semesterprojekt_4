@@ -15,6 +15,7 @@
 "./src/gpio.obj"
 "./src/joystick.obj"
 "./src/main.obj"
+"./src/priority_test.obj"
 "./src/spi.obj"
 "./src/uart.obj"
 "./src/uart0.obj"

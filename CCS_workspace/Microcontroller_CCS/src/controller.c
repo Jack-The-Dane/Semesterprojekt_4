@@ -3,16 +3,32 @@
 #include "spi.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "gpio.h"
 #include "semphr.h"
 
 // TODO: Use mutex to protect joystick
 void controller_task(void * pvParameters) {
-    extern Joystick joystick;
+
     extern SemaphoreHandle_t joystick_mutex;
     TickType_t last_wake_time = xTaskGetTickCount();
     while (1) {
         if(xSemaphoreTake(joystick_mutex, 0)){
-            SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
+            TickType_t xLastWakeTime;
+
+        //Ticks (10 ticks), 1 tick = 5ms
+        const TickType_t xFrequency = 10;
+
+        extern Joystick joystick;
+
+        // Initialize the xLastWakeTime variable with the current time.
+        xLastWakeTime = xTaskGetTickCount();
+
+        // Wait for the next cycle.
+       vTaskDelayUntil( &xLastWakeTime, xFrequency );
+
+        setLEDColor(WHITE);
+
+        SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
             SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
             xSemaphoreGive(joystick_mutex);
             BOOLEAN direction1 = 0;

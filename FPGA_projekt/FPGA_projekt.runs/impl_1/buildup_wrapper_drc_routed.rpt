@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Apr 29 18:09:50 2024
+| Date         : Wed May  1 11:05:15 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_drc -file buildup_wrapper_drc_routed.rpt -pb buildup_wrapper_drc_routed.pb -rpx buildup_wrapper_drc_routed.rpx
 | Design       : buildup_wrapper
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 24
+             Violations found: 23
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
-| PDRC-153    | Warning  | Gated clock check                                           | 22         |
+| PDRC-153    | Warning  | Gated clock check                                           | 21         |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 | ZPS7-1      | Warning  | PS7 block required                                          | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
@@ -37,110 +37,105 @@ Table of Contents
 -----------------
 PDRC-153#1 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/Prescaler/U0/E[0] is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/Prescaler/U0/data_reg[19]_i_2/O, cell buildup_i/SPI_0/U0/Prescaler/U0/data_reg[19]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#21 Warning
-Gated clock check  
 Net buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC_i_1/O, cell buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#22 Warning
+PDRC-153#21 Warning
 Gated clock check  
 Net buildup_i/clock_divider_0/U0/clk_div is a gated clock net sourced by a combinational pin buildup_i/clock_divider_0/U0/clk_div__0/O, cell buildup_i/clock_divider_0/U0/clk_div__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>4cbd99ef</spirit:value>
+            <spirit:value>97015ad2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>e0d4bf41</spirit:value>
+            <spirit:value>9edebd6f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -208,7 +208,7 @@
       <spirit:file>
         <spirit:name>src/SPI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_92ab65b5</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_1adf5936</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -288,11 +288,11 @@
       <xilinx:displayName>SPI_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-04-29T08:09:46Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-05-01T08:44:07Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="7fb13c5e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="cd496337"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a21713eb"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="e3b5e3ae"/>
     </xilinx:packagingInfo>

@@ -48,6 +48,7 @@ begin
     begin
         if(rst = '1') then
             cnt_temp <= (others => '0');
+            out_temp <= '0';
         elsif(rising_edge(sample)) then
             if(en = '1') then
                 cnt_temp <= cnt_temp + 1;

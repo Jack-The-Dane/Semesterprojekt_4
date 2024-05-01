@@ -1,63 +1,91 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.16629",
-   "Default View_TopLeft":"164,-149",
+   "Default View_ScaleFactor":"1.09595",
+   "Default View_TopLeft":"610,-18",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
 #  -string -flagsOSRD
-preplace port port-id_CS -pg 1 -lvl 0 -x -60 -y 400 -defaultsOSRD
-preplace port port-id_clk -pg 1 -lvl 0 -x -60 -y 80 -defaultsOSRD
-preplace port port-id_rst -pg 1 -lvl 0 -x -60 -y 360 -defaultsOSRD
-preplace port port-id_mosi -pg 1 -lvl 0 -x -60 -y 430 -defaultsOSRD
-preplace port port-id_pwm_0 -pg 1 -lvl 7 -x 1540 -y 190 -defaultsOSRD
-preplace port port-id_encoder_a_tilt -pg 1 -lvl 0 -x -60 -y 290 -defaultsOSRD
-preplace port port-id_encoder_b_tilt -pg 1 -lvl 0 -x -60 -y 320 -defaultsOSRD
-preplace port port-id_sclk -pg 1 -lvl 0 -x -60 -y 160 -defaultsOSRD
-preplace port port-id_miso -pg 1 -lvl 7 -x 1540 -y 360 -defaultsOSRD
-preplace port port-id_led_0 -pg 1 -lvl 7 -x 1540 -y 490 -defaultsOSRD
-preplace port port-id_encoder_a_pan -pg 1 -lvl 0 -x -60 -y 460 -defaultsOSRD
-preplace port port-id_encoder_b_pan -pg 1 -lvl 0 -x -60 -y 490 -defaultsOSRD
-preplace port port-id_Hall_effect_sensor_0 -pg 1 -lvl 0 -x -60 -y 580 -defaultsOSRD
-preplace port port-id_Hall_effect_sensor_1 -pg 1 -lvl 0 -x -60 -y 610 -defaultsOSRD
-preplace port port-id_pwm_1 -pg 1 -lvl 7 -x 1540 -y 300 -defaultsOSRD
-preplace inst block_encoder_0 -pg 1 -lvl 2 -x 340 -y 290 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 1 -x 70 -y 220 -defaultsOSRD
-preplace inst clock_divider_0 -pg 1 -lvl 3 -x 610 -y 100 -defaultsOSRD
-preplace inst synchronizer_0 -pg 1 -lvl 2 -x 340 -y 120 -defaultsOSRD
-preplace inst SPI_0 -pg 1 -lvl 4 -x 910 -y 400 -defaultsOSRD
-preplace inst block_encoder_1 -pg 1 -lvl 2 -x 340 -y 470 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -x 610 -y 410 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 5 -x 1160 -y 390 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 5 -x 1160 -y 290 -defaultsOSRD
-preplace inst counter_1 -pg 1 -lvl 5 -x 1160 -y 170 -defaultsOSRD
-preplace inst pwm_gen_0 -pg 1 -lvl 6 -x 1390 -y 150 -defaultsOSRD
-preplace inst pwm_gen_1 -pg 1 -lvl 6 -x 1390 -y 360 -defaultsOSRD
-preplace netloc Hall_effect_sensor_0_1 1 0 3 NJ 580 N 580 460
-preplace netloc Hall_effect_sensor_1_1 1 0 3 NJ 610 N 610 480
-preplace netloc SPI_0_SPI_out 1 4 1 1060 290n
-preplace netloc SPI_0_miso 1 4 3 1030 450 N 450 1500
-preplace netloc block_encoder_0_pulse_cnt 1 2 1 450 290n
-preplace netloc block_encoder_1_pulse_cnt 1 2 1 470 440n
-preplace netloc btn_0_1 1 0 7 NJ 400 160J 590 490 560 760 500 1030 490 N 490 N
-preplace netloc clk_1 1 0 3 N 80 220 50 450
-preplace netloc clock_divider_0_clk_div 1 3 2 790 150 N
-preplace netloc counter_0_cnt 1 5 1 1290 140n
+preplace port port-id_CS -pg 1 -lvl 0 -x -70 -y 400 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -70 -y 80 -defaultsOSRD
+preplace port port-id_rst -pg 1 -lvl 0 -x -70 -y 360 -defaultsOSRD
+preplace port port-id_mosi -pg 1 -lvl 0 -x -70 -y 430 -defaultsOSRD
+preplace port port-id_pwm_pan_cw -pg 1 -lvl 9 -x 1920 -y 140 -defaultsOSRD
+preplace port port-id_encoder_a_tilt -pg 1 -lvl 0 -x -70 -y 290 -defaultsOSRD
+preplace port port-id_encoder_b_tilt -pg 1 -lvl 0 -x -70 -y 320 -defaultsOSRD
+preplace port port-id_sclk -pg 1 -lvl 0 -x -70 -y 160 -defaultsOSRD
+preplace port port-id_miso -pg 1 -lvl 9 -x 1920 -y 60 -defaultsOSRD
+preplace port port-id_encoder_a_pan -pg 1 -lvl 0 -x -70 -y 460 -defaultsOSRD
+preplace port port-id_encoder_b_pan -pg 1 -lvl 0 -x -70 -y 490 -defaultsOSRD
+preplace port port-id_Hall_effect_sensor_0 -pg 1 -lvl 0 -x -70 -y 580 -defaultsOSRD
+preplace port port-id_Hall_effect_sensor_1 -pg 1 -lvl 0 -x -70 -y 550 -defaultsOSRD
+preplace port port-id_pwm_tilt_cw -pg 1 -lvl 9 -x 1920 -y 380 -defaultsOSRD
+preplace port port-id_pwm_pan_ccw -pg 1 -lvl 9 -x 1920 -y 250 -defaultsOSRD
+preplace port port-id_pwm_tilt_ccw -pg 1 -lvl 9 -x 1920 -y 520 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 9 -x 1920 -y 660 -defaultsOSRD
+preplace inst block_encoder_0 -pg 1 -lvl 2 -x 320 -y 290 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 50 -y 220 -defaultsOSRD
+preplace inst clock_divider_0 -pg 1 -lvl 3 -x 600 -y 100 -defaultsOSRD
+preplace inst synchronizer_0 -pg 1 -lvl 2 -x 320 -y 120 -defaultsOSRD
+preplace inst SPI_0 -pg 1 -lvl 4 -x 870 -y 280 -defaultsOSRD
+preplace inst block_encoder_1 -pg 1 -lvl 2 -x 320 -y 470 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 600 -y 410 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 5 -x 1130 -y 290 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 5 -x 1130 -y 180 -defaultsOSRD
+preplace inst counter_1 -pg 1 -lvl 5 -x 1130 -y 60 -defaultsOSRD
+preplace inst pwm_pan_cw -pg 1 -lvl 6 -x 1350 -y 110 -defaultsOSRD
+preplace inst pwm_tilt_cw -pg 1 -lvl 6 -x 1350 -y 350 -defaultsOSRD
+preplace inst xlslice_2 -pg 1 -lvl 5 -x 1130 -y 710 -defaultsOSRD
+preplace inst xlslice_3 -pg 1 -lvl 5 -x 1130 -y 610 -defaultsOSRD
+preplace inst pwm_pan_ccw -pg 1 -lvl 6 -x 1350 -y 230 -defaultsOSRD
+preplace inst pwm_tilt_ccw -pg 1 -lvl 6 -x 1350 -y 470 -defaultsOSRD
+preplace inst AND_gate_0 -pg 1 -lvl 8 -x 1800 -y 140 -defaultsOSRD
+preplace inst AND_gate_1 -pg 1 -lvl 8 -x 1800 -y 260 -defaultsOSRD
+preplace inst AND_gate_2 -pg 1 -lvl 8 -x 1800 -y 380 -defaultsOSRD
+preplace inst AND_gate_3 -pg 1 -lvl 8 -x 1800 -y 500 -defaultsOSRD
+preplace inst NOT_gate_0 -pg 1 -lvl 7 -x 1590 -y 290 -defaultsOSRD
+preplace inst NOT_gate_1 -pg 1 -lvl 7 -x 1590 -y 470 -defaultsOSRD
+preplace inst xlslice_5 -pg 1 -lvl 6 -x 1350 -y 760 -defaultsOSRD
+preplace inst xlslice_6 -pg 1 -lvl 6 -x 1350 -y 580 -defaultsOSRD
+preplace inst xlconcat_1 -pg 1 -lvl 7 -x 1590 -y 680 -defaultsOSRD
+preplace netloc AND_gate_0_C 1 8 1 N 140
+preplace netloc AND_gate_1_C 1 8 1 1880 250n
+preplace netloc AND_gate_2_C 1 8 1 N 380
+preplace netloc AND_gate_3_C 1 8 1 1880 500n
+preplace netloc Hall_effect_sensor_0_1 1 0 3 NJ 580 N 580 450
+preplace netloc Hall_effect_sensor_1_1 1 0 3 NJ 550 130 590 470
+preplace netloc NOT_gate_0_B 1 7 1 1690 270n
+preplace netloc NOT_gate_1_B 1 7 1 1680 470n
+preplace netloc SPI_0_SPI_out 1 4 1 1030 180n
+preplace netloc SPI_0_miso 1 4 5 990 -20 N -20 N -20 N -20 1880
+preplace netloc block_encoder_0_pulse_cnt 1 2 1 430 290n
+preplace netloc block_encoder_1_pulse_cnt 1 2 1 460 440n
+preplace netloc btn_0_1 1 0 4 -50J 10 NJ 10 N 10 750
+preplace netloc clk_1 1 0 3 N 80 200 190 430
+preplace netloc clock_divider_0_clk_div 1 3 2 740 40 N
+preplace netloc counter_1_cnt 1 5 1 1250 60n
 preplace netloc encoder_a_0_1 1 0 2 NJ 290 NJ
-preplace netloc encoder_a_0_2 1 0 2 NJ 460 170J
-preplace netloc encoder_b_0_1 1 0 2 -40J 310 NJ
+preplace netloc encoder_a_0_2 1 0 2 NJ 460 150J
+preplace netloc encoder_b_0_1 1 0 2 NJ 320 140J
 preplace netloc encoder_b_0_2 1 0 2 NJ 490 NJ
-preplace netloc ja_3_1 1 0 2 NJ 160 150
-preplace netloc mosi_1 1 0 4 NJ 430 150J 570 N 570 790
-preplace netloc rst 1 0 5 NJ 360 210 40 480 30 780J 170 N
-preplace netloc synchronizer_0_Q 1 2 2 460 180 710
-preplace netloc xlconcat_0_dout 1 3 1 770 380n
-preplace netloc xlconstant_1_dout 1 1 4 230 190 N 190 N 190 N
-preplace netloc xlslice_0_Dout 1 5 1 1260 370n
-preplace netloc xlslice_1_Dout 1 5 1 1260 160n
-preplace netloc pwm_gen_0_pwm 1 6 1 1490 150n
-preplace netloc pwm_gen_1_pwm 1 6 1 1490 300n
-levelinfo -pg 1 -60 70 340 610 910 1160 1390 1540
-pagesize -pg 1 -db -bbox -sgen -260 -120 1680 740
+preplace netloc ja_3_1 1 0 2 NJ 160 140
+preplace netloc mosi_1 1 0 4 NJ 430 140J 570 440 300 N
+preplace netloc pwm_pan_ccw_pwm 1 6 2 NJ 230 1690
+preplace netloc pwm_pan_cw_pwm 1 6 2 NJ 110 1690
+preplace netloc pwm_tilt_ccw_pwm 1 6 2 1450 410 1690J
+preplace netloc pwm_tilt_cw_pwm 1 6 2 NJ 350 1690
+preplace netloc rst 1 0 5 NJ 360 190 50 460 30 730J 60 N
+preplace netloc synchronizer_0_Q 1 2 2 470 280 N
+preplace netloc xlconcat_0_dout 1 3 1 750 260n
+preplace netloc xlconstant_1_dout 1 1 4 210 20 N 20 N 20 1000
+preplace netloc xlslice_0_Dout 1 5 1 1230 290n
+preplace netloc xlslice_1_Dout 1 5 1 1240 120n
+preplace netloc xlslice_2_Dout 1 5 3 1250J 700 1470J 390 N
+preplace netloc xlslice_3_Dout 1 5 3 1230 640 1490J 150 NJ
+preplace netloc xlslice_6_Dout 1 6 1 1480 580n
+preplace netloc xlslice_5_Dout 1 6 1 1500 690n
+preplace netloc xlconcat_1_dout 1 7 2 NJ 680 1880
+levelinfo -pg 1 -70 50 320 600 870 1130 1350 1590 1800 1920
+pagesize -pg 1 -db -bbox -sgen -260 -330 2060 820
 "
 }
 0

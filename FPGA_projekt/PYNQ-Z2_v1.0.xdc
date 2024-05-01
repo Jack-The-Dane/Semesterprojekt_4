@@ -24,10 +24,10 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { sy
 
 ##LEDs
 
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led_0 }]; #IO_L6N_T0_VREF_34 Sch=led[0]
-#set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L6P_T0_34 Sch=led[1]
-#set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=led[2]
-#set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L23P_T3_35 Sch=led[3]
+set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led[0] }]; #IO_L6N_T0_VREF_34 Sch=led[0]
+set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { led[1] }]; #IO_L6P_T0_34 Sch=led[1]
+set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { led[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=led[2]
+set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { led[3] }]; #IO_L23P_T3_35 Sch=led[3]
 
 ##Buttons
 
@@ -38,25 +38,38 @@ set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { led_0 
 
 ##PmodA
 
-set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { pwm_0 }]; #IO_L17P_T2_34 Sch=ja_p[1]
+set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { pwm_pan_cw }]; #IO_L17P_T2_34 Sch=ja_p[1]
 set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { encoder_a_tilt }]; #IO_L17N_T2_34 Sch=ja_n[1]
-set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { encoder_b_tilt }]; #IO_L7P_T1_34 Sch=ja_p[2]
+set_property PULLDOWN true [get_ports {encoder_a_tilt}];
+#set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { encoder_b_tilt }]; #IO_L7P_T1_34 Sch=ja_p[2]
+#set_property PULLDOWN true [get_ports {encoder_b_tilt}];
 set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { miso }]; #IO_L7N_T1_34 Sch=ja_n[2]
 set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { mosi }]; #IO_L12P_T1_MRCC_34 Sch=ja_p[3]
+set_property PULLDOWN true [get_ports {mosi}];
 set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports { CS }]; #IO_L12N_T1_MRCC_34 Sch=ja_n[3]
+set_property PULLDOWN true [get_ports {CS}];
 set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { rst }]; #IO_L22P_T3_34 Sch=ja_p[4]
+set_property PULLDOWN true [get_ports {rst}];
 set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { sclk }]; #IO_L22N_T3_34 Sch=ja_n[4]
+set_property PULLDOWN true [get_ports {sclk}];
+
+
 
 ##PmodB
 
 set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { encoder_a_pan }]; #IO_L8P_T1_34 Sch=jb_p[1]
+set_property PULLDOWN true [get_ports {encoder_a_pan}];
 set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { encoder_b_pan }]; #IO_L8N_T1_34 Sch=jb_n[1]
+set_property PULLDOWN true  [get_ports {encoder_b_pan}];
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { Hall_effect_sensor_0 }]; #IO_L1P_T0_34 Sch=jb_p[2]
+set_property PULLDOWN true [get_ports {Hall_effect_sensor_0}];
 set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { Hall_effect_sensor_1 }]; #IO_L1N_T0_34 Sch=jb_n[2]
-set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { pwm_1 }]; #IO_L18P_T2_34 Sch=jb_p[3]
-#set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { jb[5] }]; #IO_L18N_T2_34 Sch=jb_n[3]
-#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { jb[6] }]; #IO_L4P_T0_34 Sch=jb_p[4]
-#set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { jb[7] }]; #IO_L4N_T0_34 Sch=jb_n[4]
+set_property PULLDOWN true [get_ports {Hall_effect_sensor_1}];
+set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { pwm_pan_ccw }]; #IO_L18P_T2_34 Sch=jb_p[3]
+set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { pwm_tilt_cw }]; #IO_L18N_T2_34 Sch=jb_n[3]
+set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { pwm_tilt_ccw }]; #IO_L4P_T0_34 Sch=jb_p[4]
+set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { encoder_b_tilt }]; #IO_L4N_T0_34 Sch=jb_n[4]
+set_property PULLDOWN true [get_ports {encoder_b_tilt}];
 
 ##Audio
 
