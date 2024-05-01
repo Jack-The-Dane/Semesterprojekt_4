@@ -38,7 +38,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
-  delay_us(100);
+  delay_us(SCLK_HALF_PERIOD_US);
   //setLEDColor(GREEN);
 
   for (INT32U i = SPI_WORD_LENGTH; i > 0; i--) {
@@ -49,10 +49,10 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     } else {
       GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN); // Set 0
     }
-
+    setLEDColor(CYAN);
     // Pulse the clock
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
-    delay_ms(100); // This should be as long as the FPGA needs to shift out a bit
+    delay_us(SCLK_HALF_PERIOD_US); // This should be as long as the FPGA needs to shift out a bit
     GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
     // Read input bit
@@ -61,14 +61,14 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     } else {
       *data_recieve &= ~(1 << (i - 1)); // Set 0
     }
-    delay_ms(100);
+    setLEDColor(YELLOW);
+    delay_us(SCLK_HALF_PERIOD_US);
   }
 
-  delay_us(100);
   GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
-  delay_us(100);
-  // Set MOSI low
+  delay_us(SCLK_HALF_PERIOD_US);
+  // Set MOSI high
   GPIO_PORTE_DATA_R |= (1 << SPI_MOSI_PIN);
 
   // Set CS high to end the SPI frame.
