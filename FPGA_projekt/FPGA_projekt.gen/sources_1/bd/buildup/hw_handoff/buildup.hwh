@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 29 18:02:31 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 30 15:58:45 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="buildup" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -53,6 +53,21 @@
         <CONNECTION INSTANCE="External_Ports" PORT="CS"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="led_1" SIGIS="undef" SIGNAME="External_Ports_sclk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="sclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led_2" SIGIS="undef" SIGNAME="External_Ports_rst">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="led_3" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_mosi">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="mosi"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT DIR="O" NAME="miso" SIGIS="undef" SIGNAME="SPI_0_miso">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SPI_0" PORT="miso"/>
@@ -60,17 +75,28 @@
     </PORT>
     <PORT DIR="I" NAME="mosi" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_mosi">
       <CONNECTIONS>
+        <CONNECTION INSTANCE="External_Ports" PORT="led_3"/>
         <CONNECTION INSTANCE="SPI_0" PORT="mosi"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="pwm_0" SIGIS="undef" SIGNAME="pwm_gen_0_pwm">
+    <PORT DIR="O" NAME="pwm_pan_ccw" SIGIS="undef" SIGNAME="AND_gate_1_C">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="pwm_gen_0" PORT="pwm"/>
+        <CONNECTION INSTANCE="AND_gate_1" PORT="C"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="pwm_1" SIGIS="undef" SIGNAME="pwm_gen_1_pwm">
+    <PORT DIR="O" NAME="pwm_pan_cw" SIGIS="undef" SIGNAME="AND_gate_0_C">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="pwm_gen_1" PORT="pwm"/>
+        <CONNECTION INSTANCE="AND_gate_0" PORT="C"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pwm_tilt_ccw" SIGIS="undef" SIGNAME="AND_gate_3_C">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="AND_gate_3" PORT="C"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="pwm_tilt_cw" SIGIS="undef" SIGNAME="AND_gate_2_C">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="AND_gate_2" PORT="C"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
@@ -78,13 +104,15 @@
         <CONNECTION INSTANCE="block_encoder_0" PORT="rst"/>
         <CONNECTION INSTANCE="clock_divider_0" PORT="rst"/>
         <CONNECTION INSTANCE="block_encoder_1" PORT="rst"/>
-        <CONNECTION INSTANCE="SPI_0" PORT="rst"/>
         <CONNECTION INSTANCE="counter_1" PORT="rst"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="led_2"/>
+        <CONNECTION INSTANCE="SPI_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sclk" SIGIS="clk" SIGNAME="External_Ports_sclk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="synchronizer_0" PORT="D"/>
+        <CONNECTION INSTANCE="External_Ports" PORT="led_1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -92,6 +120,146 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/AND_gate_0" HWVERSION="1.0" INSTANCE="AND_gate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_AND_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="pwm_pan_cw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_pan_cw" PORT="pwm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="xlslice_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="AND_gate_0_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm_pan_cw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/AND_gate_1" HWVERSION="1.0" INSTANCE="AND_gate_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_AND_gate_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="pwm_pan_ccw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_pan_ccw" PORT="pwm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_0_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NOT_gate_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="AND_gate_1_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm_pan_ccw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/AND_gate_2" HWVERSION="1.0" INSTANCE="AND_gate_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_AND_gate_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="pwm_tilt_cw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_tilt_cw" PORT="pwm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="AND_gate_2_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm_tilt_cw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/AND_gate_3" HWVERSION="1.0" INSTANCE="AND_gate_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AND_gate" VLNV="xilinx.com:module_ref:AND_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_AND_gate_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="pwm_tilt_ccw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="pwm_tilt_ccw" PORT="pwm"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_1_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NOT_gate_1" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="C" SIGIS="undef" SIGNAME="AND_gate_3_C">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm_tilt_ccw"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/NOT_gate_0" HWVERSION="1.0" INSTANCE="NOT_gate_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="NOT_gate" VLNV="xilinx.com:module_ref:NOT_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_NOT_gate_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="xlslice_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_0_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_1" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/NOT_gate_1" HWVERSION="1.0" INSTANCE="NOT_gate_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="NOT_gate" VLNV="xilinx.com:module_ref:NOT_gate:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_NOT_gate_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="B" SIGIS="undef" SIGNAME="NOT_gate_1_B">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_3" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="2" FULLNAME="/SPI_0" HWVERSION="1.0" INSTANCE="SPI_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SPI" VLNV="xilinx.com:user:SPI:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -113,6 +281,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_3" PORT="Din"/>
+            <CONNECTION INSTANCE="xlslice_2" PORT="Din"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="SPI_sample" SIGIS="undef" SIGNAME="synchronizer_0_Q">
@@ -125,7 +295,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="miso"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="mosi" SIGIS="undef" SIGNAME="External_Ports_mosi">
+        <PORT DIR="I" NAME="mosi" POLARITY="ACTIVE_LOW" SIGIS="undef" SIGNAME="External_Ports_mosi">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="mosi"/>
           </CONNECTIONS>
@@ -259,8 +429,10 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_1_cnt">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="pwm_gen_0" PORT="cnt"/>
-            <CONNECTION INSTANCE="pwm_gen_1" PORT="cnt"/>
+            <CONNECTION INSTANCE="pwm_pan_cw" PORT="cnt"/>
+            <CONNECTION INSTANCE="pwm_pan_ccw" PORT="cnt"/>
+            <CONNECTION INSTANCE="pwm_tilt_cw" PORT="cnt"/>
+            <CONNECTION INSTANCE="pwm_tilt_ccw" PORT="cnt"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="en" SIGIS="undef" SIGNAME="xlconstant_1_dout">
@@ -276,7 +448,33 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/pwm_gen_0" HWVERSION="1.0" INSTANCE="pwm_gen_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/pwm_pan_ccw" HWVERSION="1.0" INSTANCE="pwm_pan_ccw" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_pwm_gen_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_1_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_1" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_pan_ccw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_1" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pwm_pan_cw" HWVERSION="1.0" INSTANCE="pwm_pan_cw" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="n_bits" VALUE="8"/>
@@ -294,15 +492,41 @@
             <CONNECTION INSTANCE="xlslice_1" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_gen_0_pwm">
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_pan_cw_pwm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pwm_0"/>
+            <CONNECTION INSTANCE="AND_gate_0" PORT="A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/pwm_gen_1" HWVERSION="1.0" INSTANCE="pwm_gen_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/pwm_tilt_ccw" HWVERSION="1.0" INSTANCE="pwm_tilt_ccw" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="n_bits" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_pwm_gen_0_3"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="counter_1_cnt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="counter_1" PORT="cnt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="duty" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_tilt_ccw_pwm">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_3" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/pwm_tilt_cw" HWVERSION="1.0" INSTANCE="pwm_tilt_cw" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="pwm_gen" VLNV="xilinx.com:module_ref:pwm_gen:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="n_bits" VALUE="8"/>
@@ -320,9 +544,9 @@
             <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_gen_1_pwm">
+        <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_tilt_cw_pwm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pwm_1"/>
+            <CONNECTION INSTANCE="AND_gate_2" PORT="A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -555,7 +779,8 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="pwm_gen_1" PORT="duty"/>
+            <CONNECTION INSTANCE="pwm_tilt_cw" PORT="duty"/>
+            <CONNECTION INSTANCE="pwm_tilt_ccw" PORT="duty"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -579,7 +804,58 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_1_Dout">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="pwm_gen_0" PORT="duty"/>
+            <CONNECTION INSTANCE="pwm_pan_cw" PORT="duty"/>
+            <CONNECTION INSTANCE="pwm_pan_ccw" PORT="duty"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="3" FULLNAME="/xlslice_2" HWVERSION="1.0" INSTANCE="xlslice_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_FROM" VALUE="16"/>
+        <PARAMETER NAME="DIN_TO" VALUE="16"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_2_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SPI_0_SPI_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPI_0" PORT="SPI_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_2" PORT="B"/>
+            <CONNECTION INSTANCE="NOT_gate_1" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="3" FULLNAME="/xlslice_3" HWVERSION="1.0" INSTANCE="xlslice_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_FROM" VALUE="17"/>
+        <PARAMETER NAME="DIN_TO" VALUE="17"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_2_1"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SPI_0_SPI_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SPI_0" PORT="SPI_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AND_gate_0" PORT="B"/>
+            <CONNECTION INSTANCE="NOT_gate_0" PORT="A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

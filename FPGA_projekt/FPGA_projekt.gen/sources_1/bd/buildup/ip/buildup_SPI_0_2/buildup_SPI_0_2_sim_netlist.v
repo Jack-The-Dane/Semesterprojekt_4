@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon Apr 29 10:10:55 2024
+// Date        : Tue Apr 30 15:56:03 2024
 // Host        : Cornelia running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
 //               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2_sim_netlist.v}
@@ -60,7 +60,7 @@ module buildup_SPI_0_2_SPI
     miso,
     mosi,
     rst);
-  input SPI_chip_select;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input SPI_chip_select;
   input [19:0]SPI_in;
   output [19:0]SPI_out;
   input SPI_sample;
@@ -223,8 +223,9 @@ module buildup_SPI_0_2_enable_counter
   wire \cnt_temp[0]_i_1_n_0 ;
   wire [5:1]cnt_temp_0;
   wire enable_counter_0_cnt;
-  wire out_temp__4;
   wire out_temp_i_1_n_0;
+  wire out_temp_i_2_n_0;
+  wire out_temp_i_3_n_0;
   wire rst;
 
   LUT1 #(
@@ -249,7 +250,7 @@ module buildup_SPI_0_2_enable_counter
         .I4(cnt_temp[4]),
         .I5(cnt_temp[1]),
         .O(cnt_temp_0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h6CCC)) 
     \cnt_temp[3]_i_1 
@@ -288,7 +289,7 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[0] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(\cnt_temp[0]_i_1_n_0 ),
         .Q(cnt_temp[0]));
   FDCE #(
@@ -296,7 +297,7 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[1] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(cnt_temp_0[1]),
         .Q(cnt_temp[1]));
   FDCE #(
@@ -304,7 +305,7 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[2] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(cnt_temp_0[2]),
         .Q(cnt_temp[2]));
   FDCE #(
@@ -312,7 +313,7 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[3] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(cnt_temp_0[3]),
         .Q(cnt_temp[3]));
   FDCE #(
@@ -320,7 +321,7 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[4] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(cnt_temp_0[4]),
         .Q(cnt_temp[4]));
   FDCE #(
@@ -328,35 +329,39 @@ module buildup_SPI_0_2_enable_counter
     \cnt_temp_reg[5] 
        (.C(SPI_sample),
         .CE(NOT_gate_0_B),
-        .CLR(rst),
+        .CLR(SPI_chip_select),
         .D(cnt_temp_0[5]),
         .Q(cnt_temp[5]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \data_reg[19]_i_2 
        (.I0(enable_counter_0_cnt),
         .I1(rst),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'hAAAC)) 
+  LUT6 #(
+    .INIT(64'h888888888B888888)) 
     out_temp_i_1
        (.I0(enable_counter_0_cnt),
-        .I1(out_temp__4),
-        .I2(SPI_chip_select),
-        .I3(rst),
+        .I1(SPI_chip_select),
+        .I2(cnt_temp[5]),
+        .I3(out_temp_i_2_n_0),
+        .I4(cnt_temp[4]),
+        .I5(out_temp_i_3_n_0),
         .O(out_temp_i_1_n_0));
-  LUT6 #(
-    .INIT(64'h0100000000000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     out_temp_i_2
-       (.I0(cnt_temp[5]),
-        .I1(cnt_temp[2]),
-        .I2(cnt_temp[3]),
-        .I3(cnt_temp[4]),
-        .I4(cnt_temp[0]),
-        .I5(cnt_temp[1]),
-        .O(out_temp__4));
+       (.I0(cnt_temp[2]),
+        .I1(cnt_temp[3]),
+        .O(out_temp_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    out_temp_i_3
+       (.I0(cnt_temp[0]),
+        .I1(cnt_temp[1]),
+        .O(out_temp_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     out_temp_reg

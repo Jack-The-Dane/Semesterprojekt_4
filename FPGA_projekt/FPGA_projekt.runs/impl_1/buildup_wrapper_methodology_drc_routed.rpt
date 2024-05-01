@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Apr 29 18:09:50 2024
+| Date         : Tue Apr 30 16:00:06 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_methodology -file buildup_wrapper_methodology_drc_routed.rpt -pb buildup_wrapper_methodology_drc_routed.pb -rpx buildup_wrapper_methodology_drc_routed.rpx
 | Design       : buildup_wrapper
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 164
+             Violations found: 166
 +-----------+------------------+--------------------------------+------------+
 | Rule      | Severity         | Description                    | Violations |
 +-----------+------------------+--------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell    | 87         |
 | LUTAR-1   | Warning          | LUT drives async reset alert   | 40         |
-| TIMING-20 | Warning          | Non-clocked latch              | 36         |
+| TIMING-20 | Warning          | Non-clocked latch              | 38         |
 | LATCH-1   | Advisory         | Existing latches in the design | 1          |
 +-----------+------------------+--------------------------------+------------+
 
@@ -727,152 +727,162 @@ Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[1] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[1]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[16] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[2] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[2]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[17] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[3] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[3]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[1] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[4] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[4]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[2] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[5] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[5]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[3] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[6] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[6]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[4] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[7] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[7]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[5] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[8] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[8]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[6] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[9] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[9]/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[7] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[8] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/latch_0/U0/data_reg[9] cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/latch_0/U0/data_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[0]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[10]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[11]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#26 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[16]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#27 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#28 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#29 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#30 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#31 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#32 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[3]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[4]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[5]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC/G is not reached by a timing clock
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[6]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_LDC/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
 Non-clocked latch  
 The latch buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC cannot be properly analyzed as its control pin buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[9]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 36 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 38 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Mon Apr 29 10:10:55 2024
+-- Date        : Tue Apr 30 15:56:03 2024
 -- Host        : Cornelia running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
 --               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2_sim_netlist.vhdl}
@@ -33,13 +33,14 @@ architecture STRUCTURE of buildup_SPI_0_2_enable_counter is
   signal \cnt_temp[0]_i_1_n_0\ : STD_LOGIC;
   signal cnt_temp_0 : STD_LOGIC_VECTOR ( 5 downto 1 );
   signal \^enable_counter_0_cnt\ : STD_LOGIC;
-  signal \out_temp__4\ : STD_LOGIC;
   signal out_temp_i_1_n_0 : STD_LOGIC;
+  signal out_temp_i_2_n_0 : STD_LOGIC;
+  signal out_temp_i_3_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \cnt_temp[1]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \cnt_temp[3]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \data_reg[19]_i_2\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of out_temp_i_1 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \cnt_temp[3]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of out_temp_i_2 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of out_temp_i_3 : label is "soft_lutpair1";
 begin
   enable_counter_0_cnt <= \^enable_counter_0_cnt\;
 \cnt_temp[0]_i_1\: unisim.vcomponents.LUT1
@@ -124,7 +125,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => \cnt_temp[0]_i_1_n_0\,
       Q => cnt_temp(0)
     );
@@ -135,7 +136,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => cnt_temp_0(1),
       Q => cnt_temp(1)
     );
@@ -146,7 +147,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => cnt_temp_0(2),
       Q => cnt_temp(2)
     );
@@ -157,7 +158,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => cnt_temp_0(3),
       Q => cnt_temp(3)
     );
@@ -168,7 +169,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => cnt_temp_0(4),
       Q => cnt_temp(4)
     );
@@ -179,7 +180,7 @@ begin
         port map (
       C => SPI_sample,
       CE => NOT_gate_0_B,
-      CLR => rst,
+      CLR => SPI_chip_select,
       D => cnt_temp_0(5),
       Q => cnt_temp(5)
     );
@@ -192,29 +193,36 @@ begin
       I1 => rst,
       O => E(0)
     );
-out_temp_i_1: unisim.vcomponents.LUT4
+out_temp_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"AAAC"
+      INIT => X"888888888B888888"
     )
         port map (
       I0 => \^enable_counter_0_cnt\,
-      I1 => \out_temp__4\,
-      I2 => SPI_chip_select,
-      I3 => rst,
+      I1 => SPI_chip_select,
+      I2 => cnt_temp(5),
+      I3 => out_temp_i_2_n_0,
+      I4 => cnt_temp(4),
+      I5 => out_temp_i_3_n_0,
       O => out_temp_i_1_n_0
     );
-out_temp_i_2: unisim.vcomponents.LUT6
+out_temp_i_2: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0100000000000000"
+      INIT => X"1"
     )
         port map (
-      I0 => cnt_temp(5),
-      I1 => cnt_temp(2),
-      I2 => cnt_temp(3),
-      I3 => cnt_temp(4),
-      I4 => cnt_temp(0),
-      I5 => cnt_temp(1),
-      O => \out_temp__4\
+      I0 => cnt_temp(2),
+      I1 => cnt_temp(3),
+      O => out_temp_i_2_n_0
+    );
+out_temp_i_3: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => cnt_temp(0),
+      I1 => cnt_temp(1),
+      O => out_temp_i_3_n_0
     );
 out_temp_reg: unisim.vcomponents.FDRE
     generic map(
@@ -2176,8 +2184,10 @@ architecture STRUCTURE of buildup_SPI_0_2_SPI is
   attribute x_core_info of latch_0 : label is "latch,Vivado 2023.2";
   attribute x_core_info of spi_in_RnM : label is "shift_register_generic,Vivado 2023.2";
   attribute x_interface_info : string;
-  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
+  attribute x_interface_info of SPI_chip_select : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute x_interface_parameter : string;
+  attribute x_interface_parameter of SPI_chip_select : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  attribute x_interface_info of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
   attribute x_interface_parameter of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
 Prescaler: entity work.buildup_SPI_0_2_SPI_enable_counter_0_0

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 29 10:09:40 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 30 15:47:43 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="SPI" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -8,6 +8,7 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="NOT_gate_0" PORT="A"/>
         <CONNECTION INSTANCE="SPI_in" PORT="chip_select"/>
+        <CONNECTION INSTANCE="Prescaler" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="19" NAME="SPI_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_SPI_in">
@@ -38,9 +39,8 @@
     </PORT>
     <PORT DIR="I" NAME="rst" SIGIS="undef" SIGNAME="External_Ports_rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Prescaler" PORT="rst"/>
-        <CONNECTION INSTANCE="latch_0" PORT="rst"/>
         <CONNECTION INSTANCE="SPI_in" PORT="rst"/>
+        <CONNECTION INSTANCE="latch_0" PORT="rst"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -86,9 +86,9 @@
             <CONNECTION INSTANCE="NOT_gate_0" PORT="B"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_SPI_chip_select">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="SPI_chip_select"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="sample" SIGIS="undef" SIGNAME="External_Ports_SPI_sample">

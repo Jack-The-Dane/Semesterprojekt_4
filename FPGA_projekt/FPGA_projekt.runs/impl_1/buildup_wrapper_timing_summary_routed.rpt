@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Apr 29 18:09:51 2024
+| Date         : Tue Apr 30 16:00:06 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file buildup_wrapper_timing_summary_routed.rpt -pb buildup_wrapper_timing_summary_routed.pb -rpx buildup_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : buildup_wrapper
@@ -45,7 +45,7 @@ Rule       Severity          Description                     Violations
 ---------  ----------------  ------------------------------  ----------  
 TIMING-17  Critical Warning  Non-clocked sequential cell     87          
 LUTAR-1    Warning           LUT drives async reset alert    40          
-TIMING-20  Warning           Non-clocked latch               36          
+TIMING-20  Warning           Non-clocked latch               38          
 LATCH-1    Advisory          Existing latches in the design  1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
@@ -56,12 +56,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (183)
+1. checking no_clock (187)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (223)
+4. checking unconstrained_internal_endpoints (225)
 5. checking no_input_delay (10)
-6. checking no_output_delay (3)
+6. checking no_output_delay (5)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -69,7 +69,7 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (183)
+1. checking no_clock (187)
 --------------------------
  There are 20 register/latch pins with no clock driven by root clock pin: CS (HIGH)
 
@@ -79,9 +79,9 @@ Table of Contents
 
  There are 31 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 16 register/latch pins with no clock driven by root clock pin: rst (HIGH)
+ There are 18 register/latch pins with no clock driven by root clock pin: rst (HIGH)
 
- There are 16 register/latch pins with no clock driven by root clock pin: buildup_i/SPI_0/U0/Prescaler/U0/out_temp_reg/Q (HIGH)
+ There are 18 register/latch pins with no clock driven by root clock pin: buildup_i/SPI_0/U0/Prescaler/U0/out_temp_reg/Q (HIGH)
 
  There is 1 register/latch pin with no clock driven by root clock pin: buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/Q (HIGH)
 
@@ -140,9 +140,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (223)
+4. checking unconstrained_internal_endpoints (225)
 --------------------------------------------------
- There are 223 pins that are not constrained for maximum delay. (HIGH)
+ There are 225 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -154,9 +154,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (3)
+6. checking no_output_delay (5)
 -------------------------------
- There are 3 ports with no output delay specified. (HIGH)
+ There are 5 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -201,7 +201,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                  227          inf        0.000                      0                  227           NA           NA                      NA                    NA  
+        inf        0.000                      0                  234          inf        0.000                      0                  234           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -270,13 +270,67 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay           227 Endpoints
-Min Delay           227 Endpoints
+Max Delay           234 Endpoints
+Min Delay           234 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 buildup_i/counter_1/U0/cnt_int_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            pwm_pan_ccw
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.432ns  (logic 5.006ns (53.077%)  route 4.426ns (46.923%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDCE                         0.000     0.000 r  buildup_i/counter_1/U0/cnt_int_reg[2]/C
+    SLICE_X112Y81        FDCE (Prop_fdce_C_Q)         0.478     0.478 r  buildup_i/counter_1/U0/cnt_int_reg[2]/Q
+                         net (fo=13, routed)          1.059     1.537    buildup_i/pwm_pan_ccw_RnM/U0/cnt[2]
+    SLICE_X110Y81        LUT4 (Prop_lut4_I1_O)        0.301     1.838 r  buildup_i/pwm_pan_ccw_RnM/U0/pwm_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     1.838    buildup_i/pwm_pan_ccw_RnM/U0/pwm_INST_0_i_7_n_0
+    SLICE_X110Y81        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.388 r  buildup_i/pwm_pan_ccw_RnM/U0/pwm_INST_0/CO[3]
+                         net (fo=1, routed)           1.259     3.646    buildup_i/AND_gate_1/A
+    SLICE_X113Y78        LUT2 (Prop_lut2_I0_O)        0.124     3.770 r  buildup_i/AND_gate_1/C_INST_0/O
+                         net (fo=1, routed)           2.109     5.879    pwm_pan_ccw_OBUF
+    V16                  OBUF (Prop_obuf_I_O)         3.553     9.432 r  pwm_pan_ccw_OBUF_inst/O
+                         net (fo=0)                   0.000     9.432    pwm_pan_ccw
+    V16                                                               r  pwm_pan_ccw (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/SPI_0/U0/latch_0/U0/data_reg[3]/G
+                            (positive level-sensitive latch)
+  Destination:            pwm_tilt_cw
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        9.297ns  (logic 4.911ns (52.818%)  route 4.386ns (47.182%))
+  Logic Levels:           5  (CARRY4=1 LDCE=1 LUT2=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X110Y81        LDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[3]/G
+    SLICE_X110Y81        LDCE (EnToQ_ldce_G_Q)        0.559     0.559 r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[3]/Q
+                         net (fo=4, routed)           0.985     1.544    buildup_i/pwm_tilt_cw_RnM/U0/duty[3]
+    SLICE_X111Y80        LUT4 (Prop_lut4_I2_O)        0.124     1.668 r  buildup_i/pwm_tilt_cw_RnM/U0/pwm_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     1.668    buildup_i/pwm_tilt_cw_RnM/U0/pwm_INST_0_i_7_n_0
+    SLICE_X111Y80        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.218 r  buildup_i/pwm_tilt_cw_RnM/U0/pwm_INST_0/CO[3]
+                         net (fo=1, routed)           1.240     3.458    buildup_i/AND_gate_2/A
+    SLICE_X112Y78        LUT2 (Prop_lut2_I0_O)        0.124     3.582 r  buildup_i/AND_gate_2/C_INST_0/O
+                         net (fo=1, routed)           2.162     5.743    pwm_tilt_cw_OBUF
+    W16                  OBUF (Prop_obuf_I_O)         3.554     9.297 r  pwm_tilt_cw_OBUF_inst/O
+                         net (fo=0)                   0.000     9.297    pwm_tilt_cw
+    W16                                                               r  pwm_tilt_cw (OUT)
+  -------------------------------------------------------------------    -------------------
+
 Slack:                    inf
   Source:                 CS
                             (input port)
@@ -284,7 +338,7 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.807ns  (logic 5.033ns (57.148%)  route 3.774ns (42.852%))
+  Data Path Delay:        9.112ns  (logic 5.033ns (55.236%)  route 4.079ns (44.764%))
   Logic Levels:           2  (IBUF=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -292,60 +346,106 @@ Slack:                    inf
     U19                                               0.000     0.000 r  CS (IN)
                          net (fo=0)                   0.000     0.000    CS
     U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          3.774     5.277    led_0_OBUF
-    R14                  OBUF (Prop_obuf_I_O)         3.530     8.807 r  led_0_OBUF_inst/O
-                         net (fo=0)                   0.000     8.807    led_0
+                         net (fo=50, routed)          4.079     5.582    led_0_OBUF
+    R14                  OBUF (Prop_obuf_I_O)         3.530     9.112 r  led_0_OBUF_inst/O
+                         net (fo=0)                   0.000     9.112    led_0
     R14                                                               r  led_0 (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/latch_0/U0/data_reg[8]/G
-                            (positive level-sensitive latch)
-  Destination:            pwm_0
-                            (output port)
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.613ns  (logic 5.042ns (58.548%)  route 3.570ns (41.452%))
-  Logic Levels:           4  (CARRY4=1 LDCE=1 LUT4=1 OBUF=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X108Y84        LDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[8]/G
-    SLICE_X108Y84        LDCE (EnToQ_ldce_G_Q)        0.827     0.827 r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[8]/Q
-                         net (fo=2, routed)           0.953     1.780    buildup_i/pwm_gen_0/U0/duty[0]
-    SLICE_X108Y83        LUT4 (Prop_lut4_I0_O)        0.124     1.904 r  buildup_i/pwm_gen_0/U0/pwm_INST_0_i_8/O
-                         net (fo=1, routed)           0.000     1.904    buildup_i/pwm_gen_0/U0/pwm_INST_0_i_8_n_0
-    SLICE_X108Y83        CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.417 r  buildup_i/pwm_gen_0/U0/pwm_INST_0/CO[3]
-                         net (fo=1, routed)           2.617     5.034    pwm_0_OBUF
-    Y18                  OBUF (Prop_obuf_I_O)         3.578     8.613 r  pwm_0_OBUF_inst/O
-                         net (fo=0)                   0.000     8.613    pwm_0
-    Y18                                                               r  pwm_0 (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 buildup_i/counter_1/U0/cnt_int_reg[2]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            pwm_1
+  Destination:            pwm_tilt_ccw
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.321ns  (logic 4.820ns (57.927%)  route 3.501ns (42.073%))
-  Logic Levels:           4  (CARRY4=1 FDCE=1 LUT4=1 OBUF=1)
+  Data Path Delay:        8.907ns  (logic 5.054ns (56.746%)  route 3.853ns (43.254%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT4=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X110Y83        FDCE                         0.000     0.000 r  buildup_i/counter_1/U0/cnt_int_reg[2]/C
-    SLICE_X110Y83        FDCE (Prop_fdce_C_Q)         0.419     0.419 r  buildup_i/counter_1/U0/cnt_int_reg[2]/Q
-                         net (fo=9, routed)           0.875     1.294    buildup_i/pwm_gen_1/U0/cnt[2]
-    SLICE_X109Y82        LUT4 (Prop_lut4_I1_O)        0.299     1.593 r  buildup_i/pwm_gen_1/U0/pwm_INST_0_i_7/O
-                         net (fo=1, routed)           0.000     1.593    buildup_i/pwm_gen_1/U0/pwm_INST_0_i_7_n_0
-    SLICE_X109Y82        CARRY4 (Prop_carry4_S[1]_CO[3])
-                                                      0.550     2.143 r  buildup_i/pwm_gen_1/U0/pwm_INST_0/CO[3]
-                         net (fo=1, routed)           2.626     4.769    pwm_1_OBUF
-    V16                  OBUF (Prop_obuf_I_O)         3.552     8.321 r  pwm_1_OBUF_inst/O
-                         net (fo=0)                   0.000     8.321    pwm_1
-    V16                                                               r  pwm_1 (OUT)
+    SLICE_X112Y81        FDCE                         0.000     0.000 r  buildup_i/counter_1/U0/cnt_int_reg[2]/C
+    SLICE_X112Y81        FDCE (Prop_fdce_C_Q)         0.478     0.478 r  buildup_i/counter_1/U0/cnt_int_reg[2]/Q
+                         net (fo=13, routed)          0.877     1.355    buildup_i/pwm_tilt_ccw_RnM/U0/cnt[2]
+    SLICE_X111Y81        LUT4 (Prop_lut4_I1_O)        0.301     1.656 r  buildup_i/pwm_tilt_ccw_RnM/U0/pwm_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     1.656    buildup_i/pwm_tilt_ccw_RnM/U0/pwm_INST_0_i_7_n_0
+    SLICE_X111Y81        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.206 r  buildup_i/pwm_tilt_ccw_RnM/U0/pwm_INST_0/CO[3]
+                         net (fo=1, routed)           0.921     3.127    buildup_i/AND_gate_3/A
+    SLICE_X112Y81        LUT2 (Prop_lut2_I0_O)        0.124     3.251 r  buildup_i/AND_gate_3/C_INST_0/O
+                         net (fo=1, routed)           2.055     5.306    pwm_tilt_ccw_OBUF
+    V12                  OBUF (Prop_obuf_I_O)         3.601     8.907 r  pwm_tilt_ccw_OBUF_inst/O
+                         net (fo=0)                   0.000     8.907    pwm_tilt_ccw
+    V12                                                               r  pwm_tilt_ccw (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/counter_1/U0/cnt_int_reg[2]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            pwm_pan_cw
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.765ns  (logic 5.032ns (57.414%)  route 3.733ns (42.586%))
+  Logic Levels:           5  (CARRY4=1 FDCE=1 LUT2=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y81        FDCE                         0.000     0.000 r  buildup_i/counter_1/U0/cnt_int_reg[2]/C
+    SLICE_X112Y81        FDCE (Prop_fdce_C_Q)         0.478     0.478 r  buildup_i/counter_1/U0/cnt_int_reg[2]/Q
+                         net (fo=13, routed)          0.892     1.370    buildup_i/pwm_pan_cw_RnM/U0/cnt[2]
+    SLICE_X110Y80        LUT4 (Prop_lut4_I1_O)        0.301     1.671 r  buildup_i/pwm_pan_cw_RnM/U0/pwm_INST_0_i_7/O
+                         net (fo=1, routed)           0.000     1.671    buildup_i/pwm_pan_cw_RnM/U0/pwm_INST_0_i_7_n_0
+    SLICE_X110Y80        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.221 r  buildup_i/pwm_pan_cw_RnM/U0/pwm_INST_0/CO[3]
+                         net (fo=1, routed)           0.738     2.959    buildup_i/AND_gate_0/A
+    SLICE_X113Y78        LUT2 (Prop_lut2_I0_O)        0.124     3.083 r  buildup_i/AND_gate_0/C_INST_0/O
+                         net (fo=1, routed)           2.103     5.186    pwm_pan_cw_OBUF
+    Y18                  OBUF (Prop_obuf_I_O)         3.579     8.765 r  pwm_pan_cw_OBUF_inst/O
+                         net (fo=0)                   0.000     8.765    pwm_pan_cw
+    Y18                                                               r  pwm_pan_cw (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 rst
+                            (input port)
+  Destination:            led_2
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.721ns  (logic 5.063ns (58.053%)  route 3.658ns (41.947%))
+  Logic Levels:           2  (IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    W18                                               0.000     0.000 r  rst (IN)
+                         net (fo=0)                   0.000     0.000    rst
+    W18                  IBUF (Prop_ibuf_I_O)         1.490     1.490 r  rst_IBUF_inst/O
+                         net (fo=32, routed)          3.658     5.148    led_2_OBUF
+    N16                  OBUF (Prop_obuf_I_O)         3.572     8.721 r  led_2_OBUF_inst/O
+                         net (fo=0)                   0.000     8.721    led_2
+    N16                                                               r  led_2 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 mosi
+                            (input port)
+  Destination:            led_3
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.168ns  (logic 5.079ns (62.186%)  route 3.089ns (37.814%))
+  Logic Levels:           2  (IBUF=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    U18                                               0.000     0.000 r  mosi (IN)
+                         net (fo=0)                   0.000     0.000    mosi
+    U18                  IBUF (Prop_ibuf_I_O)         1.498     1.498 r  mosi_IBUF_inst/O
+                         net (fo=3, routed)           3.089     4.587    led_3_OBUF
+    M14                  OBUF (Prop_obuf_I_O)         3.581     8.168 r  led_3_OBUF_inst/O
+                         net (fo=0)                   0.000     8.168    led_3
+    M14                                                               r  led_3 (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -354,7 +454,7 @@ Slack:                    inf
   Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_C/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.922ns  (logic 2.894ns (36.534%)  route 5.028ns (63.466%))
+  Data Path Delay:        8.014ns  (logic 2.664ns (33.244%)  route 5.350ns (66.756%))
   Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -362,14 +462,14 @@ Slack:                    inf
     U19                                               0.000     0.000 r  CS (IN)
                          net (fo=0)                   0.000     0.000    CS
     U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          2.913     4.416    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X113Y86        LUT2 (Prop_lut2_I0_O)        0.152     4.568 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2/O
-                         net (fo=2, routed)           0.690     5.258    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2_n_0
-    SLICE_X111Y83        LDCE (SetClr_ldce_CLR_Q)     1.087     6.345 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/Q
-                         net (fo=2, routed)           0.798     7.143    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_n_0
-    SLICE_X111Y82        LUT3 (Prop_lut3_I1_O)        0.152     7.295 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[2]_C_i_1/O
-                         net (fo=2, routed)           0.627     7.922    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[2]
-    SLICE_X112Y81        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_C/D
+                         net (fo=50, routed)          2.959     4.462    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
+    SLICE_X111Y86        LUT2 (Prop_lut2_I0_O)        0.124     4.586 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2/O
+                         net (fo=2, routed)           0.491     5.077    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2_n_0
+    SLICE_X111Y85        LDCE (SetClr_ldce_CLR_Q)     0.885     5.962 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/Q
+                         net (fo=2, routed)           1.114     7.076    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_n_0
+    SLICE_X111Y86        LUT3 (Prop_lut3_I1_O)        0.152     7.228 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[2]_C_i_1/O
+                         net (fo=2, routed)           0.786     8.014    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[2]
+    SLICE_X110Y82        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_C/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -378,7 +478,7 @@ Slack:                    inf
   Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_P/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.828ns  (logic 2.894ns (36.970%)  route 4.934ns (63.030%))
+  Data Path Delay:        8.005ns  (logic 2.664ns (33.282%)  route 5.341ns (66.718%))
   Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT3=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -386,134 +486,35 @@ Slack:                    inf
     U19                                               0.000     0.000 r  CS (IN)
                          net (fo=0)                   0.000     0.000    CS
     U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          2.913     4.416    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X113Y86        LUT2 (Prop_lut2_I0_O)        0.152     4.568 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2/O
-                         net (fo=2, routed)           0.690     5.258    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2_n_0
-    SLICE_X111Y83        LDCE (SetClr_ldce_CLR_Q)     1.087     6.345 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/Q
-                         net (fo=2, routed)           0.798     7.143    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_n_0
-    SLICE_X111Y82        LUT3 (Prop_lut3_I1_O)        0.152     7.295 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[2]_C_i_1/O
-                         net (fo=2, routed)           0.534     7.828    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[2]
-    SLICE_X111Y81        FDPE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_P/D
+                         net (fo=50, routed)          2.959     4.462    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
+    SLICE_X111Y86        LUT2 (Prop_lut2_I0_O)        0.124     4.586 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2/O
+                         net (fo=2, routed)           0.491     5.077    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2_n_0
+    SLICE_X111Y85        LDCE (SetClr_ldce_CLR_Q)     0.885     5.962 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/Q
+                         net (fo=2, routed)           1.114     7.076    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_n_0
+    SLICE_X111Y86        LUT3 (Prop_lut3_I1_O)        0.152     7.228 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[2]_C_i_1/O
+                         net (fo=2, routed)           0.777     8.005    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[2]
+    SLICE_X111Y83        FDPE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[2]_P/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 CS
+  Source:                 sclk
                             (input port)
-  Destination:            buildup_i/SPI_0/U0/latch_0/U0/data_reg[1]/D
+  Destination:            led_1
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.743ns  (logic 2.866ns (37.017%)  route 4.877ns (62.983%))
-  Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT4=1)
+  Data Path Delay:        7.897ns  (logic 5.044ns (63.873%)  route 2.853ns (36.127%))
+  Logic Levels:           2  (IBUF=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    U19                                               0.000     0.000 r  CS (IN)
-                         net (fo=0)                   0.000     0.000    CS
-    U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          2.913     4.416    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X113Y86        LUT2 (Prop_lut2_I0_O)        0.152     4.568 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2/O
-                         net (fo=2, routed)           0.690     5.258    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_i_2_n_0
-    SLICE_X111Y83        LDCE (SetClr_ldce_CLR_Q)     1.087     6.345 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC/Q
-                         net (fo=2, routed)           0.798     7.143    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[1]_LDC_n_0
-    SLICE_X111Y82        LUT4 (Prop_lut4_I2_O)        0.124     7.267 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/data_reg[1]_i_1/O
-                         net (fo=1, routed)           0.476     7.743    buildup_i/SPI_0/U0/latch_0/U0/D[1]
-    SLICE_X109Y82        LDCE                                         r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[1]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 CS
-                            (input port)
-  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_P/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.455ns  (logic 2.636ns (35.363%)  route 4.819ns (64.637%))
-  Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    U19                                               0.000     0.000 r  CS (IN)
-                         net (fo=0)                   0.000     0.000    CS
-    U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          3.207     4.710    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X111Y88        LUT2 (Prop_lut2_I0_O)        0.124     4.834 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_2/O
-                         net (fo=2, routed)           0.629     5.463    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_2_n_0
-    SLICE_X111Y88        LDCE (SetClr_ldce_CLR_Q)     0.885     6.348 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/Q
-                         net (fo=1, routed)           0.493     6.841    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_n_0
-    SLICE_X111Y88        LUT3 (Prop_lut3_I1_O)        0.124     6.965 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[18]_C_i_1/O
-                         net (fo=2, routed)           0.490     7.455    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[18]
-    SLICE_X113Y86        FDPE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_P/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 CS
-                            (input port)
-  Destination:            buildup_i/SPI_0/U0/latch_0/U0/data_reg[12]/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.315ns  (logic 2.649ns (36.218%)  route 4.665ns (63.782%))
-  Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT4=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    U19                                               0.000     0.000 r  CS (IN)
-                         net (fo=0)                   0.000     0.000    CS
-    U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          2.587     4.090    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X109Y87        LUT2 (Prop_lut2_I0_O)        0.124     4.214 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_2/O
-                         net (fo=2, routed)           0.629     4.843    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_2_n_0
-    SLICE_X108Y90        LDCE (SetClr_ldce_CLR_Q)     0.898     5.741 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/Q
-                         net (fo=2, routed)           0.594     6.335    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_n_0
-    SLICE_X108Y89        LUT4 (Prop_lut4_I2_O)        0.124     6.459 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/data_reg[12]_i_1/O
-                         net (fo=1, routed)           0.855     7.315    buildup_i/SPI_0/U0/latch_0/U0/D[12]
-    SLICE_X108Y83        LDCE                                         r  buildup_i/SPI_0/U0/latch_0/U0/data_reg[12]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 CS
-                            (input port)
-  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_C/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.314ns  (logic 2.636ns (36.044%)  route 4.678ns (63.956%))
-  Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    U19                                               0.000     0.000 r  CS (IN)
-                         net (fo=0)                   0.000     0.000    CS
-    U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          3.207     4.710    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X111Y88        LUT2 (Prop_lut2_I0_O)        0.124     4.834 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_2/O
-                         net (fo=2, routed)           0.629     5.463    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_i_2_n_0
-    SLICE_X111Y88        LDCE (SetClr_ldce_CLR_Q)     0.885     6.348 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC/Q
-                         net (fo=1, routed)           0.493     6.841    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[17]_LDC_n_0
-    SLICE_X111Y88        LUT3 (Prop_lut3_I1_O)        0.124     6.965 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[18]_C_i_1/O
-                         net (fo=2, routed)           0.349     7.314    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[18]
-    SLICE_X112Y87        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[18]_C/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 CS
-                            (input port)
-  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_C/D
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.261ns  (logic 2.675ns (36.842%)  route 4.586ns (63.158%))
-  Logic Levels:           4  (IBUF=1 LDCE=1 LUT2=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    U19                                               0.000     0.000 r  CS (IN)
-                         net (fo=0)                   0.000     0.000    CS
-    U19                  IBUF (Prop_ibuf_I_O)         1.503     1.503 r  CS_IBUF_inst/O
-                         net (fo=44, routed)          2.587     4.090    buildup_i/SPI_0/U0/spi_in_RnM/U0/SPI_chip_select
-    SLICE_X109Y87        LUT2 (Prop_lut2_I0_O)        0.124     4.214 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_2/O
-                         net (fo=2, routed)           0.629     4.843    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_i_2_n_0
-    SLICE_X108Y90        LDCE (SetClr_ldce_CLR_Q)     0.898     5.741 f  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC/Q
-                         net (fo=2, routed)           0.594     6.335    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[12]_LDC_n_0
-    SLICE_X108Y89        LUT3 (Prop_lut3_I1_O)        0.150     6.485 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[13]_C_i_1/O
-                         net (fo=2, routed)           0.776     7.261    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[13]
-    SLICE_X108Y85        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[13]_C/D
+    W19                                               0.000     0.000 r  sclk (IN)
+                         net (fo=0)                   0.000     0.000    sclk
+    W19                  IBUF (Prop_ibuf_I_O)         1.487     1.487 r  sclk_IBUF_inst/O
+                         net (fo=2, routed)           2.853     4.340    led_1_OBUF
+    P14                  OBUF (Prop_obuf_I_O)         3.557     7.897 r  led_1_OBUF_inst/O
+                         net (fo=0)                   0.000     7.897    led_1
+    P14                                                               r  led_1 (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -523,20 +524,58 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C
+  Source:                 buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/D
+  Destination:            buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_2_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.255ns  (logic 0.141ns (55.284%)  route 0.114ns (44.716%))
+  Data Path Delay:        0.262ns  (logic 0.128ns (48.842%)  route 0.134ns (51.158%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X113Y82        FDRE                         0.000     0.000 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C
-    SLICE_X113Y82        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/Q
-                         net (fo=3, routed)           0.114     0.255    buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1
-    SLICE_X113Y82        FDRE                                         r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/D
+    SLICE_X113Y83        FDRE                         0.000     0.000 r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/C
+    SLICE_X113Y83        FDRE (Prop_fdre_C_Q)         0.128     0.128 r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/Q
+                         net (fo=2, routed)           0.134     0.262    buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1
+    SLICE_X113Y83        FDRE                                         r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.291ns  (logic 0.209ns (71.796%)  route 0.082ns (28.204%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X112Y85        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C/C
+    SLICE_X112Y85        FDCE (Prop_fdce_C_Q)         0.164     0.164 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C/Q
+                         net (fo=1, routed)           0.082     0.246    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_C_n_0
+    SLICE_X113Y85        LUT5 (Prop_lut5_I2_O)        0.045     0.291 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_i_1/O
+                         net (fo=1, routed)           0.000     0.291    buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_i_1_n_0
+    SLICE_X113Y85        FDRE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/G
+                            (positive level-sensitive latch)
+  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_C/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.292ns  (logic 0.206ns (70.625%)  route 0.086ns (29.375%))
+  Logic Levels:           2  (LDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X106Y80        LDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/G
+    SLICE_X106Y80        LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC/Q
+                         net (fo=2, routed)           0.086     0.244    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[7]_LDC_n_0
+    SLICE_X107Y80        LUT3 (Prop_lut3_I1_O)        0.048     0.292 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[8]_C_i_1/O
+                         net (fo=2, routed)           0.000     0.292    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[8]
+    SLICE_X107Y80        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[8]_C/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -545,163 +584,127 @@ Slack:                    inf
   Destination:            buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_2_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.263ns  (logic 0.128ns (48.625%)  route 0.135ns (51.375%))
+  Data Path Delay:        0.298ns  (logic 0.141ns (47.272%)  route 0.157ns (52.728%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X113Y82        FDRE                         0.000     0.000 r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1_reg/C
-    SLICE_X113Y82        FDRE (Prop_fdre_C_Q)         0.128     0.128 r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1_reg/Q
-                         net (fo=3, routed)           0.135     0.263    buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1
-    SLICE_X113Y82        FDRE                                         r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_2_reg/D
+    SLICE_X113Y83        FDRE                         0.000     0.000 r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1_reg/C
+    SLICE_X113Y83        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1_reg/Q
+                         net (fo=3, routed)           0.157     0.298    buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_1
+    SLICE_X113Y83        FDRE                                         r  buildup_i/block_encoder_1/U0/edge_detector_a/U0/latch_2_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1_reg/C
+  Source:                 buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C
                             (rising edge-triggered cell FDRE)
-  Destination:            buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_2_reg/D
+  Destination:            buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.266ns  (logic 0.141ns (53.104%)  route 0.125ns (46.896%))
+  Data Path Delay:        0.330ns  (logic 0.141ns (42.781%)  route 0.189ns (57.219%))
   Logic Levels:           1  (FDRE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X113Y82        FDRE                         0.000     0.000 r  buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1_reg/C
-    SLICE_X113Y82        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1_reg/Q
-                         net (fo=2, routed)           0.125     0.266    buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_1
-    SLICE_X113Y82        FDRE                                         r  buildup_i/block_encoder_0/U0/edge_detector_b/U0/latch_2_reg/D
+    SLICE_X113Y83        FDRE                         0.000     0.000 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/C
+    SLICE_X113Y83        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1_reg/Q
+                         net (fo=3, routed)           0.189     0.330    buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_1
+    SLICE_X109Y83        FDRE                                         r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/G
-                            (positive level-sensitive latch)
-  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_C/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.292ns  (logic 0.206ns (70.625%)  route 0.086ns (29.375%))
-  Logic Levels:           2  (LDCE=1 LUT3=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X106Y85        LDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/G
-    SLICE_X106Y85        LDCE (EnToQ_ldce_G_Q)        0.158     0.158 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC/Q
-                         net (fo=2, routed)           0.086     0.244    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[14]_LDC_n_0
-    SLICE_X107Y85        LUT3 (Prop_lut3_I1_O)        0.048     0.292 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data[15]_C_i_1/O
-                         net (fo=2, routed)           0.000     0.292    buildup_i/SPI_0/U0/spi_in_RnM/U0/p_2_in[15]
-    SLICE_X107Y85        FDCE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[15]_C/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.311ns  (logic 0.186ns (59.835%)  route 0.125ns (40.165%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X109Y80        FDCE                         0.000     0.000 r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C
-    SLICE_X109Y80        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/Q
-                         net (fo=14, routed)          0.125     0.266    buildup_i/block_encoder_0/U0/up_down_counter_0/U0/Q[1]
-    SLICE_X108Y80        LUT6 (Prop_lut6_I2_O)        0.045     0.311 r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt[3]_i_1/O
-                         net (fo=1, routed)           0.000     0.311    buildup_i/block_encoder_0/U0/up_down_counter_0/U0/p_0_in[3]
-    SLICE_X108Y80        FDCE                                         r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_2_reg/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.313ns  (logic 0.128ns (40.934%)  route 0.185ns (59.066%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X113Y82        FDRE                         0.000     0.000 r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/C
-    SLICE_X113Y82        FDRE (Prop_fdre_C_Q)         0.128     0.128 r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1_reg/Q
-                         net (fo=2, routed)           0.185     0.313    buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_1
-    SLICE_X113Y82        FDRE                                         r  buildup_i/block_encoder_1/U0/edge_detector_b/U0/latch_2_reg/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[0]/C
-                            (rising edge-triggered cell FDCE)
-  Destination:            buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[2]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.314ns  (logic 0.209ns (66.640%)  route 0.105ns (33.360%))
-  Logic Levels:           2  (FDCE=1 LUT6=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X108Y79        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[0]/C
-    SLICE_X108Y79        FDCE (Prop_fdce_C_Q)         0.164     0.164 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[0]/Q
-                         net (fo=7, routed)           0.105     0.269    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[0]
-    SLICE_X109Y79        LUT6 (Prop_lut6_I0_O)        0.045     0.314 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[2]_i_1/O
-                         net (fo=1, routed)           0.000     0.314    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_0[2]
-    SLICE_X109Y79        FDCE                                         r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[2]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/C
+  Source:                 buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/C
                             (rising edge-triggered cell FDCE)
   Destination:            buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[5]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.317ns  (logic 0.186ns (58.622%)  route 0.131ns (41.378%))
+  Data Path Delay:        0.331ns  (logic 0.227ns (68.576%)  route 0.104ns (31.424%))
   Logic Levels:           2  (FDCE=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y79        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/C
-    SLICE_X109Y79        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/Q
-                         net (fo=4, routed)           0.131     0.272    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[4]
-    SLICE_X109Y79        LUT6 (Prop_lut6_I4_O)        0.045     0.317 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[5]_i_2/O
-                         net (fo=1, routed)           0.000     0.317    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_0[5]
-    SLICE_X109Y79        FDCE                                         r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[5]/D
+    SLICE_X110Y84        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/C
+    SLICE_X110Y84        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/Q
+                         net (fo=5, routed)           0.104     0.232    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[3]
+    SLICE_X110Y84        LUT6 (Prop_lut6_I2_O)        0.099     0.331 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[5]_i_2/O
+                         net (fo=1, routed)           0.000     0.331    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_0[5]
+    SLICE_X110Y84        FDCE                                         r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[5]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/C
+  Source:                 buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/C
                             (rising edge-triggered cell FDCE)
   Destination:            buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.318ns  (logic 0.186ns (58.438%)  route 0.132ns (41.562%))
+  Data Path Delay:        0.332ns  (logic 0.227ns (68.370%)  route 0.105ns (31.630%))
   Logic Levels:           2  (FDCE=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X109Y79        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/C
-    SLICE_X109Y79        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/Q
-                         net (fo=4, routed)           0.132     0.273    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[4]
-    SLICE_X109Y79        LUT6 (Prop_lut6_I4_O)        0.045     0.318 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[4]_i_1/O
-                         net (fo=1, routed)           0.000     0.318    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_0[4]
-    SLICE_X109Y79        FDCE                                         r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/D
+    SLICE_X110Y84        FDCE                         0.000     0.000 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/C
+    SLICE_X110Y84        FDCE (Prop_fdce_C_Q)         0.128     0.128 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[3]/Q
+                         net (fo=5, routed)           0.105     0.233    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[3]
+    SLICE_X110Y84        LUT6 (Prop_lut6_I2_O)        0.099     0.332 r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp[4]_i_1/O
+                         net (fo=1, routed)           0.000     0.332    buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_0[4]
+    SLICE_X110Y84        FDCE                                         r  buildup_i/SPI_0/U0/Prescaler/U0/cnt_temp_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P/C
-                            (rising edge-triggered cell FDPE)
-  Destination:            buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_reg/D
+  Source:                 buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.322ns  (logic 0.186ns (57.733%)  route 0.136ns (42.267%))
-  Logic Levels:           2  (FDPE=1 LUT5=1)
+  Data Path Delay:        0.334ns  (logic 0.186ns (55.654%)  route 0.148ns (44.346%))
+  Logic Levels:           2  (FDRE=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X113Y88        FDPE                         0.000     0.000 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P/C
-    SLICE_X113Y88        FDPE (Prop_fdpe_C_Q)         0.141     0.141 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P/Q
-                         net (fo=1, routed)           0.136     0.277    buildup_i/SPI_0/U0/spi_in_RnM/U0/register_data_reg[19]_P_n_0
-    SLICE_X113Y87        LUT5 (Prop_lut5_I0_O)        0.045     0.322 r  buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_i_1/O
-                         net (fo=1, routed)           0.000     0.322    buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_i_1_n_0
-    SLICE_X113Y87        FDRE                                         r  buildup_i/SPI_0/U0/spi_in_RnM/U0/carry_out_reg/D
+    SLICE_X109Y83        FDRE                         0.000     0.000 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/C
+    SLICE_X109Y83        FDRE (Prop_fdre_C_Q)         0.141     0.141 r  buildup_i/block_encoder_0/U0/edge_detector_a/U0/latch_2_reg/Q
+                         net (fo=2, routed)           0.148     0.289    buildup_i/block_encoder_0/U0/up_down_counter_0/U0/latch_2
+    SLICE_X109Y84        LUT6 (Prop_lut6_I3_O)        0.045     0.334 r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.334    buildup_i/block_encoder_0/U0/up_down_counter_0/U0/p_0_in[0]
+    SLICE_X109Y84        FDCE                                         r  buildup_i/block_encoder_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/clock_divider_0/U0/cnt_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            buildup_i/clock_divider_0/U0/cnt_reg[3]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.339ns  (logic 0.183ns (53.966%)  route 0.156ns (46.034%))
+  Logic Levels:           2  (FDCE=1 LUT4=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X111Y79        FDCE                         0.000     0.000 r  buildup_i/clock_divider_0/U0/cnt_reg[3]/C
+    SLICE_X111Y79        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  buildup_i/clock_divider_0/U0/cnt_reg[3]/Q
+                         net (fo=2, routed)           0.156     0.297    buildup_i/clock_divider_0/U0/cnt_reg[3]
+    SLICE_X111Y79        LUT4 (Prop_lut4_I3_O)        0.042     0.339 r  buildup_i/clock_divider_0/U0/cnt[3]_i_1/O
+                         net (fo=1, routed)           0.000     0.339    buildup_i/clock_divider_0/U0/plusOp[3]
+    SLICE_X111Y79        FDCE                                         r  buildup_i/clock_divider_0/U0/cnt_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.340ns  (logic 0.186ns (54.658%)  route 0.154ns (45.342%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X113Y80        FDCE                         0.000     0.000 r  buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/C
+    SLICE_X113Y80        FDCE (Prop_fdce_C_Q)         0.141     0.141 r  buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/Q
+                         net (fo=9, routed)           0.154     0.295    buildup_i/block_encoder_1/U0/up_down_counter_0/U0/Q[6]
+    SLICE_X113Y80        LUT6 (Prop_lut6_I3_O)        0.045     0.340 r  buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt[6]_i_1/O
+                         net (fo=1, routed)           0.000     0.340    buildup_i/block_encoder_1/U0/up_down_counter_0/U0/p_0_in[6]
+    SLICE_X113Y80        FDCE                                         r  buildup_i/block_encoder_1/U0/up_down_counter_0/U0/int_cnt_reg[6]/D
   -------------------------------------------------------------------    -------------------
 
 

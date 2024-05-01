@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Apr 29 18:09:22 2024
+| Date         : Tue Apr 30 15:59:46 2024
 | Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_utilization -file buildup_wrapper_utilization_placed.rpt -pb buildup_wrapper_utilization_placed.pb
 | Design       : buildup_wrapper
@@ -32,12 +32,12 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs              |  127 |     0 |          0 |     53200 |  0.24 |
-|   LUT as Logic          |  127 |     0 |          0 |     53200 |  0.24 |
+| Slice LUTs              |  142 |     0 |          0 |     53200 |  0.27 |
+|   LUT as Logic          |  142 |     0 |          0 |     53200 |  0.27 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         |  123 |     0 |          0 |    106400 |  0.12 |
+| Slice Registers         |  125 |     0 |          0 |    106400 |  0.12 |
 |   Register as Flip Flop |   87 |     0 |          0 |    106400 |  0.08 |
-|   Register as Latch     |   36 |     0 |          0 |    106400 |  0.03 |
+|   Register as Latch     |   38 |     0 |          0 |    106400 |  0.04 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 20    |          Yes |           - |          Set |
-| 92    |          Yes |           - |        Reset |
+| 94    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 11    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -69,21 +69,21 @@ Table of Contents
 +--------------------------------------------+------+-------+------------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Prohibited | Available | Util% |
 +--------------------------------------------+------+-------+------------+-----------+-------+
-| Slice                                      |   82 |     0 |          0 |     13300 |  0.62 |
-|   SLICEL                                   |   59 |     0 |            |           |       |
-|   SLICEM                                   |   23 |     0 |            |           |       |
-| LUT as Logic                               |  127 |     0 |          0 |     53200 |  0.24 |
+| Slice                                      |   85 |     0 |          0 |     13300 |  0.64 |
+|   SLICEL                                   |   60 |     0 |            |           |       |
+|   SLICEM                                   |   25 |     0 |            |           |       |
+| LUT as Logic                               |  142 |     0 |          0 |     53200 |  0.27 |
 |   using O5 output only                     |    0 |       |            |           |       |
-|   using O6 output only                     |   88 |       |            |           |       |
-|   using O5 and O6                          |   39 |       |            |           |       |
+|   using O6 output only                     |   95 |       |            |           |       |
+|   using O5 and O6                          |   47 |       |            |           |       |
 | LUT as Memory                              |    0 |     0 |          0 |     17400 |  0.00 |
 |   LUT as Distributed RAM                   |    0 |     0 |            |           |       |
 |   LUT as Shift Register                    |    0 |     0 |            |           |       |
-| Slice Registers                            |  123 |     0 |          0 |    106400 |  0.12 |
-|   Register driven from within the Slice    |   39 |       |            |           |       |
+| Slice Registers                            |  125 |     0 |          0 |    106400 |  0.12 |
+|   Register driven from within the Slice    |   41 |       |            |           |       |
 |   Register driven from outside the Slice   |   84 |       |            |           |       |
-|     LUT in front of the register is unused |   44 |       |            |           |       |
-|     LUT in front of the register is used   |   40 |       |            |           |       |
+|     LUT in front of the register is unused |   36 |       |            |           |       |
+|     LUT in front of the register is used   |   48 |       |            |           |       |
 | Unique Control Sets                        |   69 |       |          0 |     13300 |  0.52 |
 +--------------------------------------------+------+-------+------------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
@@ -118,9 +118,9 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   15 |    15 |          0 |       125 | 12.00 |
-|   IOB Master Pads           |    8 |       |            |           |       |
-|   IOB Slave Pads            |    7 |       |            |           |       |
+| Bonded IOB                  |   20 |    20 |          0 |       125 | 16.00 |
+|   IOB Master Pads           |   11 |       |            |           |       |
+|   IOB Slave Pads            |    9 |       |            |           |       |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |          0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         4 |  0.00 |
@@ -176,19 +176,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT4     |   60 |                 LUT |
 | FDCE     |   56 |        Flop & Latch |
-| LUT2     |   45 |                 LUT |
-| LUT4     |   43 |                 LUT |
-| LDCE     |   36 |        Flop & Latch |
+| LUT2     |   51 |                 LUT |
+| LDCE     |   38 |        Flop & Latch |
 | LUT6     |   30 |                 LUT |
 | LUT3     |   28 |                 LUT |
 | FDPE     |   20 |        Flop & Latch |
 | LUT5     |   16 |                 LUT |
 | IBUF     |   11 |                  IO |
 | FDRE     |   11 |        Flop & Latch |
-| OBUF     |    4 |                  IO |
+| OBUF     |    9 |                  IO |
 | LUT1     |    4 |                 LUT |
-| CARRY4   |    2 |          CarryLogic |
+| CARRY4   |    4 |          CarryLogic |
 | BUFG     |    2 |               Clock |
 +----------+------+---------------------+
 
@@ -209,12 +209,20 @@ Table of Contents
 +---------------------------+------+
 | buildup_synchronizer_0_0  |    1 |
 | buildup_pwm_gen_1_0       |    1 |
+| buildup_pwm_gen_0_3       |    1 |
+| buildup_pwm_gen_0_2       |    1 |
 | buildup_pwm_gen_0_1       |    1 |
 | buildup_counter_1_0       |    1 |
 | buildup_clock_divider_0_0 |    1 |
 | buildup_block_encoder_1_0 |    1 |
 | buildup_block_encoder_0_0 |    1 |
 | buildup_SPI_0_2           |    1 |
+| buildup_NOT_gate_0_1      |    1 |
+| buildup_NOT_gate_0_0      |    1 |
+| buildup_AND_gate_0_3      |    1 |
+| buildup_AND_gate_0_2      |    1 |
+| buildup_AND_gate_0_1      |    1 |
+| buildup_AND_gate_0_0      |    1 |
 +---------------------------+------+
 
 

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Mon Apr 29 10:09:39 2024
+--Date        : Tue Apr 30 15:47:42 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target SPI.bd
 --Design      : SPI
@@ -89,7 +89,7 @@ Prescaler: component SPI_enable_counter_0_0
      port map (
       cnt => enable_counter_0_cnt,
       en => NOT_gate_0_B,
-      rst => rst_1,
+      rst => SPI_chip_select_1,
       sample => clock_1
     );
 spi_in_RnM: component SPI_shift_register_input_1

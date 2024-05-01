@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon Apr 29 10:10:55 2024
+// Date        : Tue Apr 30 15:56:03 2024
 // Host        : Cornelia running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub {c:/Users/Corne/Documents/MEGA/4.
 //               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2_stub.v}
