@@ -9,6 +9,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "semphr.h"
+#include "priority_test.h"
 
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE
 #define IDLE_PRIO 0
@@ -47,8 +48,10 @@ int main(void) {
     xTaskCreate(alive_blink,             "Alive blinker",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
     xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
     xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-   // xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL );
+    xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL );
     xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL );
+    xTaskCreate(priority_test1,           "priority test",           USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL);
+    xTaskCreate(priority_test2,           "priority test",           USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL);
 
     vTaskStartScheduler();
 
