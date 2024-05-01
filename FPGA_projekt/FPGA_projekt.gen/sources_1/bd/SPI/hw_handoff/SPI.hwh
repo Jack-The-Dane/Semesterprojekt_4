@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Apr 30 15:47:43 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May  1 10:44:02 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="SPI" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -23,8 +23,8 @@
     </PORT>
     <PORT DIR="I" NAME="SPI_sample" SIGIS="undef" SIGNAME="External_Ports_SPI_sample">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Prescaler" PORT="sample"/>
         <CONNECTION INSTANCE="SPI_in" PORT="sample"/>
+        <CONNECTION INSTANCE="Prescaler" PORT="sample"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="miso" SIGIS="undef" SIGNAME="SPI_in_carry_out">

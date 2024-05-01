@@ -214,8 +214,8 @@
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "Prescaler/sample",
-          "SPI_in/sample"
+          "SPI_in/sample",
+          "Prescaler/sample"
         ]
       },
       "enable_counter_0_cnt": {

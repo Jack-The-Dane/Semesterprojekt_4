@@ -49,7 +49,7 @@ begin
         if(rst = '1') then
             data <= (others => '0');
         end if;
-        if(cnt = '1') then
+        if(rising_edge(cnt)) then
            data <= D;
                 end if;
         

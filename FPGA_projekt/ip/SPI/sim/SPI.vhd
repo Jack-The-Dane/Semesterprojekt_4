@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Tue Apr 30 15:47:42 2024
+--Date        : Wed May  1 10:44:02 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target SPI.bd
 --Design      : SPI
@@ -22,10 +22,10 @@ entity SPI is
     mosi : in STD_LOGIC;
     rst : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of SPI : entity is "SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=SPI,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of SPI : entity is "SPI.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of SPI : entity is "SPI,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=SPI,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=4,numReposBlks=4,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=4,numPkgbdBlks=0,bdsource=USER,synth_mode=Hierarchical}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of SPI : entity is "SPI.hwdef";
 end SPI;
 
 architecture STRUCTURE of SPI is
