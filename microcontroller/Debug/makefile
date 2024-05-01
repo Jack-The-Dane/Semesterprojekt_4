@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /home/kasper/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -43,8 +45,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := rm -rf
-RMDIR := rm -rf
+RM := DEL /F
+RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -170,15 +172,15 @@ all: $(OBJS) $(LD_SRCS) $(CMD_SRCS) $(GEN_CMDS)
 CCS-Project.out: $(OBJS) $(LD_SRCS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/kasper/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --c99 --relaxed_ansi --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"CCS-Project.map" --heap_size=0 --stack_size=512 -i"/home/kasper/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/kasper/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CCS-Project_linkInfo.xml" --rom_model -o "CCS-Project.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --c99 --relaxed_ansi --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"CCS-Project.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CCS-Project_linkInfo.xml" --rom_model -o "CCS-Project.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "tm4c123gh6pm_startup_ccs.obj" "freeRTOS/croutine.obj" "freeRTOS/event_groups.obj" "freeRTOS/list.obj" "freeRTOS/queue.obj" "freeRTOS/stream_buffer.obj" "freeRTOS/tasks.obj" "freeRTOS/timers.obj" "freeRTOS/portable/GCC/ARM_CM4F/port.obj" "freeRTOS/portable/MemMang/heap_1.obj" "freeRTOS/portable/MemMang/heap_2.obj" "freeRTOS/portable/MemMang/heap_3.obj" "freeRTOS/portable/MemMang/heap_4.obj" "freeRTOS/portable/MemMang/heap_5.obj" "src/adc.obj" "src/controller.obj" "src/gpio.obj" "src/joystick.obj" "src/main.obj" "src/spi.obj" "src/systick.obj" "src/uart.obj" "src/uart0.obj" "tm4c123/helper.obj" "tm4c123/nostdlib.obj" "tm4c123/startup_gcc.obj" 
-	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs.d" "freeRTOS/croutine.d" "freeRTOS/event_groups.d" "freeRTOS/list.d" "freeRTOS/queue.d" "freeRTOS/stream_buffer.d" "freeRTOS/tasks.d" "freeRTOS/timers.d" "freeRTOS/portable/GCC/ARM_CM4F/port.d" "freeRTOS/portable/MemMang/heap_1.d" "freeRTOS/portable/MemMang/heap_2.d" "freeRTOS/portable/MemMang/heap_3.d" "freeRTOS/portable/MemMang/heap_4.d" "freeRTOS/portable/MemMang/heap_5.d" "src/adc.d" "src/controller.d" "src/gpio.d" "src/joystick.d" "src/main.d" "src/spi.d" "src/systick.d" "src/uart.d" "src/uart0.d" "tm4c123/helper.d" "tm4c123/nostdlib.d" "tm4c123/startup_gcc.d" 
+	-$(RM) "main.obj" "tm4c123gh6pm_startup_ccs.obj" "freeRTOS\croutine.obj" "freeRTOS\event_groups.obj" "freeRTOS\list.obj" "freeRTOS\queue.obj" "freeRTOS\stream_buffer.obj" "freeRTOS\tasks.obj" "freeRTOS\timers.obj" "freeRTOS\portable\GCC\ARM_CM4F\port.obj" "freeRTOS\portable\MemMang\heap_1.obj" "freeRTOS\portable\MemMang\heap_2.obj" "freeRTOS\portable\MemMang\heap_3.obj" "freeRTOS\portable\MemMang\heap_4.obj" "freeRTOS\portable\MemMang\heap_5.obj" "src\adc.obj" "src\controller.obj" "src\gpio.obj" "src\joystick.obj" "src\main.obj" "src\spi.obj" "src\systick.obj" "src\uart.obj" "src\uart0.obj" "tm4c123\helper.obj" "tm4c123\nostdlib.obj" "tm4c123\startup_gcc.obj" 
+	-$(RM) "main.d" "tm4c123gh6pm_startup_ccs.d" "freeRTOS\croutine.d" "freeRTOS\event_groups.d" "freeRTOS\list.d" "freeRTOS\queue.d" "freeRTOS\stream_buffer.d" "freeRTOS\tasks.d" "freeRTOS\timers.d" "freeRTOS\portable\GCC\ARM_CM4F\port.d" "freeRTOS\portable\MemMang\heap_1.d" "freeRTOS\portable\MemMang\heap_2.d" "freeRTOS\portable\MemMang\heap_3.d" "freeRTOS\portable\MemMang\heap_4.d" "freeRTOS\portable\MemMang\heap_5.d" "src\adc.d" "src\controller.d" "src\gpio.d" "src\joystick.d" "src\main.d" "src\spi.d" "src\systick.d" "src\uart.d" "src\uart0.d" "tm4c123\helper.d" "tm4c123\nostdlib.d" "tm4c123\startup_gcc.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

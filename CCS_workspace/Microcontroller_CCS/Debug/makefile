@@ -2,7 +2,9 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-CG_TOOL_ROOT := /home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS
 
 GEN_OPTS__FLAG := 
 GEN_CMDS__FLAG := 
@@ -25,6 +27,7 @@ ORDERED_OBJS += \
 "./src/gpio.obj" \
 "./src/joystick.obj" \
 "./src/main.obj" \
+"./src/priority_test.obj" \
 "./src/spi.obj" \
 "./src/uart.obj" \
 "./src/uart0.obj" \
@@ -34,8 +37,8 @@ $(GEN_CMDS__FLAG) \
 
 -include ../makefile.init
 
-RM := rm -rf
-RMDIR := rm -rf
+RM := DEL /F
+RMDIR := RMDIR /S/Q
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -159,16 +162,16 @@ all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 Microcontroller_CCS.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: Arm Linker'
-	"/home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Microcontroller_CCS.map" --heap_size=0 --stack_size=512 -i"/home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"/home/jacob/Appimages/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Microcontroller_CCS_linkInfo.xml" --rom_model -o "Microcontroller_CCS.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --c99 --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Microcontroller_CCS.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/lib" -i"C:/ti/ccs1260/ccs/tools/compiler/ti-cgt-arm_20.2.7.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Microcontroller_CCS_linkInfo.xml" --rom_model -o "Microcontroller_CCS.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "frt10/port/MemMang/heap_2.obj" "frt10/port/TivaM4/port.obj" "frt10/port/TivaM4/portasm.obj" "frt10/port/TivaM4/startup_frt.obj" "frt10/port/TivaM4/systick_frt.obj" "frt10/src/croutine.obj" "frt10/src/event_groups.obj" "frt10/src/list.obj" "frt10/src/queue.obj" "frt10/src/stream_buffer.obj" "frt10/src/tasks.obj" "frt10/src/timers.obj" "src/adc.obj" "src/controller.obj" "src/gpio.obj" "src/joystick.obj" "src/main.obj" "src/spi.obj" "src/uart.obj" "src/uart0.obj" 
-	-$(RM) "frt10/port/MemMang/heap_2.d" "frt10/port/TivaM4/port.d" "frt10/port/TivaM4/startup_frt.d" "frt10/port/TivaM4/systick_frt.d" "frt10/src/croutine.d" "frt10/src/event_groups.d" "frt10/src/list.d" "frt10/src/queue.d" "frt10/src/stream_buffer.d" "frt10/src/tasks.d" "frt10/src/timers.d" "src/adc.d" "src/controller.d" "src/gpio.d" "src/joystick.d" "src/main.d" "src/spi.d" "src/uart.d" "src/uart0.d" 
-	-$(RM) "frt10/port/TivaM4/portasm.d" 
+	-$(RM) "frt10\port\MemMang\heap_2.obj" "frt10\port\TivaM4\port.obj" "frt10\port\TivaM4\portasm.obj" "frt10\port\TivaM4\startup_frt.obj" "frt10\port\TivaM4\systick_frt.obj" "frt10\src\croutine.obj" "frt10\src\event_groups.obj" "frt10\src\list.obj" "frt10\src\queue.obj" "frt10\src\stream_buffer.obj" "frt10\src\tasks.obj" "frt10\src\timers.obj" "src\adc.obj" "src\controller.obj" "src\gpio.obj" "src\joystick.obj" "src\main.obj" "src\priority_test.obj" "src\spi.obj" "src\uart.obj" "src\uart0.obj" 
+	-$(RM) "frt10\port\MemMang\heap_2.d" "frt10\port\TivaM4\port.d" "frt10\port\TivaM4\startup_frt.d" "frt10\port\TivaM4\systick_frt.d" "frt10\src\croutine.d" "frt10\src\event_groups.d" "frt10\src\list.d" "frt10\src\queue.d" "frt10\src\stream_buffer.d" "frt10\src\tasks.d" "frt10\src\timers.d" "src\adc.d" "src\controller.d" "src\gpio.d" "src\joystick.d" "src\main.d" "src\priority_test.d" "src\spi.d" "src\uart.d" "src\uart0.d" 
+	-$(RM) "frt10\port\TivaM4\portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
