@@ -38,7 +38,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
-  delay_us(10);
+  delay_us(100);
   //setLEDColor(GREEN);
 
   for (INT32U i = SPI_WORD_LENGTH; i > 0; i--) {
@@ -67,7 +67,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   delay_us(100);
   GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
-  delay_us(10);
+  delay_us(100);
   // Set MOSI low
   GPIO_PORTE_DATA_R |= (1 << SPI_MOSI_PIN);
 
