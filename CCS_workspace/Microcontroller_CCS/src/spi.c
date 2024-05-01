@@ -22,7 +22,8 @@ void init_spi() {
   GPIO_PORTE_PUR_R = 1 << SPI_MISO_PIN;
 
   // Set the initial values
-  GPIO_PORTE_DATA_R = (0 << SPI_MOSI_PIN) | (0 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
+  // Clock Phase and Clock Polarity are both set to 1, giving SPI mode 3.
+  GPIO_PORTE_DATA_R = (1 << SPI_MOSI_PIN) | (1 << SPI_CLK_PIN) | (1 << SPI_CS_PIN);
 
   spi_pan_motor = 0b10101010;
   spi_tilt_motor = 0b10101010;
@@ -49,12 +50,10 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
       GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN); // Set 0
     }
 
-    delay_ms(100);
-
     // Pulse the clock
-    GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
-    delay_ms(100); // This should be as long as the FPGA needs to shift out a bit
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
+    delay_ms(100); // This should be as long as the FPGA needs to shift out a bit
+    GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
     // Read input bit
     if (GPIO_PORTE_DATA_R & (1 << SPI_MISO_PIN)) {
@@ -62,14 +61,15 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     } else {
       *data_recieve &= ~(1 << (i - 1)); // Set 0
     }
+    delay_ms(100);
   }
 
-  delay_ms(100);
+  delay_us(100);
   GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
   delay_us(10);
   // Set MOSI low
-  GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN);
+  GPIO_PORTE_DATA_R |= (1 << SPI_MOSI_PIN);
 
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
