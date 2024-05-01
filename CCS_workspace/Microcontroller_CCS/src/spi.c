@@ -32,14 +32,15 @@ void init_spi() {
 
 // https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Bit-banging_the_protocol
 void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
-  //setLEDColor(RED);
+  setLEDColor(GREEN);
 
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
+  delay_us(10);
   //setLEDColor(GREEN);
 
-  for (uint8_t i = SPI_WORD_LENGTH; i > 0; i--) {
+  for (INT32U i = SPI_WORD_LENGTH; i > 0; i--) {
 
     // Set output bit
     if (*data_send & (1 << (i - 1))) {
@@ -48,11 +49,11 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
       GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN); // Set 0
     }
 
-    delay_us(1);
+    delay_ms(100);
 
     // Pulse the clock
     GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
-    delay_us(1); // This should be as long as the FPGA needs to shift out a bit
+    delay_ms(100); // This should be as long as the FPGA needs to shift out a bit
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
 
     // Read input bit
@@ -63,11 +64,16 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     }
   }
 
+  delay_ms(100);
+  GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
+
+  delay_us(10);
   // Set MOSI low
   GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN);
 
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
+  setLEDColor(BLUE);
 }
 
 void spi_task() {

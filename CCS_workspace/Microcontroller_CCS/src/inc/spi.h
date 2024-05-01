@@ -4,12 +4,12 @@
 #define SPI_H
 
 // The type of data sent and received over SPI
-#define SPI_TYPE INT16U
-#define SPI_WORD_LENGTH 16
+#define SPI_TYPE INT32U
+#define SPI_WORD_LENGTH 20
 
 // `SPI_MOTOR_TYPE` and `SPI_ENCODER_TYPE` should be half the size of `SPI_TYPE`
 #define SPI_MOTOR_TYPE INT8U
-#define SPI_ENCODER_TYPE INT8U
+#define SPI_ENCODER_TYPE INT16U
 
 // Pins within PORTE
 #define SPI_CS_PIN 3   // Chip select (Active low)

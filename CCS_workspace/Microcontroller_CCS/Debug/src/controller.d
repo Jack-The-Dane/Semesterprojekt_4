@@ -24,6 +24,8 @@ src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_worksp
 src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/mpu_wrappers.h
 src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h
 src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h
+src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/semphr.h
+src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/queue.h
 
 ../src/controller.c:
 
@@ -72,4 +74,8 @@ src/controller.obj: /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_worksp
 /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h:
 
 /home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h:
+
+/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/semphr.h:
+
+/home/jacob/Documents/Semester4/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/queue.h:
 

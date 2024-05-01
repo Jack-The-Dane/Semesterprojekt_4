@@ -3,19 +3,59 @@
 #include "spi.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "semphr.h"
 
 // TODO: Use mutex to protect joystick
 void controller_task(void * pvParameters) {
     extern Joystick joystick;
+    extern SemaphoreHandle_t joystick_mutex;
+    TickType_t last_wake_time = xTaskGetTickCount();
     while (1) {
-        SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
-        SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
+        if(xSemaphoreTake(joystick_mutex, 0)){
+            SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
+            SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
+            xSemaphoreGive(joystick_mutex);
+            BOOLEAN direction1 = 0;
+            BOOLEAN direction2 = 0;
 
-        INT16U motors = motor1 << 8 | motor2;
-        INT16U encoders = 0;
+            if(motor1 > 0x80){
+                motor1 = (motor1 - 0x80) * 2 + 1;
+                direction1 = 0;
+            } else if (motor1 > 0){
+                motor1 = (0x80 - motor1) * 2;
+                direction1 = 1;
+            } else {
+                motor1 = 0xFF;
+                direction1 = 1;
+            }
 
-        spi_tranceive(&motors, &encoders);
-        vTaskDelay(30);
+            if(motor2 > 0x80){
+                motor2 = (motor2 - 0x80) * 2 + 1;
+                direction2 = 0;
+            } else if (motor2 > 0){
+                motor2 = (0x80 - motor2) * 2;
+                direction2 = 1;
+            } else {
+                motor2 = 0xFF;
+                direction2 = 1;
+            }
+
+            motor1 = 0x80;
+            motor2 = 0x80;
+            direction1 = 0;
+            direction2 = 0;
+
+            SPI_TYPE motors = 0;
+
+            motors = direction1 << 17 | direction2 << 16 | motor1 << 8 | motor2;
+            
+            SPI_TYPE encoders = 0;
+
+            spi_tranceive(&motors, &encoders);
+            vTaskDelay(200);
+        } else {
+            xTaskDelayUntil(&last_wake_time, 1);
+        }
     }
 
 }
