@@ -24,6 +24,7 @@ src/controller.obj: C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semest
 src/controller.obj: C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/mpu_wrappers.h
 src/controller.obj: C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h
 src/controller.obj: C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h
+src/controller.obj: C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/gpio.h
 
 ../src/controller.c:
 
@@ -72,4 +73,6 @@ C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/S
 C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/task.h:
 
 C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/frt10/inc/list.h:
+
+C:/Users/Rikke/OneDrive\ -\ Syddansk\ Universitet/4.\ semester/Semesterprojekt/Semesterprojekt_4/CCS_workspace/Microcontroller_CCS/src/inc/gpio.h:
 

@@ -12,7 +12,7 @@
 #include "gpio.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "gpio.h"
+
 
 // Perform an action every 10 ticks.
 void priority_test1( void * pvParameters )
