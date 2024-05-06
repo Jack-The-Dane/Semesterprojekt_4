@@ -6,9 +6,9 @@
 #define DELAY_H
 
 // The is not accurate at all
-void delay_us(uint16_t us) {
-    for (uint16_t i = 0; i < us; i++) {
-        for (uint16_t j = 0; j < 16; j++) {
+void delay_us(uint32_t us) {
+    for (uint32_t i = 0; i < us; i++) {
+        for (uint32_t j = 0; j < 16; j++) {
             i++;
         }
     }
