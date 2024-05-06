@@ -72,13 +72,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_NOT
 # IP: bd/buildup/ip/buildup_NOT_gate_0_1/buildup_NOT_gate_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_NOT_gate_0_1 || ORIG_REF_NAME==buildup_NOT_gate_0_1} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_xlslice_4_0/buildup_xlslice_4_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_4_0 || ORIG_REF_NAME==buildup_xlslice_4_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_5_0/buildup_xlslice_5_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_5_0 || ORIG_REF_NAME==buildup_xlslice_5_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlconcat_1_0/buildup_xlconcat_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlconcat_1_0 || ORIG_REF_NAME==buildup_xlconcat_1_0} -quiet] -quiet
+# IP: bd/buildup/ip/buildup_xlslice_4_1/buildup_xlslice_4_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_4_1 || ORIG_REF_NAME==buildup_xlslice_4_1} -quiet] -quiet
 
 # XDC: c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/buildup_ooc.xdc

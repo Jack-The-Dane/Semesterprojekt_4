@@ -7,7 +7,8 @@
       "name": "buildup",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "block_encoder_0": "",
@@ -32,9 +33,7 @@
       "AND_gate_3": "",
       "NOT_gate_0": "",
       "NOT_gate_1": "",
-      "xlslice_5": "",
-      "xlslice_6": "",
-      "xlconcat_1": ""
+      "xlslice_4": ""
     },
     "ports": {
       "CS": {
@@ -42,14 +41,50 @@
       },
       "clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "buildup_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "rst": {
         "direction": "I"
       },
       "mosi": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "pwm_pan_cw": {
         "direction": "O"
@@ -62,7 +97,29 @@
       },
       "sclk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "buildup_sclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "miso": {
         "direction": "O"
@@ -91,7 +148,13 @@
       "led": {
         "direction": "O",
         "left": "3",
-        "right": "0"
+        "right": "0",
+        "parameters": {
+          "PortWidth": {
+            "value": "4",
+            "value_src": "ip_prop"
+          }
+        }
       }
     },
     "components": {
@@ -598,80 +661,26 @@
           }
         }
       },
-      "xlslice_5": {
+      "xlslice_4": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
-        "xci_name": "buildup_xlslice_4_0",
-        "xci_path": "ip\\buildup_xlslice_4_0\\buildup_xlslice_4_0.xci",
-        "inst_hier_path": "xlslice_5",
+        "xci_name": "buildup_xlslice_4_1",
+        "xci_path": "ip\\buildup_xlslice_4_1\\buildup_xlslice_4_1.xci",
+        "inst_hier_path": "xlslice_4",
         "parameters": {
           "DIN_FROM": {
-            "value": "7"
+            "value": "19"
           },
           "DIN_TO": {
-            "value": "7"
+            "value": "16"
           },
           "DIN_WIDTH": {
-            "value": "8"
-          }
-        }
-      },
-      "xlslice_6": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "3",
-        "xci_name": "buildup_xlslice_5_0",
-        "xci_path": "ip\\buildup_xlslice_5_0\\buildup_xlslice_5_0.xci",
-        "inst_hier_path": "xlslice_6",
-        "parameters": {
-          "DIN_FROM": {
-            "value": "7"
-          },
-          "DIN_TO": {
-            "value": "7"
-          },
-          "DIN_WIDTH": {
-            "value": "8"
-          }
-        }
-      },
-      "xlconcat_1": {
-        "vlnv": "xilinx.com:ip:xlconcat:2.1",
-        "ip_revision": "5",
-        "xci_name": "buildup_xlconcat_1_0",
-        "xci_path": "ip\\buildup_xlconcat_1_0\\buildup_xlconcat_1_0.xci",
-        "inst_hier_path": "xlconcat_1",
-        "parameters": {
-          "NUM_PORTS": {
-            "value": "4"
+            "value": "20"
           }
         }
       }
     },
     "nets": {
-      "AND_gate_0_C": {
-        "ports": [
-          "AND_gate_0/C",
-          "pwm_pan_cw"
-        ]
-      },
-      "AND_gate_1_C": {
-        "ports": [
-          "AND_gate_1/C",
-          "pwm_pan_ccw"
-        ]
-      },
-      "AND_gate_2_C": {
-        "ports": [
-          "AND_gate_2/C",
-          "pwm_tilt_cw"
-        ]
-      },
-      "AND_gate_3_C": {
-        "ports": [
-          "AND_gate_3/C",
-          "pwm_tilt_ccw"
-        ]
-      },
       "Hall_effect_sensor_0_1": {
         "ports": [
           "Hall_effect_sensor_0",
@@ -702,7 +711,8 @@
           "xlslice_1/Din",
           "xlslice_0/Din",
           "xlslice_3/Din",
-          "xlslice_2/Din"
+          "xlslice_2/Din",
+          "xlslice_4/Din"
         ]
       },
       "SPI_0_miso": {
@@ -792,25 +802,25 @@
       "pwm_pan_ccw_pwm": {
         "ports": [
           "pwm_pan_ccw/pwm",
-          "AND_gate_1/A"
+          "pwm_pan_ccw"
         ]
       },
       "pwm_pan_cw_pwm": {
         "ports": [
           "pwm_pan_cw/pwm",
-          "AND_gate_0/A"
+          "pwm_pan_cw"
         ]
       },
       "pwm_tilt_ccw_pwm": {
         "ports": [
           "pwm_tilt_ccw/pwm",
-          "AND_gate_3/A"
+          "pwm_tilt_ccw"
         ]
       },
       "pwm_tilt_cw_pwm": {
         "ports": [
           "pwm_tilt_cw/pwm",
-          "AND_gate_2/A"
+          "pwm_tilt_cw"
         ]
       },
       "rst": {
@@ -835,12 +845,6 @@
           "SPI_0/SPI_in"
         ]
       },
-      "xlconcat_1_dout": {
-        "ports": [
-          "xlconcat_1/dout",
-          "led"
-        ]
-      },
       "xlconstant_1_dout": {
         "ports": [
           "xlconstant_1/dout",
@@ -853,44 +857,34 @@
         "ports": [
           "xlslice_0/Dout",
           "pwm_tilt_cw/duty",
-          "pwm_tilt_ccw/duty",
-          "xlslice_6/Din"
+          "pwm_tilt_ccw/duty"
         ]
       },
       "xlslice_1_Dout": {
         "ports": [
           "xlslice_1/Dout",
           "pwm_pan_cw/duty",
-          "pwm_pan_ccw/duty",
-          "xlslice_5/Din"
+          "pwm_pan_ccw/duty"
         ]
       },
       "xlslice_2_Dout": {
         "ports": [
           "xlslice_2/Dout",
           "AND_gate_2/B",
-          "NOT_gate_1/A",
-          "xlconcat_1/In1"
+          "NOT_gate_1/A"
         ]
       },
       "xlslice_3_Dout": {
         "ports": [
           "xlslice_3/Dout",
           "AND_gate_0/B",
-          "NOT_gate_0/A",
-          "xlconcat_1/In3"
+          "NOT_gate_0/A"
         ]
       },
-      "xlslice_5_Dout": {
+      "xlslice_4_Dout": {
         "ports": [
-          "xlslice_5/Dout",
-          "xlconcat_1/In2"
-        ]
-      },
-      "xlslice_6_Dout": {
-        "ports": [
-          "xlslice_6/Dout",
-          "xlconcat_1/In0"
+          "xlslice_4/Dout",
+          "led"
         ]
       }
     }

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Tue Apr 30 15:53:04 2024
+--Date        : Fri May  3 16:02:51 2024
 --Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target buildup.bd
 --Design      : buildup
@@ -22,10 +22,7 @@ entity buildup is
     encoder_a_tilt : in STD_LOGIC;
     encoder_b_pan : in STD_LOGIC;
     encoder_b_tilt : in STD_LOGIC;
-    led_0 : out STD_LOGIC;
-    led_1 : out STD_LOGIC;
-    led_2 : out STD_LOGIC;
-    led_3 : out STD_LOGIC;
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     miso : out STD_LOGIC;
     mosi : in STD_LOGIC;
     pwm_pan_ccw : out STD_LOGIC;
@@ -37,7 +34,7 @@ entity buildup is
     spi_out : out STD_LOGIC_VECTOR ( 19 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=22,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=13,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=25,numReposBlks=25,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=13,numPkgbdBlks=3,bdsource=USER,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of buildup : entity is "buildup.hwdef";
 end buildup;
@@ -202,6 +199,27 @@ architecture STRUCTURE of buildup is
     B : out STD_LOGIC
   );
   end component buildup_NOT_gate_0_1;
+  component buildup_xlslice_4_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component buildup_xlslice_4_0;
+  component buildup_xlslice_5_0 is
+  port (
+    Din : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component buildup_xlslice_5_0;
+  component buildup_xlconcat_1_0 is
+  port (
+    In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In2 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    In3 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component buildup_xlconcat_1_0;
   signal AND_gate_0_C : STD_LOGIC;
   signal AND_gate_1_C : STD_LOGIC;
   signal AND_gate_2_C : STD_LOGIC;
@@ -228,14 +246,16 @@ architecture STRUCTURE of buildup is
   signal pwm_pan_cw_pwm : STD_LOGIC;
   signal pwm_tilt_ccw_pwm : STD_LOGIC;
   signal pwm_tilt_cw_pwm : STD_LOGIC;
-  signal \^rst\ : STD_LOGIC;
   signal synchronizer_0_Q : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 19 downto 0 );
+  signal xlconcat_1_dout : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_2_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_3_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlslice_5_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal xlslice_6_Dout : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
@@ -247,7 +267,6 @@ architecture STRUCTURE of buildup is
 begin
   Hall_effect_sensor_0_1 <= Hall_effect_sensor_0;
   Hall_effect_sensor_1_1 <= Hall_effect_sensor_1;
-  \^rst\ <= rst;
   btn_0_1 <= CS;
   clk_1 <= clk;
   encoder_a_0_1 <= encoder_a_tilt;
@@ -255,10 +274,7 @@ begin
   encoder_b_0_1 <= encoder_b_tilt;
   encoder_b_0_2 <= encoder_b_pan;
   ja_3_1 <= sclk;
-  led_0 <= btn_0_1;
-  led_1 <= ja_3_1;
-  led_2 <= \^rst\;
-  led_3 <= mosi_1;
+  led(3 downto 0) <= xlconcat_1_dout(3 downto 0);
   miso <= SPI_0_miso;
   mosi_1 <= mosi;
   pwm_pan_ccw <= AND_gate_1_C;
@@ -308,7 +324,7 @@ SPI_0: component buildup_SPI_0_2
       SPI_sample => synchronizer_0_Q,
       miso => SPI_0_miso,
       mosi => mosi_1,
-      rst => \^rst\
+      rst => rst
     );
 block_encoder_0: component buildup_block_encoder_0_0
      port map (
@@ -317,7 +333,7 @@ block_encoder_0: component buildup_block_encoder_0_0
       encoder_a => encoder_a_0_1,
       encoder_b => encoder_b_0_1,
       pulse_cnt(8 downto 0) => block_encoder_0_pulse_cnt(8 downto 0),
-      rst => \^rst\
+      rst => rst
     );
 block_encoder_1: component buildup_block_encoder_1_0
      port map (
@@ -326,20 +342,20 @@ block_encoder_1: component buildup_block_encoder_1_0
       encoder_a => encoder_a_0_2,
       encoder_b => encoder_b_0_2,
       pulse_cnt(8 downto 0) => block_encoder_1_pulse_cnt(8 downto 0),
-      rst => \^rst\
+      rst => rst
     );
 clock_divider_0: component buildup_clock_divider_0_0
      port map (
       clk => clk_1,
       clk_div => clock_divider_0_clk_div,
-      rst => \^rst\
+      rst => rst
     );
 counter_1: component buildup_counter_1_0
      port map (
       clk => clock_divider_0_clk_div,
       cnt(7 downto 0) => counter_1_cnt(7 downto 0),
       en => xlconstant_1_dout(0),
-      rst => \^rst\
+      rst => rst
     );
 pwm_pan_ccw_RnM: component buildup_pwm_gen_0_2
      port map (
@@ -379,6 +395,14 @@ xlconcat_0: component buildup_xlconcat_0_0
       In3(8 downto 0) => block_encoder_1_pulse_cnt(8 downto 0),
       dout(19 downto 0) => xlconcat_0_dout(19 downto 0)
     );
+xlconcat_1: component buildup_xlconcat_1_0
+     port map (
+      In0(0) => xlslice_6_Dout(0),
+      In1(0) => xlslice_2_Dout(0),
+      In2(0) => xlslice_5_Dout(0),
+      In3(0) => xlslice_3_Dout(0),
+      dout(3 downto 0) => xlconcat_1_dout(3 downto 0)
+    );
 xlconstant_1: component buildup_xlconstant_1_0
      port map (
       dout(0) => xlconstant_1_dout(0)
@@ -402,5 +426,15 @@ xlslice_3: component buildup_xlslice_2_1
      port map (
       Din(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       Dout(0) => xlslice_3_Dout(0)
+    );
+xlslice_5: component buildup_xlslice_4_0
+     port map (
+      Din(7 downto 0) => xlslice_1_Dout(7 downto 0),
+      Dout(0) => xlslice_5_Dout(0)
+    );
+xlslice_6: component buildup_xlslice_5_0
+     port map (
+      Din(7 downto 0) => xlslice_0_Dout(7 downto 0),
+      Dout(0) => xlslice_6_Dout(0)
     );
 end STRUCTURE;

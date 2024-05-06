@@ -47,17 +47,14 @@ architecture Behavioral of buildup_tb is
     encoder_b_tilt : in STD_LOGIC;
     sclk : in STD_LOGIC;
     miso : out STD_LOGIC;
-    led_0 : out STD_LOGIC;
     encoder_a_pan : in STD_LOGIC;
     encoder_b_pan : in STD_LOGIC;
     Hall_effect_sensor_0 : in STD_LOGIC;
     Hall_effect_sensor_1 : in STD_LOGIC;
     pwm_tilt_cw : out STD_LOGIC;
-    led_1 : out STD_LOGIC;
-    led_2 : out STD_LOGIC;
-    led_3 : out STD_LOGIC;
     pwm_pan_ccw : out STD_LOGIC;
     pwm_tilt_ccw : out STD_LOGIC;
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     spi_out : out STD_LOGIC_VECTOR ( 19 downto 0 )
   );
   end component buildup;
@@ -72,15 +69,12 @@ architecture Behavioral of buildup_tb is
     signal encoder_b_tilt_tb :  STD_LOGIC;
     signal sclk_tb :  STD_LOGIC;
     signal miso_tb :  STD_LOGIC;
-    signal led_0_tb :  STD_LOGIC;
+    signal led_tb :  STD_LOGIC_VECTOR ( 3 downto 0 );
     signal encoder_a_pan_tb :  STD_LOGIC;
     signal encoder_b_pan_tb :  STD_LOGIC;
     signal Hall_effect_sensor_0_tb :  STD_LOGIC;
     signal Hall_effect_sensor_1_tb :  STD_LOGIC;
     signal pwm_tilt_cw_tb :  STD_LOGIC;
-    signal led_1_tb :  STD_LOGIC;
-    signal led_2_tb :  STD_LOGIC;
-    signal led_3_tb :  STD_LOGIC;
     signal pwm_pan_ccw_tb :  STD_LOGIC;
     signal pwm_tilt_ccw_tb :  STD_LOGIC;
     signal spi_out_tb : STD_LOGIC_VECTOR ( 19 downto 0 );
@@ -98,15 +92,12 @@ begin
             encoder_b_tilt => encoder_b_tilt_tb,
             sclk => sclk_tb,
             miso => miso_tb,
-            led_0 => led_0_tb,
+            led => led_tb,
             encoder_a_pan => encoder_a_pan_tb,
             encoder_b_pan => encoder_b_pan_tb,
             Hall_effect_sensor_0 => Hall_effect_sensor_0_tb,
             Hall_effect_sensor_1 => Hall_effect_sensor_1_tb,
             pwm_tilt_cw => pwm_tilt_cw_tb,
-            led_1 => led_1_tb,
-            led_2 => led_2_tb,
-            led_3 => led_3_tb,
             pwm_pan_ccw => pwm_pan_ccw_tb,
             pwm_tilt_ccw => pwm_tilt_ccw_tb,
             spi_out => spi_out_tb
@@ -533,7 +524,7 @@ begin
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    sclk_tb <= '0';
+    
     CS_tb <= '1';
     mosi_tb <= '0';                 -- 39
     
@@ -966,7 +957,7 @@ begin
     
     wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
     sclk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0'; wait for TIME_DELTA; clk_tb <= '1'; wait for TIME_DELTA; clk_tb <= '0';
-    sclk_tb <= '0';
+    
     CS_tb <= '1';
     mosi_tb <= '0';                 -- 39
     
