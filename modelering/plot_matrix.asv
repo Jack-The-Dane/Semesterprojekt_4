@@ -1,7 +1,8 @@
-function out = plot_matrix(M, rows, cols, step)
+function [out = plot_matrix(M, rows, cols)
     
     points = [];
-    for x = 0:step:2*pi
+
+    for x = 0:0.1:2*pi
         r = M(x);
         points = [points [
             x;
@@ -19,6 +20,7 @@ function out = plot_matrix(M, rows, cols, step)
         nexttile
         plot(x, vpa(y, 3));
         xlim([0 2*pi]);
+        % ytickformat('%,.3f')
     end
    
     out = points;
