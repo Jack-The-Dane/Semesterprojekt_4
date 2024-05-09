@@ -10,6 +10,7 @@
 
 void priority_test1();
 void priority_test2();
+void priority_test3();
 
 
 #endif /* SRC_INC_PRIORITY_TEST_H_ */
