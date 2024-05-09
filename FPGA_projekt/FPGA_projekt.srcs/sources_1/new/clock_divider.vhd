@@ -47,9 +47,15 @@ if(rst = '1') then
     cnt <= (others => '0');
 elsif(rising_edge(clk)) then
     cnt <= cnt + 1;
+    if(cnt < n_bits) then
+        clk_div <= '0';
+    elsif(cnt = n_bits) then
+        clk_div <= '1';
+    elsif(cnt = 2*n_bits) then
+        cnt <= (others => '0');
+    end if;
 end if;
 end process;
-clk_div <= '1' when cnt = (2**n_bits)-1 else '0';
 
 
 

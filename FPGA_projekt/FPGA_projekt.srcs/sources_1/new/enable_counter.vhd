@@ -31,15 +31,15 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity enable_counter is
+entity prescaler is
     generic( data_length : positive := 16);
     Port ( en : in STD_LOGIC;
            rst : in STD_LOGIC;
            sample : in STD_LOGIC;
            cnt : out STD_LOGIC);
-end enable_counter;
+end prescaler;
 
-architecture Behavioral of enable_counter is
+architecture Behavioral of prescaler is
 signal cnt_temp : unsigned(5 downto 0) := "000000";
 signal out_temp : std_logic := '0';
 

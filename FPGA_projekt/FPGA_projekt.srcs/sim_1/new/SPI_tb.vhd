@@ -37,200 +37,64 @@ end SPI_tb;
 
 architecture Behavioral of SPI_tb is
 
-component SPI_wrapper is
+component Master_wrapper is
   port (
-    SPI_chip_select : in STD_LOGIC;
-    SPI_out : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    SPI_sample : in STD_LOGIC;
-    encoder_in : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    miso : out STD_LOGIC;
-    mosi : in STD_LOGIC;
+    CS : out STD_LOGIC;
+    MISO : in STD_LOGIC;
+    MOSI : out STD_LOGIC;
+    Q_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    SCLK : out STD_LOGIC;
+    clk : in STD_LOGIC;
+    register_in_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     rst : in STD_LOGIC
   );
 end component;
 
 constant TIME_DELTA : time := 10 us; -- period: 20 micro s
 
-signal SPI_chip_select_tb : std_logic;
-signal SPI_out_tb : STD_LOGIC_VECTOR ( 15 downto 0 );
-signal SPI_sample_tb : STD_LOGIC;
-signal encoder_in_tb : STD_LOGIC_VECTOR ( 15 downto 0 );
-signal miso_tb : STD_LOGIC;
-signal mosi_tb : std_logic;
+signal CS_tb : STD_LOGIC;
+signal clk_tb : std_logic;
+signal register_in_0_tb : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal SCLK_tb : STD_LOGIC;
+signal Q_0_tb : STD_LOGIC_VECTOR ( 7 downto 0 );
+signal MISO_tb : STD_LOGIC;
+signal MOSI_tb : std_logic;
 signal rst_tb : std_logic;
 
 begin
 
-    dut : SPI_wrapper
+    dut : Master_wrapper
         port map(
-            SPI_chip_select => SPI_chip_select_tb,
-            SPI_out => SPI_out_tb,
-            SPI_sample => SPI_sample_tb,
-            encoder_in => encoder_in_tb,
-            miso => miso_tb,
-            mosi => mosi_tb,
+            CS => CS_tb,
+            clk => clk_tb,
+            register_in_0 => register_in_0_tb,
+            SCLK => SCLK_tb,
+            Q_0 => Q_0_tb,
+            MISO => MISO_tb,
+            MOSI => MOSI_tb,
             rst => rst_tb
             
         );
     
+    simulation_clk: process
+    begin
+    
+        clk_tb <= '0';
+        
+        wait for TIME_DELTA;
+        
+        clk_tb <= '1';
+        
+        wait for TIME_DELTA;
+    
+    end process simulation_clk;
+    
     simulation: process
     begin
     
-        SPI_chip_select_tb <= '1';              -- 1
-        SPI_sample_tb <= '1';
-        encoder_in_tb <= "1100010010011011";
-        mosi_tb <= '0';
+        register_in_0_tb <= "01101001";
+        MISO_tb <= '0';
         rst_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_chip_select_tb <= '0';              -- 2.5 :)
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 2
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 3
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 4 
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 5
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 6
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 7
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 8
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 9
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 10
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 11
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 12
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 13
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 14
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 15
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 16
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 17
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 18
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 19
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 20
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 21
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 22
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 23
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 24
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 25
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 26
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 27
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 28
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 29
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   -- 30
-        mosi_tb <= '0';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 31
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '0';                   --32
-        mosi_tb <= '1';
-        
-        wait for TIME_DELTA;
-        
-        SPI_sample_tb <= '1';                   -- 33
-        
-        wait for TIME_DELTA;
-        
-        SPI_chip_select_tb <= '1';              -- 34
-        mosi_tb <= '0';
         
         wait;
     

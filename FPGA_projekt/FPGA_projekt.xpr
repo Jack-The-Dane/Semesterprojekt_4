@@ -94,7 +94,23 @@
   <FileSets Version="1" Minor="32">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
+      <File Path="$PSRCDIR/sources_1/new/flipflipflopflop.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/test_sync/test_sync.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="test_sync.bd" FileRelPathName="ip/test_sync_flipflipflopflop_0_0/test_sync_flipflipflopflop_0_0.xci">
+          <Proxy FileSetName="test_sync_flipflipflopflop_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/test_sync/hdl/test_sync_wrapper.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -102,12 +118,21 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/synchronizer.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/Downloads/counter.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/counter.vhd"/>
           <Attr Name="ImportTime" Val="1710753117"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -116,6 +141,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/PWM.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../Semesterprojekt/Semesterprojekt.srcs/sources_1/new/PWM.vhd"/>
           <Attr Name="ImportTime" Val="1710846831"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -124,18 +150,21 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/AND_gate.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/NOT_gate.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/buildup/buildup.bd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -149,12 +178,10 @@
         <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci">
           <Proxy FileSetName="buildup_clock_divider_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_0"/>
-        </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/buildup/hdl/buildup_wrapper.vhd">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -350,7 +377,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="buildup_wrapper"/>
+        <Option Name="TopModule" Val="test_sync_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -423,12 +450,6 @@
     <FileSet Name="encoder_test_block_encoder_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/encoder_test_block_encoder_0_0" RelGenDir="$PGENDIR/encoder_test_block_encoder_0_0">
       <Config>
         <Option Name="TopModule" Val="encoder_test_block_encoder_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_0" RelGenDir="$PGENDIR/buildup_synchronizer_0_0">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -510,6 +531,12 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="test_sync_flipflipflopflop_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/test_sync_flipflipflopflop_0_0" RelGenDir="$PGENDIR/test_sync_flipflipflopflop_0_0">
+      <Config>
+        <Option Name="TopModule" Val="test_sync_flipflipflopflop_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -541,16 +568,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="encoder_test_block_encoder_0_0_synth_1" Type="Ft3:Synth" SrcSet="encoder_test_block_encoder_0_0" Part="xc7z020clg400-1" ConstrsSet="encoder_test_block_encoder_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/encoder_test_block_encoder_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
@@ -690,6 +707,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="test_sync_flipflipflopflop_0_0_synth_1" Type="Ft3:Synth" SrcSet="test_sync_flipflipflopflop_0_0" Part="xc7z020clg400-1" ConstrsSet="test_sync_flipflipflopflop_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/test_sync_flipflipflopflop_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_sync_flipflipflopflop_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/test_sync_flipflipflopflop_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
@@ -709,23 +736,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="encoder_test_block_encoder_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="encoder_test_block_encoder_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="encoder_test_block_encoder_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/encoder_test_block_encoder_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -947,6 +957,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="buildup_SPI_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_SPI_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_SPI_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_SPI_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_SPI_0_2_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="test_sync_flipflipflopflop_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="test_sync_flipflipflopflop_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="test_sync_flipflipflopflop_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/test_sync_flipflipflopflop_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/test_sync_flipflipflopflop_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>

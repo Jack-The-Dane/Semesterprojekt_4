@@ -3,76 +3,13 @@
 
 # XDC: C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/PYNQ-Z2_v1.0.xdc
 
-# Block Designs: bd/buildup/buildup.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup || ORIG_REF_NAME==buildup} -quiet] -quiet
+# Block Designs: bd/test_sync/test_sync.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_sync || ORIG_REF_NAME==test_sync} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_0_0 || ORIG_REF_NAME==buildup_block_encoder_0_0} -quiet] -quiet
+# IP: bd/test_sync/ip/test_sync_flipflipflopflop_0_0/test_sync_flipflipflopflop_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_sync_flipflipflopflop_0_0 || ORIG_REF_NAME==test_sync_flipflipflopflop_0_0} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlconstant_1_0 || ORIG_REF_NAME==buildup_xlconstant_1_0} -quiet] -quiet
+# IP: bd/test_sync/ip/test_sync_flipflipflopflop_0_1/test_sync_flipflipflopflop_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==test_sync_flipflipflopflop_0_1 || ORIG_REF_NAME==test_sync_flipflipflopflop_0_1} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_clock_divider_0_0 || ORIG_REF_NAME==buildup_clock_divider_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_synchronizer_0_0/buildup_synchronizer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_synchronizer_0_0 || ORIG_REF_NAME==buildup_synchronizer_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_SPI_0_2/buildup_SPI_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_SPI_0_2 || ORIG_REF_NAME==buildup_SPI_0_2} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_block_encoder_1_0/buildup_block_encoder_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_1_0 || ORIG_REF_NAME==buildup_block_encoder_1_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlconcat_0_0/buildup_xlconcat_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlconcat_0_0 || ORIG_REF_NAME==buildup_xlconcat_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_0_0/buildup_xlslice_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_0_0 || ORIG_REF_NAME==buildup_xlslice_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_1_0/buildup_xlslice_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_1_0 || ORIG_REF_NAME==buildup_xlslice_1_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_counter_1_0/buildup_counter_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_counter_1_0 || ORIG_REF_NAME==buildup_counter_1_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_pwm_gen_0_1/buildup_pwm_gen_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_pwm_gen_0_1 || ORIG_REF_NAME==buildup_pwm_gen_0_1} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_pwm_gen_1_0/buildup_pwm_gen_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_pwm_gen_1_0 || ORIG_REF_NAME==buildup_pwm_gen_1_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_2_0/buildup_xlslice_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_2_0 || ORIG_REF_NAME==buildup_xlslice_2_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_2_1/buildup_xlslice_2_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_2_1 || ORIG_REF_NAME==buildup_xlslice_2_1} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_pwm_gen_0_2/buildup_pwm_gen_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_pwm_gen_0_2 || ORIG_REF_NAME==buildup_pwm_gen_0_2} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_pwm_gen_0_3/buildup_pwm_gen_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_pwm_gen_0_3 || ORIG_REF_NAME==buildup_pwm_gen_0_3} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_AND_gate_0_0/buildup_AND_gate_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_AND_gate_0_0 || ORIG_REF_NAME==buildup_AND_gate_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_AND_gate_0_1/buildup_AND_gate_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_AND_gate_0_1 || ORIG_REF_NAME==buildup_AND_gate_0_1} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_AND_gate_0_2/buildup_AND_gate_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_AND_gate_0_2 || ORIG_REF_NAME==buildup_AND_gate_0_2} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_AND_gate_0_3/buildup_AND_gate_0_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_AND_gate_0_3 || ORIG_REF_NAME==buildup_AND_gate_0_3} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_NOT_gate_0_0/buildup_NOT_gate_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_NOT_gate_0_0 || ORIG_REF_NAME==buildup_NOT_gate_0_0} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_NOT_gate_0_1/buildup_NOT_gate_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_NOT_gate_0_1 || ORIG_REF_NAME==buildup_NOT_gate_0_1} -quiet] -quiet
-
-# IP: bd/buildup/ip/buildup_xlslice_4_1/buildup_xlslice_4_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_4_1 || ORIG_REF_NAME==buildup_xlslice_4_1} -quiet] -quiet
-
-# XDC: c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/buildup_ooc.xdc
+# XDC: c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/test_sync/test_sync_ooc.xdc

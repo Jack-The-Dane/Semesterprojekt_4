@@ -1,0 +1,141 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xEAEA2C637DD30809",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/test_sync",
+      "name": "test_sync",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "flipflipflopflop_0": "",
+      "flipflipflopflop_1": ""
+    },
+    "ports": {
+      "sclk": {
+        "direction": "I"
+      },
+      "pwm_tilt_cw": {
+        "direction": "O"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test_sync_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "flipflipflopflop_0": {
+        "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
+        "ip_revision": "1",
+        "xci_name": "test_sync_flipflipflopflop_0_0",
+        "xci_path": "ip\\test_sync_flipflipflopflop_0_0\\test_sync_flipflipflopflop_0_0.xci",
+        "inst_hier_path": "flipflipflopflop_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflipflopflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "D": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "test_sync_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "flipflipflopflop_1": {
+        "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
+        "ip_revision": "1",
+        "xci_name": "test_sync_flipflipflopflop_0_1",
+        "xci_path": "ip\\test_sync_flipflipflopflop_0_1\\test_sync_flipflipflopflop_0_1.xci",
+        "inst_hier_path": "flipflipflopflop_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "flipflipflopflop",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "D": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "test_sync_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "flipflipflopflop_0/clk",
+          "flipflipflopflop_1/clk"
+        ]
+      },
+      "flipflipflopflop_0_Q": {
+        "ports": [
+          "flipflipflopflop_0/Q",
+          "flipflipflopflop_1/D"
+        ]
+      },
+      "flipflipflopflop_1_Q": {
+        "ports": [
+          "flipflipflopflop_1/Q",
+          "pwm_tilt_cw"
+        ]
+      },
+      "sclk_1": {
+        "ports": [
+          "sclk",
+          "flipflipflopflop_0/D"
+        ]
+      }
+    }
+  }
+}
