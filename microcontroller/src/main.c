@@ -32,8 +32,17 @@ void setup() {
 void * joystick_mutex;
 void * joystick_uart_mutex;
 
+xQueueHandle q_uart_tx
+xQueueHandle q q_uart_rx
+
 int main(void) {
     setup();
+
+    q_uart_tx = xQueueCreate(150, sizeof(INT8U));
+    q_uart_rx = xQueueCreate(150, sizeof(INT8U));
+
+    char c = 'a';
+    xQueueSendToBack(q_uart_rx, &c, 1);
 
     joystick_mutex = xSemaphoreCreateMutex();
     joystick_uart_mutex = xSemaphoreCreateMutex();
@@ -47,6 +56,8 @@ int main(void) {
     xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
     xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
     xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+    xTaskCreate(uart_task,               "uart_task",               USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
+
 
     vTaskStartScheduler();
 

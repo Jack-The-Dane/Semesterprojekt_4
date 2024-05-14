@@ -21,6 +21,10 @@
 #include <stdint.h>
 #include "tm4c123gh6pm.h"
 #include "emp_type.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
 /*****************************    Defines    *******************************/
 
 /*****************************   Constants   *******************************/
@@ -53,7 +57,7 @@ INT32U lcrh_stopbits( INT8U antal_stopbits )
 *   Input    :
 *   Output   :
 *   Function : sets bit 3 according to the wanted number of stop bits.
-*   		    1 stpobit:  bit3 = 0 (default).
+*   		    1 stopbit:  bit3 = 0 (default).
 *   		    2 stopbits: bit3 = 1.
 *   		   all other bits are returned = 0
 ******************************************************************************/

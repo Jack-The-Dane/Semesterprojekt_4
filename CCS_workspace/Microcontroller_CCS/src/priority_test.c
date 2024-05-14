@@ -18,7 +18,7 @@
 void priority_test1( void * pvParameters )
  {
  TickType_t xLastWakeTime;
- const TickType_t xFrequency = 100;
+ const TickType_t xFrequency = 1;
 
      //Initialise the xLastWakeTime variable with the current time.
      xLastWakeTime = xTaskGetTickCount();
@@ -32,25 +32,25 @@ void priority_test1( void * pvParameters )
              vTaskDelayUntil( &xLastWakeTime, xFrequency );
              //GPIO_PORTF_DATA_R = 0b1100; //RED LED ON LAUNCH PAD
              setLEDColor(BLUE);
-             //vTaskDelay(10);
+             //vTaskDelay(100);
          }
 
  }
 void priority_test2( void * pvParameters )
  {
     TickType_t xLastWakeTime;
-    const TickType_t xFrequency = 50;
+    const TickType_t xFrequency = 5;
 
          // Initialise the xLastWakeTime variable with the current time.
              xLastWakeTime = xTaskGetTickCount();
-             vTaskDelayUntil( &xLastWakeTime, xFrequency );
+
 
      // Perform action here.
          while(1){
              vTaskDelayUntil( &xLastWakeTime, xFrequency );
              //GPIO_PORTF_DATA_R = 0b1010;//YELLOW LED ON LAUNCH PAD
              setLEDColor(RED);
-             //vTaskDelay(2000);
+             //vTaskDelay(500);
          }
 
 
@@ -59,21 +59,22 @@ void priority_test2( void * pvParameters )
 
 void priority_test3( void * pvParameters )
  {
-// TickType_t xLastWakeTime;
- //const TickType_t xFrequency = 50;
+TickType_t xLastWakeTime;
+ const TickType_t xFrequency = 500;
 
      // Initialise the xLastWakeTime variable with the current time.
-         //xLastWakeTime = xTaskGetTickCount();
+         xLastWakeTime = xTaskGetTickCount();
 
      // Wait for the next cycle.
 
 
          // Perform action here.
          while(1){
+
              //vTaskDelayUntil( &xLastWakeTime, xFrequency );
              //GPIO_PORTF_DATA_R = 0b0110; //GREEN
              setLEDColor(GREEN);
-             vTaskDelay(60);
+             //vTaskDelay(500);
 
 
          }

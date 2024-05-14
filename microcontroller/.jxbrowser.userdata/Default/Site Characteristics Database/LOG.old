@@ -1,2 +1,5 @@
-2024/05/01-08:31:53.992 11d4 Creating DB C:\Users\Rikke\OneDrive - Syddansk Universitet\4. semester\Semesterprojekt\Semesterprojekt_4\microcontroller\.jxbrowser.userdata\Default\Site Characteristics Database since it was missing.
-2024/05/01-08:31:54.022 11d4 Reusing MANIFEST C:\Users\Rikke\OneDrive - Syddansk Universitet\4. semester\Semesterprojekt\Semesterprojekt_4\microcontroller\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001
+2024/05/14-09:04:18.269 7038 Log #3: 3 ops saved to Table #4 OK
+2024/05/14-09:04:18.271 7038 Archiving C:\Users\simon\OneDrive - Syddansk Universitet\Dokumenter\obsidian\Semesterprojekt_4\microcontroller\.jxbrowser.userdata\Default\Site Characteristics Database/000003.log: OK
+2024/05/14-09:04:18.271 7038 Table #4: 3 entries OK
+2024/05/14-09:04:18.273 7038 Archiving C:\Users\simon\OneDrive - Syddansk Universitet\Dokumenter\obsidian\Semesterprojekt_4\microcontroller\.jxbrowser.userdata\Default\Site Characteristics Database/MANIFEST-000001: OK
+2024/05/14-09:04:18.290 7038 **** Repaired leveldb C:\Users\simon\OneDrive - Syddansk Universitet\Dokumenter\obsidian\Semesterprojekt_4\microcontroller\.jxbrowser.userdata\Default\Site Characteristics Database; recovered 1 files; 219 bytes. Some data may have been lost. ****

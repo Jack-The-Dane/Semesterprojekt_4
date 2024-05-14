@@ -1,10 +1,9 @@
-#ifndef UART
-#define UART
+#ifndef UART0_H
+#define UART0_H
 
 void init_uart();
-void uart_putc(char ch);
-char uart_getc();
-void uart_put_string(char* str);
-void uart_put_stringln(char* str);
+void uart_task(void *pvParameters);
+void send_string(char *str);
+char* receive_string();
 
 #endif
