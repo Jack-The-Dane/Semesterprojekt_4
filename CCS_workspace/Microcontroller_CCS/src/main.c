@@ -49,8 +49,6 @@ int main(void) {
     q_uart_tx = xQueueCreate(150, sizeof(INT8U));
     q_uart_rx = xQueueCreate(150, sizeof(INT8U));
 
-    setLEDColor(BLUE);
-
     xTaskCreate(alive_blink,             "Alive blinker",           USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
     xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
     xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );

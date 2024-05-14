@@ -4,6 +4,7 @@
 #include "FreeRTOS.h"
 #include "queue.h"
 #include "gpio.h"
+#include <string.h>
 
 extern xQueueHandle q_uart_tx;
 extern xQueueHandle q_uart_rx;
@@ -18,6 +19,23 @@ void send_string(char *str) {
     xQueueSendToBack(q_uart_tx, str, 15);
     str++;
   }
+}
+
+char* receive_string(){
+    char str[100] = "";
+    char ch;
+
+    if(!xQueueReceive(q_uart_rx, &ch, 0)) return "";
+    strncat(str, &ch, 1);
+
+    while(ch != '\n') {
+
+        if (!xQueueReceive(q_uart_rx, &ch, 0)) continue;
+
+        strncat(str, &ch, 1);
+    }
+
+    return str;
 }
 
 void init_uart() {
