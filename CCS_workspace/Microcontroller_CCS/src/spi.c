@@ -33,7 +33,6 @@ void init_spi() {
 
 // https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Bit-banging_the_protocol
 void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
-  setLEDColor(GREEN);
 
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
@@ -49,7 +48,6 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     } else {
       GPIO_PORTE_DATA_R &= ~(1 << SPI_MOSI_PIN); // Set 0
     }
-    setLEDColor(CYAN);
     // Pulse the clock
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
     delay_us(SCLK_HALF_PERIOD_US); // This should be as long as the FPGA needs to shift out a bit
@@ -61,7 +59,6 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     } else {
       *data_recieve &= ~(1 << (i - 1)); // Set 0
     }
-    setLEDColor(YELLOW);
     delay_us(SCLK_HALF_PERIOD_US);
   }
 
@@ -73,7 +70,6 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
 
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
-  setLEDColor(BLUE);
 }
 
 void spi_task() {
