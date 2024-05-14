@@ -12,6 +12,7 @@ extern xQueueHandle q_uart_rx;
 
 extern SemaphoreHandle_t joystick_mutex;
 extern SemaphoreHandle_t joystick_uart_mutex;
+extern SemaphoreHandle_t joystick_run_mutex;
 
 // Global joystick for now
 Joystick joystick = {0};
@@ -29,6 +30,9 @@ void init_joystick() {
 
 void joystick_task(void * pvParameters) {
     while (1) {
+
+        if(!xSemaphoreTake(joystick_run_mutex, portMAX_DELAY)) continue;
+
         if(xSemaphoreTake(joystick_mutex, 1)){
             joystick.x = get_adc0();
             joystick.y = get_adc1();

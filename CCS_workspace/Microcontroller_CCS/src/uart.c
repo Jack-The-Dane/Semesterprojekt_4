@@ -26,14 +26,15 @@ char* receive_string(){
     char ch;
 
     if(!xQueueReceive(q_uart_rx, &ch, 0)) return "";
+    if (ch == '\n') return "";
+
     strncat(str, &ch, 1);
 
-    while(ch != '\n') {
-
-        if (!xQueueReceive(q_uart_rx, &ch, 0)) continue;
-
-        strncat(str, &ch, 1);
-    }
+    do {
+        if (xQueueReceive(q_uart_rx, &ch, 0)) {
+            strncat(str, &ch, 1);
+        }
+    } while(ch != '\n');
 
     return str;
 }

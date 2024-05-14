@@ -15,12 +15,14 @@ extern xQueueHandle q_uart_tx;
 extern xQueueHandle q_uart_rx;
 
 void serial_interface_task (void *pvParameters){
-    INT8U ch;
     while(1){
         char * str = receive_string();
         if (strlen(str) != 0) {
-            setLEDColor(RED);
             send_string(str);
+            if(strcmp(str, "debug\n")==0){
+                send_string("Entering debug mode");
+            }
+
         }
     }
 }

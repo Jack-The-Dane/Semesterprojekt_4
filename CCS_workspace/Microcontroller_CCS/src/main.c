@@ -20,6 +20,7 @@
 
 volatile SemaphoreHandle_t joystick_mutex;
 volatile SemaphoreHandle_t joystick_uart_mutex;
+volatile SemaphoreHandle_t joystick_run_mutex;
 
 volatile xQueueHandle q_uart_tx;
 volatile xQueueHandle q_uart_rx;
