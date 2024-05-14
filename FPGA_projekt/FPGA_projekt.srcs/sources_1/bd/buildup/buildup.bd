@@ -136,10 +136,6 @@
               "ASSOCIATED_RESET": {
                 "value": "rst",
                 "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "buildup_clk",
-                "value_src": "default_prop"
               }
             }
           },
@@ -683,10 +679,10 @@
         "ports": [
           "clk",
           "block_encoder_0/clk",
-          "clock_divider_0/clk",
           "block_encoder_1/clk",
           "synchronizer_0/clk",
-          "synchronizer_1/clk"
+          "synchronizer_1/clk",
+          "clock_divider_0/clk"
         ]
       },
       "clock_divider_0_clk_div": {
@@ -768,10 +764,10 @@
         "ports": [
           "rst",
           "block_encoder_0/rst",
-          "clock_divider_0/rst",
           "block_encoder_1/rst",
           "counter_1/rst",
-          "SPI_0/rst"
+          "SPI_0/rst",
+          "clock_divider_0/rst"
         ]
       },
       "synchronizer_0_Q": {

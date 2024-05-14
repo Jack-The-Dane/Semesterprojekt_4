@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"test_sync": {
-			"proto_instances": {
-			}
-		}
-	}
-}
