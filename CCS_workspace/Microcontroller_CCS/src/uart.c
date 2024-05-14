@@ -1,41 +1,41 @@
+#include <stdint.h>
+#include "tm4c123gh6pm.h"
+#include "emp_type.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "gpio.h"
 #include "uart0.h"
 
-void uart_putc(char ch) {
-    while(!uart0_tx_rdy());
-    uart0_putc(ch);
-}
+extern xQueueHandle q_uart_tx;
+extern xQueueHandle q_uart_rx;
 
-char uart_getc() {
-    while(!uart0_rx_rdy());
-    return uart0_getc();
-}
-
-char * uart_get_string() {
-    static char buffer[256];
-    char *buffer_pointer = buffer;
-
-    char current_char = '\0';
-
-    do {
-        current_char = uart_getc();
-        *buffer_pointer = current_char;
-        buffer_pointer++;
-    } while(current_char != '\n' && current_char != '\r' && current_char != '\0');
-
-    *buffer_pointer = '\0';
-
-    return buffer;
+void send_string(char *str) {
+    while (*str) {
+        xQueueSendToBack(q_uart_tx, str, 0);
+        str++;
+    }
 }
 
 void init_uart() {
-    uart0_init(9600, 8, 0, 0);
+    uart0_init(9600, 8, 1, 'e');
 }
 
-void uart_put_string(char* str) {
-    while(*str) uart_putc(*str++);
-}
+void uart_task(void *pvParameters) {
+  // Task
+  INT8U uart_data;
+  while (1) {
 
-void uart_put_stringln(char* str) {
-    uart_put_string(str);
-    uart_putc('\n');
+    while (xQueueReceive(q_uart_tx, &uart_data, 0)) {
+      uart0_putc(uart_data);
+      vTaskDelay(50 / portTICK_RATE_MS);
+    }
+
+    while (!(UART0_FR_R & (1 << 4))) {
+      uart_data = uart0_getc();
+      xQueueSendToBack(q_uart_rx, &uart_data, 15);
+      vTaskDelay(50 / portTICK_RATE_MS);
+    }
+
+    vTaskDelay(50 / portTICK_RATE_MS); // wait 50 ms.
+  }
 }

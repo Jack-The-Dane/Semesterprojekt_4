@@ -7,6 +7,9 @@
 #include "FreeRTOS.h"
 #include "semphr.h"
 
+extern xQueueHandle q_uart_tx;
+extern xQueueHandle q_uart_rx;
+
 extern SemaphoreHandle_t joystick_mutex;
 extern SemaphoreHandle_t joystick_uart_mutex;
 
@@ -37,13 +40,16 @@ void joystick_task(void * pvParameters) {
 }
 
 void joystick_uart_echo_task(void * pvParameters) {
+    send_string("helloooooo");
     while (1) {
+
+
         if(xSemaphoreTake(joystick_uart_mutex, 1)){
             if(xSemaphoreTake(joystick_mutex, 1)){
                 setLEDColor(RED);
-                uart_putc(joystick.x >> 4);
-                uart_putc(joystick.y >> 4);
-                uart_putc(joystick.button);
+                //uart_putc(joystick.x >> 4);
+                //uart_putc(joystick.y >> 4);
+                //uart_putc(joystick.button);
                 xSemaphoreGive(joystick_mutex);
                 xSemaphoreGive(joystick_uart_mutex);
                 setLEDColor(BLUE);

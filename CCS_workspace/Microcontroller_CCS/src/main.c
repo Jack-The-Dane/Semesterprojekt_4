@@ -9,7 +9,8 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "semphr.h"
-#include "priority_test.h"
+#include "queue.h"
+#include "serial_interface.h"
 
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE
 #define IDLE_PRIO 0
@@ -19,6 +20,9 @@
 
 volatile SemaphoreHandle_t joystick_mutex;
 volatile SemaphoreHandle_t joystick_uart_mutex;
+
+volatile xQueueHandle q_uart_tx;
+volatile xQueueHandle q_uart_rx;
 
 void error() {
     setLEDColor(RED);
@@ -42,18 +46,18 @@ int main(void) {
     if (!joystick_mutex) error();
     if (!joystick_uart_mutex) error();
 
-    //setLEDColor(BLUE);
+    q_uart_tx = xQueueCreate(150, sizeof(INT8U));
+    q_uart_rx = xQueueCreate(150, sizeof(INT8U));
 
+    setLEDColor(BLUE);
 
-    //xTaskCreate(alive_blink,             "Alive blinker",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-    //xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-    //xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL );
-    //xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL );
-    //xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL );
-
-    xTaskCreate(priority_test1,           "priority test",           USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL);
-    xTaskCreate(priority_test2,           "priority test",           USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL);
-    xTaskCreate(priority_test3,           "priority test",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
+    xTaskCreate(alive_blink,             "Alive blinker",           USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(uart_task,               "uart_task",               USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(serial_interface_task,   "serial_task",             USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
 
     vTaskStartScheduler();
 
