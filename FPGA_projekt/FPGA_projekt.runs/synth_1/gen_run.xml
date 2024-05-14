@@ -279,20 +279,20 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_SPI_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_clock_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_up_down_counter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="test_sync_flipflipflopflop_0_0"/>
 </GenRun>

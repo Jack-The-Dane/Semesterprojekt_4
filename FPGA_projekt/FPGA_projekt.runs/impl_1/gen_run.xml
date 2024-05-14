@@ -18,10 +18,14 @@
   <File Type="BITSTR-MMI" Name="test_sync_wrapper.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="test_sync_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="test_sync_wrapper.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="test_sync_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="test_sync_wrapper.ltx"/>
+  <File Type="BOOT-PDI-FILE" Name="test_sync_wrapper_boot.pdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="NPI_FILE" Name="test_sync_wrapper.npi"/>
   <File Type="OPT-DRC" Name="test_sync_wrapper_drc_opted.rpt"/>
+  <File Type="RBD_FILE" Name="test_sync_wrapper.rbd"/>
   <File Type="OPT-HWDEF" Name="test_sync_wrapper.hwdef"/>
   <File Type="PLACE-IO" Name="test_sync_wrapper_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="test_sync_wrapper_utilization_placed.rpt"/>
@@ -55,17 +59,13 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="test_sync_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="test_sync_wrapper_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="test_sync_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="test_sync_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="test_sync_wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="test_sync_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="test_sync_wrapper.pdi"/>
-  <File Type="BOOT-PDI-FILE" Name="test_sync_wrapper_boot.pdi"/>
   <File Type="PL-PDI-FILE" Name="test_sync_wrapper_pld.pdi"/>
   <File Type="RCFI_FILE" Name="test_sync_wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="test_sync_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="test_sync_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="test_sync_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="test_sync_wrapper.rbd"/>
   <File Type="ROUTE-RQS" Name="test_sync_wrapper_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="test_sync_wrapper_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -352,20 +352,20 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_SPI_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="encoder_test_block_encoder_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_clock_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_AND_gate_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_edge_detector_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="block_encoder_up_down_counter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_counter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_encoder_NOT_gate_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_pwm_gen_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="test_sync_flipflipflopflop_0_0"/>
 </GenRun>
