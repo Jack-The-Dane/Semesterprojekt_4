@@ -55,7 +55,7 @@ int main(void) {
     xTaskCreate(joystick_task,           "joystick_task",           USERTASK_STACK_SIZE, NULL, LOW_PRIO,  &joystick_handle );
     xTaskCreate(joystick_uart_echo_task, "joystick_uart_echo_task", USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
     xTaskCreate(spi_task,                "spi_task",                USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
-    xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
+    xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, HIGH_PRIO,  NULL );
     xTaskCreate(uart_task,               "uart_task",               USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
     xTaskCreate(serial_interface_task,   "serial_task",             USERTASK_STACK_SIZE, NULL, LOW_PRIO,  NULL );
 

@@ -16,8 +16,10 @@ extern xQueueHandle q_uart_tx;
 extern xQueueHandle q_uart_rx;
 extern TaskHandle_t joystick_handle;
 
+BOOLEAN debug_mode = FALSE;
+
 void serial_interface_task (void *pvParameters){
-    BOOLEAN debug_mode = FALSE;
+
     while(1){
         char * str = receive_string();
         if (strlen(str) != 0) {
