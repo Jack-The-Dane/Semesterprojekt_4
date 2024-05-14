@@ -52,7 +52,7 @@ int main(void) {
     //xTaskCreate(controller_task,         "controller_task",         USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL );
 
     xTaskCreate(priority_test1,           "priority test",           USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL);
-    xTaskCreate(priority_test2,           "priority test",           USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL);
+    xTaskCreate(priority_test2,           "priority test",           USERTASK_STACK_SIZE, NULL, HIGH_PRIO, NULL);
     xTaskCreate(priority_test3,           "priority test",           USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
 
     vTaskStartScheduler();

@@ -16,14 +16,15 @@ void controller_task(void * pvParameters) {
     TickType_t xLastWakeTime;
     // Initialize the xLastWakeTime variable with the current time.
     xLastWakeTime = xTaskGetTickCount();
+     const TickType_t xFrequency = 1;
     //Ticks (10 ticks), 1 tick = 5ms
-    const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
+    //const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
     while (1) {
         // Wait for the next cycle.
         vTaskDelayUntil( &xLastWakeTime, xFrequency );
         if(xSemaphoreTake(joystick_mutex, 0)){
 
-            setLEDColor(WHITE);
+            setLEDColor(BLUE);
 
             SPI_MOTOR_TYPE motor1 = joystick.x >> 4;
             SPI_MOTOR_TYPE motor2 = joystick.y >> 4;
@@ -66,7 +67,7 @@ void controller_task(void * pvParameters) {
 
             spi_tranceive(&motors, &encoders);
         } else {
-            vTaskDelay(1);
+           // vTaskDelay(1);
         }
 
     }
