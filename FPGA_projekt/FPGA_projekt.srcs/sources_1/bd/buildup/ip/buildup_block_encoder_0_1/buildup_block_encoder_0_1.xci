@@ -1,0 +1,48 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "buildup_block_encoder_0_1",
+    "cell_name": "block_encoder_pan",
+    "component_reference": "user.org:user:block_encoder:1.0",
+    "ip_revision": "2",
+    "gen_directory": "../../../../../../FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_1",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "buildup_block_encoder_0_1", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynq" } ],
+        "BASE_BOARD_PART": [ { "value": "tul.com.tw:pynq-z2:part0:1.0" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7z020" } ],
+        "PACKAGE": [ { "value": "clg400" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "2" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_1" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "clk": [ { "direction": "in" } ],
+        "enable": [ { "direction": "in" } ],
+        "encoder_a": [ { "direction": "in" } ],
+        "encoder_b": [ { "direction": "in" } ],
+        "pulse_cnt": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],
+        "rst": [ { "direction": "in" } ]
+      }
+    }
+  }
+}

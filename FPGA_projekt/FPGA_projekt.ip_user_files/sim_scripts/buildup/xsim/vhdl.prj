@@ -1,0 +1,42 @@
+vhdl xil_defaultlib  \
+"../../../bd/buildup/ipshared/f442/src/edge_detector.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_edge_detector_0_0.vhd" \
+"../../../bd/buildup/ipshared/f442/src/uo_down_counter.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_up_down_counter_0_0.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_edge_detector_0_1.vhd" \
+"../../../bd/buildup/ipshared/f442/src/NOT_gate.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_NOT_gate_0_0.vhd" \
+"../../../bd/buildup/ipshared/f442/src/AND_gate.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_AND_gate_0_0.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_NOT_gate_0_1.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder_AND_gate_1_0.vhd" \
+"../../../bd/buildup/ipshared/f442/sim/block_encoder.vhd" \
+"../../../bd/buildup/ip/buildup_block_encoder_0_0/sim/buildup_block_encoder_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_clock_divider_0_0/sim/buildup_clock_divider_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_block_encoder_1_0/sim/buildup_block_encoder_1_0.vhd" \
+"../../../bd/buildup/ip/buildup_counter_1_0/sim/buildup_counter_1_0.vhd" \
+"../../../bd/buildup/ip/buildup_pwm_gen_0_2/sim/buildup_pwm_gen_0_2.vhd" \
+"../../../bd/buildup/ip/buildup_pwm_gen_0_3/sim/buildup_pwm_gen_0_3.vhd" \
+"../../../bd/buildup/ip/buildup_AND_gate_0_0/sim/buildup_AND_gate_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_AND_gate_0_1/sim/buildup_AND_gate_0_1.vhd" \
+"../../../bd/buildup/ip/buildup_AND_gate_0_2/sim/buildup_AND_gate_0_2.vhd" \
+"../../../bd/buildup/ip/buildup_AND_gate_0_3/sim/buildup_AND_gate_0_3.vhd" \
+"../../../bd/buildup/ip/buildup_NOT_gate_0_0/sim/buildup_NOT_gate_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_NOT_gate_0_1/sim/buildup_NOT_gate_0_1.vhd" \
+"../../../bd/buildup/ip/buildup_spi_sub_0_0/sim/buildup_spi_sub_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_2/sim/buildup_synchronizer_0_2.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_3/sim/buildup_synchronizer_0_3.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_4/sim/buildup_synchronizer_0_4.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_5/sim/buildup_synchronizer_0_5.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_6/sim/buildup_synchronizer_0_6.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_7/sim/buildup_synchronizer_0_7.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_8/sim/buildup_synchronizer_0_8.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_9/sim/buildup_synchronizer_0_9.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_10/sim/buildup_synchronizer_0_10.vhd" \
+"../../../bd/buildup/ip/buildup_synchronizer_0_11/sim/buildup_synchronizer_0_11.vhd" \
+"../../../bd/buildup/ip/buildup_Rising_edge_detector_0_0/sim/buildup_Rising_edge_detector_0_0.vhd" \
+"../../../bd/buildup/ip/buildup_Falling_edge_detector_0_0/sim/buildup_Falling_edge_detector_0_0.vhd" \
+"../../../bd/buildup/sim/buildup.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="buildup_clock_divider_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_clock_divider_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_counter_1_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_counter_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_pwm_gen_0_2_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_pwm_gen_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_pwm_gen_0_3_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_pwm_gen_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_AND_gate_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_AND_gate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_AND_gate_0_1_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_AND_gate_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_AND_gate_0_2_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_AND_gate_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_AND_gate_0_3_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_AND_gate_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_NOT_gate_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_NOT_gate_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_NOT_gate_0_1_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_NOT_gate_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_2_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_8_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_Falling_edge_detector_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Falling_edge_detector_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_11_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_11_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_10_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_9_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_5_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_3_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_spi_sub_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_spi_sub_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_4_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_6_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_synchronizer_0_7_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_synchronizer_0_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="buildup_Rising_edge_detector_0_0_synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="buildup_clock_divider_0_0_synth_1"/>
+		<Parent Id="buildup_counter_1_0_synth_1"/>
+		<Parent Id="buildup_pwm_gen_0_2_synth_1"/>
+		<Parent Id="buildup_pwm_gen_0_3_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_0_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_1_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_2_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_3_synth_1"/>
+		<Parent Id="buildup_NOT_gate_0_0_synth_1"/>
+		<Parent Id="buildup_NOT_gate_0_1_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_2_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_8_synth_1"/>
+		<Parent Id="buildup_Falling_edge_detector_0_0_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_11_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_10_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_9_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_5_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_3_synth_1"/>
+		<Parent Id="buildup_spi_sub_0_0_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_4_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_6_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_7_synth_1"/>
+		<Parent Id="buildup_Rising_edge_detector_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="buildup_clock_divider_0_0_synth_1"/>
+		<Parent Id="buildup_counter_1_0_synth_1"/>
+		<Parent Id="buildup_pwm_gen_0_2_synth_1"/>
+		<Parent Id="buildup_pwm_gen_0_3_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_0_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_1_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_2_synth_1"/>
+		<Parent Id="buildup_AND_gate_0_3_synth_1"/>
+		<Parent Id="buildup_NOT_gate_0_0_synth_1"/>
+		<Parent Id="buildup_NOT_gate_0_1_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_2_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_8_synth_1"/>
+		<Parent Id="buildup_Falling_edge_detector_0_0_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_11_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_10_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_9_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_5_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_3_synth_1"/>
+		<Parent Id="buildup_spi_sub_0_0_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_4_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_6_synth_1"/>
+		<Parent Id="buildup_synchronizer_0_7_synth_1"/>
+		<Parent Id="buildup_Rising_edge_detector_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.ignorePathLengthChecks" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+
