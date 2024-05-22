@@ -30,11 +30,14 @@ char* receive_string(){
     if(!xQueueReceive(q_uart_rx, &ch, 0)) return "";
     if (ch == '\n') return "";
 
-    strncat(str, &ch, 1);
+    //strncat(str, &ch, 1);
+    str[0] = ch;
+    INT8U i = 1;
 
     do {
         if (xQueueReceive(q_uart_rx, &ch, 0)) {
-            strncat(str, &ch, 1);
+            //strncat(str, &ch, 1);
+            str[i++] = ch;
         }
     } while(ch != '\n');
 
@@ -85,13 +88,13 @@ void uart_task(void *pvParameters) {
   INT8U uart_data;
   while (1) {
 
-    while (xQueueReceive(q_uart_tx, &uart_data, 0)) {
-      send_char(uart_data);
-    }
-
     while (!(UART0_FR_R & (1 << 4))) {
       uart_data = UART0_DR_R;
       xQueueSendToBack(q_uart_rx, &uart_data, 15);
+    }
+
+    while (xQueueReceive(q_uart_tx, &uart_data, 0)) {
+      send_char(uart_data);
     }
 
     vTaskDelay(50 / portTICK_RATE_MS); // wait 50 ms.

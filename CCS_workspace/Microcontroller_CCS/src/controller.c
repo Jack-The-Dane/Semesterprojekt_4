@@ -1,3 +1,4 @@
+#include "controller.h"
 #include "emp_type.h"
 #include "joystick.h"
 #include "spi.h"
@@ -17,10 +18,11 @@ void send_debug_value(SPI_TYPE encoders){
     INT8U byte1 = encoders;
     INT8U byte2 = encoders >> 8;
     INT8U byte3 = encoders >> 16;
+    INT8U byte4 = '\n';
     xQueueSendToBack(q_uart_tx, &byte1, 0);
     xQueueSendToBack(q_uart_tx, &byte2, 0);
     xQueueSendToBack(q_uart_tx, &byte3, 0);
-
+    xQueueSendToBack(q_uart_tx, &byte4, 0);
 }
 
 // TODO: Use mutex to protect joystick
@@ -32,7 +34,7 @@ void controller_task(void * pvParameters) {
     xLastWakeTime = xTaskGetTickCount();
     //Ticks (10 ticks), 1 tick = 5ms
     const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
-
+    encoders = 0;
     SPI_MOTOR_TYPE pan_pwm = 0;
     SPI_MOTOR_TYPE tilt_pwm = 0;
 
@@ -82,7 +84,7 @@ void controller_task(void * pvParameters) {
 
             motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             
-            SPI_TYPE encoders = 0;
+            
             
             spi_tranceive(&motors, &encoders);
 
