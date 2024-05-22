@@ -2,16 +2,130 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Fri Apr  5 23:05:23 2024
+// Date        : Fri May 17 12:54:21 2024
 // Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top buildup_block_encoder_0_0 -prefix
-//               buildup_block_encoder_0_0_ encoder_test_block_encoder_0_0_sim_netlist.v
-// Design      : encoder_test_block_encoder_0_0
+//               buildup_block_encoder_0_0_ buildup_block_encoder_0_1_sim_netlist.v
+// Design      : buildup_block_encoder_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
+
+module buildup_block_encoder_0_0_Rising_edge_detector
+   (E,
+    encoder_b,
+    clk,
+    enable,
+    \int_cnt_reg[0] ,
+    encoder_a);
+  output [0:0]E;
+  input encoder_b;
+  input clk;
+  input enable;
+  input \int_cnt_reg[0] ;
+  input encoder_a;
+
+  wire [0:0]E;
+  wire FF1;
+  wire FF2;
+  wire clk;
+  wire enable;
+  wire encoder_a;
+  wire encoder_b;
+  wire \int_cnt_reg[0] ;
+
+  FDRE #(
+    .INIT(1'b0)) 
+    FF1_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(encoder_b),
+        .Q(FF1),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    FF2_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(FF1),
+        .Q(FF2),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'h88888A88)) 
+    \int_cnt[10]_i_1 
+       (.I0(enable),
+        .I1(\int_cnt_reg[0] ),
+        .I2(encoder_a),
+        .I3(FF1),
+        .I4(FF2),
+        .O(E));
+endmodule
+
+(* ORIG_REF_NAME = "Rising_edge_detector" *) 
+module buildup_block_encoder_0_0_Rising_edge_detector_0
+   (FF1_reg_0,
+    FF2,
+    D,
+    FF2_reg_0,
+    encoder_a,
+    clk,
+    encoder_b,
+    Q);
+  output FF1_reg_0;
+  output FF2;
+  output [0:0]D;
+  output FF2_reg_0;
+  input encoder_a;
+  input clk;
+  input encoder_b;
+  input [1:0]Q;
+
+  wire [0:0]D;
+  wire FF1_reg_0;
+  wire FF2;
+  wire FF2_reg_0;
+  wire [1:0]Q;
+  wire clk;
+  wire encoder_a;
+  wire encoder_b;
+
+  FDRE #(
+    .INIT(1'b0)) 
+    FF1_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(encoder_a),
+        .Q(FF1_reg_0),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    FF2_reg
+       (.C(clk),
+        .CE(1'b1),
+        .D(FF1_reg_0),
+        .Q(FF2),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT3 #(
+    .INIT(8'h04)) 
+    \int_cnt[10]_i_3 
+       (.I0(FF2),
+        .I1(FF1_reg_0),
+        .I2(encoder_b),
+        .O(FF2_reg_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hFB0404FB)) 
+    \int_cnt[1]_i_1 
+       (.I0(encoder_b),
+        .I1(FF1_reg_0),
+        .I2(FF2),
+        .I3(Q[0]),
+        .I4(Q[1]),
+        .O(D));
+endmodule
 
 (* hw_handoff = "block_encoder.hwdef" *) 
 module buildup_block_encoder_0_0_block_encoder
@@ -25,236 +139,163 @@ module buildup_block_encoder_0_0_block_encoder
   input enable;
   input encoder_a;
   input encoder_b;
-  output [8:0]pulse_cnt;
+  output [10:0]pulse_cnt;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 rst RST" *) (* x_interface_parameter = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
 
-  wire AND_gate_0_C;
-  wire \U0/latch_1 ;
-  wire \U0/latch_2 ;
+  wire Rising_edge_a_n_3;
+  wire Rising_edge_b_n_0;
+  wire \U0/FF1 ;
+  wire \U0/FF2 ;
   wire clk;
-  wire edge_detector_b_n_0;
   wire enable;
   wire encoder_a;
   wire encoder_b;
-  wire [8:0]pulse_cnt;
+  wire [1:1]p_0_in;
+  wire [10:0]pulse_cnt;
   wire rst;
 
-  (* x_core_info = "edge_detector,Vivado 2023.2" *) 
-  buildup_block_encoder_0_0_block_encoder_edge_detector_0_0 edge_detector_a
-       (.AND_gate_0_C(AND_gate_0_C),
+  (* x_core_info = "Rising_edge_detector,Vivado 2023.2" *) 
+  buildup_block_encoder_0_0_block_encoder_Rising_edge_detector_0_0 Rising_edge_a
+       (.D(p_0_in),
+        .FF1(\U0/FF1 ),
+        .FF2(\U0/FF2 ),
+        .FF2_reg(Rising_edge_a_n_3),
+        .Q(pulse_cnt[1:0]),
         .clk(clk),
         .encoder_a(encoder_a),
-        .encoder_b(encoder_b),
-        .latch_1(\U0/latch_1 ),
-        .latch_2(\U0/latch_2 ));
-  (* x_core_info = "edge_detector,Vivado 2023.2" *) 
-  buildup_block_encoder_0_0_block_encoder_edge_detector_0_1 edge_detector_b
-       (.AND_gate_0_C(AND_gate_0_C),
-        .E(edge_detector_b_n_0),
+        .encoder_b(encoder_b));
+  (* x_core_info = "Rising_edge_detector,Vivado 2023.2" *) 
+  buildup_block_encoder_0_0_block_encoder_Rising_edge_a_0 Rising_edge_b
+       (.E(Rising_edge_b_n_0),
         .clk(clk),
         .enable(enable),
         .encoder_a(encoder_a),
-        .encoder_b(encoder_b));
+        .encoder_b(encoder_b),
+        .\int_cnt_reg[0] (Rising_edge_a_n_3));
   (* x_core_info = "up_down_counter,Vivado 2023.2" *) 
   buildup_block_encoder_0_0_block_encoder_up_down_counter_0_0 up_down_counter_0
-       (.AND_gate_0_C(AND_gate_0_C),
-        .E(edge_detector_b_n_0),
+       (.D(p_0_in),
+        .E(Rising_edge_b_n_0),
+        .FF1(\U0/FF1 ),
+        .FF2(\U0/FF2 ),
         .Q(pulse_cnt),
         .clk(clk),
         .encoder_b(encoder_b),
-        .latch_1(\U0/latch_1 ),
-        .latch_2(\U0/latch_2 ),
+        .\int_cnt_reg[10] (Rising_edge_a_n_3),
         .rst(rst));
 endmodule
 
-module buildup_block_encoder_0_0_block_encoder_edge_detector_0_0
-   (latch_1,
-    latch_2,
-    AND_gate_0_C,
-    encoder_a,
-    clk,
-    encoder_b);
-  output latch_1;
-  output latch_2;
-  output AND_gate_0_C;
-  input encoder_a;
-  input clk;
-  input encoder_b;
-
-  wire AND_gate_0_C;
-  wire clk;
-  wire encoder_a;
-  wire encoder_b;
-  wire latch_1;
-  wire latch_2;
-
-  buildup_block_encoder_0_0_edge_detector_0 U0
-       (.AND_gate_0_C(AND_gate_0_C),
-        .clk(clk),
-        .encoder_a(encoder_a),
-        .encoder_b(encoder_b),
-        .latch_1(latch_1),
-        .latch_2(latch_2));
-endmodule
-
-module buildup_block_encoder_0_0_block_encoder_edge_detector_0_1
+module buildup_block_encoder_0_0_block_encoder_Rising_edge_a_0
    (E,
     encoder_b,
     clk,
-    encoder_a,
-    AND_gate_0_C,
-    enable);
+    enable,
+    \int_cnt_reg[0] ,
+    encoder_a);
   output [0:0]E;
   input encoder_b;
   input clk;
-  input encoder_a;
-  input AND_gate_0_C;
   input enable;
+  input \int_cnt_reg[0] ;
+  input encoder_a;
 
-  wire AND_gate_0_C;
   wire [0:0]E;
   wire clk;
   wire enable;
   wire encoder_a;
   wire encoder_b;
+  wire \int_cnt_reg[0] ;
 
-  buildup_block_encoder_0_0_edge_detector U0
-       (.AND_gate_0_C(AND_gate_0_C),
-        .E(E),
+  buildup_block_encoder_0_0_Rising_edge_detector U0
+       (.E(E),
         .clk(clk),
         .enable(enable),
+        .encoder_a(encoder_a),
+        .encoder_b(encoder_b),
+        .\int_cnt_reg[0] (\int_cnt_reg[0] ));
+endmodule
+
+module buildup_block_encoder_0_0_block_encoder_Rising_edge_detector_0_0
+   (FF1,
+    FF2,
+    D,
+    FF2_reg,
+    encoder_a,
+    clk,
+    encoder_b,
+    Q);
+  output FF1;
+  output FF2;
+  output [0:0]D;
+  output FF2_reg;
+  input encoder_a;
+  input clk;
+  input encoder_b;
+  input [1:0]Q;
+
+  wire [0:0]D;
+  wire FF1;
+  wire FF2;
+  wire FF2_reg;
+  wire [1:0]Q;
+  wire clk;
+  wire encoder_a;
+  wire encoder_b;
+
+  buildup_block_encoder_0_0_Rising_edge_detector_0 U0
+       (.D(D),
+        .FF1_reg_0(FF1),
+        .FF2(FF2),
+        .FF2_reg_0(FF2_reg),
+        .Q(Q),
+        .clk(clk),
         .encoder_a(encoder_a),
         .encoder_b(encoder_b));
 endmodule
 
 module buildup_block_encoder_0_0_block_encoder_up_down_counter_0_0
    (Q,
+    D,
+    \int_cnt_reg[10] ,
+    FF2,
+    FF1,
     encoder_b,
-    latch_1,
-    latch_2,
-    AND_gate_0_C,
     E,
     clk,
     rst);
-  output [8:0]Q;
+  output [10:0]Q;
+  input [0:0]D;
+  input \int_cnt_reg[10] ;
+  input FF2;
+  input FF1;
   input encoder_b;
-  input latch_1;
-  input latch_2;
-  input AND_gate_0_C;
   input [0:0]E;
   input clk;
   input rst;
 
-  wire AND_gate_0_C;
+  wire [0:0]D;
   wire [0:0]E;
-  wire [8:0]Q;
+  wire FF1;
+  wire FF2;
+  wire [10:0]Q;
   wire clk;
   wire encoder_b;
-  wire latch_1;
-  wire latch_2;
+  wire \int_cnt_reg[10] ;
   wire rst;
 
   buildup_block_encoder_0_0_up_down_counter U0
-       (.AND_gate_0_C(AND_gate_0_C),
+       (.D(D),
         .E(E),
+        .FF1(FF1),
+        .FF2(FF2),
         .Q(Q),
         .clk(clk),
         .encoder_b(encoder_b),
-        .latch_1(latch_1),
-        .latch_2(latch_2),
+        .\int_cnt_reg[10]_0 (\int_cnt_reg[10] ),
         .rst(rst));
 endmodule
 
-module buildup_block_encoder_0_0_edge_detector
-   (E,
-    encoder_b,
-    clk,
-    encoder_a,
-    AND_gate_0_C,
-    enable);
-  output [0:0]E;
-  input encoder_b;
-  input clk;
-  input encoder_a;
-  input AND_gate_0_C;
-  input enable;
-
-  wire AND_gate_0_C;
-  wire [0:0]E;
-  wire clk;
-  wire enable;
-  wire encoder_a;
-  wire encoder_b;
-  wire latch_1;
-  wire latch_2;
-
-  LUT5 #(
-    .INIT(32'hFF020000)) 
-    \int_cnt[8]_i_1 
-       (.I0(latch_1),
-        .I1(latch_2),
-        .I2(encoder_a),
-        .I3(AND_gate_0_C),
-        .I4(enable),
-        .O(E));
-  FDRE latch_1_reg
-       (.C(clk),
-        .CE(1'b1),
-        .D(encoder_b),
-        .Q(latch_1),
-        .R(1'b0));
-  FDRE latch_2_reg
-       (.C(clk),
-        .CE(1'b1),
-        .D(latch_1),
-        .Q(latch_2),
-        .R(1'b0));
-endmodule
-
-(* ORIG_REF_NAME = "edge_detector" *) 
-module buildup_block_encoder_0_0_edge_detector_0
-   (latch_1,
-    latch_2,
-    AND_gate_0_C,
-    encoder_a,
-    clk,
-    encoder_b);
-  output latch_1;
-  output latch_2;
-  output AND_gate_0_C;
-  input encoder_a;
-  input clk;
-  input encoder_b;
-
-  wire AND_gate_0_C;
-  wire clk;
-  wire encoder_a;
-  wire encoder_b;
-  wire latch_1;
-  wire latch_2;
-
-  LUT3 #(
-    .INIT(8'h04)) 
-    \int_cnt[8]_i_3 
-       (.I0(latch_2),
-        .I1(latch_1),
-        .I2(encoder_b),
-        .O(AND_gate_0_C));
-  FDRE latch_1_reg
-       (.C(clk),
-        .CE(1'b1),
-        .D(encoder_a),
-        .Q(latch_1),
-        .R(1'b0));
-  FDRE latch_2_reg
-       (.C(clk),
-        .CE(1'b1),
-        .D(latch_1),
-        .Q(latch_2),
-        .R(1'b0));
-endmodule
-
-(* CHECK_LICENSE_TYPE = "encoder_test_block_encoder_0_0,block_encoder,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
+(* CHECK_LICENSE_TYPE = "buildup_block_encoder_0_1,block_encoder,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "IPI" *) 
 (* x_core_info = "block_encoder,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module buildup_block_encoder_0_0
@@ -268,14 +309,14 @@ module buildup_block_encoder_0_0
   input enable;
   input encoder_a;
   input encoder_b;
-  output [8:0]pulse_cnt;
+  output [10:0]pulse_cnt;
   input rst;
 
   wire clk;
   wire enable;
   wire encoder_a;
   wire encoder_b;
-  wire [8:0]pulse_cnt;
+  wire [10:0]pulse_cnt;
   wire rst;
 
   (* hw_handoff = "block_encoder.hwdef" *) 
@@ -290,265 +331,267 @@ endmodule
 
 module buildup_block_encoder_0_0_up_down_counter
    (Q,
+    \int_cnt_reg[10]_0 ,
+    FF2,
+    FF1,
     encoder_b,
-    latch_1,
-    latch_2,
-    AND_gate_0_C,
     E,
     clk,
-    rst);
-  output [8:0]Q;
+    rst,
+    D);
+  output [10:0]Q;
+  input \int_cnt_reg[10]_0 ;
+  input FF2;
+  input FF1;
   input encoder_b;
-  input latch_1;
-  input latch_2;
-  input AND_gate_0_C;
   input [0:0]E;
   input clk;
   input rst;
+  input [0:0]D;
 
-  wire AND_gate_0_C;
+  wire [0:0]D;
   wire [0:0]E;
-  wire [8:0]Q;
+  wire FF1;
+  wire FF2;
+  wire [10:0]Q;
   wire clk;
   wire encoder_b;
-  wire \int_cnt[0]_i_2_n_0 ;
-  wire \int_cnt[4]_i_2_n_0 ;
-  wire \int_cnt[4]_i_3_n_0 ;
+  wire \int_cnt[10]_i_4_n_0 ;
+  wire \int_cnt[10]_i_5_n_0 ;
+  wire \int_cnt[10]_i_6_n_0 ;
+  wire \int_cnt[10]_i_7_n_0 ;
+  wire \int_cnt[10]_i_8_n_0 ;
+  wire \int_cnt[10]_i_9_n_0 ;
   wire \int_cnt[5]_i_2_n_0 ;
-  wire \int_cnt[5]_i_3_n_0 ;
+  wire \int_cnt[6]_i_2_n_0 ;
+  wire \int_cnt[6]_i_3_n_0 ;
   wire \int_cnt[7]_i_2_n_0 ;
   wire \int_cnt[7]_i_3_n_0 ;
   wire \int_cnt[7]_i_4_n_0 ;
-  wire \int_cnt[8]_i_4_n_0 ;
-  wire \int_cnt[8]_i_5_n_0 ;
-  wire \int_cnt[8]_i_6_n_0 ;
-  wire \int_cnt[8]_i_7_n_0 ;
-  wire \int_cnt[8]_i_8_n_0 ;
-  wire \int_cnt[8]_i_9_n_0 ;
-  wire latch_1;
-  wire latch_2;
-  wire [8:0]p_0_in;
+  wire \int_cnt[8]_i_2_n_0 ;
+  wire \int_cnt[9]_i_2_n_0 ;
+  wire \int_cnt_reg[10]_0 ;
+  wire [10:0]p_0_in;
   wire rst;
 
-  LUT6 #(
-    .INIT(64'hAAAAFFFFAAAAFFEF)) 
+  LUT1 #(
+    .INIT(2'h1)) 
     \int_cnt[0]_i_1 
-       (.I0(\int_cnt[8]_i_6_n_0 ),
-        .I1(encoder_b),
-        .I2(latch_1),
-        .I3(latch_2),
-        .I4(Q[0]),
-        .I5(\int_cnt[0]_i_2_n_0 ),
+       (.I0(Q[0]),
         .O(p_0_in[0]));
+  LUT6 #(
+    .INIT(64'h1F20300F1F203F00)) 
+    \int_cnt[10]_i_2 
+       (.I0(\int_cnt[10]_i_4_n_0 ),
+        .I1(\int_cnt[10]_i_5_n_0 ),
+        .I2(\int_cnt_reg[10]_0 ),
+        .I3(Q[10]),
+        .I4(Q[9]),
+        .I5(\int_cnt[10]_i_6_n_0 ),
+        .O(p_0_in[10]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
-    .INIT(32'hBFFFFFFF)) 
-    \int_cnt[0]_i_2 
-       (.I0(\int_cnt[8]_i_8_n_0 ),
-        .I1(Q[2]),
-        .I2(Q[8]),
+    .INIT(32'h08000000)) 
+    \int_cnt[10]_i_4 
+       (.I0(Q[8]),
+        .I1(Q[7]),
+        .I2(\int_cnt[6]_i_2_n_0 ),
         .I3(Q[6]),
         .I4(Q[5]),
-        .O(\int_cnt[0]_i_2_n_0 ));
+        .O(\int_cnt[10]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000010000000)) 
+    \int_cnt[10]_i_5 
+       (.I0(\int_cnt[10]_i_7_n_0 ),
+        .I1(\int_cnt[10]_i_8_n_0 ),
+        .I2(\int_cnt[10]_i_9_n_0 ),
+        .I3(Q[2]),
+        .I4(Q[10]),
+        .I5(Q[8]),
+        .O(\int_cnt[10]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
+    \int_cnt[10]_i_6 
+       (.I0(Q[8]),
+        .I1(\int_cnt[6]_i_3_n_0 ),
+        .I2(Q[6]),
+        .I3(Q[7]),
+        .O(\int_cnt[10]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \int_cnt[10]_i_7 
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .O(\int_cnt[10]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h7)) 
+    \int_cnt[10]_i_8 
+       (.I0(Q[5]),
+        .I1(Q[6]),
+        .O(\int_cnt[10]_i_8_n_0 ));
+  LUT4 #(
+    .INIT(16'h1000)) 
+    \int_cnt[10]_i_9 
+       (.I0(Q[9]),
+        .I1(Q[7]),
+        .I2(Q[4]),
+        .I3(Q[3]),
+        .O(\int_cnt[10]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFB04FF00FF0004FB)) 
+    \int_cnt[2]_i_1 
+       (.I0(FF2),
+        .I1(FF1),
+        .I2(encoder_b),
+        .I3(Q[2]),
+        .I4(Q[0]),
+        .I5(Q[1]),
+        .O(p_0_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'hCEECFEEF)) 
-    \int_cnt[1]_i_1 
-       (.I0(\int_cnt[8]_i_4_n_0 ),
-        .I1(\int_cnt[8]_i_6_n_0 ),
+    .INIT(32'h6CCCCCC9)) 
+    \int_cnt[3]_i_1 
+       (.I0(\int_cnt_reg[10]_0 ),
+        .I1(Q[3]),
         .I2(Q[1]),
         .I3(Q[0]),
-        .I4(AND_gate_0_C),
-        .O(p_0_in[1]));
+        .I4(Q[2]),
+        .O(p_0_in[3]));
   LUT6 #(
-    .INIT(64'hCEECECECFEFCFCEF)) 
-    \int_cnt[2]_i_1 
-       (.I0(\int_cnt[8]_i_4_n_0 ),
-        .I1(\int_cnt[8]_i_6_n_0 ),
+    .INIT(64'h6CCCCCCCCCCCCCC9)) 
+    \int_cnt[4]_i_1 
+       (.I0(\int_cnt_reg[10]_0 ),
+        .I1(Q[4]),
         .I2(Q[2]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(AND_gate_0_C),
-        .O(p_0_in[2]));
-  LUT6 #(
-    .INIT(64'hBCCCCCCE88888882)) 
-    \int_cnt[3]_i_1 
-       (.I0(\int_cnt[7]_i_2_n_0 ),
-        .I1(Q[3]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(Q[2]),
-        .I5(\int_cnt[8]_i_4_n_0 ),
-        .O(p_0_in[3]));
-  LUT5 #(
-    .INIT(32'hCE82B382)) 
-    \int_cnt[4]_i_1 
-       (.I0(\int_cnt[7]_i_2_n_0 ),
-        .I1(Q[4]),
-        .I2(\int_cnt[4]_i_2_n_0 ),
-        .I3(\int_cnt[8]_i_4_n_0 ),
-        .I4(\int_cnt[4]_i_3_n_0 ),
+        .I5(Q[3]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \int_cnt[4]_i_2 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .O(\int_cnt[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h7FFF)) 
-    \int_cnt[4]_i_3 
-       (.I0(Q[3]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .O(\int_cnt[4]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hF2F8F2F8FFF8F2FF)) 
+    .INIT(64'hFFEF00200010FFDF)) 
     \int_cnt[5]_i_1 
-       (.I0(\int_cnt[8]_i_4_n_0 ),
-        .I1(\int_cnt[5]_i_2_n_0 ),
-        .I2(\int_cnt[8]_i_6_n_0 ),
-        .I3(Q[5]),
-        .I4(\int_cnt[5]_i_3_n_0 ),
-        .I5(AND_gate_0_C),
+       (.I0(\int_cnt[6]_i_2_n_0 ),
+        .I1(FF2),
+        .I2(FF1),
+        .I3(encoder_b),
+        .I4(\int_cnt[5]_i_2_n_0 ),
+        .I5(Q[5]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'h80000000)) 
+    .INIT(32'hFFFFFFFE)) 
     \int_cnt[5]_i_2 
        (.I0(Q[4]),
         .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[0]),
+        .I2(Q[0]),
+        .I3(Q[1]),
         .I4(Q[3]),
         .O(\int_cnt[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \int_cnt[5]_i_3 
+    .INIT(32'hB04FBF40)) 
+    \int_cnt[6]_i_1 
+       (.I0(\int_cnt[6]_i_2_n_0 ),
+        .I1(Q[5]),
+        .I2(\int_cnt_reg[10]_0 ),
+        .I3(Q[6]),
+        .I4(\int_cnt[6]_i_3_n_0 ),
+        .O(p_0_in[6]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'h7FFFFFFF)) 
+    \int_cnt[6]_i_2 
        (.I0(Q[3]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+        .I1(Q[0]),
+        .I2(Q[1]),
         .I3(Q[2]),
         .I4(Q[4]),
-        .O(\int_cnt[5]_i_3_n_0 ));
+        .O(\int_cnt[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hF8F2FFF2F8F2F8FF)) 
-    \int_cnt[6]_i_1 
-       (.I0(\int_cnt[8]_i_4_n_0 ),
-        .I1(\int_cnt[7]_i_4_n_0 ),
-        .I2(\int_cnt[8]_i_6_n_0 ),
-        .I3(Q[6]),
-        .I4(AND_gate_0_C),
-        .I5(\int_cnt[7]_i_3_n_0 ),
-        .O(p_0_in[6]));
-  LUT6 #(
-    .INIT(64'hCCCE8882BBCE8882)) 
-    \int_cnt[7]_i_1 
-       (.I0(\int_cnt[7]_i_2_n_0 ),
-        .I1(Q[7]),
-        .I2(\int_cnt[7]_i_3_n_0 ),
-        .I3(Q[6]),
-        .I4(\int_cnt[8]_i_4_n_0 ),
-        .I5(\int_cnt[7]_i_4_n_0 ),
-        .O(p_0_in[7]));
-  LUT6 #(
-    .INIT(64'h00000000FFFEFFFF)) 
-    \int_cnt[7]_i_2 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(\int_cnt[8]_i_9_n_0 ),
-        .I5(AND_gate_0_C),
-        .O(\int_cnt[7]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    \int_cnt[7]_i_3 
-       (.I0(Q[4]),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(Q[3]),
-        .I5(Q[5]),
-        .O(\int_cnt[7]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h7FFFFFFFFFFFFFFF)) 
-    \int_cnt[7]_i_4 
+    .INIT(64'h0000000000000001)) 
+    \int_cnt[6]_i_3 
        (.I0(Q[5]),
         .I1(Q[3]),
-        .I2(Q[0]),
-        .I3(Q[1]),
+        .I2(Q[1]),
+        .I3(Q[0]),
         .I4(Q[2]),
         .I5(Q[4]),
-        .O(\int_cnt[7]_i_4_n_0 ));
+        .O(\int_cnt[6]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hF8F2FFF2F8F2F8FF)) 
-    \int_cnt[8]_i_2 
-       (.I0(\int_cnt[8]_i_4_n_0 ),
-        .I1(\int_cnt[8]_i_5_n_0 ),
-        .I2(\int_cnt[8]_i_6_n_0 ),
-        .I3(Q[8]),
-        .I4(AND_gate_0_C),
-        .I5(\int_cnt[8]_i_7_n_0 ),
-        .O(p_0_in[8]));
-  LUT6 #(
-    .INIT(64'hFFFF7FFF00000000)) 
-    \int_cnt[8]_i_4 
-       (.I0(Q[5]),
-        .I1(Q[6]),
-        .I2(Q[8]),
-        .I3(Q[2]),
-        .I4(\int_cnt[8]_i_8_n_0 ),
-        .I5(AND_gate_0_C),
-        .O(\int_cnt[8]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+    .INIT(64'h40404F401F101010)) 
+    \int_cnt[7]_i_1 
+       (.I0(\int_cnt[10]_i_5_n_0 ),
+        .I1(\int_cnt[7]_i_2_n_0 ),
+        .I2(\int_cnt_reg[10]_0 ),
+        .I3(\int_cnt[7]_i_3_n_0 ),
+        .I4(\int_cnt[7]_i_4_n_0 ),
+        .I5(Q[7]),
+        .O(p_0_in[7]));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hBF)) 
-    \int_cnt[8]_i_5 
-       (.I0(\int_cnt[7]_i_4_n_0 ),
+    \int_cnt[7]_i_2 
+       (.I0(\int_cnt[6]_i_2_n_0 ),
+        .I1(Q[6]),
+        .I2(Q[5]),
+        .O(\int_cnt[7]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFD)) 
+    \int_cnt[7]_i_3 
+       (.I0(\int_cnt[6]_i_3_n_0 ),
         .I1(Q[6]),
         .I2(Q[7]),
-        .O(\int_cnt[8]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000010000)) 
-    \int_cnt[8]_i_6 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(\int_cnt[8]_i_9_n_0 ),
-        .I5(AND_gate_0_C),
-        .O(\int_cnt[8]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \int_cnt[8]_i_7 
-       (.I0(Q[6]),
-        .I1(\int_cnt[7]_i_3_n_0 ),
-        .I2(Q[7]),
-        .O(\int_cnt[8]_i_7_n_0 ));
-  LUT5 #(
-    .INIT(32'hFFFFEFFF)) 
-    \int_cnt[8]_i_8 
-       (.I0(Q[3]),
-        .I1(Q[4]),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(Q[7]),
-        .O(\int_cnt[8]_i_8_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000001)) 
-    \int_cnt[8]_i_9 
-       (.I0(Q[4]),
-        .I1(Q[5]),
-        .I2(Q[6]),
         .I3(Q[8]),
-        .I4(Q[7]),
-        .O(\int_cnt[8]_i_9_n_0 ));
+        .I4(Q[10]),
+        .I5(Q[9]),
+        .O(\int_cnt[7]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \int_cnt[7]_i_4 
+       (.I0(\int_cnt[6]_i_3_n_0 ),
+        .I1(Q[6]),
+        .O(\int_cnt[7]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hBBBB888844447774)) 
+    \int_cnt[8]_i_1 
+       (.I0(\int_cnt[8]_i_2_n_0 ),
+        .I1(\int_cnt_reg[10]_0 ),
+        .I2(Q[9]),
+        .I3(Q[10]),
+        .I4(\int_cnt[9]_i_2_n_0 ),
+        .I5(Q[8]),
+        .O(p_0_in[8]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'hF7FF)) 
+    \int_cnt[8]_i_2 
+       (.I0(Q[5]),
+        .I1(Q[6]),
+        .I2(\int_cnt[6]_i_2_n_0 ),
+        .I3(Q[7]),
+        .O(\int_cnt[8]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h77777744888888B8)) 
+    \int_cnt[9]_i_1 
+       (.I0(\int_cnt[10]_i_4_n_0 ),
+        .I1(\int_cnt_reg[10]_0 ),
+        .I2(Q[10]),
+        .I3(Q[8]),
+        .I4(\int_cnt[9]_i_2_n_0 ),
+        .I5(Q[9]),
+        .O(p_0_in[9]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hEF)) 
+    \int_cnt[9]_i_2 
+       (.I0(Q[7]),
+        .I1(Q[6]),
+        .I2(\int_cnt[6]_i_3_n_0 ),
+        .O(\int_cnt[9]_i_2_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \int_cnt_reg[0] 
@@ -559,11 +602,19 @@ module buildup_block_encoder_0_0_up_down_counter
         .Q(Q[0]));
   FDCE #(
     .INIT(1'b0)) 
+    \int_cnt_reg[10] 
+       (.C(clk),
+        .CE(E),
+        .CLR(rst),
+        .D(p_0_in[10]),
+        .Q(Q[10]));
+  FDCE #(
+    .INIT(1'b0)) 
     \int_cnt_reg[1] 
        (.C(clk),
         .CE(E),
         .CLR(rst),
-        .D(p_0_in[1]),
+        .D(D),
         .Q(Q[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -621,6 +672,14 @@ module buildup_block_encoder_0_0_up_down_counter
         .CLR(rst),
         .D(p_0_in[8]),
         .Q(Q[8]));
+  FDCE #(
+    .INIT(1'b0)) 
+    \int_cnt_reg[9] 
+       (.C(clk),
+        .CE(E),
+        .CLR(rst),
+        .D(p_0_in[9]),
+        .Q(Q[9]));
 endmodule
 `ifndef GLBL
 `define GLBL

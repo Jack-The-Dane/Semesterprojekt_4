@@ -60,7 +60,7 @@ ENTITY block_encoder_up_down_counter_0_0 IS
     down : IN STD_LOGIC;
     rst : IN STD_LOGIC;
     en : IN STD_LOGIC;
-    cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+    cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
   );
 END block_encoder_up_down_counter_0_0;
 
@@ -78,7 +78,7 @@ ARCHITECTURE block_encoder_up_down_counter_0_0_arch OF block_encoder_up_down_cou
       down : IN STD_LOGIC;
       rst : IN STD_LOGIC;
       en : IN STD_LOGIC;
-      cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
+      cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
     );
   END COMPONENT up_down_counter;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -90,8 +90,8 @@ ARCHITECTURE block_encoder_up_down_counter_0_0_arch OF block_encoder_up_down_cou
 BEGIN
   U0 : up_down_counter
     GENERIC MAP (
-      n_bits => 9,
-      max_val_binary => B"101100111"
+      n_bits => 11,
+      max_val_binary => B"10001111111"
     )
     PORT MAP (
       clk => clk,

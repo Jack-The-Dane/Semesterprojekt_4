@@ -5,10 +5,10 @@
 
 // The type of data sent and received over SPI
 #define SPI_TYPE INT32U
-#define SPI_WORD_LENGTH 20
+#define SPI_WORD_LENGTH 24
 
 // SPI frequency
-#define SCLK_FREQ 5UL
+#define SCLK_FREQ 10000UL
 #define SCLK_HALF_PERIOD_US (1000000UL / (SCLK_FREQ * 2))
 
 // `SPI_MOTOR_TYPE` and `SPI_ENCODER_TYPE` should be half the size of `SPI_TYPE`

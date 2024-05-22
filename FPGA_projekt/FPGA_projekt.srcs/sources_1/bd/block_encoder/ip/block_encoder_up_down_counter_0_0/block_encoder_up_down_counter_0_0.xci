@@ -8,13 +8,13 @@
     "gen_directory": "../../../../../../FPGA_projekt.gen/sources_1/bd/block_encoder/ip/block_encoder_up_down_counter_0_0",
     "parameters": {
       "component_parameters": {
-        "n_bits": [ { "value": "9", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "max_val_binary": [ { "value": "\"101100111\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
+        "n_bits": [ { "value": "11", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "max_val_binary": [ { "value": "\"10001111111\"", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "Component_Name": [ { "value": "block_encoder_up_down_counter_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "model_parameters": {
-        "n_bits": [ { "value": "9", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "max_val_binary": [ { "value": "\"101100111\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
+        "n_bits": [ { "value": "11", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "max_val_binary": [ { "value": "\"10001111111\"", "resolve_type": "generated", "format": "bitString", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynq" } ],
@@ -47,7 +47,7 @@
         "down": [ { "direction": "in" } ],
         "rst": [ { "direction": "in" } ],
         "en": [ { "direction": "in" } ],
-        "cnt": [ { "direction": "out", "size_left": "8", "size_right": "0" } ]
+        "cnt": [ { "direction": "out", "size_left": "10", "size_right": "0" } ]
       },
       "interfaces": {
         "rst": {

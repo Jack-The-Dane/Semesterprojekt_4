@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "buildup_xlconstant_1_0",
-    "cell_name": "xlconstant_1",
+    "cell_name": "Always_true",
     "component_reference": "xilinx.com:ip:xlconstant:1.1",
     "ip_revision": "8",
     "gen_directory": "../../../../../../FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_xlconstant_1_0",

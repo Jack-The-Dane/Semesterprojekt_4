@@ -7,7 +7,8 @@
       "name": "test_sync",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
       "flipflipflopflop_0": "",
@@ -22,7 +23,29 @@
       },
       "clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "test_sync_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -30,7 +53,7 @@
         "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
         "ip_revision": "1",
         "xci_name": "test_sync_flipflipflopflop_0_0",
-        "xci_path": "ip\\test_sync_flipflipflopflop_0_0\\test_sync_flipflipflopflop_0_0.xci",
+        "xci_path": "ip/test_sync_flipflipflopflop_0_0/test_sync_flipflipflopflop_0_0.xci",
         "inst_hier_path": "flipflipflopflop_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -43,7 +66,13 @@
           },
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "test_sync_clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "Q": {
             "direction": "O"
@@ -54,7 +83,7 @@
         "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
         "ip_revision": "1",
         "xci_name": "test_sync_flipflipflopflop_0_1",
-        "xci_path": "ip\\test_sync_flipflipflopflop_0_1\\test_sync_flipflipflopflop_0_1.xci",
+        "xci_path": "ip/test_sync_flipflipflopflop_0_1/test_sync_flipflipflopflop_0_1.xci",
         "inst_hier_path": "flipflipflopflop_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -67,7 +96,13 @@
           },
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "test_sync_clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "Q": {
             "direction": "O"

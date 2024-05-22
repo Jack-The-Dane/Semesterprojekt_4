@@ -38,7 +38,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
   delay_us(SCLK_HALF_PERIOD_US);
-  //setLEDColor(GREEN);
+
 
   for (INT32U i = SPI_WORD_LENGTH; i > 0; i--) {
 
@@ -62,9 +62,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     delay_us(SCLK_HALF_PERIOD_US);
   }
 
-  GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
 
-  delay_us(SCLK_HALF_PERIOD_US);
   // Set MOSI high
   GPIO_PORTE_DATA_R |= (1 << SPI_MOSI_PIN);
 

@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Wed Apr 17 17:09:33 2024
---Host        : Cornelia running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+--Date        : Fri May 17 12:51:00 2024
+--Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target block_encoder_wrapper.bd
 --Design      : block_encoder_wrapper
 --Purpose     : IP block netlist
@@ -18,7 +18,7 @@ entity block_encoder_wrapper is
     enable : in STD_LOGIC;
     encoder_a : in STD_LOGIC;
     encoder_b : in STD_LOGIC;
-    pulse_cnt : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    pulse_cnt : out STD_LOGIC_VECTOR ( 10 downto 0 );
     rst : in STD_LOGIC
   );
 end block_encoder_wrapper;
@@ -30,7 +30,7 @@ architecture STRUCTURE of block_encoder_wrapper is
     rst : in STD_LOGIC;
     encoder_a : in STD_LOGIC;
     encoder_b : in STD_LOGIC;
-    pulse_cnt : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    pulse_cnt : out STD_LOGIC_VECTOR ( 10 downto 0 );
     enable : in STD_LOGIC
   );
   end component block_encoder;
@@ -41,7 +41,7 @@ block_encoder_i: component block_encoder
       enable => enable,
       encoder_a => encoder_a,
       encoder_b => encoder_b,
-      pulse_cnt(8 downto 0) => pulse_cnt(8 downto 0),
+      pulse_cnt(10 downto 0) => pulse_cnt(10 downto 0),
       rst => rst
     );
 end STRUCTURE;

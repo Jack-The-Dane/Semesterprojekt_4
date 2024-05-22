@@ -15,10 +15,12 @@ void send_char(INT8U chr) {
 }
 
 void send_string(char *str) {
-  while (*str) {
+  while (*str != '\n') {
     xQueueSendToBack(q_uart_tx, str, 15);
     str++;
   }
+  INT8U n = '\n';
+  xQueueSendToBack(q_uart_tx, &n, 15);
 }
 
 char* receive_string(){

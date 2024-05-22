@@ -2,6 +2,8 @@
 
 #ifndef JOYSTICK
 #define JOYSTICK
+// Use ACD input 10 (PB4) - PAN input
+// Use ACD input 11 (PB5) - TILT input
 
 #define JOYSTICK_BUTTON_PIN 0
 

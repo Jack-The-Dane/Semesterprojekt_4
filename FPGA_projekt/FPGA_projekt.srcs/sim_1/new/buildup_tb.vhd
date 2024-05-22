@@ -54,8 +54,7 @@ architecture Behavioral of buildup_tb is
     pwm_tilt_cw : out STD_LOGIC;
     pwm_pan_ccw : out STD_LOGIC;
     pwm_tilt_ccw : out STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    spi_out : out STD_LOGIC_VECTOR ( 19 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component buildup;
   
@@ -77,7 +76,6 @@ architecture Behavioral of buildup_tb is
     signal pwm_tilt_cw_tb :  STD_LOGIC;
     signal pwm_pan_ccw_tb :  STD_LOGIC;
     signal pwm_tilt_ccw_tb :  STD_LOGIC;
-    signal spi_out_tb : STD_LOGIC_VECTOR ( 19 downto 0 );
 
 begin
 
@@ -99,8 +97,7 @@ begin
             Hall_effect_sensor_1 => Hall_effect_sensor_1_tb,
             pwm_tilt_cw => pwm_tilt_cw_tb,
             pwm_pan_ccw => pwm_pan_ccw_tb,
-            pwm_tilt_ccw => pwm_tilt_ccw_tb,
-            spi_out => spi_out_tb
+            pwm_tilt_ccw => pwm_tilt_ccw_tb
         );
         
     simulation: process

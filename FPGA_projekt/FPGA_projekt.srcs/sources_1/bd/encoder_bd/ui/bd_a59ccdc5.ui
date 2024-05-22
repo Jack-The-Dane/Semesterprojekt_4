@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"1.0",
    "Default View_TopLeft":"-363,-119",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_ja_0 -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
 preplace port port-id_ja_1 -pg 1 -lvl 0 -x -20 -y 90 -defaultsOSRD

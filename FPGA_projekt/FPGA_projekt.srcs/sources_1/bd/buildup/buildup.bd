@@ -1,39 +1,48 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB8E63C1B508BDD98",
+      "boundary_crc": "0xB8E63C1B423B3312",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/buildup",
       "name": "buildup",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2"
+      "tool_version": "2023.2",
+      "validated": "true"
     },
     "design_tree": {
-      "block_encoder_0": "",
-      "xlconstant_1": "",
+      "Always_true": "",
       "clock_divider_0": "",
-      "synchronizer_0": "",
-      "SPI_0": "",
-      "block_encoder_1": "",
       "xlconcat_0": "",
       "xlslice_0": "",
       "xlslice_1": "",
       "counter_1": "",
-      "pwm_pan_cw": "",
-      "pwm_tilt_cw": "",
       "xlslice_2": "",
       "xlslice_3": "",
-      "pwm_pan_ccw": "",
-      "pwm_tilt_ccw": "",
+      "pwm_pan": "",
+      "pwm_tilt": "",
       "AND_gate_0": "",
       "AND_gate_1": "",
       "AND_gate_2": "",
       "AND_gate_3": "",
       "NOT_gate_0": "",
       "NOT_gate_1": "",
-      "xlslice_4": "",
-      "synchronizer_1": ""
+      "spi_sub_0": "",
+      "synchronizer_0": "",
+      "synchronizer_1": "",
+      "synchronizer_2": "",
+      "synchronizer_3": "",
+      "synchronizer_4": "",
+      "synchronizer_5": "",
+      "synchronizer_6": "",
+      "synchronizer_7": "",
+      "synchronizer_8": "",
+      "synchronizer_9": "",
+      "Rising_edge_detector_0": "",
+      "Falling_edge_detector_0": "",
+      "block_encoder_tilt": "",
+      "block_encoder_pan": "",
+      "xlslice_5": ""
     },
     "ports": {
       "CS": {
@@ -41,14 +50,46 @@
       },
       "clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "buildup_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "rst": {
         "direction": "I"
       },
       "mosi": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "pwm_pan_cw": {
         "direction": "O"
@@ -61,7 +102,29 @@
       },
       "sclk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "buildup_sclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
       },
       "miso": {
         "direction": "O"
@@ -94,29 +157,22 @@
       }
     },
     "components": {
-      "block_encoder_0": {
-        "vlnv": "user.org:user:block_encoder:1.0",
-        "ip_revision": "2",
-        "xci_name": "buildup_block_encoder_0_0",
-        "xci_path": "ip\\buildup_block_encoder_0_0\\buildup_block_encoder_0_0.xci",
-        "inst_hier_path": "block_encoder_0"
-      },
-      "xlconstant_1": {
+      "Always_true": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "8",
         "xci_name": "buildup_xlconstant_1_0",
-        "xci_path": "ip\\buildup_xlconstant_1_0\\buildup_xlconstant_1_0.xci",
-        "inst_hier_path": "xlconstant_1"
+        "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
+        "inst_hier_path": "Always_true"
       },
       "clock_divider_0": {
         "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_clock_divider_0_0",
-        "xci_path": "ip\\buildup_clock_divider_0_0\\buildup_clock_divider_0_0.xci",
+        "xci_path": "ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci",
         "inst_hier_path": "clock_divider_0",
         "parameters": {
           "n_bits": {
-            "value": "4"
+            "value": "20"
           }
         },
         "reference_info": {
@@ -136,6 +192,10 @@
               "ASSOCIATED_RESET": {
                 "value": "rst",
                 "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
               }
             }
           },
@@ -144,56 +204,18 @@
           }
         }
       },
-      "synchronizer_0": {
-        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_synchronizer_0_0",
-        "xci_path": "ip\\buildup_synchronizer_0_0\\buildup_synchronizer_0_0.xci",
-        "inst_hier_path": "synchronizer_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "synchronizer",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "D": {
-            "direction": "I"
-          },
-          "Q": {
-            "direction": "O"
-          }
-        }
-      },
-      "SPI_0": {
-        "vlnv": "xilinx.com:user:SPI:1.0",
-        "ip_revision": "2",
-        "xci_name": "buildup_SPI_0_2",
-        "xci_path": "ip\\buildup_SPI_0_2\\buildup_SPI_0_2.xci",
-        "inst_hier_path": "SPI_0"
-      },
-      "block_encoder_1": {
-        "vlnv": "user.org:user:block_encoder:1.0",
-        "ip_revision": "2",
-        "xci_name": "buildup_block_encoder_1_0",
-        "xci_path": "ip\\buildup_block_encoder_1_0\\buildup_block_encoder_1_0.xci",
-        "inst_hier_path": "block_encoder_1"
-      },
       "xlconcat_0": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "ip_revision": "5",
         "xci_name": "buildup_xlconcat_0_0",
-        "xci_path": "ip\\buildup_xlconcat_0_0\\buildup_xlconcat_0_0.xci",
+        "xci_path": "ip/buildup_xlconcat_0_0/buildup_xlconcat_0_0.xci",
         "inst_hier_path": "xlconcat_0",
         "parameters": {
           "IN2_WIDTH": {
-            "value": "9"
+            "value": "11"
           },
           "IN3_WIDTH": {
-            "value": "9"
+            "value": "11"
           },
           "NUM_PORTS": {
             "value": "4"
@@ -204,7 +226,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_0_0",
-        "xci_path": "ip\\buildup_xlslice_0_0\\buildup_xlslice_0_0.xci",
+        "xci_path": "ip/buildup_xlslice_0_0/buildup_xlslice_0_0.xci",
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
@@ -214,7 +236,7 @@
             "value": "0"
           },
           "DIN_WIDTH": {
-            "value": "20"
+            "value": "24"
           }
         }
       },
@@ -222,7 +244,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_1_0",
-        "xci_path": "ip\\buildup_xlslice_1_0\\buildup_xlslice_1_0.xci",
+        "xci_path": "ip/buildup_xlslice_1_0/buildup_xlslice_1_0.xci",
         "inst_hier_path": "xlslice_1",
         "parameters": {
           "DIN_FROM": {
@@ -232,7 +254,7 @@
             "value": "8"
           },
           "DIN_WIDTH": {
-            "value": "20"
+            "value": "24"
           }
         }
       },
@@ -240,7 +262,7 @@
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_counter_1_0",
-        "xci_path": "ip\\buildup_counter_1_0\\buildup_counter_1_0.xci",
+        "xci_path": "ip/buildup_counter_1_0/buildup_counter_1_0.xci",
         "inst_hier_path": "counter_1",
         "parameters": {
           "n_bits": {
@@ -277,75 +299,11 @@
           }
         }
       },
-      "pwm_pan_cw": {
-        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_pwm_gen_0_1",
-        "xci_path": "ip\\buildup_pwm_gen_0_1\\buildup_pwm_gen_0_1.xci",
-        "inst_hier_path": "pwm_pan_cw",
-        "parameters": {
-          "n_bits": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pwm_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "cnt": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "duty": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "pwm": {
-            "direction": "O"
-          }
-        }
-      },
-      "pwm_tilt_cw": {
-        "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
-        "ip_revision": "1",
-        "xci_name": "buildup_pwm_gen_1_0",
-        "xci_path": "ip\\buildup_pwm_gen_1_0\\buildup_pwm_gen_1_0.xci",
-        "inst_hier_path": "pwm_tilt_cw",
-        "parameters": {
-          "n_bits": {
-            "value": "8"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "pwm_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "cnt": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "duty": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "pwm": {
-            "direction": "O"
-          }
-        }
-      },
       "xlslice_2": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_2_0",
-        "xci_path": "ip\\buildup_xlslice_2_0\\buildup_xlslice_2_0.xci",
+        "xci_path": "ip/buildup_xlslice_2_0/buildup_xlslice_2_0.xci",
         "inst_hier_path": "xlslice_2",
         "parameters": {
           "DIN_FROM": {
@@ -355,7 +313,7 @@
             "value": "16"
           },
           "DIN_WIDTH": {
-            "value": "20"
+            "value": "24"
           }
         }
       },
@@ -363,7 +321,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_2_1",
-        "xci_path": "ip\\buildup_xlslice_2_1\\buildup_xlslice_2_1.xci",
+        "xci_path": "ip/buildup_xlslice_2_1/buildup_xlslice_2_1.xci",
         "inst_hier_path": "xlslice_3",
         "parameters": {
           "DIN_FROM": {
@@ -373,16 +331,16 @@
             "value": "17"
           },
           "DIN_WIDTH": {
-            "value": "20"
+            "value": "24"
           }
         }
       },
-      "pwm_pan_ccw": {
+      "pwm_pan": {
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_pwm_gen_0_2",
-        "xci_path": "ip\\buildup_pwm_gen_0_2\\buildup_pwm_gen_0_2.xci",
-        "inst_hier_path": "pwm_pan_ccw",
+        "xci_path": "ip/buildup_pwm_gen_0_2/buildup_pwm_gen_0_2.xci",
+        "inst_hier_path": "pwm_pan",
         "parameters": {
           "n_bits": {
             "value": "8"
@@ -409,12 +367,12 @@
           }
         }
       },
-      "pwm_tilt_ccw": {
+      "pwm_tilt": {
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_pwm_gen_0_3",
-        "xci_path": "ip\\buildup_pwm_gen_0_3\\buildup_pwm_gen_0_3.xci",
-        "inst_hier_path": "pwm_tilt_ccw",
+        "xci_path": "ip/buildup_pwm_gen_0_3/buildup_pwm_gen_0_3.xci",
+        "inst_hier_path": "pwm_tilt",
         "parameters": {
           "n_bits": {
             "value": "8"
@@ -445,7 +403,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_0",
-        "xci_path": "ip\\buildup_AND_gate_0_0\\buildup_AND_gate_0_0.xci",
+        "xci_path": "ip/buildup_AND_gate_0_0/buildup_AND_gate_0_0.xci",
         "inst_hier_path": "AND_gate_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -468,7 +426,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_1",
-        "xci_path": "ip\\buildup_AND_gate_0_1\\buildup_AND_gate_0_1.xci",
+        "xci_path": "ip/buildup_AND_gate_0_1/buildup_AND_gate_0_1.xci",
         "inst_hier_path": "AND_gate_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -491,7 +449,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_2",
-        "xci_path": "ip\\buildup_AND_gate_0_2\\buildup_AND_gate_0_2.xci",
+        "xci_path": "ip/buildup_AND_gate_0_2/buildup_AND_gate_0_2.xci",
         "inst_hier_path": "AND_gate_2",
         "reference_info": {
           "ref_type": "hdl",
@@ -514,7 +472,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_3",
-        "xci_path": "ip\\buildup_AND_gate_0_3\\buildup_AND_gate_0_3.xci",
+        "xci_path": "ip/buildup_AND_gate_0_3/buildup_AND_gate_0_3.xci",
         "inst_hier_path": "AND_gate_3",
         "reference_info": {
           "ref_type": "hdl",
@@ -537,7 +495,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_NOT_gate_0_0",
-        "xci_path": "ip\\buildup_NOT_gate_0_0\\buildup_NOT_gate_0_0.xci",
+        "xci_path": "ip/buildup_NOT_gate_0_0/buildup_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -557,7 +515,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_NOT_gate_0_1",
-        "xci_path": "ip\\buildup_NOT_gate_0_1\\buildup_NOT_gate_0_1.xci",
+        "xci_path": "ip/buildup_NOT_gate_0_1/buildup_NOT_gate_0_1.xci",
         "inst_hier_path": "NOT_gate_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -573,29 +531,109 @@
           }
         }
       },
-      "xlslice_4": {
-        "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "ip_revision": "3",
-        "xci_name": "buildup_xlslice_4_1",
-        "xci_path": "ip\\buildup_xlslice_4_1\\buildup_xlslice_4_1.xci",
-        "inst_hier_path": "xlslice_4",
+      "spi_sub_0": {
+        "vlnv": "xilinx.com:module_ref:spi_sub:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_spi_sub_0_0",
+        "xci_path": "ip/buildup_spi_sub_0_0/buildup_spi_sub_0_0.xci",
+        "inst_hier_path": "spi_sub_0",
         "parameters": {
-          "DIN_FROM": {
-            "value": "17"
+          "n_bits": {
+            "value": "24"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "spi_sub",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
           },
-          "DIN_TO": {
-            "value": "14"
+          "rst": {
+            "type": "rst",
+            "direction": "I"
           },
-          "DIN_WIDTH": {
-            "value": "20"
+          "SCLK_rising": {
+            "direction": "I"
+          },
+          "SCLK_falling": {
+            "direction": "I"
+          },
+          "MOSI": {
+            "direction": "I"
+          },
+          "CS": {
+            "direction": "I"
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "23",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "24",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "MISO": {
+            "direction": "O"
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "synchronizer_0": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_2",
+        "xci_path": "ip/buildup_synchronizer_0_2/buildup_synchronizer_0_2.xci",
+        "inst_hier_path": "synchronizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
           }
         }
       },
       "synchronizer_1": {
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
-        "xci_name": "buildup_synchronizer_0_1",
-        "xci_path": "ip\\buildup_synchronizer_0_1\\buildup_synchronizer_0_1.xci",
+        "xci_name": "buildup_synchronizer_0_3",
+        "xci_path": "ip/buildup_synchronizer_0_3/buildup_synchronizer_0_3.xci",
         "inst_hier_path": "synchronizer_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -605,7 +643,13 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "D": {
             "direction": "I"
@@ -614,19 +658,404 @@
             "direction": "O"
           }
         }
+      },
+      "synchronizer_2": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_4",
+        "xci_path": "ip/buildup_synchronizer_0_4/buildup_synchronizer_0_4.xci",
+        "inst_hier_path": "synchronizer_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_3": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_5",
+        "xci_path": "ip/buildup_synchronizer_0_5/buildup_synchronizer_0_5.xci",
+        "inst_hier_path": "synchronizer_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_4": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_6",
+        "xci_path": "ip/buildup_synchronizer_0_6/buildup_synchronizer_0_6.xci",
+        "inst_hier_path": "synchronizer_4",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_5": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_7",
+        "xci_path": "ip/buildup_synchronizer_0_7/buildup_synchronizer_0_7.xci",
+        "inst_hier_path": "synchronizer_5",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_6": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_8",
+        "xci_path": "ip/buildup_synchronizer_0_8/buildup_synchronizer_0_8.xci",
+        "inst_hier_path": "synchronizer_6",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_7": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_9",
+        "xci_path": "ip/buildup_synchronizer_0_9/buildup_synchronizer_0_9.xci",
+        "inst_hier_path": "synchronizer_7",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_8": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_10",
+        "xci_path": "ip/buildup_synchronizer_0_10/buildup_synchronizer_0_10.xci",
+        "inst_hier_path": "synchronizer_8",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "buildup_sclk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "synchronizer_9": {
+        "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_synchronizer_0_11",
+        "xci_path": "ip/buildup_synchronizer_0_11/buildup_synchronizer_0_11.xci",
+        "inst_hier_path": "synchronizer_9",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "synchronizer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "Rising_edge_detector_0": {
+        "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_Rising_edge_detector_0_0",
+        "xci_path": "ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.xci",
+        "inst_hier_path": "Rising_edge_detector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Rising_edge_detector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "Falling_edge_detector_0": {
+        "vlnv": "xilinx.com:module_ref:Falling_edge_detector:1.0",
+        "ip_revision": "1",
+        "xci_name": "buildup_Falling_edge_detector_0_0",
+        "xci_path": "ip/buildup_Falling_edge_detector_0_0/buildup_Falling_edge_detector_0_0.xci",
+        "inst_hier_path": "Falling_edge_detector_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Falling_edge_detector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "buildup_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "block_encoder_tilt": {
+        "vlnv": "user.org:user:block_encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_block_encoder_0_0",
+        "xci_path": "ip/buildup_block_encoder_0_0/buildup_block_encoder_0_0.xci",
+        "inst_hier_path": "block_encoder_tilt"
+      },
+      "block_encoder_pan": {
+        "vlnv": "user.org:user:block_encoder:1.0",
+        "ip_revision": "2",
+        "xci_name": "buildup_block_encoder_0_1",
+        "xci_path": "ip/buildup_block_encoder_0_1/buildup_block_encoder_0_1.xci",
+        "inst_hier_path": "block_encoder_pan"
+      },
+      "xlslice_5": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "ip_revision": "3",
+        "xci_name": "buildup_xlslice_5_0",
+        "xci_path": "ip/buildup_xlslice_5_0/buildup_xlslice_5_0.xci",
+        "inst_hier_path": "xlslice_5",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "3"
+          },
+          "DIN_WIDTH": {
+            "value": "11"
+          }
+        }
       }
     },
     "nets": {
+      "AND_gate_0_C": {
+        "ports": [
+          "AND_gate_0/C",
+          "pwm_pan_cw"
+        ]
+      },
+      "AND_gate_1_C": {
+        "ports": [
+          "AND_gate_1/C",
+          "pwm_pan_ccw"
+        ]
+      },
+      "AND_gate_2_C": {
+        "ports": [
+          "AND_gate_2/C",
+          "pwm_tilt_cw"
+        ]
+      },
+      "AND_gate_3_C": {
+        "ports": [
+          "AND_gate_3/C",
+          "pwm_tilt_ccw"
+        ]
+      },
+      "CS_1": {
+        "ports": [
+          "CS",
+          "synchronizer_5/D"
+        ]
+      },
+      "Falling_edge_detector_0_Q": {
+        "ports": [
+          "Falling_edge_detector_0/Q",
+          "spi_sub_0/SCLK_falling"
+        ]
+      },
       "Hall_effect_sensor_0_1": {
         "ports": [
           "Hall_effect_sensor_0",
-          "xlconcat_0/In0"
+          "synchronizer_0/D"
         ]
       },
       "Hall_effect_sensor_1_1": {
         "ports": [
           "Hall_effect_sensor_1",
-          "xlconcat_0/In1"
+          "synchronizer_1/D"
         ]
       },
       "NOT_gate_0_B": {
@@ -641,48 +1070,53 @@
           "AND_gate_3/B"
         ]
       },
+      "Rising_edge_detector_0_Q": {
+        "ports": [
+          "Rising_edge_detector_0/Q",
+          "spi_sub_0/SCLK_rising"
+        ]
+      },
       "SPI_0_SPI_out": {
         "ports": [
-          "SPI_0/SPI_out",
+          "spi_sub_0/data_out",
           "xlslice_1/Din",
           "xlslice_0/Din",
           "xlslice_3/Din",
-          "xlslice_2/Din",
-          "xlslice_4/Din"
+          "xlslice_2/Din"
         ]
       },
-      "SPI_0_miso": {
+      "block_encoder_pan_pulse_cnt": {
         "ports": [
-          "SPI_0/miso",
-          "miso"
-        ]
-      },
-      "block_encoder_0_pulse_cnt": {
-        "ports": [
-          "block_encoder_0/pulse_cnt",
+          "block_encoder_pan/pulse_cnt",
           "xlconcat_0/In2"
         ]
       },
-      "block_encoder_1_pulse_cnt": {
+      "block_encoder_tilt_pulse_cnt": {
         "ports": [
-          "block_encoder_1/pulse_cnt",
-          "xlconcat_0/In3"
-        ]
-      },
-      "btn_0_1": {
-        "ports": [
-          "CS",
-          "SPI_0/SPI_chip_select"
+          "block_encoder_tilt/pulse_cnt",
+          "xlconcat_0/In3",
+          "xlslice_5/Din"
         ]
       },
       "clk_1": {
         "ports": [
           "clk",
-          "block_encoder_0/clk",
-          "block_encoder_1/clk",
+          "clock_divider_0/clk",
+          "synchronizer_8/clk",
+          "synchronizer_7/clk",
+          "synchronizer_6/clk",
+          "spi_sub_0/clk",
           "synchronizer_0/clk",
           "synchronizer_1/clk",
-          "clock_divider_0/clk"
+          "synchronizer_2/clk",
+          "synchronizer_3/clk",
+          "synchronizer_4/clk",
+          "synchronizer_5/clk",
+          "synchronizer_9/clk",
+          "Rising_edge_detector_0/clk",
+          "Falling_edge_detector_0/clk",
+          "block_encoder_tilt/clk",
+          "block_encoder_pan/clk"
         ]
       },
       "clock_divider_0_clk_div": {
@@ -694,120 +1128,160 @@
       "counter_1_cnt": {
         "ports": [
           "counter_1/cnt",
-          "pwm_pan_cw/cnt",
-          "pwm_pan_ccw/cnt",
-          "pwm_tilt_cw/cnt",
-          "pwm_tilt_ccw/cnt"
+          "pwm_pan/cnt",
+          "pwm_tilt/cnt"
         ]
       },
-      "encoder_a_0_1": {
-        "ports": [
-          "encoder_a_tilt",
-          "block_encoder_0/encoder_a"
-        ]
-      },
-      "encoder_a_0_2": {
+      "encoder_a_pan_1": {
         "ports": [
           "encoder_a_pan",
-          "block_encoder_1/encoder_a"
+          "synchronizer_3/D"
         ]
       },
-      "encoder_b_0_1": {
+      "encoder_a_tilt_1": {
         "ports": [
-          "encoder_b_tilt",
-          "block_encoder_0/encoder_b"
+          "encoder_a_tilt",
+          "synchronizer_7/D"
         ]
       },
-      "encoder_b_0_2": {
+      "encoder_b_pan_1": {
         "ports": [
           "encoder_b_pan",
-          "block_encoder_1/encoder_b"
+          "synchronizer_2/D"
         ]
       },
-      "ja_3_1": {
+      "encoder_b_tilt_1": {
         "ports": [
-          "sclk",
-          "synchronizer_0/D"
+          "encoder_b_tilt",
+          "synchronizer_6/D"
         ]
       },
       "mosi_1": {
         "ports": [
           "mosi",
-          "synchronizer_1/D"
+          "synchronizer_4/D"
         ]
       },
-      "pwm_pan_ccw_pwm": {
+      "pwm_pan_pwm": {
         "ports": [
-          "pwm_pan_ccw/pwm",
-          "pwm_pan_ccw"
-        ]
-      },
-      "pwm_pan_cw_pwm": {
-        "ports": [
-          "pwm_pan_cw/pwm",
-          "pwm_pan_cw"
+          "pwm_pan/pwm",
+          "AND_gate_0/A",
+          "AND_gate_1/A"
         ]
       },
       "pwm_tilt_ccw_pwm": {
         "ports": [
-          "pwm_tilt_ccw/pwm",
-          "pwm_tilt_ccw"
+          "pwm_tilt/pwm",
+          "AND_gate_3/A",
+          "AND_gate_2/A"
         ]
       },
-      "pwm_tilt_cw_pwm": {
-        "ports": [
-          "pwm_tilt_cw/pwm",
-          "pwm_tilt_cw"
-        ]
-      },
-      "rst": {
+      "rst_1": {
         "ports": [
           "rst",
-          "block_encoder_0/rst",
-          "block_encoder_1/rst",
-          "counter_1/rst",
-          "SPI_0/rst",
-          "clock_divider_0/rst"
+          "synchronizer_9/D"
+        ]
+      },
+      "sclk_1": {
+        "ports": [
+          "sclk",
+          "synchronizer_8/D"
+        ]
+      },
+      "spi_sub_0_MISO": {
+        "ports": [
+          "spi_sub_0/MISO",
+          "miso"
         ]
       },
       "synchronizer_0_Q": {
         "ports": [
           "synchronizer_0/Q",
-          "SPI_0/SPI_sample"
+          "xlconcat_0/In0"
         ]
       },
       "synchronizer_1_Q": {
         "ports": [
           "synchronizer_1/Q",
-          "SPI_0/mosi"
+          "xlconcat_0/In1"
+        ]
+      },
+      "synchronizer_2_Q": {
+        "ports": [
+          "synchronizer_2/Q",
+          "block_encoder_pan/encoder_b"
+        ]
+      },
+      "synchronizer_3_Q": {
+        "ports": [
+          "synchronizer_3/Q",
+          "block_encoder_pan/encoder_a"
+        ]
+      },
+      "synchronizer_4_Q": {
+        "ports": [
+          "synchronizer_4/Q",
+          "spi_sub_0/MOSI"
+        ]
+      },
+      "synchronizer_5_Q": {
+        "ports": [
+          "synchronizer_5/Q",
+          "spi_sub_0/CS"
+        ]
+      },
+      "synchronizer_6_Q": {
+        "ports": [
+          "synchronizer_6/Q",
+          "block_encoder_tilt/encoder_a"
+        ]
+      },
+      "synchronizer_7_Q": {
+        "ports": [
+          "synchronizer_7/Q",
+          "block_encoder_tilt/encoder_b"
+        ]
+      },
+      "synchronizer_8_Q": {
+        "ports": [
+          "synchronizer_8/Q",
+          "Rising_edge_detector_0/D",
+          "Falling_edge_detector_0/D"
+        ]
+      },
+      "synchronizer_9_Q": {
+        "ports": [
+          "synchronizer_9/Q",
+          "spi_sub_0/rst",
+          "counter_1/rst",
+          "block_encoder_tilt/rst",
+          "block_encoder_pan/rst"
         ]
       },
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
-          "SPI_0/SPI_in"
+          "spi_sub_0/data_in"
         ]
       },
       "xlconstant_1_dout": {
         "ports": [
-          "xlconstant_1/dout",
-          "block_encoder_0/enable",
-          "block_encoder_1/enable",
-          "counter_1/en"
+          "Always_true/dout",
+          "counter_1/en",
+          "block_encoder_tilt/enable",
+          "block_encoder_pan/enable"
         ]
       },
       "xlslice_0_Dout": {
         "ports": [
           "xlslice_0/Dout",
-          "pwm_tilt_cw/duty",
-          "pwm_tilt_ccw/duty"
+          "pwm_tilt/duty"
         ]
       },
       "xlslice_1_Dout": {
         "ports": [
           "xlslice_1/Dout",
-          "pwm_pan_cw/duty",
-          "pwm_pan_ccw/duty"
+          "pwm_pan/duty"
         ]
       },
       "xlslice_2_Dout": {
@@ -824,9 +1298,9 @@
           "NOT_gate_0/A"
         ]
       },
-      "xlslice_4_Dout": {
+      "xlslice_5_Dout": {
         "ports": [
-          "xlslice_4/Dout",
+          "xlslice_5/Dout",
           "led"
         ]
       }

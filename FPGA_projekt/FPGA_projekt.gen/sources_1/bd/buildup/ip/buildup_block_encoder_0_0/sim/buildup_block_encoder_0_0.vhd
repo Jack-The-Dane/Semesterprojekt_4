@@ -59,7 +59,7 @@ ENTITY buildup_block_encoder_0_0 IS
     enable : IN STD_LOGIC;
     encoder_a : IN STD_LOGIC;
     encoder_b : IN STD_LOGIC;
-    pulse_cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+    pulse_cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
     rst : IN STD_LOGIC
   );
 END buildup_block_encoder_0_0;
@@ -73,7 +73,7 @@ ARCHITECTURE buildup_block_encoder_0_0_arch OF buildup_block_encoder_0_0 IS
       enable : IN STD_LOGIC;
       encoder_a : IN STD_LOGIC;
       encoder_b : IN STD_LOGIC;
-      pulse_cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0);
+      pulse_cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
       rst : IN STD_LOGIC
     );
   END COMPONENT block_encoder;
