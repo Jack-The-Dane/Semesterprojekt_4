@@ -80,7 +80,7 @@
     {                                              \
         for (j = 0; j < cols; j++)                 \
         {                                          \
-            printf("%.3f ", M[i][j]);              \
+            printf("%f ", M[i][j]);              \
         }                                          \
         printf("\n");                              \
     }                                              \
