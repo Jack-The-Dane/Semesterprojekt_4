@@ -16,8 +16,11 @@ void step_controller(double ref[][1], double y[][1], void * u, double time_step)
     static double observer_integrator[4][1] = {0};
 
     // Update control integrator
-    matrix_subtract(control_integrator, ref);
-    matrix_add(control_integrator, y);
+    double int_in[2][1] = {0};
+    matrix_subtract(int_in, ref);
+    matrix_add(int_in, y);
+    matrix_scale(int_in, time_step);
+    matrix_add(control_integrator, int_in);
 
     // Calculate the new input
     double u_temp[2][1] = {0};
@@ -38,7 +41,7 @@ void step_controller(double ref[][1], double y[][1], void * u, double time_step)
         double obs_in2[4][1];
         double obs_in3[4][1];
         matrix_multiply(A, x_hat, obs_in1);
-        matrix_multiply(B, u_temp,    obs_in2);
+        matrix_multiply(B, u_temp, obs_in2);
 
         // Calculate observer output error
         double L_in[2][1] = {0};
@@ -51,31 +54,22 @@ void step_controller(double ref[][1], double y[][1], void * u, double time_step)
         matrix_add(observer_integrator, obs_in3);
     }
 
+    // Copy the new input value to outside the function
     memcpy(u, u_temp, sizeof(double)*2);
 }
 
 int main(void)
 {
-    double ref[2][1] = {1, 1};
-    double y[2][1] = {0};
-    double u[2][1] = {0};
+    double ref[2][1] = {{1}, {1}};
+    double y[2][1]   = {{0}, {0}};
+    double u[2][1]   = {{0}, {0}};
     double time_step = 0.5;
 
     for (int i = 0; i < 10; i++) {
         step_controller(ref, y, &u, time_step);
         matrix_print(u);
+        /* step_system(u, &y, time_step); */
     }
-
-    y[0][0] = 1;
-    y[0][1] = 1;
-
-    printf("\n\n");
-
-    for (int i = 0; i < 10; i++) {
-        step_controller(ref, y, &u, time_step);
-        matrix_print(u);
-    }
-
 
     return 0;
 
