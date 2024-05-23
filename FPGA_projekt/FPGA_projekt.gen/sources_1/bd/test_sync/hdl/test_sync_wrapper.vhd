@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
---Date        : Tue May  7 15:30:02 2024
---Host        : Cornelia running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+--Date        : Tue May 14 09:34:59 2024
+--Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 --Command     : generate_target test_sync_wrapper.bd
 --Design      : test_sync_wrapper
 --Purpose     : IP block netlist

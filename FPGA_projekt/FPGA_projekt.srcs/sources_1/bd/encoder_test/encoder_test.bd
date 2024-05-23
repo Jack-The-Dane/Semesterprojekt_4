@@ -7,8 +7,7 @@
       "name": "encoder_test",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "block_encoder_0": "",
@@ -57,7 +56,10 @@
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
-            "value": "3"
+            "value": "8"
+          },
+          "DIN_TO": {
+            "value": "5"
           },
           "DIN_WIDTH": {
             "value": "9"

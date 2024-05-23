@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "buildup_block_encoder_0_0",
-    "cell_name": "block_encoder_0",
+    "cell_name": "block_encoder_tilt",
     "component_reference": "user.org:user:block_encoder:1.0",
     "ip_revision": "2",
     "gen_directory": "../../../../../../FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_block_encoder_0_0",
@@ -40,7 +40,7 @@
         "enable": [ { "direction": "in" } ],
         "encoder_a": [ { "direction": "in" } ],
         "encoder_b": [ { "direction": "in" } ],
-        "pulse_cnt": [ { "direction": "out", "size_left": "8", "size_right": "0" } ],
+        "pulse_cnt": [ { "direction": "out", "size_left": "10", "size_right": "0" } ],
         "rst": [ { "direction": "in" } ]
       }
     }

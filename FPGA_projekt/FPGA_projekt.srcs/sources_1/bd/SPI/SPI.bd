@@ -7,8 +7,7 @@
       "name": "SPI",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "SPI_in": "",
@@ -35,13 +34,7 @@
       "SPI_in": {
         "direction": "I",
         "left": "19",
-        "right": "0",
-        "parameters": {
-          "LAYERED_METADATA": {
-            "value": "undef",
-            "value_src": "default_prop"
-          }
-        }
+        "right": "0"
       },
       "SPI_out": {
         "direction": "O",
@@ -54,7 +47,7 @@
         "vlnv": "xilinx.com:module_ref:shift_register_generic:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_shift_register_input_1",
-        "xci_path": "ip\\SPI_shift_register_input_1\\SPI_shift_register_input_1.xci",
+        "xci_path": "ip/SPI_shift_register_input_1/SPI_shift_register_input_1.xci",
         "inst_hier_path": "SPI_in",
         "parameters": {
           "register_length": {
@@ -76,13 +69,7 @@
           "register_in": {
             "direction": "I",
             "left": "19",
-            "right": "0",
-            "parameters": {
-              "LAYERED_METADATA": {
-                "value": "undef",
-                "value_src": "default_prop"
-              }
-            }
+            "right": "0"
           },
           "rst": {
             "type": "rst",
@@ -105,7 +92,7 @@
         "vlnv": "xilinx.com:module_ref:latch:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_latch_0_0",
-        "xci_path": "ip\\SPI_latch_0_0\\SPI_latch_0_0.xci",
+        "xci_path": "ip/SPI_latch_0_0/SPI_latch_0_0.xci",
         "inst_hier_path": "latch_0",
         "parameters": {
           "data_length": {
@@ -141,7 +128,7 @@
         "vlnv": "xilinx.com:module_ref:enable_counter:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_enable_counter_0_0",
-        "xci_path": "ip\\SPI_enable_counter_0_0\\SPI_enable_counter_0_0.xci",
+        "xci_path": "ip/SPI_enable_counter_0_0/SPI_enable_counter_0_0.xci",
         "inst_hier_path": "Prescaler",
         "parameters": {
           "data_length": {
@@ -173,7 +160,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_NOT_gate_0_0",
-        "xci_path": "ip\\SPI_NOT_gate_0_0\\SPI_NOT_gate_0_0.xci",
+        "xci_path": "ip/SPI_NOT_gate_0_0/SPI_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -206,16 +193,16 @@
       "SPI_chip_select_1": {
         "ports": [
           "SPI_chip_select",
-          "NOT_gate_0/A",
+          "Prescaler/rst",
           "SPI_in/chip_select",
-          "Prescaler/rst"
+          "NOT_gate_0/A"
         ]
       },
       "clock_1": {
         "ports": [
           "SPI_sample",
-          "SPI_in/sample",
-          "Prescaler/sample"
+          "Prescaler/sample",
+          "SPI_in/sample"
         ]
       },
       "enable_counter_0_cnt": {

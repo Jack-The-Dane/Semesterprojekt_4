@@ -45,7 +45,7 @@
         "vlnv": "xilinx.com:module_ref:encoder_sampling:1.0",
         "ip_revision": "1",
         "xci_name": "encoder_sample_encoder_sampling_0_0",
-        "xci_path": "ip\\encoder_sample_encoder_sampling_0_0\\encoder_sample_encoder_sampling_0_0.xci",
+        "xci_path": "ip/encoder_sample_encoder_sampling_0_0/encoder_sample_encoder_sampling_0_0.xci",
         "inst_hier_path": "encoder_sampling_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -84,7 +84,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "encoder_sample_xlslice_0_0",
-        "xci_path": "ip\\encoder_sample_xlslice_0_0\\encoder_sample_xlslice_0_0.xci",
+        "xci_path": "ip/encoder_sample_xlslice_0_0/encoder_sample_xlslice_0_0.xci",
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
@@ -102,7 +102,7 @@
         "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
         "ip_revision": "1",
         "xci_name": "encoder_sample_clock_divider_0_0",
-        "xci_path": "ip\\encoder_sample_clock_divider_0_0\\encoder_sample_clock_divider_0_0.xci",
+        "xci_path": "ip/encoder_sample_clock_divider_0_0/encoder_sample_clock_divider_0_0.xci",
         "inst_hier_path": "clock_divider_0",
         "parameters": {
           "n_bits": {

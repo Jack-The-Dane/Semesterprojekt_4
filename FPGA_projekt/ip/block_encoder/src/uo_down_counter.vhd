@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity up_down_counter is
-generic( n_bits : positive := 9;
-         max_val_binary : unsigned := "101100111"); -- 359 in hex
+generic( n_bits : positive := 11;
+         max_val_binary : unsigned := "10001111111"); -- 1151 in hex
     Port ( clk : in STD_LOGIC;
            up : in STD_LOGIC;
            down : in STD_LOGIC;
@@ -63,6 +63,8 @@ elsif(rising_edge(clk)) then
             else
                 int_cnt <= int_cnt - 1;
             end if;
+        else 
+            int_cnt <= int_cnt;
         end if;
     end if;
 end if;

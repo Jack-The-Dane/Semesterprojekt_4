@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3C7BD52C7F9B6D57",
+      "boundary_crc": "0x4A55C7DB8DC18FD7",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../FPGA_projekt.gen/sources_1/bd/block_encoder",
       "name": "block_encoder",
@@ -11,13 +11,13 @@
       "validated": "true"
     },
     "design_tree": {
-      "edge_detector_a": "",
       "up_down_counter_0": "",
-      "edge_detector_b": "",
       "NOT_gate_b": "",
       "up_signal": "",
       "NOT_gate_a": "",
-      "down_signal": ""
+      "down_signal": "",
+      "Rising_edge_a": "",
+      "Rising_edge_b": ""
     },
     "ports": {
       "clk": {
@@ -34,7 +34,7 @@
       },
       "pulse_cnt": {
         "direction": "O",
-        "left": "8",
+        "left": "10",
         "right": "0"
       },
       "enable": {
@@ -42,35 +42,11 @@
       }
     },
     "components": {
-      "edge_detector_a": {
-        "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
-        "ip_revision": "1",
-        "xci_name": "block_encoder_edge_detector_0_0",
-        "xci_path": "ip\\block_encoder_edge_detector_0_0\\block_encoder_edge_detector_0_0.xci",
-        "inst_hier_path": "edge_detector_a",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "edge_detector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "d": {
-            "direction": "I"
-          },
-          "result": {
-            "direction": "O"
-          }
-        }
-      },
       "up_down_counter_0": {
         "vlnv": "xilinx.com:module_ref:up_down_counter:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_up_down_counter_0_0",
-        "xci_path": "ip\\block_encoder_up_down_counter_0_0\\block_encoder_up_down_counter_0_0.xci",
+        "xci_path": "ip/block_encoder_up_down_counter_0_0/block_encoder_up_down_counter_0_0.xci",
         "inst_hier_path": "up_down_counter_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -103,32 +79,8 @@
           },
           "cnt": {
             "direction": "O",
-            "left": "8",
+            "left": "10",
             "right": "0"
-          }
-        }
-      },
-      "edge_detector_b": {
-        "vlnv": "xilinx.com:module_ref:edge_detector:1.0",
-        "ip_revision": "1",
-        "xci_name": "block_encoder_edge_detector_0_1",
-        "xci_path": "ip\\block_encoder_edge_detector_0_1\\block_encoder_edge_detector_0_1.xci",
-        "inst_hier_path": "edge_detector_b",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "edge_detector",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "d": {
-            "direction": "I"
-          },
-          "result": {
-            "direction": "O"
           }
         }
       },
@@ -136,7 +88,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_0",
-        "xci_path": "ip\\block_encoder_NOT_gate_0_0\\block_encoder_NOT_gate_0_0.xci",
+        "xci_path": "ip/block_encoder_NOT_gate_0_0/block_encoder_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_b",
         "reference_info": {
           "ref_type": "hdl",
@@ -156,7 +108,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_0_0",
-        "xci_path": "ip\\block_encoder_AND_gate_0_0\\block_encoder_AND_gate_0_0.xci",
+        "xci_path": "ip/block_encoder_AND_gate_0_0/block_encoder_AND_gate_0_0.xci",
         "inst_hier_path": "up_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -179,7 +131,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_1",
-        "xci_path": "ip\\block_encoder_NOT_gate_0_1\\block_encoder_NOT_gate_0_1.xci",
+        "xci_path": "ip/block_encoder_NOT_gate_0_1/block_encoder_NOT_gate_0_1.xci",
         "inst_hier_path": "NOT_gate_a",
         "reference_info": {
           "ref_type": "hdl",
@@ -199,7 +151,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_1_0",
-        "xci_path": "ip\\block_encoder_AND_gate_1_0\\block_encoder_AND_gate_1_0.xci",
+        "xci_path": "ip/block_encoder_AND_gate_1_0/block_encoder_AND_gate_1_0.xci",
         "inst_hier_path": "down_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -214,6 +166,54 @@
             "direction": "I"
           },
           "C": {
+            "direction": "O"
+          }
+        }
+      },
+      "Rising_edge_a": {
+        "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_encoder_Rising_edge_detector_0_0",
+        "xci_path": "ip/block_encoder_Rising_edge_detector_0_0/block_encoder_Rising_edge_detector_0_0.xci",
+        "inst_hier_path": "Rising_edge_a",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Rising_edge_detector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
+            "direction": "O"
+          }
+        }
+      },
+      "Rising_edge_b": {
+        "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
+        "ip_revision": "1",
+        "xci_name": "block_encoder_Rising_edge_a_0",
+        "xci_path": "ip/block_encoder_Rising_edge_a_0/block_encoder_Rising_edge_a_0.xci",
+        "inst_hier_path": "Rising_edge_b",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Rising_edge_detector",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "D": {
+            "direction": "I"
+          },
+          "Q": {
             "direction": "O"
           }
         }
@@ -244,24 +244,24 @@
           "up_signal/B"
         ]
       },
-      "clk_1": {
+      "Rising_edge_a_Q": {
         "ports": [
-          "clk",
-          "edge_detector_a/clk",
-          "up_down_counter_0/clk",
-          "edge_detector_b/clk"
-        ]
-      },
-      "edge_detector_a_edge": {
-        "ports": [
-          "edge_detector_a/result",
+          "Rising_edge_a/Q",
           "up_signal/A"
         ]
       },
-      "edge_detector_b_edge": {
+      "Rising_edge_b_Q": {
         "ports": [
-          "edge_detector_b/result",
+          "Rising_edge_b/Q",
           "down_signal/A"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "Rising_edge_a/clk",
+          "Rising_edge_b/clk",
+          "up_down_counter_0/clk"
         ]
       },
       "enable_1": {
@@ -273,15 +273,15 @@
       "encoder_a_1": {
         "ports": [
           "encoder_a",
-          "edge_detector_a/d",
-          "NOT_gate_a/A"
+          "NOT_gate_a/A",
+          "Rising_edge_a/D"
         ]
       },
       "encoder_b_1": {
         "ports": [
           "encoder_b",
-          "edge_detector_b/d",
-          "NOT_gate_b/A"
+          "NOT_gate_b/A",
+          "Rising_edge_b/D"
         ]
       },
       "rst_1": {
