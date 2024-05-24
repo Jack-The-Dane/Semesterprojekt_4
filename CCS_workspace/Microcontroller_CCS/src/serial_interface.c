@@ -18,8 +18,8 @@
 
 extern xQueueHandle q_uart_tx;
 extern xQueueHandle q_uart_rx;
-extern xSemaphoreHandle_t encoder_mutex;
-extern xSemaphoreHandle_t joystick_mutex;
+extern SemaphoreHandle_t encoder_mutex;
+extern SemaphoreHandle_t joystick_mutex;
 extern TaskHandle_t joystick_handle;
 
 BOOLEAN debug_mode = FALSE;
