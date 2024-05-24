@@ -4,7 +4,7 @@ import csv
 velocities_tilt = ["10 80", "18 80"]
 #velocities_pan = []
 
-ser = serial.Serial('COM6', 115200, 8, "E", 1, 1)  # open serial port
+ser = serial.Serial('/dev/ttyACM0', 115200, 8, "E", 1, 1)  # open serial port
 array = []
 # Check if serial port was opened successfully
 if ser.is_open:

@@ -6,6 +6,7 @@
 
 SPI_TYPE encoders;
 
+void vel_measurer(double u[2][1]);
 void controller_task();
 
 #endif
