@@ -63,10 +63,9 @@ void serial_interface_task (void *pvParameters){
                 joystick.x = x;
                 joystick.y = y;
                 joystick.button = (str[4] & 0x7F);
-                send_string("Values received \n");
                 INT8U data[6] = {x >> 8, x & 0x00FF, y >> 8, y & 0x00FF, joystick.button, 0x0A}; 
                 send_string(data);
-                INT8U enc_data[5] = {(encoders >> 24), ((encoders & 0x00FF0000) >> 16), ((encoders & 0x0000FF00) >> 8), ((encoders & 0xFF)), 0x0a};
+                INT8U enc_data[5] = {((encoders >> 19) & 0x01), ((encoders >> 11) & 0xff), ((encoders >> 10) & 0x01), (encoders >> 2) & 0xff, 0x0a};
                 send_string(enc_data);
             }
 

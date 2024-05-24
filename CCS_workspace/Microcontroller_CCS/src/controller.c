@@ -9,7 +9,7 @@
 #include "uart.h"
 
 // How much time is allocated for the other tasks running on the microcontroller (5 ms / tick)
-#define CONTROLLER_EXTRA_SLEEP_TICKS 100
+#define CONTROLLER_EXTRA_SLEEP_TICKS 5
 
 extern BOOLEAN debug_mode;
 extern xQueueHandle q_uart_tx;
