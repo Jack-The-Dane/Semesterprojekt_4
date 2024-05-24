@@ -22,7 +22,14 @@ if ser.is_open:
         array.append(ser.readline().hex())
         array.append(ser.readline().hex())
         print("Device response:", array)
+    
+    for i in range(200):
+        ser.write(bytearray.fromhex("10 80" + velocities_tilt[1] + "80 0A"))
+        # Read and print any response
+        array.append(ser.readline().hex())
+        array.append(ser.readline().hex())
         
+
         
     # Send debug message (converted to bytes for serial communication)
     ser.write(serial.to_bytes(b'debug\n'))
