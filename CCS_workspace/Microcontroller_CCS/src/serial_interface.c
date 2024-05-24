@@ -14,23 +14,15 @@
 #include "joystick.h"
 #include "controller.h"
 #include "spi.h"
+#include "semphr.h"
 
 extern xQueueHandle q_uart_tx;
 extern xQueueHandle q_uart_rx;
+extern xSemaphoreHandle_t encoder_mutex;
+extern xSemaphoreHandle_t joystick_mutex;
 extern TaskHandle_t joystick_handle;
 
 BOOLEAN debug_mode = FALSE;
-
-INT8U string_length(char *str){
-    INT8U i = 0;
-    while(*str != '\n'){
-        i++;
-        //xQueueSendToBack(q_uart_tx, str, 0);
-        str++;
-    }
-    return i;
-}
-
 
 void serial_interface_task (void *pvParameters){
     extern Joystick joystick;
@@ -60,13 +52,23 @@ void serial_interface_task (void *pvParameters){
             } else if( debug_mode && strlen(str) == 6){
                 INT16U x = ((str[0] & 0x1F) << 7) | (str[1] & 0x7F); 
                 INT16U y = ((str[2] & 0x1F) << 7) | (str[3] & 0x7F);
-                joystick.x = x;
-                joystick.y = y;
-                joystick.button = (str[4] & 0x7F);
-                INT8U data[6] = {x >> 8, x & 0x00FF, y >> 8, y & 0x00FF, joystick.button, 0x0A}; 
+                INT8U button = ((str[4] & 0x7F));
+                if(xSemaphoreTake(joystick_mutex, 0))
+                {
+                    joystick.x = x;
+                    joystick.y = y;
+                    joystick.button = (button);
+                    xSemaphoreGive(joystick_mutex);
+                }
+                INT8U data[6] = {x >> 8, x & 0x00FF, y >> 8, y & 0x00FF, button, 0x0A}; 
                 send_string(data);
-                INT8U enc_data[5] = {((encoders >> 19) & 0x01), ((encoders >> 11) & 0xff), ((encoders >> 10) & 0x01), (encoders >> 2) & 0xff, 0x0a};
-                send_string(enc_data);
+                
+                if(xSemaphoreTake(encoder_mutex,0)){
+                    INT8U enc_data[5] = {((encoders >> 19) & 0x01), ((encoders >> 11) & 0xff), ((encoders >> 10) & 0x01), (encoders >> 2) & 0xff, 0x0a};
+                    xSemaphoreGive(encoder_mutex);
+                    send_string(enc_data);
+                }
+                
             }
 
         }
