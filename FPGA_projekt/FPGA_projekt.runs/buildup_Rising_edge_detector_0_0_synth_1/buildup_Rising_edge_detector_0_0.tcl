@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.tcl"
+  variable script "C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.tcl"
   variable category "vivado_synth"
 }
 
@@ -72,30 +72,29 @@ proc create_report { reportName command } {
 OPTRACE "buildup_Rising_edge_detector_0_0_synth_1" START { ROLLUP_AUTO }
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
-set_param ips.modRefOverrideMrefDirPath /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/mref
+set_param ips.modRefOverrideMrefDirPath {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/mref}}
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/wt [current_project]
-set_property parent.project_path /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr [current_project]
+set_property webtalk.parent_dir {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {/home/jacob/.Xilinx/Vivado/2023.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_repo_paths {
-  /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/ip/SPI
-  /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/ip/block_encoder
+  {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/SPI}
+  {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/ip/block_encoder}
 } [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/ip [current_project]
+set_property ip_output_repo {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/Rising_edge_detector.vhd
-read_ip -quiet /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.xci
+read_vhdl -library xil_defaultlib {{C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/new/Rising_edge_detector.vhd}}
+read_ip -quiet {{C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.srcs/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.xci}}
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,7 +108,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1 -new_name buildup_Rising_edge_detector_0_0 -ip [get_ips buildup_Rising_edge_detector_0_0]]
+set cacheID [config_ip_cache -export -no_bom  -dir {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1} -new_name buildup_Rising_edge_detector_0_0 -ip [get_ips buildup_Rising_edge_detector_0_0]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -164,32 +163,32 @@ create_report "buildup_Rising_edge_detector_0_0_synth_1_synth_report_utilization
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.dcp /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.dcp
+  file copy -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.dcp} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v
+  write_verilog -force -mode synth_stub {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl
+  write_vhdl -force -mode synth_stub {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.v
+  write_verilog -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -199,32 +198,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.dcp /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.dcp
+  file copy -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0.dcp} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.dcp}
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_stub.v /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v
+  file rename -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_stub.v} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_stub.vhdl /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl
+  file rename -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_stub.vhdl} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_sim_netlist.v /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.v
+  file rename -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_sim_netlist.v} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.v}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl
+  file rename -force {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.runs/buildup_Rising_edge_detector_0_0_synth_1/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl} {c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl}
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -232,15 +231,15 @@ if { [catch {
 close [open .end.used_ip_cache.rst w]
 }; # end if cacheID 
 
-if {[file isdir /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0]} {
+if {[file isdir {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0}]} {
   catch { 
-    file copy -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0
+    file copy -force {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.v}} {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0}
   }
 }
 
-if {[file isdir /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0]} {
+if {[file isdir {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0}]} {
   catch { 
-    file copy -force /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0
+    file copy -force {{c:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_stub.vhdl}} {C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.ip_user_files/ip/buildup_Rising_edge_detector_0_0}
   }
 }
 file delete __synthesis_is_running__

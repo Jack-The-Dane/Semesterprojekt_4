@@ -1,12 +1,12 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
--- Date        : Tue May 14 09:50:28 2024
--- Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_AND_gate_0_0/buildup_AND_gate_0_0_stub.vhdl
--- Design      : buildup_AND_gate_0_0
+-- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+-- Date        : Mon Apr 29 09:55:27 2024
+-- Host        : Cornelia running 64-bit major release  (build 9200)
+-- Command     : write_vhdl -force -mode synth_stub -rename_top buildup_AND_gate_0_0 -prefix
+--               buildup_AND_gate_0_0_ block_encoder_AND_gate_1_0_stub.vhdl
+-- Design      : block_encoder_AND_gate_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
 -- --------------------------------------------------------------------------------

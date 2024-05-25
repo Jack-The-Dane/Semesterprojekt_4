@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 17 13:19:53 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 24 13:27:12 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="buildup" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -22,21 +22,21 @@
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clock_divider_0" PORT="clk"/>
-        <CONNECTION INSTANCE="synchronizer_8" PORT="clk"/>
-        <CONNECTION INSTANCE="synchronizer_7" PORT="clk"/>
-        <CONNECTION INSTANCE="synchronizer_6" PORT="clk"/>
         <CONNECTION INSTANCE="spi_sub_0" PORT="clk"/>
+        <CONNECTION INSTANCE="synchronizer_8" PORT="clk"/>
+        <CONNECTION INSTANCE="synchronizer_9" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_0" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_1" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_2" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_3" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_4" PORT="clk"/>
         <CONNECTION INSTANCE="synchronizer_5" PORT="clk"/>
-        <CONNECTION INSTANCE="synchronizer_9" PORT="clk"/>
+        <CONNECTION INSTANCE="synchronizer_6" PORT="clk"/>
+        <CONNECTION INSTANCE="synchronizer_7" PORT="clk"/>
         <CONNECTION INSTANCE="Rising_edge_detector_0" PORT="clk"/>
         <CONNECTION INSTANCE="Falling_edge_detector_0" PORT="clk"/>
-        <CONNECTION INSTANCE="block_encoder_tilt" PORT="clk"/>
-        <CONNECTION INSTANCE="block_encoder_pan" PORT="clk"/>
+        <CONNECTION INSTANCE="block_encoder_pan_0" PORT="clk"/>
+        <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="encoder_a_pan" SIGIS="undef" SIGNAME="External_Ports_encoder_a_pan">
@@ -221,8 +221,8 @@
         <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="Always_true_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="counter_1" PORT="en"/>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="enable"/>
-            <CONNECTION INSTANCE="block_encoder_pan" PORT="enable"/>
+            <CONNECTION INSTANCE="block_encoder_pan_0" PORT="enable"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="enable"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -318,10 +318,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/block_encoder_pan" HWVERSION="1.0" INSTANCE="block_encoder_pan" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_encoder" VLNV="user.org:user:block_encoder:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/block_encoder_pan_0" HWVERSION="1.0" INSTANCE="block_encoder_pan_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_encoder" VLNV="xilinx.com:user:block_encoder:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="buildup_block_encoder_0_1"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_block_encoder_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -345,7 +345,7 @@
             <CONNECTION INSTANCE="synchronizer_2" PORT="Q"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="10" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_pan_pulse_cnt">
+        <PORT DIR="O" LEFT="8" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_pan_0_pulse_cnt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In2"/>
           </CONNECTIONS>
@@ -358,10 +358,10 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2" FULLNAME="/block_encoder_tilt" HWVERSION="1.0" INSTANCE="block_encoder_tilt" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_encoder" VLNV="user.org:user:block_encoder:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/block_encoder_tilt_0" HWVERSION="1.0" INSTANCE="block_encoder_tilt_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="block_encoder" VLNV="xilinx.com:user:block_encoder:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="buildup_block_encoder_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="buildup_block_encoder_pan_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -385,7 +385,7 @@
             <CONNECTION INSTANCE="synchronizer_7" PORT="Q"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="10" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_pulse_cnt">
+        <PORT DIR="O" LEFT="8" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_0_pulse_cnt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="In3"/>
             <CONNECTION INSTANCE="xlslice_5" PORT="Din"/>
@@ -500,8 +500,8 @@
         </PORT>
         <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="pwm_tilt_pwm">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="AND_gate_3" PORT="A"/>
             <CONNECTION INSTANCE="AND_gate_2" PORT="A"/>
+            <CONNECTION INSTANCE="AND_gate_3" PORT="A"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -510,7 +510,7 @@
     <MODULE COREREVISION="1" FULLNAME="/spi_sub_0" HWVERSION="1.0" INSTANCE="spi_sub_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="spi_sub" VLNV="xilinx.com:module_ref:spi_sub:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="n_bits" VALUE="24"/>
+        <PARAMETER NAME="n_bits" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_spi_sub_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -545,12 +545,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="I" LEFT="19" NAME="data_in" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
+        <PORT DIR="O" LEFT="19" NAME="data_out" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="xlslice_1" PORT="Din"/>
             <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
@@ -633,7 +633,7 @@
         </PORT>
         <PORT DIR="O" NAME="Q" SIGIS="undef" SIGNAME="synchronizer_2_Q">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_pan" PORT="encoder_b"/>
+            <CONNECTION INSTANCE="block_encoder_pan_0" PORT="encoder_b"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -659,7 +659,7 @@
         </PORT>
         <PORT DIR="O" NAME="Q" SIGIS="undef" SIGNAME="synchronizer_3_Q">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_pan" PORT="encoder_a"/>
+            <CONNECTION INSTANCE="block_encoder_pan_0" PORT="encoder_a"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -737,7 +737,7 @@
         </PORT>
         <PORT DIR="O" NAME="Q" SIGIS="undef" SIGNAME="synchronizer_6_Q">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="encoder_a"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="encoder_a"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -763,7 +763,7 @@
         </PORT>
         <PORT DIR="O" NAME="Q" SIGIS="undef" SIGNAME="synchronizer_7_Q">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="encoder_b"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="encoder_b"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -816,10 +816,10 @@
         </PORT>
         <PORT DIR="O" NAME="Q" SIGIS="undef" SIGNAME="synchronizer_9_Q">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="spi_sub_0" PORT="rst"/>
             <CONNECTION INSTANCE="counter_1" PORT="rst"/>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="rst"/>
-            <CONNECTION INSTANCE="block_encoder_pan" PORT="rst"/>
+            <CONNECTION INSTANCE="spi_sub_0" PORT="rst"/>
+            <CONNECTION INSTANCE="block_encoder_pan_0" PORT="rst"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="rst"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -883,7 +883,7 @@
         <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN2_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="9"/>
         <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
@@ -894,7 +894,7 @@
         <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="IN3_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="9"/>
         <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
@@ -962,7 +962,7 @@
         <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
         <PARAMETER NAME="NUM_PORTS" VALUE="4"/>
-        <PARAMETER NAME="dout_width" VALUE="24"/>
+        <PARAMETER NAME="dout_width" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlconcat_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -977,17 +977,17 @@
             <CONNECTION INSTANCE="synchronizer_1" PORT="Q"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="10" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_pan_pulse_cnt">
+        <PORT DIR="I" LEFT="8" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_pan_0_pulse_cnt">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_pan" PORT="pulse_cnt"/>
+            <CONNECTION INSTANCE="block_encoder_pan_0" PORT="pulse_cnt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="10" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_pulse_cnt">
+        <PORT DIR="I" LEFT="8" NAME="In3" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_0_pulse_cnt">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="pulse_cnt"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="pulse_cnt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+        <PORT DIR="O" LEFT="19" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_sub_0" PORT="data_in"/>
           </CONNECTIONS>
@@ -1000,13 +1000,13 @@
       <PARAMETERS>
         <PARAMETER NAME="DIN_FROM" VALUE="7"/>
         <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_0_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="8"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_sub_0" PORT="data_out"/>
           </CONNECTIONS>
@@ -1024,13 +1024,13 @@
       <PARAMETERS>
         <PARAMETER NAME="DIN_FROM" VALUE="15"/>
         <PARAMETER NAME="DIN_TO" VALUE="8"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_1_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="8"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_sub_0" PORT="data_out"/>
           </CONNECTIONS>
@@ -1048,13 +1048,13 @@
       <PARAMETERS>
         <PARAMETER NAME="DIN_FROM" VALUE="16"/>
         <PARAMETER NAME="DIN_TO" VALUE="16"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_2_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_sub_0" PORT="data_out"/>
           </CONNECTIONS>
@@ -1073,13 +1073,13 @@
       <PARAMETERS>
         <PARAMETER NAME="DIN_FROM" VALUE="17"/>
         <PARAMETER NAME="DIN_TO" VALUE="17"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="20"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_2_1"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="23" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
+        <PORT DIR="I" LEFT="19" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="spi_sub_0_data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="spi_sub_0" PORT="data_out"/>
           </CONNECTIONS>
@@ -1098,15 +1098,15 @@
       <PARAMETERS>
         <PARAMETER NAME="DIN_FROM" VALUE="3"/>
         <PARAMETER NAME="DIN_TO" VALUE="0"/>
-        <PARAMETER NAME="DIN_WIDTH" VALUE="11"/>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="9"/>
         <PARAMETER NAME="Component_Name" VALUE="buildup_xlslice_5_0"/>
         <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="10" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_pulse_cnt">
+        <PORT DIR="I" LEFT="8" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="block_encoder_tilt_0_pulse_cnt">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="block_encoder_tilt" PORT="pulse_cnt"/>
+            <CONNECTION INSTANCE="block_encoder_tilt_0" PORT="pulse_cnt"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_5_Dout">

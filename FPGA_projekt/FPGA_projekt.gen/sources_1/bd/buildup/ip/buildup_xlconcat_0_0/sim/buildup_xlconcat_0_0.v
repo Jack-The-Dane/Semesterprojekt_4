@@ -63,15 +63,15 @@ module buildup_xlconcat_0_0 (
 
 input wire [0 : 0] In0;
 input wire [0 : 0] In1;
-input wire [10 : 0] In2;
-input wire [10 : 0] In3;
-output wire [23 : 0] dout;
+input wire [8 : 0] In2;
+input wire [8 : 0] In3;
+output wire [19 : 0] dout;
 
   xlconcat_v2_1_5_xlconcat #(
     .IN0_WIDTH(1),
     .IN1_WIDTH(1),
-    .IN2_WIDTH(11),
-    .IN3_WIDTH(11),
+    .IN2_WIDTH(9),
+    .IN3_WIDTH(9),
     .IN4_WIDTH(1),
     .IN5_WIDTH(1),
     .IN6_WIDTH(1),
@@ -196,7 +196,7 @@ output wire [23 : 0] dout;
     .IN125_WIDTH(1),
     .IN126_WIDTH(1),
     .IN127_WIDTH(1),
-    .dout_width(24),
+    .dout_width(20),
     .NUM_PORTS(4)
   ) inst (
     .In0(In0),

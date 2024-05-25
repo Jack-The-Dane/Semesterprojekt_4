@@ -45,7 +45,7 @@
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "ip_revision": "1",
         "xci_name": "design_1_counter_0_0",
-        "xci_path": "ip/design_1_counter_0_0/design_1_counter_0_0.xci",
+        "xci_path": "ip\\design_1_counter_0_0\\design_1_counter_0_0.xci",
         "inst_hier_path": "counter_0",
         "parameters": {
           "n_bits": {
@@ -86,7 +86,7 @@
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "design_1_pwm_gen_0_1",
-        "xci_path": "ip/design_1_pwm_gen_0_1/design_1_pwm_gen_0_1.xci",
+        "xci_path": "ip\\design_1_pwm_gen_0_1\\design_1_pwm_gen_0_1.xci",
         "inst_hier_path": "pwm_gen_0",
         "parameters": {
           "n_bits": {
@@ -118,7 +118,7 @@
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "design_1_pwm_gen_1_0",
-        "xci_path": "ip/design_1_pwm_gen_1_0/design_1_pwm_gen_1_0.xci",
+        "xci_path": "ip\\design_1_pwm_gen_1_0\\design_1_pwm_gen_1_0.xci",
         "inst_hier_path": "pwm_gen_1",
         "parameters": {
           "n_bits": {
@@ -150,7 +150,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "design_1_xlslice_0_0",
-        "xci_path": "ip/design_1_xlslice_0_0/design_1_xlslice_0_0.xci",
+        "xci_path": "ip\\design_1_xlslice_0_0\\design_1_xlslice_0_0.xci",
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
@@ -168,7 +168,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "design_1_xlslice_0_1",
-        "xci_path": "ip/design_1_xlslice_0_1/design_1_xlslice_0_1.xci",
+        "xci_path": "ip\\design_1_xlslice_0_1\\design_1_xlslice_0_1.xci",
         "inst_hier_path": "xlslice_1",
         "parameters": {
           "DIN_FROM": {

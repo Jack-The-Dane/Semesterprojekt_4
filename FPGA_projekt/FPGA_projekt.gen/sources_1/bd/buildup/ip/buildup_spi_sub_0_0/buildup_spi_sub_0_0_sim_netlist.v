@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-// Date        : Fri May 17 11:32:43 2024
-// Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
-// Command     : write_verilog -force -mode funcsim
-//               /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_spi_sub_0_0/buildup_spi_sub_0_0_sim_netlist.v
+// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+// Date        : Fri May 24 13:13:20 2024
+// Host        : Cornelia running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
+//               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_spi_sub_0_0/buildup_spi_sub_0_0_sim_netlist.v}
 // Design      : buildup_spi_sub_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -32,9 +32,9 @@ module buildup_spi_sub_0_0
   input SCLK_falling;
   input MOSI;
   input CS;
-  input [23:0]data_in;
+  input [19:0]data_in;
   output MISO;
-  output [23:0]data_out;
+  output [19:0]data_out;
 
   wire CS;
   wire MISO;
@@ -42,8 +42,8 @@ module buildup_spi_sub_0_0
   wire SCLK_falling;
   wire SCLK_rising;
   wire clk;
-  wire [23:0]data_in;
-  wire [23:0]data_out;
+  wire [19:0]data_in;
+  wire [19:0]data_out;
   wire rst;
 
   buildup_spi_sub_0_0_spi_sub U0
@@ -70,13 +70,13 @@ module buildup_spi_sub_0_0_spi_sub
     data_in,
     MOSI);
   output MISO;
-  output [23:0]data_out;
+  output [19:0]data_out;
   input rst;
   input clk;
   input SCLK_falling;
   input CS;
   input SCLK_rising;
-  input [23:0]data_in;
+  input [19:0]data_in;
   input MOSI;
 
   wire CS;
@@ -101,12 +101,12 @@ module buildup_spi_sub_0_0_spi_sub
   wire SCLK_falling;
   wire SCLK_rising;
   wire \bit_counter[0]_i_1_n_0 ;
-  wire \bit_counter[23]_i_1_n_0 ;
-  wire \bit_counter[23]_i_2_n_0 ;
+  wire \bit_counter[19]_i_1_n_0 ;
+  wire \bit_counter[19]_i_2_n_0 ;
   wire clk;
-  wire [23:0]data_in;
-  wire [23:0]data_out;
-  wire [23:1]in7;
+  wire [19:0]data_in;
+  wire [19:0]data_out;
+  wire [19:1]in7;
   wire next_state;
   wire one_shot;
   wire one_shot_i_1_n_0;
@@ -124,12 +124,8 @@ module buildup_spi_sub_0_0_spi_sub
   wire \shift_reg[17]_i_1_n_0 ;
   wire \shift_reg[18]_i_1_n_0 ;
   wire \shift_reg[19]_i_1_n_0 ;
+  wire \shift_reg[19]_i_2_n_0 ;
   wire \shift_reg[1]_i_1_n_0 ;
-  wire \shift_reg[20]_i_1_n_0 ;
-  wire \shift_reg[21]_i_1_n_0 ;
-  wire \shift_reg[22]_i_1_n_0 ;
-  wire \shift_reg[23]_i_1_n_0 ;
-  wire \shift_reg[23]_i_2_n_0 ;
   wire \shift_reg[2]_i_1_n_0 ;
   wire \shift_reg[3]_i_1_n_0 ;
   wire \shift_reg[4]_i_1_n_0 ;
@@ -150,10 +146,6 @@ module buildup_spi_sub_0_0_spi_sub
   wire \shift_reg_reg_n_0_[18] ;
   wire \shift_reg_reg_n_0_[19] ;
   wire \shift_reg_reg_n_0_[1] ;
-  wire \shift_reg_reg_n_0_[20] ;
-  wire \shift_reg_reg_n_0_[21] ;
-  wire \shift_reg_reg_n_0_[22] ;
-  wire \shift_reg_reg_n_0_[23] ;
   wire \shift_reg_reg_n_0_[2] ;
   wire \shift_reg_reg_n_0_[3] ;
   wire \shift_reg_reg_n_0_[4] ;
@@ -330,7 +322,7 @@ module buildup_spi_sub_0_0_spi_sub
     .INIT(4'hE)) 
     MISO_reg_i_1
        (.I0(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I1(\shift_reg_reg_n_0_[23] ),
+        .I1(\shift_reg_reg_n_0_[19] ),
         .O(MISO_reg_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
@@ -350,19 +342,19 @@ module buildup_spi_sub_0_0_spi_sub
         .O(\bit_counter[0]_i_1_n_0 ));
   LUT3 #(
     .INIT(8'h04)) 
-    \bit_counter[23]_i_1 
+    \bit_counter[19]_i_1 
        (.I0(rst),
         .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\bit_counter[23]_i_1_n_0 ));
+        .O(\bit_counter[19]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h00F8)) 
-    \bit_counter[23]_i_2 
+    \bit_counter[19]_i_2 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I1(one_shot_reg_n_0),
         .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I3(rst),
-        .O(\bit_counter[23]_i_2_n_0 ));
+        .O(\bit_counter[19]_i_2_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[0] 
@@ -375,186 +367,154 @@ module buildup_spi_sub_0_0_spi_sub
     .INIT(1'b0)) 
     \bit_counter_reg[10] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[10]),
         .Q(in7[11]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[11] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[11]),
         .Q(in7[12]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[12] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[12]),
         .Q(in7[13]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[13] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[13]),
         .Q(in7[14]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[14] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[14]),
         .Q(in7[15]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[15] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[15]),
         .Q(in7[16]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[16] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[16]),
         .Q(in7[17]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[17] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[17]),
         .Q(in7[18]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[18] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[18]),
         .Q(in7[19]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[19] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[19]),
-        .Q(in7[20]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .Q(p_0_in),
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[1] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[1]),
         .Q(in7[2]),
-        .R(\bit_counter[23]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bit_counter_reg[20] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(in7[20]),
-        .Q(in7[21]),
-        .R(\bit_counter[23]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bit_counter_reg[21] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(in7[21]),
-        .Q(in7[22]),
-        .R(\bit_counter[23]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bit_counter_reg[22] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(in7[22]),
-        .Q(in7[23]),
-        .R(\bit_counter[23]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \bit_counter_reg[23] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(in7[23]),
-        .Q(p_0_in),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[2] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[2]),
         .Q(in7[3]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[3] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[3]),
         .Q(in7[4]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[4] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[4]),
         .Q(in7[5]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[5] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[5]),
         .Q(in7[6]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[6] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[6]),
         .Q(in7[7]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[7] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[7]),
         .Q(in7[8]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[8] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[8]),
         .Q(in7[9]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \bit_counter_reg[9] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(in7[9]),
         .Q(in7[10]),
-        .R(\bit_counter[23]_i_1_n_0 ));
+        .R(\bit_counter[19]_i_1_n_0 ));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
@@ -675,46 +635,6 @@ module buildup_spi_sub_0_0_spi_sub
         .G(\FSM_onehot_current_state_reg_n_0_[3] ),
         .GE(1'b1),
         .Q(data_out[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \data_out_reg[20] 
-       (.CLR(1'b0),
-        .D(\shift_reg_reg_n_0_[20] ),
-        .G(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .GE(1'b1),
-        .Q(data_out[20]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \data_out_reg[21] 
-       (.CLR(1'b0),
-        .D(\shift_reg_reg_n_0_[21] ),
-        .G(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .GE(1'b1),
-        .Q(data_out[21]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \data_out_reg[22] 
-       (.CLR(1'b0),
-        .D(\shift_reg_reg_n_0_[22] ),
-        .G(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .GE(1'b1),
-        .Q(data_out[22]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \data_out_reg[23] 
-       (.CLR(1'b0),
-        .D(\shift_reg_reg_n_0_[23] ),
-        .G(\FSM_onehot_current_state_reg_n_0_[3] ),
-        .GE(1'b1),
-        .Q(data_out[23]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
   (* XILINX_TRANSFORM_PINMAP = "VCC:GE GND:CLR" *) 
   LDCE #(
@@ -892,14 +812,23 @@ module buildup_spi_sub_0_0_spi_sub
         .I2(\shift_reg_reg_n_0_[17] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(\shift_reg[18]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h22202020)) 
+    \shift_reg[19]_i_1 
+       (.I0(one_shot),
+        .I1(rst),
+        .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I3(one_shot_reg_n_0),
+        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .O(\shift_reg[19]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'hF888)) 
-    \shift_reg[19]_i_1 
+    \shift_reg[19]_i_2 
        (.I0(data_in[19]),
         .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
         .I2(\shift_reg_reg_n_0_[18] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[19]_i_1_n_0 ));
+        .O(\shift_reg[19]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hF888)) 
     \shift_reg[1]_i_1 
@@ -908,47 +837,6 @@ module buildup_spi_sub_0_0_spi_sub
         .I2(\shift_reg_reg_n_0_[0] ),
         .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(\shift_reg[1]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hF888)) 
-    \shift_reg[20]_i_1 
-       (.I0(data_in[20]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I2(\shift_reg_reg_n_0_[19] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[20]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hF888)) 
-    \shift_reg[21]_i_1 
-       (.I0(data_in[21]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I2(\shift_reg_reg_n_0_[20] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[21]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hF888)) 
-    \shift_reg[22]_i_1 
-       (.I0(data_in[22]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I2(\shift_reg_reg_n_0_[21] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[22]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h22202020)) 
-    \shift_reg[23]_i_1 
-       (.I0(one_shot),
-        .I1(rst),
-        .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I3(one_shot_reg_n_0),
-        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[23]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hF888)) 
-    \shift_reg[23]_i_2 
-       (.I0(data_in[23]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I2(\shift_reg_reg_n_0_[22] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .O(\shift_reg[23]_i_2_n_0 ));
   LUT4 #(
     .INIT(16'hF888)) 
     \shift_reg[2]_i_1 
@@ -1017,194 +905,162 @@ module buildup_spi_sub_0_0_spi_sub
     .INIT(1'b0)) 
     \shift_reg_reg[0] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[0]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[0] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[10] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[10]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[10] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[11] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[11]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[11] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[12] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[12]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[12] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[13] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[13]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[13] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[14] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[14]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[14] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[15] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[15]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[15] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[16] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[16]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[16] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[17] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[17]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[17] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[18] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[18]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[18] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[19] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(\shift_reg[19]_i_1_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
+        .D(\shift_reg[19]_i_2_n_0 ),
         .Q(\shift_reg_reg_n_0_[19] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[1] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[1]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[1] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
-  FDSE #(
-    .INIT(1'b0)) 
-    \shift_reg_reg[20] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(\shift_reg[20]_i_1_n_0 ),
-        .Q(\shift_reg_reg_n_0_[20] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
-  FDSE #(
-    .INIT(1'b0)) 
-    \shift_reg_reg[21] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(\shift_reg[21]_i_1_n_0 ),
-        .Q(\shift_reg_reg_n_0_[21] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
-  FDSE #(
-    .INIT(1'b0)) 
-    \shift_reg_reg[22] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(\shift_reg[22]_i_1_n_0 ),
-        .Q(\shift_reg_reg_n_0_[22] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
-  FDSE #(
-    .INIT(1'b0)) 
-    \shift_reg_reg[23] 
-       (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
-        .D(\shift_reg[23]_i_2_n_0 ),
-        .Q(\shift_reg_reg_n_0_[23] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[2] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[2]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[2] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[3] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[3]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[3] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[4] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[4]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[4] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[5] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[5]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[5] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[6] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[6]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[6] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[7] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[7]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[7] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[8] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[8]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[8] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
   FDSE #(
     .INIT(1'b0)) 
     \shift_reg_reg[9] 
        (.C(clk),
-        .CE(\bit_counter[23]_i_2_n_0 ),
+        .CE(\bit_counter[19]_i_2_n_0 ),
         .D(\shift_reg[9]_i_1_n_0 ),
         .Q(\shift_reg_reg_n_0_[9] ),
-        .S(\shift_reg[23]_i_1_n_0 ));
+        .S(\shift_reg[19]_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

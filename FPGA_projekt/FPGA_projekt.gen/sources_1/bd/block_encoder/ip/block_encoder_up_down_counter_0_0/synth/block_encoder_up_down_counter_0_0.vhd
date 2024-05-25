@@ -60,7 +60,7 @@ ENTITY block_encoder_up_down_counter_0_0 IS
     down : IN STD_LOGIC;
     rst : IN STD_LOGIC;
     en : IN STD_LOGIC;
-    cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+    cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
   );
 END block_encoder_up_down_counter_0_0;
 
@@ -78,7 +78,7 @@ ARCHITECTURE block_encoder_up_down_counter_0_0_arch OF block_encoder_up_down_cou
       down : IN STD_LOGIC;
       rst : IN STD_LOGIC;
       en : IN STD_LOGIC;
-      cnt : OUT STD_LOGIC_VECTOR(10 DOWNTO 0)
+      cnt : OUT STD_LOGIC_VECTOR(8 DOWNTO 0)
     );
   END COMPONENT up_down_counter;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -86,7 +86,7 @@ ARCHITECTURE block_encoder_up_down_counter_0_0_arch OF block_encoder_up_down_cou
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF block_encoder_up_down_counter_0_0_arch : ARCHITECTURE IS "block_encoder_up_down_counter_0_0,up_down_counter,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF block_encoder_up_down_counter_0_0_arch: ARCHITECTURE IS "block_encoder_up_down_counter_0_0,up_down_counter,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=up_down_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,n_bits=11,max_val_binary=10001111111}";
+  ATTRIBUTE CORE_GENERATION_INFO OF block_encoder_up_down_counter_0_0_arch: ARCHITECTURE IS "block_encoder_up_down_counter_0_0,up_down_counter,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=up_down_counter,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,n_bits=9,max_val_binary=101101000}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF block_encoder_up_down_counter_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -98,8 +98,8 @@ ARCHITECTURE block_encoder_up_down_counter_0_0_arch OF block_encoder_up_down_cou
 BEGIN
   U0 : up_down_counter
     GENERIC MAP (
-      n_bits => 11,
-      max_val_binary => B"10001111111"
+      n_bits => 9,
+      max_val_binary => B"101101000"
     )
     PORT MAP (
       clk => clk,

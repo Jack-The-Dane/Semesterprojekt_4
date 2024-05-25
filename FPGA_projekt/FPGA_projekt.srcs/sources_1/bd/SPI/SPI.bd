@@ -47,7 +47,7 @@
         "vlnv": "xilinx.com:module_ref:shift_register_generic:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_shift_register_input_1",
-        "xci_path": "ip/SPI_shift_register_input_1/SPI_shift_register_input_1.xci",
+        "xci_path": "ip\\SPI_shift_register_input_1\\SPI_shift_register_input_1.xci",
         "inst_hier_path": "SPI_in",
         "parameters": {
           "register_length": {
@@ -92,7 +92,7 @@
         "vlnv": "xilinx.com:module_ref:latch:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_latch_0_0",
-        "xci_path": "ip/SPI_latch_0_0/SPI_latch_0_0.xci",
+        "xci_path": "ip\\SPI_latch_0_0\\SPI_latch_0_0.xci",
         "inst_hier_path": "latch_0",
         "parameters": {
           "data_length": {
@@ -128,7 +128,7 @@
         "vlnv": "xilinx.com:module_ref:enable_counter:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_enable_counter_0_0",
-        "xci_path": "ip/SPI_enable_counter_0_0/SPI_enable_counter_0_0.xci",
+        "xci_path": "ip\\SPI_enable_counter_0_0\\SPI_enable_counter_0_0.xci",
         "inst_hier_path": "Prescaler",
         "parameters": {
           "data_length": {
@@ -160,7 +160,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "SPI_NOT_gate_0_0",
-        "xci_path": "ip/SPI_NOT_gate_0_0/SPI_NOT_gate_0_0.xci",
+        "xci_path": "ip\\SPI_NOT_gate_0_0\\SPI_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_0",
         "reference_info": {
           "ref_type": "hdl",

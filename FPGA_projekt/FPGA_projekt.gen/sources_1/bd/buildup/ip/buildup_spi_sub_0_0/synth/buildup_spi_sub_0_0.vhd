@@ -61,9 +61,9 @@ ENTITY buildup_spi_sub_0_0 IS
     SCLK_falling : IN STD_LOGIC;
     MOSI : IN STD_LOGIC;
     CS : IN STD_LOGIC;
-    data_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    data_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     MISO : OUT STD_LOGIC;
-    data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+    data_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
   );
 END buildup_spi_sub_0_0;
 
@@ -81,9 +81,9 @@ ARCHITECTURE buildup_spi_sub_0_0_arch OF buildup_spi_sub_0_0 IS
       SCLK_falling : IN STD_LOGIC;
       MOSI : IN STD_LOGIC;
       CS : IN STD_LOGIC;
-      data_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+      data_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       MISO : OUT STD_LOGIC;
-      data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+      data_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
     );
   END COMPONENT spi_sub;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -91,7 +91,7 @@ ARCHITECTURE buildup_spi_sub_0_0_arch OF buildup_spi_sub_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF buildup_spi_sub_0_0_arch : ARCHITECTURE IS "buildup_spi_sub_0_0,spi_sub,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF buildup_spi_sub_0_0_arch: ARCHITECTURE IS "buildup_spi_sub_0_0,spi_sub,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=spi_sub,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,n_bits=24}";
+  ATTRIBUTE CORE_GENERATION_INFO OF buildup_spi_sub_0_0_arch: ARCHITECTURE IS "buildup_spi_sub_0_0,spi_sub,{x_ipProduct=Vivado 2023.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=spi_sub,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,n_bits=20}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF buildup_spi_sub_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -103,7 +103,7 @@ ARCHITECTURE buildup_spi_sub_0_0_arch OF buildup_spi_sub_0_0 IS
 BEGIN
   U0 : spi_sub
     GENERIC MAP (
-      n_bits => 24
+      n_bits => 20
     )
     PORT MAP (
       clk => clk,

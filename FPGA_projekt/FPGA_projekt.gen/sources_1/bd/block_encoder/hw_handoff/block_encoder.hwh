@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 17 12:51:01 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri May 24 13:26:25 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="block_encoder" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="clk" SIGIS="undef" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="Rising_edge_a" PORT="clk"/>
         <CONNECTION INSTANCE="Rising_edge_b" PORT="clk"/>
+        <CONNECTION INSTANCE="Rising_edge_a" PORT="clk"/>
         <CONNECTION INSTANCE="up_down_counter_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
@@ -28,7 +28,7 @@
         <CONNECTION INSTANCE="Rising_edge_b" PORT="D"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="10" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
+    <PORT DIR="O" LEFT="8" NAME="pulse_cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
       <CONNECTIONS>
         <CONNECTION INSTANCE="up_down_counter_0" PORT="cnt"/>
       </CONNECTIONS>
@@ -161,8 +161,8 @@
     <MODULE COREREVISION="1" FULLNAME="/up_down_counter_0" HWVERSION="1.0" INSTANCE="up_down_counter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="up_down_counter" VLNV="xilinx.com:module_ref:up_down_counter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="max_val_binary" VALUE="&quot;10001111111&quot;"/>
-        <PARAMETER NAME="n_bits" VALUE="11"/>
+        <PARAMETER NAME="max_val_binary" VALUE="&quot;101101000&quot;"/>
+        <PARAMETER NAME="n_bits" VALUE="9"/>
         <PARAMETER NAME="Component_Name" VALUE="block_encoder_up_down_counter_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -172,7 +172,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="10" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
+        <PORT DIR="O" LEFT="8" NAME="cnt" RIGHT="0" SIGIS="undef" SIGNAME="up_down_counter_0_cnt">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="pulse_cnt"/>
           </CONNECTIONS>

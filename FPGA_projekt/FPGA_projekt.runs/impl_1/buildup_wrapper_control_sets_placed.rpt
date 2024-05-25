@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Fri May 17 13:21:01 2024
-| Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Fri May 24 13:29:30 2024
+| Host         : Cornelia running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file buildup_wrapper_control_sets_placed.rpt
 | Design       : buildup_wrapper
 | Device       : xc7z020
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    10 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    37 |
+| Unused register locations in slices containing registers |    49 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -43,8 +43,8 @@ Table of Contents
 | >= 0 to < 4        |     1 |
 | >= 4 to < 6        |     2 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     1 |
-| >= 10 to < 12      |     2 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
 | >= 16              |     4 |
@@ -59,30 +59,30 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              89 |           28 |
-| No           | No                    | Yes                    |              13 |            3 |
+| No           | No                    | Yes                    |              13 |            4 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              22 |           10 |
-| Yes          | Yes                   | No                     |              47 |           12 |
+| Yes          | No                    | Yes                    |              18 |            9 |
+| Yes          | Yes                   | No                     |              39 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
-|                         Clock Signal                         |                     Enable Signal                     |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
-|  buildup_i/spi_sub_0/U0/MISO_reg_i_2_n_0                     |                                                       |                                                |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                               |                                                       | buildup_i/synchronizer_9/U0/Q                  |                1 |              5 |         5.00 |
-|  buildup_i/spi_sub_0/U0/next_state                           |                                                       |                                                |                2 |              5 |         2.50 |
-|  buildup_i/clock_divider_0/U0/clk_div                        |                                                       | buildup_i/synchronizer_9/U0/Q                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_pan/U0/Rising_edge_b/U0/E[0]  | buildup_i/synchronizer_9/U0/Q                  |                4 |             11 |         2.75 |
-|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_tilt/U0/Rising_edge_b/U0/E[0] | buildup_i/synchronizer_9/U0/Q                  |                6 |             11 |         1.83 |
-|  buildup_i/spi_sub_0/U0/FSM_onehot_current_state_reg_n_0_[3] |                                                       |                                                |                6 |             18 |         3.00 |
-|  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[23]_i_2_n_0        | buildup_i/spi_sub_0/U0/bit_counter[23]_i_1_n_0 |                4 |             23 |         5.75 |
-|  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[23]_i_2_n_0        | buildup_i/spi_sub_0/U0/shift_reg[23]_i_1_n_0   |                8 |             24 |         3.00 |
-|  clk_IBUF_BUFG                                               |                                                       |                                                |               19 |             65 |         3.42 |
-+--------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
++--------------------------------------------------------------+---------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|                         Clock Signal                         |                      Enable Signal                      |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------------------------------+---------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  buildup_i/spi_sub_0/U0/MISO_reg_i_2_n_0                     |                                                         |                                                |                1 |              1 |         1.00 |
+|  buildup_i/spi_sub_0/U0/next_state                           |                                                         |                                                |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                               |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              5 |         2.50 |
+|  buildup_i/clock_divider_0/U0/clk_div                        |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/E[0] | buildup_i/synchronizer_9/U0/Q                  |                5 |              9 |         1.80 |
+|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_pan_0/U0/Rising_edge_b/U0/E[0]  | buildup_i/synchronizer_9/U0/Q                  |                4 |              9 |         2.25 |
+|  buildup_i/spi_sub_0/U0/FSM_onehot_current_state_reg_n_0_[3] |                                                         |                                                |                6 |             18 |         3.00 |
+|  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[19]_i_2_n_0          | buildup_i/spi_sub_0/U0/bit_counter[19]_i_1_n_0 |                3 |             19 |         6.33 |
+|  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[19]_i_2_n_0          | buildup_i/spi_sub_0/U0/shift_reg[19]_i_1_n_0   |                6 |             20 |         3.33 |
+|  clk_IBUF_BUFG                                               |                                                         |                                                |               19 |             65 |         3.42 |
++--------------------------------------------------------------+---------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
 
 

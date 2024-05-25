@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity up_down_counter is
 generic( n_bits : positive := 11;
-         max_val_binary : unsigned := "10001111111"); -- 1151 in hex
+         max_val_binary : unsigned := "101101000"); -- 1151 in hex
     Port ( clk : in STD_LOGIC;
            up : in STD_LOGIC;
            down : in STD_LOGIC;

@@ -61,9 +61,9 @@ ENTITY buildup_spi_sub_0_0 IS
     SCLK_falling : IN STD_LOGIC;
     MOSI : IN STD_LOGIC;
     CS : IN STD_LOGIC;
-    data_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+    data_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
     MISO : OUT STD_LOGIC;
-    data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+    data_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
   );
 END buildup_spi_sub_0_0;
 
@@ -81,9 +81,9 @@ ARCHITECTURE buildup_spi_sub_0_0_arch OF buildup_spi_sub_0_0 IS
       SCLK_falling : IN STD_LOGIC;
       MOSI : IN STD_LOGIC;
       CS : IN STD_LOGIC;
-      data_in : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
+      data_in : IN STD_LOGIC_VECTOR(19 DOWNTO 0);
       MISO : OUT STD_LOGIC;
-      data_out : OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
+      data_out : OUT STD_LOGIC_VECTOR(19 DOWNTO 0)
     );
   END COMPONENT spi_sub;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -95,7 +95,7 @@ ARCHITECTURE buildup_spi_sub_0_0_arch OF buildup_spi_sub_0_0 IS
 BEGIN
   U0 : spi_sub
     GENERIC MAP (
-      n_bits => 24
+      n_bits => 20
     )
     PORT MAP (
       clk => clk,

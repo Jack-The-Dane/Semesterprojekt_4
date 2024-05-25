@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Fri May 17 13:19:52 2024
---Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+--Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+--Date        : Fri May 24 13:27:11 2024
+--Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target buildup.bd
 --Design      : buildup
 --Purpose     : IP block netlist
@@ -33,7 +33,7 @@ entity buildup is
     sclk : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=32,numNonXlnxBlks=2,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=23,numPkgbdBlks=2,bdsource=USER,da_clkrst_cnt=8,synth_mode=Hierarchical}";
+  attribute CORE_GENERATION_INFO of buildup : entity is "buildup,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=buildup,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=32,numReposBlks=32,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=23,numPkgbdBlks=2,bdsource=USER,da_clkrst_cnt=8,synth_mode=Hierarchical}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of buildup : entity is "buildup.hwdef";
 end buildup;
@@ -55,20 +55,20 @@ architecture STRUCTURE of buildup is
   port (
     In0 : in STD_LOGIC_VECTOR ( 0 to 0 );
     In1 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    In2 : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    In3 : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dout : out STD_LOGIC_VECTOR ( 23 downto 0 )
+    In2 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    In3 : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    dout : out STD_LOGIC_VECTOR ( 19 downto 0 )
   );
   end component buildup_xlconcat_0_0;
   component buildup_xlslice_0_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 19 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component buildup_xlslice_0_0;
   component buildup_xlslice_1_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 19 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component buildup_xlslice_1_0;
@@ -82,13 +82,13 @@ architecture STRUCTURE of buildup is
   end component buildup_counter_1_0;
   component buildup_xlslice_2_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 19 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component buildup_xlslice_2_0;
   component buildup_xlslice_2_1 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 19 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component buildup_xlslice_2_1;
@@ -154,9 +154,9 @@ architecture STRUCTURE of buildup is
     SCLK_falling : in STD_LOGIC;
     MOSI : in STD_LOGIC;
     CS : in STD_LOGIC;
-    data_in : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    data_in : in STD_LOGIC_VECTOR ( 19 downto 0 );
     MISO : out STD_LOGIC;
-    data_out : out STD_LOGIC_VECTOR ( 23 downto 0 )
+    data_out : out STD_LOGIC_VECTOR ( 19 downto 0 )
   );
   end component buildup_spi_sub_0_0;
   component buildup_synchronizer_0_2 is
@@ -243,32 +243,32 @@ architecture STRUCTURE of buildup is
     Q : out STD_LOGIC
   );
   end component buildup_Falling_edge_detector_0_0;
-  component buildup_block_encoder_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    encoder_a : in STD_LOGIC;
-    encoder_b : in STD_LOGIC;
-    pulse_cnt : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    rst : in STD_LOGIC
-  );
-  end component buildup_block_encoder_0_0;
-  component buildup_block_encoder_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    enable : in STD_LOGIC;
-    encoder_a : in STD_LOGIC;
-    encoder_b : in STD_LOGIC;
-    pulse_cnt : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    rst : in STD_LOGIC
-  );
-  end component buildup_block_encoder_0_1;
   component buildup_xlslice_5_0 is
   port (
-    Din : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    Din : in STD_LOGIC_VECTOR ( 8 downto 0 );
     Dout : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component buildup_xlslice_5_0;
+  component buildup_block_encoder_0_2 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    encoder_a : in STD_LOGIC;
+    encoder_b : in STD_LOGIC;
+    pulse_cnt : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    rst : in STD_LOGIC
+  );
+  end component buildup_block_encoder_0_2;
+  component buildup_block_encoder_pan_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    enable : in STD_LOGIC;
+    encoder_a : in STD_LOGIC;
+    encoder_b : in STD_LOGIC;
+    pulse_cnt : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    rst : in STD_LOGIC
+  );
+  end component buildup_block_encoder_pan_0_0;
   signal AND_gate_0_C : STD_LOGIC;
   signal AND_gate_1_C : STD_LOGIC;
   signal AND_gate_2_C : STD_LOGIC;
@@ -280,9 +280,9 @@ architecture STRUCTURE of buildup is
   signal NOT_gate_0_B : STD_LOGIC;
   signal NOT_gate_1_B : STD_LOGIC;
   signal Rising_edge_detector_0_Q : STD_LOGIC;
-  signal SPI_0_SPI_out : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal block_encoder_pan_pulse_cnt : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal block_encoder_tilt_pulse_cnt : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal SPI_0_SPI_out : STD_LOGIC_VECTOR ( 19 downto 0 );
+  signal block_encoder_pan_0_pulse_cnt : STD_LOGIC_VECTOR ( 8 downto 0 );
+  signal block_encoder_tilt_pulse_cnt : STD_LOGIC_VECTOR ( 8 downto 0 );
   signal clk_1 : STD_LOGIC;
   signal clock_divider_0_clk_div : STD_LOGIC;
   signal counter_1_cnt : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -306,7 +306,7 @@ architecture STRUCTURE of buildup is
   signal synchronizer_7_Q : STD_LOGIC;
   signal synchronizer_8_Q : STD_LOGIC;
   signal synchronizer_9_Q : STD_LOGIC;
-  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 19 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlslice_0_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal xlslice_1_Dout : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -389,22 +389,22 @@ Rising_edge_detector_0: component buildup_Rising_edge_detector_0_0
       Q => Rising_edge_detector_0_Q,
       clk => clk_1
     );
-block_encoder_pan: component buildup_block_encoder_0_1
+block_encoder_pan_0: component buildup_block_encoder_0_2
      port map (
       clk => clk_1,
       enable => xlconstant_1_dout(0),
       encoder_a => synchronizer_3_Q,
       encoder_b => synchronizer_2_Q,
-      pulse_cnt(10 downto 0) => block_encoder_pan_pulse_cnt(10 downto 0),
+      pulse_cnt(8 downto 0) => block_encoder_pan_0_pulse_cnt(8 downto 0),
       rst => synchronizer_9_Q
     );
-block_encoder_tilt: component buildup_block_encoder_0_0
+block_encoder_tilt_0: component buildup_block_encoder_pan_0_0
      port map (
       clk => clk_1,
       enable => xlconstant_1_dout(0),
       encoder_a => synchronizer_6_Q,
       encoder_b => synchronizer_7_Q,
-      pulse_cnt(10 downto 0) => block_encoder_tilt_pulse_cnt(10 downto 0),
+      pulse_cnt(8 downto 0) => block_encoder_tilt_pulse_cnt(8 downto 0),
       rst => synchronizer_9_Q
     );
 clock_divider_0: component buildup_clock_divider_0_0
@@ -440,8 +440,8 @@ spi_sub_0: component buildup_spi_sub_0_0
       SCLK_falling => Falling_edge_detector_0_Q,
       SCLK_rising => Rising_edge_detector_0_Q,
       clk => clk_1,
-      data_in(23 downto 0) => xlconcat_0_dout(23 downto 0),
-      data_out(23 downto 0) => SPI_0_SPI_out(23 downto 0),
+      data_in(19 downto 0) => xlconcat_0_dout(19 downto 0),
+      data_out(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       rst => synchronizer_9_Q
     );
 synchronizer_0: component buildup_synchronizer_0_2
@@ -508,33 +508,33 @@ xlconcat_0: component buildup_xlconcat_0_0
      port map (
       In0(0) => synchronizer_0_Q,
       In1(0) => synchronizer_1_Q,
-      In2(10 downto 0) => block_encoder_pan_pulse_cnt(10 downto 0),
-      In3(10 downto 0) => block_encoder_tilt_pulse_cnt(10 downto 0),
-      dout(23 downto 0) => xlconcat_0_dout(23 downto 0)
+      In2(8 downto 0) => block_encoder_pan_0_pulse_cnt(8 downto 0),
+      In3(8 downto 0) => block_encoder_tilt_pulse_cnt(8 downto 0),
+      dout(19 downto 0) => xlconcat_0_dout(19 downto 0)
     );
 xlslice_0: component buildup_xlslice_0_0
      port map (
-      Din(23 downto 0) => SPI_0_SPI_out(23 downto 0),
+      Din(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       Dout(7 downto 0) => xlslice_0_Dout(7 downto 0)
     );
 xlslice_1: component buildup_xlslice_1_0
      port map (
-      Din(23 downto 0) => SPI_0_SPI_out(23 downto 0),
+      Din(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       Dout(7 downto 0) => xlslice_1_Dout(7 downto 0)
     );
 xlslice_2: component buildup_xlslice_2_0
      port map (
-      Din(23 downto 0) => SPI_0_SPI_out(23 downto 0),
+      Din(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       Dout(0) => xlslice_2_Dout(0)
     );
 xlslice_3: component buildup_xlslice_2_1
      port map (
-      Din(23 downto 0) => SPI_0_SPI_out(23 downto 0),
+      Din(19 downto 0) => SPI_0_SPI_out(19 downto 0),
       Dout(0) => xlslice_3_Dout(0)
     );
 xlslice_5: component buildup_xlslice_5_0
      port map (
-      Din(10 downto 0) => block_encoder_tilt_pulse_cnt(10 downto 0),
+      Din(8 downto 0) => block_encoder_tilt_pulse_cnt(8 downto 0),
       Dout(3 downto 0) => xlslice_5_Dout(3 downto 0)
     );
 end STRUCTURE;

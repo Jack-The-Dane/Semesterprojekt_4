@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
---Date        : Fri May 17 12:51:00 2024
---Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+--Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+--Date        : Fri May 24 13:26:25 2024
+--Host        : Cornelia running 64-bit major release  (build 9200)
 --Command     : generate_target block_encoder.bd
 --Design      : block_encoder
 --Purpose     : IP block netlist
@@ -18,7 +18,7 @@ entity block_encoder is
     enable : in STD_LOGIC;
     encoder_a : in STD_LOGIC;
     encoder_b : in STD_LOGIC;
-    pulse_cnt : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    pulse_cnt : out STD_LOGIC_VECTOR ( 8 downto 0 );
     rst : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -35,7 +35,7 @@ architecture STRUCTURE of block_encoder is
     down : in STD_LOGIC;
     rst : in STD_LOGIC;
     en : in STD_LOGIC;
-    cnt : out STD_LOGIC_VECTOR ( 10 downto 0 )
+    cnt : out STD_LOGIC_VECTOR ( 8 downto 0 )
   );
   end component block_encoder_up_down_counter_0_0;
   component block_encoder_NOT_gate_0_0 is
@@ -89,13 +89,13 @@ architecture STRUCTURE of block_encoder is
   signal encoder_a_1 : STD_LOGIC;
   signal encoder_b_1 : STD_LOGIC;
   signal rst_1 : STD_LOGIC;
-  signal up_down_counter_0_cnt : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal up_down_counter_0_cnt : STD_LOGIC_VECTOR ( 8 downto 0 );
 begin
   clk_1 <= clk;
   enable_1 <= enable;
   encoder_a_1 <= encoder_a;
   encoder_b_1 <= encoder_b;
-  pulse_cnt(10 downto 0) <= up_down_counter_0_cnt(10 downto 0);
+  pulse_cnt(8 downto 0) <= up_down_counter_0_cnt(8 downto 0);
   rst_1 <= rst;
 NOT_gate_a: component block_encoder_NOT_gate_0_1
      port map (
@@ -128,7 +128,7 @@ down_signal: component block_encoder_AND_gate_1_0
 up_down_counter_0: component block_encoder_up_down_counter_0_0
      port map (
       clk => clk_1,
-      cnt(10 downto 0) => up_down_counter_0_cnt(10 downto 0),
+      cnt(8 downto 0) => up_down_counter_0_cnt(8 downto 0),
       down => AND_gate_1_C,
       en => enable_1,
       rst => rst_1,

@@ -55,7 +55,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ade3481f</spirit:value>
+            <spirit:value>95ab1957</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -68,7 +68,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ade3481f</spirit:value>
+            <spirit:value>95ab1957</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -174,7 +174,7 @@
       <spirit:modelParameter spirit:dataType="unsigned">
         <spirit:name>max_val_binary</spirit:name>
         <spirit:displayName>Max Val Binary</spirit:displayName>
-        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_val_binary" spirit:bitStringLength="11">&quot;10001111111&quot;</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.max_val_binary" spirit:bitStringLength="9">&quot;101101000&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -184,7 +184,7 @@
       <spirit:file>
         <spirit:name>xgui/up_down_counter_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_9f049a1c</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_6563884e</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -199,7 +199,7 @@
     <spirit:parameter>
       <spirit:name>max_val_binary</spirit:name>
       <spirit:displayName>Max Val Binary</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.max_val_binary" spirit:bitStringLength="11">&quot;10001111111&quot;</spirit:value>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.max_val_binary" spirit:bitStringLength="9">&quot;101101000&quot;</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -221,7 +221,7 @@
         <xilinx:designToolContext>IPI</xilinx:designToolContext>
       </xilinx:designToolContexts>
       <xilinx:coreRevision>1</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-05-17T10:50:35Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-05-24T11:25:21Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
