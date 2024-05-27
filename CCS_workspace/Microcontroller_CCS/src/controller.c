@@ -63,34 +63,34 @@ const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LE
 // Velocity measurer
 void vel_measurer(){
     static INT8U i = 0;
-    static INT16S theta_last_tilt = 0;
-    static INT16S theta_last_pan = 0;
-    static INT16S theta_current_tilt = 0;
-    static INT16S theta_current_pan = 0;
+    static double theta_last_tilt = 0;
+    static double theta_last_pan = 0;
+    static double theta_current_tilt = 0;
+    static double theta_current_pan = 0;
 
     if(i % VEL_SIZE == 0){i = 0;}
-    theta_current_tilt = tics_to_rad((encoders >> 2) & 0x1FF);
-    theta_current_pan = tics_to_rad((encoders >> 11) & 0x1FF);
+    theta_current_pan = tics_to_rad((encoders >> 2) & 0x1FF);
+    theta_current_tilt = tics_to_rad((encoders >> 11) & 0x1FF);
 
     // Calulate pan velocity and place in array
     v_pan[i] = (dist(theta_last_pan, theta_current_pan)) / (xFrequency * portTICK_PERIOD_MS);
     v_tilt[i] = (dist(theta_last_tilt, theta_current_tilt)) / (xFrequency * portTICK_PERIOD_MS);
 
     // Sum of velocities
-    INT16S vel_sum_pan = 0;
-    INT16S vel_sum_tilt = 0;
+    double vel_sum_pan = 0;
+    double vel_sum_tilt = 0;
     for(INT8U j = 0; j < VEL_SIZE; j++){
         vel_sum_pan += v_pan[j];
         vel_sum_tilt += v_tilt[j];
     }
 
-    double v_rad_pan = ((double) vel_sum_pan) * 0.02204626423;
-    double v_rad_tilt = ((double) vel_sum_tilt) * 0.02204626423;
+    double v_rad_pan = ((double) vel_sum_pan);
+    double v_rad_tilt = ((double) vel_sum_tilt);
 
     u_temp[0][0] = v_rad_pan / VEL_SIZE;
     u_temp[1][0] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
 
-    send_char((char) (u_temp[1][1] * 100));
+    send_char((char) (u_temp[1][0] * 100));
 
     // Iterate and set used positions as old
     i++;
