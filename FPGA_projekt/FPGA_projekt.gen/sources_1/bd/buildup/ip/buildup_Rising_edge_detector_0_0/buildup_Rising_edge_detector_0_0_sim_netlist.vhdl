@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
--- Date        : Fri May 24 10:48:47 2024
--- Host        : Cornelia running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
---               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0_sim_netlist.vhdl}
+-- Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+-- Date        : Tue May 14 10:03:41 2024
+-- Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+-- Command     : write_vhdl -force -mode funcsim -rename_top buildup_Rising_edge_detector_0_0 -prefix
+--               buildup_Rising_edge_detector_0_0_ buildup_Rising_edge_detector_0_0_sim_netlist.vhdl
 -- Design      : buildup_Rising_edge_detector_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity buildup_Rising_edge_detector_0_0_Rising_edge_detector is
     D : in STD_LOGIC;
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of buildup_Rising_edge_detector_0_0_Rising_edge_detector : entity is "Rising_edge_detector";
 end buildup_Rising_edge_detector_0_0_Rising_edge_detector;
 
 architecture STRUCTURE of buildup_Rising_edge_detector_0_0_Rising_edge_detector is

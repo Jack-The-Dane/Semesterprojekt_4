@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri May 24 13:29:30 2024
-| Host         : Cornelia running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Mon May 27 14:49:15 2024
+| Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_control_sets -verbose -file buildup_wrapper_control_sets_placed.rpt
 | Design       : buildup_wrapper
 | Device       : xc7z020
@@ -77,8 +77,8 @@ Table of Contents
 |  buildup_i/spi_sub_0/U0/next_state                           |                                                         |                                                |                2 |              5 |         2.50 |
 |  clk_IBUF_BUFG                                               |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              5 |         2.50 |
 |  buildup_i/clock_divider_0/U0/clk_div                        |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/E[0] | buildup_i/synchronizer_9/U0/Q                  |                5 |              9 |         1.80 |
 |  clk_IBUF_BUFG                                               | buildup_i/block_encoder_pan_0/U0/Rising_edge_b/U0/E[0]  | buildup_i/synchronizer_9/U0/Q                  |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG                                               | buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/E[0] | buildup_i/synchronizer_9/U0/Q                  |                5 |              9 |         1.80 |
 |  buildup_i/spi_sub_0/U0/FSM_onehot_current_state_reg_n_0_[3] |                                                         |                                                |                6 |             18 |         3.00 |
 |  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[19]_i_2_n_0          | buildup_i/spi_sub_0/U0/bit_counter[19]_i_1_n_0 |                3 |             19 |         6.33 |
 |  clk_IBUF_BUFG                                               | buildup_i/spi_sub_0/U0/bit_counter[19]_i_2_n_0          | buildup_i/spi_sub_0/U0/shift_reg[19]_i_1_n_0   |                6 |             20 |         3.33 |

@@ -2,18 +2,18 @@
 <Root MajorVersion="0" MinorVersion="43">
   <CompositeFile CompositeFileTopName="buildup" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1716550033"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1716550033"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1716550033"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1716550033"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1716814082"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1716814082"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1716814082"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1716814082"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\buildup.vhd" Type="VHDL">
+      <File Name="synth/buildup.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\buildup.vhd" Type="VHDL">
+      <File Name="sim/buildup.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -27,7 +27,7 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\buildup.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/buildup.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -39,13 +39,13 @@
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\buildup.hwdef">
+      <File Name="synth/buildup.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\buildup.protoinst">
+      <File Name="sim/buildup.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

@@ -1,19 +1,19 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Mon Apr 29 18:04:58 2024
-// Host        : Cornelia running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+// Date        : Tue May 14 09:50:24 2024
+// Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
 // Command     : write_verilog -force -mode funcsim -rename_top buildup_pwm_gen_0_2 -prefix
-//               buildup_pwm_gen_0_2_ design_1_pwm_gen_1_0_sim_netlist.v
-// Design      : design_1_pwm_gen_1_0
+//               buildup_pwm_gen_0_2_ buildup_pwm_gen_0_3_sim_netlist.v
+// Design      : buildup_pwm_gen_0_3
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_pwm_gen_1_0,pwm_gen,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* CHECK_LICENSE_TYPE = "buildup_pwm_gen_0_3,pwm_gen,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "pwm_gen,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module buildup_pwm_gen_0_2

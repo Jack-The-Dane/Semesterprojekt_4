@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"1.5",
-   "Default View_TopLeft":"-337,-235",
+   "Default View_TopLeft":"-337,-239",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_pwm_0 -pg 1 -lvl 3 -x 630 -y 20 -defaultsOSRD
 preplace port port-id_clk_0 -pg 1 -lvl 0 -x -40 -y -80 -defaultsOSRD
@@ -16,14 +16,14 @@ preplace inst pwm_gen_0 -pg 1 -lvl 2 -x 500 -y -30 -defaultsOSRD
 preplace inst pwm_gen_1 -pg 1 -lvl 2 -x 500 -y 190 -defaultsOSRD
 preplace inst xlslice_0 -pg 1 -lvl 1 -x 100 -y 90 -defaultsOSRD
 preplace inst xlslice_1 -pg 1 -lvl 1 -x 100 -y 200 -defaultsOSRD
-preplace netloc Din_0_1 1 0 1 -10 90n
+preplace netloc Din_0_1 1 0 1 -20 90n
 preplace netloc clk_0_1 1 0 1 -10J -80n
-preplace netloc counter_0_cnt 1 1 1 390 -40n
+preplace netloc counter_0_cnt 1 1 1 380 -40n
 preplace netloc en_0_1 1 0 1 -10J -10n
-preplace netloc pwm_gen_0_pwm 1 2 1 600 -30n
-preplace netloc pwm_gen_1_pwm 1 2 1 600 140n
+preplace netloc pwm_gen_0_pwm 1 2 1 610 -30n
+preplace netloc pwm_gen_1_pwm 1 2 1 610 140n
 preplace netloc rst_0_1 1 0 1 -20J -50n
-preplace netloc xlslice_0_Dout 1 1 1 400 -20n
+preplace netloc xlslice_0_Dout 1 1 1 390 -20n
 preplace netloc xlslice_1_Dout 1 1 1 N 200
 levelinfo -pg 1 -40 100 500 630
 pagesize -pg 1 -db -bbox -sgen -180 -110 730 260

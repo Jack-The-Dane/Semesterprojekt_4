@@ -26,7 +26,7 @@
 const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
 double v_tilt[VEL_SIZE];
 double v_pan[VEL_SIZE];
-double u_temp[2][1];
+
 double u[2][1];
 double v_temp = 0;
 
@@ -142,23 +142,13 @@ void controller_task(void * pvParameters) {
                 tilt_direction = 1;
             }
 
-            // pan_pwm = 0x25;
-            // tilt_pwm = 0x00;
-            // pan_direction = 1;
-            // tilt_direction = 1;
-
             SPI_TYPE motors = 0;
 
             motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             
-            
-            
             spi_tranceive(&motors, &encoders);
             vel_measurer();
             vTaskResume(serial_task_handle);
-            //uart_putc('a');
-            //uart_putc((encoders >> 14) & 0xFF);
-            // uart_putc(((encoders & 0xFF00)>>8));
 
             if (69) {
                 //send_debug_value(encoders);

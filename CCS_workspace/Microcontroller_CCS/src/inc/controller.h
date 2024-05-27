@@ -5,6 +5,7 @@
 #include "spi.h"
 
 SPI_TYPE encoders;
+double u_temp[2][1];
 
 // Function to calculate the angular velocity of pan and tilt
 void vel_measurer();

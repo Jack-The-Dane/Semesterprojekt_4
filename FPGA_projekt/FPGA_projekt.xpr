@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/Corne/Documents/MEGA/4. Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="/home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="856457c4186c47b6b81a62ef2c48ef08"/>
@@ -158,53 +158,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_Falling_edge_detector_0_0/buildup_Falling_edge_detector_0_0.xci">
-          <Proxy FileSetName="buildup_Falling_edge_detector_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.xci">
-          <Proxy FileSetName="buildup_Rising_edge_detector_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_0_2/buildup_block_encoder_0_2.xci">
           <Proxy FileSetName="buildup_block_encoder_0_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_pan_0_0/buildup_block_encoder_pan_0_0.xci">
           <Proxy FileSetName="buildup_block_encoder_pan_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci">
-          <Proxy FileSetName="buildup_clock_divider_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_spi_sub_0_0/buildup_spi_sub_0_0.xci">
-          <Proxy FileSetName="buildup_spi_sub_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_10/buildup_synchronizer_0_10.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_10"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_11/buildup_synchronizer_0_11.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_11"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_2/buildup_synchronizer_0_2.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_3/buildup_synchronizer_0_3.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_4/buildup_synchronizer_0_4.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_4"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_5/buildup_synchronizer_0_5.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_5"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_6/buildup_synchronizer_0_6.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_6"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_7/buildup_synchronizer_0_7.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_7"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_8/buildup_synchronizer_0_8.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_8"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_synchronizer_0_9/buildup_synchronizer_0_9.xci">
-          <Proxy FileSetName="buildup_synchronizer_0_9"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/buildup/hdl/buildup_wrapper.vhd">
@@ -465,90 +423,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="buildup_synchronizer_0_9" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_9" RelGenDir="$PGENDIR/buildup_synchronizer_0_9">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_9"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_8" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_8" RelGenDir="$PGENDIR/buildup_synchronizer_0_8">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_8"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_11" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_11" RelGenDir="$PGENDIR/buildup_synchronizer_0_11">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_11"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_Rising_edge_detector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_Rising_edge_detector_0_0" RelGenDir="$PGENDIR/buildup_Rising_edge_detector_0_0">
-      <Config>
-        <Option Name="TopModule" Val="buildup_Rising_edge_detector_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_6" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_6" RelGenDir="$PGENDIR/buildup_synchronizer_0_6">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_6"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_Falling_edge_detector_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_Falling_edge_detector_0_0" RelGenDir="$PGENDIR/buildup_Falling_edge_detector_0_0">
-      <Config>
-        <Option Name="TopModule" Val="buildup_Falling_edge_detector_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_10" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_10" RelGenDir="$PGENDIR/buildup_synchronizer_0_10">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_10"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_7" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_7" RelGenDir="$PGENDIR/buildup_synchronizer_0_7">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_7"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_2" RelGenDir="$PGENDIR/buildup_synchronizer_0_2">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_4" RelGenDir="$PGENDIR/buildup_synchronizer_0_4">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_4"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_spi_sub_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_spi_sub_0_0" RelGenDir="$PGENDIR/buildup_spi_sub_0_0">
-      <Config>
-        <Option Name="TopModule" Val="buildup_spi_sub_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_3" RelGenDir="$PGENDIR/buildup_synchronizer_0_3">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_3"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_synchronizer_0_5" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_synchronizer_0_5" RelGenDir="$PGENDIR/buildup_synchronizer_0_5">
-      <Config>
-        <Option Name="TopModule" Val="buildup_synchronizer_0_5"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="buildup_clock_divider_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_clock_divider_0_0" RelGenDir="$PGENDIR/buildup_clock_divider_0_0">
-      <Config>
-        <Option Name="TopModule" Val="buildup_clock_divider_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="buildup_block_encoder_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_block_encoder_0_2" RelGenDir="$PGENDIR/buildup_block_encoder_0_2">
       <Config>
         <Option Name="TopModule" Val="buildup_block_encoder_0_2"/>
@@ -573,11 +447,14 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
+    <Simulator Name="Xcelium">
+      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
+    </Simulator>
+    <Simulator Name="VCS">
+      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
+    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
-    </Simulator>
-    <Simulator Name="ActiveHDL">
-      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="21">
@@ -591,179 +468,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_synchronizer_0_9_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_9" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_9" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_9_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_9_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_9_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_8_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_8" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_8" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_8_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_8_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_8_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_11_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_11" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_11" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_11_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_11_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_11_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_Rising_edge_detector_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_Rising_edge_detector_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_Rising_edge_detector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_Rising_edge_detector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_Rising_edge_detector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_Rising_edge_detector_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_6_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_6" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_6" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_6_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_6_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_6_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_Falling_edge_detector_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_Falling_edge_detector_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_Falling_edge_detector_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_Falling_edge_detector_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_Falling_edge_detector_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_Falling_edge_detector_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_10_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_10" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_10" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_10_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_10_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_10_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_7_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_7" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_7" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_7_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_7_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_7_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_2_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_2" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_2_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_4_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_4" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_4_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_spi_sub_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_spi_sub_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_spi_sub_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_spi_sub_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_spi_sub_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_spi_sub_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_3_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_3" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_3_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_5_synth_1" Type="Ft3:Synth" SrcSet="buildup_synchronizer_0_5" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_5" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_synchronizer_0_5_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_5_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_5_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_clock_divider_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_clock_divider_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_clock_divider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_clock_divider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_clock_divider_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_clock_divider_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="buildup_block_encoder_0_2_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_0_2" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -773,9 +480,7 @@
     </Run>
     <Run Id="buildup_block_encoder_pan_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_pan_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_pan_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_pan_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -783,7 +488,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 8 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" LaunchOptions="-jobs 7 " AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
@@ -801,277 +506,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_synchronizer_0_9_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_9" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_9_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_9_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_9_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_8_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_8" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_8_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_8_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_8_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_11_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_11" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_11_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_11_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_11_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_Rising_edge_detector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_Rising_edge_detector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_Rising_edge_detector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_Rising_edge_detector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_Rising_edge_detector_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_6_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_6" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_6_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_6_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_6_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_Falling_edge_detector_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_Falling_edge_detector_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_Falling_edge_detector_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_Falling_edge_detector_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_Falling_edge_detector_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_10_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_10" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_10_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_10_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_10_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_7_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_7" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_7_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_7_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_7_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_2_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_4_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_4_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_spi_sub_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_spi_sub_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_spi_sub_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_spi_sub_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_spi_sub_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_3_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_3_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_synchronizer_0_5_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_synchronizer_0_5" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_synchronizer_0_5_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_5_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_synchronizer_0_5_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="buildup_clock_divider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_clock_divider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_clock_divider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_clock_divider_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_clock_divider_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="buildup_block_encoder_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -1088,9 +525,7 @@
     </Run>
     <Run Id="buildup_block_encoder_pan_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_pan_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_pan_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

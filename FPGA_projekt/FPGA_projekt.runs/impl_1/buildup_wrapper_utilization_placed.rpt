@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Fri May 24 13:29:30 2024
-| Host         : Cornelia running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+| Date         : Mon May 27 14:49:15 2024
+| Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_utilization -file buildup_wrapper_utilization_placed.rpt -pb buildup_wrapper_utilization_placed.pb
 | Design       : buildup_wrapper
 | Device       : xc7z020clg400-1

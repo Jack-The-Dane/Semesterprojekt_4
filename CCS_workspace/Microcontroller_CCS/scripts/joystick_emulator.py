@@ -33,6 +33,11 @@ def send_tilt_velocities(vels):
             line += ser.readline().hex()
         array.append(line)
         print(array[-1])
+        line = ser.readline().hex()
+        while(len(line)<4):
+            line += ser.readline().hex()
+        array.append(line)
+
 
 ser = serial.Serial('/dev/ttyACM0', 115200, 8, "E", 1, 1)  # open serial port
 
@@ -58,16 +63,19 @@ if ser.is_open:
     print("Serial port closed successfully")
 
 with open('joystick.csv', 'w') as file:
-    file.write("ADC_pan_value, ADC_tilt_value, Button_value, Encoder_tilt_value, Encoder_pan_value")
+    file.write("ADC_pan_value, ADC_tilt_value, Button_value, Encoder_tilt_value, Encoder_pan_value, Tilt_Velocity")
     file.write('\n')
     for num, line in enumerate(array):
         if(len(line)==12):
             file.write(str(int(line[0:4],16))+", "+ str(int(line[4:8],16)) + ", " + str(int(line[8:10],16)) + ", ")
         elif(len(line)==10):
-            file.write(str(int(line[0:4],16))+", "+ str(int(line[4:8],16)))
+            file.write(str(int(line[0:4],16))+", "+ str(int(line[4:8],16)) + ", ")
+        elif(len(line)==4):
+            file.write(str(int(line[0:2],16)))
             file.write('\n')
         else:
             print("Weird line length: ", len(line), " On line: ", num)
             print(line)
         
+#+", "+ str(int(line[4:8],16))
         
