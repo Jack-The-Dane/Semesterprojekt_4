@@ -28,6 +28,7 @@ INT16S v_temp = 0;
 
 extern BOOLEAN debug_mode;
 extern xQueueHandle q_uart_tx;
+extern TaskHandle_t serial_task_handle;
 
 void send_debug_value(SPI_TYPE encoders){
     INT8U byte1 = encoders;
@@ -104,8 +105,6 @@ void controller_task(void * pvParameters) {
         if(xSemaphoreTake(joystick_mutex, 0)){
 
             setLEDColor(RED);
-
-
             pan_pwm = joystick.x >> 4;
             tilt_pwm = joystick.y >> 4;
             xSemaphoreGive(joystick_mutex);
@@ -145,7 +144,7 @@ void controller_task(void * pvParameters) {
             
             spi_tranceive(&motors, &encoders);
             vel_measurer();
-
+            vTaskResume(serial_task_handle);
             //uart_putc('a');
             //uart_putc((encoders >> 14) & 0xFF);
             // uart_putc(((encoders & 0xFF00)>>8));
@@ -155,10 +154,6 @@ void controller_task(void * pvParameters) {
             }
 
 
-        } else {
-           // vTaskDelay(1);
         }
-
     }
-
 }

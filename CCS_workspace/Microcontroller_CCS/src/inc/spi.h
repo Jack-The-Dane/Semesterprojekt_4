@@ -5,7 +5,7 @@
 
 // The type of data sent and received over SPI
 #define SPI_TYPE INT32U
-#define SPI_WORD_LENGTH 24
+#define SPI_WORD_LENGTH 20
 
 // SPI frequency
 #define SCLK_FREQ 10000UL
