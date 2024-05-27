@@ -25,7 +25,7 @@
 
 double v_tilt[VEL_SIZE];
 double v_pan[VEL_SIZE];
-double u_temp[2][1];
+
 double u[2][1];
 double v_temp = 0;
 
@@ -76,7 +76,7 @@ void vel_measurer(){
     // Calulate pan velocity and place in array
     v_pan[i] = ((dist(theta_last_pan, theta_current_pan)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
     v_tilt[i] = ((dist(theta_last_tilt, theta_current_tilt)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
-    send_char((char) (v_tilt[i] * 100));
+    //send_char((char) (v_tilt[i] * 100));
 
     // Sum of velocities
     double vel_sum_pan = 0;
@@ -89,7 +89,7 @@ void vel_measurer(){
     u_temp[0][0] = vel_sum_pan / VEL_SIZE;
     u_temp[1][0] = vel_sum_tilt / VEL_SIZE;     // Get average of tilt velocities
 
-    send_char((char) (u_temp[1][0] * 100));
+    //send_char((char) (u_temp[1][0] * 100));
 
     // Iterate and set used positions as old
     i++;
@@ -146,23 +146,13 @@ void controller_task(void * pvParameters) {
                 tilt_direction = 1;
             }
 
-            // pan_pwm = 0x25;
-            // tilt_pwm = 0x00;
-            // pan_direction = 1;
-            // tilt_direction = 1;
-
             SPI_TYPE motors = 0;
 
             motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             
-            
-            
             spi_tranceive(&motors, &encoders);
             vel_measurer();
             vTaskResume(serial_task_handle);
-            //uart_putc('a');
-            //uart_putc((encoders >> 14) & 0xFF);
-            // uart_putc(((encoders & 0xFF00)>>8));
 
             if (69) {
                 //send_debug_value(encoders);

@@ -30,7 +30,7 @@
         "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
         "ip_revision": "1",
         "xci_name": "test_sync_flipflipflopflop_0_0",
-        "xci_path": "ip\\test_sync_flipflipflopflop_0_0\\test_sync_flipflipflopflop_0_0.xci",
+        "xci_path": "ip/test_sync_flipflipflopflop_0_0/test_sync_flipflipflopflop_0_0.xci",
         "inst_hier_path": "flipflipflopflop_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -54,7 +54,7 @@
         "vlnv": "xilinx.com:module_ref:flipflipflopflop:1.0",
         "ip_revision": "1",
         "xci_name": "test_sync_flipflipflopflop_0_1",
-        "xci_path": "ip\\test_sync_flipflipflopflop_0_1\\test_sync_flipflipflopflop_0_1.xci",
+        "xci_path": "ip/test_sync_flipflipflopflop_0_1/test_sync_flipflipflopflop_0_1.xci",
         "inst_hier_path": "flipflipflopflop_1",
         "reference_info": {
           "ref_type": "hdl",

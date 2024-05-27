@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Fri May 24 10:48:47 2024
-// Host        : Cornelia running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
-//               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_Falling_edge_detector_0_0/buildup_Falling_edge_detector_0_0_sim_netlist.v}
+// Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+// Date        : Tue May 14 10:02:57 2024
+// Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+// Command     : write_verilog -force -mode funcsim -rename_top buildup_Falling_edge_detector_0_0 -prefix
+//               buildup_Falling_edge_detector_0_0_ buildup_Falling_edge_detector_0_0_sim_netlist.v
 // Design      : buildup_Falling_edge_detector_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -13,28 +13,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "buildup_Falling_edge_detector_0_0,Falling_edge_detector,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "Falling_edge_detector,Vivado 2023.2" *) 
-(* NotValidForBitStream *)
-module buildup_Falling_edge_detector_0_0
-   (clk,
-    D,
-    Q);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN buildup_clk, INSERT_VIP 0" *) input clk;
-  input D;
-  output Q;
-
-  wire D;
-  wire Q;
-  wire clk;
-
-  buildup_Falling_edge_detector_0_0_Falling_edge_detector U0
-       (.D(D),
-        .Q(Q),
-        .clk(clk));
-endmodule
-
-(* ORIG_REF_NAME = "Falling_edge_detector" *) 
 module buildup_Falling_edge_detector_0_0_Falling_edge_detector
    (Q,
     D,
@@ -71,6 +49,27 @@ module buildup_Falling_edge_detector_0_0_Falling_edge_detector
        (.I0(FF2),
         .I1(FF1),
         .O(Q));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "buildup_Falling_edge_detector_0_0,Falling_edge_detector,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "Falling_edge_detector,Vivado 2023.2" *) 
+(* NotValidForBitStream *)
+module buildup_Falling_edge_detector_0_0
+   (clk,
+    D,
+    Q);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN buildup_clk, INSERT_VIP 0" *) input clk;
+  input D;
+  output Q;
+
+  wire D;
+  wire Q;
+  wire clk;
+
+  buildup_Falling_edge_detector_0_0_Falling_edge_detector U0
+       (.D(D),
+        .Q(Q),
+        .clk(clk));
 endmodule
 `ifndef GLBL
 `define GLBL

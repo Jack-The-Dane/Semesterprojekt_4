@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"1.0",
    "Default View_TopLeft":"823,107",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
 preplace port port-id_CS -pg 1 -lvl 0 -x -190 -y 170 -defaultsOSRD
 preplace port port-id_clk -pg 1 -lvl 0 -x -190 -y -330 -defaultsOSRD
@@ -55,49 +55,49 @@ preplace inst xlslice_5 -pg 1 -lvl 4 -x 1120 -y 560 -defaultsOSRD
 preplace inst block_encoder_pan_0 -pg 1 -lvl 2 -x 550 -y 360 -defaultsOSRD
 preplace inst block_encoder_tilt_0 -pg 1 -lvl 2 -x 550 -y 140 -defaultsOSRD
 preplace netloc AND_gate_0_C 1 9 1 N 140
-preplace netloc AND_gate_1_C 1 9 1 2470 250n
+preplace netloc AND_gate_1_C 1 9 1 2480 250n
 preplace netloc AND_gate_2_C 1 9 1 N 380
-preplace netloc AND_gate_3_C 1 9 1 2470 500n
-preplace netloc CS_1 1 0 1 -50 170n
-preplace netloc Falling_edge_detector_0_Q 1 3 2 NJ -230 1250
+preplace netloc AND_gate_3_C 1 9 1 2480 500n
+preplace netloc CS_1 1 0 1 -60 170n
+preplace netloc Falling_edge_detector_0_Q 1 3 2 NJ -230 1260
 preplace netloc Hall_effect_sensor_0_1 1 0 1 -170 830n
 preplace netloc Hall_effect_sensor_1_1 1 0 1 -170 690n
-preplace netloc NOT_gate_0_B 1 8 1 2270 270n
-preplace netloc NOT_gate_1_B 1 8 1 2260 470n
-preplace netloc Rising_edge_detector_0_Q 1 2 3 720J -160 NJ -160 1240
-preplace netloc SPI_0_SPI_out 1 5 1 1600 180n
-preplace netloc block_encoder_pan_0_pulse_cnt 1 2 2 NJ 360 920
-preplace netloc block_encoder_tilt_pulse_cnt 1 2 2 N 140 1020
-preplace netloc clk_1 1 0 5 -70 -240 400 -150 710 -150 1020 30 1260
-preplace netloc clock_divider_0_clk_div 1 4 2 1230 40 N
-preplace netloc counter_1_cnt 1 6 1 1840 60n
+preplace netloc NOT_gate_0_B 1 8 1 2280 270n
+preplace netloc NOT_gate_1_B 1 8 1 2270 470n
+preplace netloc Rising_edge_detector_0_Q 1 2 3 710J -160 NJ -160 1250
+preplace netloc SPI_0_SPI_out 1 5 1 1590 180n
+preplace netloc block_encoder_pan_0_pulse_cnt 1 2 2 NJ 360 930
+preplace netloc block_encoder_tilt_pulse_cnt 1 2 2 N 140 1010
+preplace netloc clk_1 1 0 5 -80 -240 380 -150 700 -150 1010 30 1270
+preplace netloc clock_divider_0_clk_div 1 4 2 1240 40 N
+preplace netloc counter_1_cnt 1 6 1 1830 60n
 preplace netloc encoder_a_pan_1 1 0 1 -170 430n
-preplace netloc encoder_a_tilt_1 1 0 1 -60 -90n
+preplace netloc encoder_a_tilt_1 1 0 1 -70 -90n
 preplace netloc encoder_b_pan_1 1 0 1 -170 560n
-preplace netloc encoder_b_tilt_1 1 0 1 -50 40n
+preplace netloc encoder_b_tilt_1 1 0 1 -60 40n
 preplace netloc mosi_1 1 0 1 -170 300n
-preplace netloc pwm_pan_pwm 1 7 2 N 230 2310J
-preplace netloc pwm_tilt_ccw_pwm 1 7 2 2050J 410 2310
+preplace netloc pwm_pan_pwm 1 7 2 N 230 2300J
+preplace netloc pwm_tilt_ccw_pwm 1 7 2 2060J 410 2300
 preplace netloc rst_1 1 0 1 -170 960n
-preplace netloc sclk_1 1 0 1 -50 -220n
-preplace netloc spi_sub_0_MISO 1 5 5 1570J -20 NJ -20 NJ -20 NJ -20 2470
-preplace netloc synchronizer_0_Q 1 1 3 430 460 660J 390 NJ
-preplace netloc synchronizer_1_Q 1 1 3 440 470 680J 410 NJ
-preplace netloc synchronizer_2_Q 1 1 1 420 380n
-preplace netloc synchronizer_3_Q 1 1 1 150 360n
-preplace netloc synchronizer_4_Q 1 1 4 140 260 NJ 260 NJ 260 1220J
-preplace netloc synchronizer_5_Q 1 1 4 130J 250 N 250 NJ 250 1230
+preplace netloc sclk_1 1 0 1 -60 -220n
+preplace netloc spi_sub_0_MISO 1 5 5 1580J -20 NJ -20 NJ -20 NJ -20 2480
+preplace netloc synchronizer_0_Q 1 1 3 410 460 680J 390 NJ
+preplace netloc synchronizer_1_Q 1 1 3 420 470 700J 410 NJ
+preplace netloc synchronizer_2_Q 1 1 1 400 380n
+preplace netloc synchronizer_3_Q 1 1 1 160 360n
+preplace netloc synchronizer_4_Q 1 1 4 150 260 NJ 260 NJ 260 1230J
+preplace netloc synchronizer_5_Q 1 1 4 140J 250 N 250 NJ 250 1240
 preplace netloc synchronizer_6_Q 1 1 1 N 140
-preplace netloc synchronizer_7_Q 1 1 1 130 20n
-preplace netloc synchronizer_8_Q 1 1 2 380 -160 660
-preplace netloc synchronizer_9_Q 1 1 5 410 240 N 240 NJ 240 1290 60 N
-preplace netloc xlconcat_0_dout 1 4 1 1270 370n
-preplace netloc xlconstant_1_dout 1 1 5 440 40 660 50 920 20 N 20 1580
-preplace netloc xlslice_0_Dout 1 6 1 1800 290n
-preplace netloc xlslice_1_Dout 1 6 1 1800 180n
-preplace netloc xlslice_2_Dout 1 6 3 1850J 400 2100J 400 2260
-preplace netloc xlslice_3_Dout 1 6 3 1810 300 2100J 150 NJ
-preplace netloc xlslice_5_Dout 1 4 6 1220J 550 NJ 550 NJ 550 NJ 550 2260J 570 2470
+preplace netloc synchronizer_7_Q 1 1 1 140 20n
+preplace netloc synchronizer_8_Q 1 1 2 360 -160 680
+preplace netloc synchronizer_9_Q 1 1 5 390 240 N 240 NJ 240 1280 60 N
+preplace netloc xlconcat_0_dout 1 4 1 1280 370n
+preplace netloc xlconstant_1_dout 1 1 5 420 40 680 50 930 20 N 20 1590
+preplace netloc xlslice_0_Dout 1 6 1 1810 290n
+preplace netloc xlslice_1_Dout 1 6 1 1810 180n
+preplace netloc xlslice_2_Dout 1 6 3 1840J 400 2090J 400 2270
+preplace netloc xlslice_3_Dout 1 6 3 1820 300 2090J 150 NJ
+preplace netloc xlslice_5_Dout 1 4 6 1230J 550 NJ 550 NJ 550 NJ 550 2270J 570 2480
 levelinfo -pg 1 -190 40 550 820 1120 1430 1700 1950 2180 2390 2520
 pagesize -pg 1 -db -bbox -sgen -390 -710 2680 1050
 "

@@ -1,19 +1,19 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Fri May 24 10:48:47 2024
-// Host        : Cornelia running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim {c:/Users/Corne/Documents/MEGA/4.
-//               Semester/Semesterprojekt/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/ip/buildup_synchronizer_0_8/buildup_synchronizer_0_8_sim_netlist.v}
-// Design      : buildup_synchronizer_0_8
+// Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
+// Date        : Tue May 14 10:02:57 2024
+// Host        : Laptop running 64-bit Ubuntu 22.04.4 LTS
+// Command     : write_verilog -force -mode funcsim -rename_top buildup_synchronizer_0_8 -prefix
+//               buildup_synchronizer_0_8_ buildup_synchronizer_0_11_sim_netlist.v
+// Design      : buildup_synchronizer_0_11
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "buildup_synchronizer_0_8,synchronizer,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* CHECK_LICENSE_TYPE = "buildup_synchronizer_0_11,synchronizer,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
 (* x_core_info = "synchronizer,Vivado 2023.2" *) 
 (* NotValidForBitStream *)
 module buildup_synchronizer_0_8
@@ -34,7 +34,6 @@ module buildup_synchronizer_0_8
         .clk(clk));
 endmodule
 
-(* ORIG_REF_NAME = "synchronizer" *) 
 module buildup_synchronizer_0_8_synchronizer
    (Q,
     clk,

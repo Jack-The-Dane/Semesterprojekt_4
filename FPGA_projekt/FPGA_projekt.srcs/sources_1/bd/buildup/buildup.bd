@@ -161,14 +161,14 @@
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "ip_revision": "8",
         "xci_name": "buildup_xlconstant_1_0",
-        "xci_path": "ip\\buildup_xlconstant_1_0\\buildup_xlconstant_1_0.xci",
+        "xci_path": "ip/buildup_xlconstant_1_0/buildup_xlconstant_1_0.xci",
         "inst_hier_path": "Always_true"
       },
       "clock_divider_0": {
         "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_clock_divider_0_0",
-        "xci_path": "ip\\buildup_clock_divider_0_0\\buildup_clock_divider_0_0.xci",
+        "xci_path": "ip/buildup_clock_divider_0_0/buildup_clock_divider_0_0.xci",
         "inst_hier_path": "clock_divider_0",
         "parameters": {
           "n_bits": {
@@ -208,7 +208,7 @@
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "ip_revision": "5",
         "xci_name": "buildup_xlconcat_0_0",
-        "xci_path": "ip\\buildup_xlconcat_0_0\\buildup_xlconcat_0_0.xci",
+        "xci_path": "ip/buildup_xlconcat_0_0/buildup_xlconcat_0_0.xci",
         "inst_hier_path": "xlconcat_0",
         "parameters": {
           "IN2_WIDTH": {
@@ -226,7 +226,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_0_0",
-        "xci_path": "ip\\buildup_xlslice_0_0\\buildup_xlslice_0_0.xci",
+        "xci_path": "ip/buildup_xlslice_0_0/buildup_xlslice_0_0.xci",
         "inst_hier_path": "xlslice_0",
         "parameters": {
           "DIN_FROM": {
@@ -244,7 +244,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_1_0",
-        "xci_path": "ip\\buildup_xlslice_1_0\\buildup_xlslice_1_0.xci",
+        "xci_path": "ip/buildup_xlslice_1_0/buildup_xlslice_1_0.xci",
         "inst_hier_path": "xlslice_1",
         "parameters": {
           "DIN_FROM": {
@@ -262,7 +262,7 @@
         "vlnv": "xilinx.com:module_ref:counter:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_counter_1_0",
-        "xci_path": "ip\\buildup_counter_1_0\\buildup_counter_1_0.xci",
+        "xci_path": "ip/buildup_counter_1_0/buildup_counter_1_0.xci",
         "inst_hier_path": "counter_1",
         "parameters": {
           "n_bits": {
@@ -303,7 +303,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_2_0",
-        "xci_path": "ip\\buildup_xlslice_2_0\\buildup_xlslice_2_0.xci",
+        "xci_path": "ip/buildup_xlslice_2_0/buildup_xlslice_2_0.xci",
         "inst_hier_path": "xlslice_2",
         "parameters": {
           "DIN_FROM": {
@@ -321,7 +321,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_2_1",
-        "xci_path": "ip\\buildup_xlslice_2_1\\buildup_xlslice_2_1.xci",
+        "xci_path": "ip/buildup_xlslice_2_1/buildup_xlslice_2_1.xci",
         "inst_hier_path": "xlslice_3",
         "parameters": {
           "DIN_FROM": {
@@ -339,7 +339,7 @@
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_pwm_gen_0_2",
-        "xci_path": "ip\\buildup_pwm_gen_0_2\\buildup_pwm_gen_0_2.xci",
+        "xci_path": "ip/buildup_pwm_gen_0_2/buildup_pwm_gen_0_2.xci",
         "inst_hier_path": "pwm_pan",
         "parameters": {
           "n_bits": {
@@ -371,7 +371,7 @@
         "vlnv": "xilinx.com:module_ref:pwm_gen:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_pwm_gen_0_3",
-        "xci_path": "ip\\buildup_pwm_gen_0_3\\buildup_pwm_gen_0_3.xci",
+        "xci_path": "ip/buildup_pwm_gen_0_3/buildup_pwm_gen_0_3.xci",
         "inst_hier_path": "pwm_tilt",
         "parameters": {
           "n_bits": {
@@ -403,7 +403,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_0",
-        "xci_path": "ip\\buildup_AND_gate_0_0\\buildup_AND_gate_0_0.xci",
+        "xci_path": "ip/buildup_AND_gate_0_0/buildup_AND_gate_0_0.xci",
         "inst_hier_path": "AND_gate_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -426,7 +426,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_1",
-        "xci_path": "ip\\buildup_AND_gate_0_1\\buildup_AND_gate_0_1.xci",
+        "xci_path": "ip/buildup_AND_gate_0_1/buildup_AND_gate_0_1.xci",
         "inst_hier_path": "AND_gate_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -449,7 +449,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_2",
-        "xci_path": "ip\\buildup_AND_gate_0_2\\buildup_AND_gate_0_2.xci",
+        "xci_path": "ip/buildup_AND_gate_0_2/buildup_AND_gate_0_2.xci",
         "inst_hier_path": "AND_gate_2",
         "reference_info": {
           "ref_type": "hdl",
@@ -472,7 +472,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_AND_gate_0_3",
-        "xci_path": "ip\\buildup_AND_gate_0_3\\buildup_AND_gate_0_3.xci",
+        "xci_path": "ip/buildup_AND_gate_0_3/buildup_AND_gate_0_3.xci",
         "inst_hier_path": "AND_gate_3",
         "reference_info": {
           "ref_type": "hdl",
@@ -495,7 +495,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_NOT_gate_0_0",
-        "xci_path": "ip\\buildup_NOT_gate_0_0\\buildup_NOT_gate_0_0.xci",
+        "xci_path": "ip/buildup_NOT_gate_0_0/buildup_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -515,7 +515,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_NOT_gate_0_1",
-        "xci_path": "ip\\buildup_NOT_gate_0_1\\buildup_NOT_gate_0_1.xci",
+        "xci_path": "ip/buildup_NOT_gate_0_1/buildup_NOT_gate_0_1.xci",
         "inst_hier_path": "NOT_gate_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -535,7 +535,7 @@
         "vlnv": "xilinx.com:module_ref:spi_sub:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_spi_sub_0_0",
-        "xci_path": "ip\\buildup_spi_sub_0_0\\buildup_spi_sub_0_0.xci",
+        "xci_path": "ip/buildup_spi_sub_0_0/buildup_spi_sub_0_0.xci",
         "inst_hier_path": "spi_sub_0",
         "parameters": {
           "n_bits": {
@@ -603,7 +603,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_2",
-        "xci_path": "ip\\buildup_synchronizer_0_2\\buildup_synchronizer_0_2.xci",
+        "xci_path": "ip/buildup_synchronizer_0_2/buildup_synchronizer_0_2.xci",
         "inst_hier_path": "synchronizer_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -633,7 +633,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_3",
-        "xci_path": "ip\\buildup_synchronizer_0_3\\buildup_synchronizer_0_3.xci",
+        "xci_path": "ip/buildup_synchronizer_0_3/buildup_synchronizer_0_3.xci",
         "inst_hier_path": "synchronizer_1",
         "reference_info": {
           "ref_type": "hdl",
@@ -663,7 +663,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_4",
-        "xci_path": "ip\\buildup_synchronizer_0_4\\buildup_synchronizer_0_4.xci",
+        "xci_path": "ip/buildup_synchronizer_0_4/buildup_synchronizer_0_4.xci",
         "inst_hier_path": "synchronizer_2",
         "reference_info": {
           "ref_type": "hdl",
@@ -693,7 +693,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_5",
-        "xci_path": "ip\\buildup_synchronizer_0_5\\buildup_synchronizer_0_5.xci",
+        "xci_path": "ip/buildup_synchronizer_0_5/buildup_synchronizer_0_5.xci",
         "inst_hier_path": "synchronizer_3",
         "reference_info": {
           "ref_type": "hdl",
@@ -723,7 +723,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_6",
-        "xci_path": "ip\\buildup_synchronizer_0_6\\buildup_synchronizer_0_6.xci",
+        "xci_path": "ip/buildup_synchronizer_0_6/buildup_synchronizer_0_6.xci",
         "inst_hier_path": "synchronizer_4",
         "reference_info": {
           "ref_type": "hdl",
@@ -759,7 +759,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_7",
-        "xci_path": "ip\\buildup_synchronizer_0_7\\buildup_synchronizer_0_7.xci",
+        "xci_path": "ip/buildup_synchronizer_0_7/buildup_synchronizer_0_7.xci",
         "inst_hier_path": "synchronizer_5",
         "reference_info": {
           "ref_type": "hdl",
@@ -789,7 +789,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_8",
-        "xci_path": "ip\\buildup_synchronizer_0_8\\buildup_synchronizer_0_8.xci",
+        "xci_path": "ip/buildup_synchronizer_0_8/buildup_synchronizer_0_8.xci",
         "inst_hier_path": "synchronizer_6",
         "reference_info": {
           "ref_type": "hdl",
@@ -819,7 +819,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_9",
-        "xci_path": "ip\\buildup_synchronizer_0_9\\buildup_synchronizer_0_9.xci",
+        "xci_path": "ip/buildup_synchronizer_0_9/buildup_synchronizer_0_9.xci",
         "inst_hier_path": "synchronizer_7",
         "reference_info": {
           "ref_type": "hdl",
@@ -849,7 +849,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_10",
-        "xci_path": "ip\\buildup_synchronizer_0_10\\buildup_synchronizer_0_10.xci",
+        "xci_path": "ip/buildup_synchronizer_0_10/buildup_synchronizer_0_10.xci",
         "inst_hier_path": "synchronizer_8",
         "reference_info": {
           "ref_type": "hdl",
@@ -893,7 +893,7 @@
         "vlnv": "xilinx.com:module_ref:synchronizer:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_synchronizer_0_11",
-        "xci_path": "ip\\buildup_synchronizer_0_11\\buildup_synchronizer_0_11.xci",
+        "xci_path": "ip/buildup_synchronizer_0_11/buildup_synchronizer_0_11.xci",
         "inst_hier_path": "synchronizer_9",
         "reference_info": {
           "ref_type": "hdl",
@@ -923,7 +923,7 @@
         "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_Rising_edge_detector_0_0",
-        "xci_path": "ip\\buildup_Rising_edge_detector_0_0\\buildup_Rising_edge_detector_0_0.xci",
+        "xci_path": "ip/buildup_Rising_edge_detector_0_0/buildup_Rising_edge_detector_0_0.xci",
         "inst_hier_path": "Rising_edge_detector_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -953,7 +953,7 @@
         "vlnv": "xilinx.com:module_ref:Falling_edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "buildup_Falling_edge_detector_0_0",
-        "xci_path": "ip\\buildup_Falling_edge_detector_0_0\\buildup_Falling_edge_detector_0_0.xci",
+        "xci_path": "ip/buildup_Falling_edge_detector_0_0/buildup_Falling_edge_detector_0_0.xci",
         "inst_hier_path": "Falling_edge_detector_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -983,7 +983,7 @@
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "ip_revision": "3",
         "xci_name": "buildup_xlslice_5_0",
-        "xci_path": "ip\\buildup_xlslice_5_0\\buildup_xlslice_5_0.xci",
+        "xci_path": "ip/buildup_xlslice_5_0/buildup_xlslice_5_0.xci",
         "inst_hier_path": "xlslice_5",
         "parameters": {
           "DIN_FROM": {
@@ -998,14 +998,14 @@
         "vlnv": "xilinx.com:user:block_encoder:1.0",
         "ip_revision": "2",
         "xci_name": "buildup_block_encoder_0_2",
-        "xci_path": "ip\\buildup_block_encoder_0_2\\buildup_block_encoder_0_2.xci",
+        "xci_path": "ip/buildup_block_encoder_0_2/buildup_block_encoder_0_2.xci",
         "inst_hier_path": "block_encoder_pan_0"
       },
       "block_encoder_tilt_0": {
         "vlnv": "xilinx.com:user:block_encoder:1.0",
         "ip_revision": "2",
         "xci_name": "buildup_block_encoder_pan_0_0",
-        "xci_path": "ip\\buildup_block_encoder_pan_0_0\\buildup_block_encoder_pan_0_0.xci",
+        "xci_path": "ip/buildup_block_encoder_pan_0_0/buildup_block_encoder_pan_0_0.xci",
         "inst_hier_path": "block_encoder_tilt_0"
       }
     },
@@ -1101,6 +1101,8 @@
       "clk_1": {
         "ports": [
           "clk",
+          "block_encoder_pan_0/clk",
+          "block_encoder_tilt_0/clk",
           "clock_divider_0/clk",
           "spi_sub_0/clk",
           "synchronizer_8/clk",
@@ -1114,9 +1116,7 @@
           "synchronizer_6/clk",
           "synchronizer_7/clk",
           "Rising_edge_detector_0/clk",
-          "Falling_edge_detector_0/clk",
-          "block_encoder_pan_0/clk",
-          "block_encoder_tilt_0/clk"
+          "Falling_edge_detector_0/clk"
         ]
       },
       "clock_divider_0_clk_div": {
@@ -1252,10 +1252,10 @@
       "synchronizer_9_Q": {
         "ports": [
           "synchronizer_9/Q",
-          "counter_1/rst",
-          "spi_sub_0/rst",
           "block_encoder_pan_0/rst",
-          "block_encoder_tilt_0/rst"
+          "block_encoder_tilt_0/rst",
+          "counter_1/rst",
+          "spi_sub_0/rst"
         ]
       },
       "xlconcat_0_dout": {
@@ -1267,9 +1267,9 @@
       "xlconstant_1_dout": {
         "ports": [
           "Always_true/dout",
-          "counter_1/en",
           "block_encoder_pan_0/enable",
-          "block_encoder_tilt_0/enable"
+          "block_encoder_tilt_0/enable",
+          "counter_1/en"
         ]
       },
       "xlslice_0_Dout": {

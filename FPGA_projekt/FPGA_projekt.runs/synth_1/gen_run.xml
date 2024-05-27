@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1716550105" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp">
-  <File Type="PA-TCL" Name="buildup_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="buildup_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="buildup_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="buildup_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="buildup_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="buildup_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="buildup_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="buildup_wrapper_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1716814083" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp">
   <File Type="VDS-TIMING-PB" Name="buildup_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="buildup_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="buildup_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="buildup_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="buildup_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="buildup_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="buildup_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="buildup_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="buildup_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/clock_divider.vhd">
@@ -295,20 +295,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_9"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_8"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_11"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_Rising_edge_detector_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_6"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_Falling_edge_detector_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_10"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_7"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_4"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_spi_sub_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_synchronizer_0_5"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_pan_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_clock_divider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_0_2"/>
 </GenRun>

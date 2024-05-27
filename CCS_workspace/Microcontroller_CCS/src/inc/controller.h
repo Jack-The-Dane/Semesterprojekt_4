@@ -5,6 +5,7 @@
 #include "spi.h"
 
 SPI_TYPE encoders;
+double u_temp[2][1];
 
 void vel_measurer();
 void controller_task();

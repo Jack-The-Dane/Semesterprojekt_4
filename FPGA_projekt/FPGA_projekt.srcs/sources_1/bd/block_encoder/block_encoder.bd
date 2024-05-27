@@ -7,8 +7,7 @@
       "name": "block_encoder",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.2",
-      "validated": "true"
+      "tool_version": "2023.2"
     },
     "design_tree": {
       "up_down_counter_0": "",
@@ -46,7 +45,7 @@
         "vlnv": "xilinx.com:module_ref:up_down_counter:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_up_down_counter_0_0",
-        "xci_path": "ip\\block_encoder_up_down_counter_0_0\\block_encoder_up_down_counter_0_0.xci",
+        "xci_path": "ip/block_encoder_up_down_counter_0_0/block_encoder_up_down_counter_0_0.xci",
         "inst_hier_path": "up_down_counter_0",
         "parameters": {
           "max_val_binary": {
@@ -96,7 +95,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_0",
-        "xci_path": "ip\\block_encoder_NOT_gate_0_0\\block_encoder_NOT_gate_0_0.xci",
+        "xci_path": "ip/block_encoder_NOT_gate_0_0/block_encoder_NOT_gate_0_0.xci",
         "inst_hier_path": "NOT_gate_b",
         "reference_info": {
           "ref_type": "hdl",
@@ -116,7 +115,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_0_0",
-        "xci_path": "ip\\block_encoder_AND_gate_0_0\\block_encoder_AND_gate_0_0.xci",
+        "xci_path": "ip/block_encoder_AND_gate_0_0/block_encoder_AND_gate_0_0.xci",
         "inst_hier_path": "up_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -139,7 +138,7 @@
         "vlnv": "xilinx.com:module_ref:NOT_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_NOT_gate_0_1",
-        "xci_path": "ip\\block_encoder_NOT_gate_0_1\\block_encoder_NOT_gate_0_1.xci",
+        "xci_path": "ip/block_encoder_NOT_gate_0_1/block_encoder_NOT_gate_0_1.xci",
         "inst_hier_path": "NOT_gate_a",
         "reference_info": {
           "ref_type": "hdl",
@@ -159,7 +158,7 @@
         "vlnv": "xilinx.com:module_ref:AND_gate:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_AND_gate_1_0",
-        "xci_path": "ip\\block_encoder_AND_gate_1_0\\block_encoder_AND_gate_1_0.xci",
+        "xci_path": "ip/block_encoder_AND_gate_1_0/block_encoder_AND_gate_1_0.xci",
         "inst_hier_path": "down_signal",
         "reference_info": {
           "ref_type": "hdl",
@@ -182,7 +181,7 @@
         "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_Rising_edge_detector_0_0",
-        "xci_path": "ip\\block_encoder_Rising_edge_detector_0_0\\block_encoder_Rising_edge_detector_0_0.xci",
+        "xci_path": "ip/block_encoder_Rising_edge_detector_0_0/block_encoder_Rising_edge_detector_0_0.xci",
         "inst_hier_path": "Rising_edge_a",
         "reference_info": {
           "ref_type": "hdl",
@@ -206,7 +205,7 @@
         "vlnv": "xilinx.com:module_ref:Rising_edge_detector:1.0",
         "ip_revision": "1",
         "xci_name": "block_encoder_Rising_edge_a_0",
-        "xci_path": "ip\\block_encoder_Rising_edge_a_0\\block_encoder_Rising_edge_a_0.xci",
+        "xci_path": "ip/block_encoder_Rising_edge_a_0/block_encoder_Rising_edge_a_0.xci",
         "inst_hier_path": "Rising_edge_b",
         "reference_info": {
           "ref_type": "hdl",
@@ -267,9 +266,9 @@
       "clk_1": {
         "ports": [
           "clk",
+          "up_down_counter_0/clk",
           "Rising_edge_b/clk",
-          "Rising_edge_a/clk",
-          "up_down_counter_0/clk"
+          "Rising_edge_a/clk"
         ]
       },
       "enable_1": {
