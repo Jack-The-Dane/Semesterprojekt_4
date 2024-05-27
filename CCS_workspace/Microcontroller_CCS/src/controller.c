@@ -16,19 +16,33 @@
 // How much time is allocated for the other tasks running on the microcontroller (5 ms / tick)
 #define CONTROLLER_EXTRA_SLEEP_TICKS 5
 #define VEL_SIZE 10      // Size of the velocity buffer
+#define PI 3.14159265358979323846
+#define TICKS_PR_REV 285
 
 
 
 
-INT16S v_tilt[VEL_SIZE];
-INT16S v_pan[VEL_SIZE];
+double v_tilt[VEL_SIZE];
+double v_pan[VEL_SIZE];
 double u_temp[2][1];
-INT16S u[2][1];
-INT16S v_temp = 0;
+double u[2][1];
+double v_temp = 0;
 
 extern BOOLEAN debug_mode;
 extern xQueueHandle q_uart_tx;
 extern TaskHandle_t serial_task_handle;
+
+double tics_to_rad(INT16S ticks){
+    ticks = ticks % TICKS_PR_REV;
+    return ((double) ticks) * 0.02204626423;
+};
+
+double dist(double p1, double p2){
+    double d = p2 - p1;
+    if(d < 0) d += 2 * PI;
+    if(d > PI) d -= 2 * PI;
+    return d;
+}
 
 void send_debug_value(SPI_TYPE encoders){
     INT8U byte1 = encoders;
@@ -44,6 +58,8 @@ const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LE
 
 #define TICKS_TO_RAD = 0.02204626423
 
+
+
 // Velocity measurer
 void vel_measurer(){
     static INT8U i = 0;
@@ -53,28 +69,28 @@ void vel_measurer(){
     static INT16S theta_current_pan = 0;
 
     if(i % VEL_SIZE == 0){i = 0;}
-    theta_current_tilt = (encoders >> 2) & 0x1FF;
-    theta_current_pan = (encoders >> 11) & 0x1FF;
+    theta_current_tilt = tics_to_rad((encoders >> 2) & 0x1FF);
+    theta_current_pan = tics_to_rad((encoders >> 11) & 0x1FF);
 
     // Calulate pan velocity and place in array
-    v_pan[i] = (theta_current_pan - theta_last_pan ) / (xFrequency * portTICK_PERIOD_MS);
-    v_tilt[i] = (theta_current_tilt - theta_last_tilt ) / (xFrequency * portTICK_PERIOD_MS);
+    v_pan[i] = (dist(theta_last_pan, theta_current_pan)) / (xFrequency * portTICK_PERIOD_MS);
+    v_tilt[i] = (dist(theta_last_tilt, theta_current_tilt)) / (xFrequency * portTICK_PERIOD_MS);
 
     // Sum of velocities
     INT16S vel_sum_pan = 0;
     INT16S vel_sum_tilt = 0;
     for(INT8U j = 0; j < VEL_SIZE; j++){
         vel_sum_pan += v_pan[j];
-        vel_sum_tilt += v_pan[j];
+        vel_sum_tilt += v_tilt[j];
     }
 
     double v_rad_pan = ((double) vel_sum_pan) * 0.02204626423;
     double v_rad_tilt = ((double) vel_sum_tilt) * 0.02204626423;
 
-    u_temp[1][1] = v_rad_pan / VEL_SIZE;
-    u_temp[2][1] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
+    u_temp[0][0] = v_rad_pan / VEL_SIZE;
+    u_temp[1][0] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
 
-    //send_char(u_temp[1][1]);
+    send_char((char) (u_temp[1][1] * 100));
 
     // Iterate and set used positions as old
     i++;
@@ -104,7 +120,7 @@ void controller_task(void * pvParameters) {
 
         if(xSemaphoreTake(joystick_mutex, 0)){
 
-            setLEDColor(RED);
+            setLEDColor(BLUE);
             pan_pwm = joystick.x >> 4;
             tilt_pwm = joystick.y >> 4;
             xSemaphoreGive(joystick_mutex);

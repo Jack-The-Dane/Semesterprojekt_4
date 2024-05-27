@@ -21,9 +21,18 @@ def scale_and_format(unformatted):
 def send_tilt_velocities(vels):
     for line in vels:
         ser.write(bytearray.fromhex("10 80" + line + "80 0A"))
+        print(bytearray.fromhex("10 80" + line + "80 0A"))
         # Read and print any response
-        array.append(ser.readline().hex())
-        array.append(ser.readline().hex())
+        line = ser.readline().hex()
+        while(len(line) < 12):
+            line += ser.readline().hex()
+        array.append(line)
+        line = ser.readline().hex()
+        print(array[-1])
+        while(len(line) < 10):
+            line += ser.readline().hex()
+        array.append(line)
+        print(array[-1])
 
 ser = serial.Serial('/dev/ttyACM0', 115200, 8, "E", 1, 1)  # open serial port
 
@@ -51,14 +60,14 @@ if ser.is_open:
 with open('joystick.csv', 'w') as file:
     file.write("ADC_pan_value, ADC_tilt_value, Button_value, Encoder_tilt_value, Encoder_pan_value")
     file.write('\n')
-    for line in array:
+    for num, line in enumerate(array):
         if(len(line)==12):
             file.write(str(line[0:4])+", "+ str(line[4:8]) + ", " + str(line[8:10] + ", "))
         elif(len(line)==10):
             file.write(str(line[0:4])+", "+ str(line[4:8]))
             file.write('\n')
         else:
-            print("Weird line length: ", len(line))
+            print("Weird line length: ", len(line), " On line: ", num)
             print(line)
         
         
