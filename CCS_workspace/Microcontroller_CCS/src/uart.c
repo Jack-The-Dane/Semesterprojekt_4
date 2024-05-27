@@ -23,6 +23,15 @@ void send_string(char *str) {
   xQueueSendToBack(q_uart_tx, &n, 15);
 }
 
+void send_string_len(char *str, INT16U str_length) {
+  for(INT16U i = 0; i < str_length; i++) {
+    xQueueSendToBack(q_uart_tx, str, 15);
+    str++;
+  }
+  INT8U n = '\n';
+  xQueueSendToBack(q_uart_tx, &n, 15);
+}
+
 char* receive_string(){
     char str[100] = "";
     char ch;
@@ -90,7 +99,7 @@ void uart_task(void *pvParameters) {
 
     while (!(UART0_FR_R & (1 << 4))) {
       uart_data = UART0_DR_R;
-      xQueueSendToBack(q_uart_rx, &uart_data, 15);
+      xQueueSendToBack(q_uart_rx, &uart_data, 0);
     }
 
     while (xQueueReceive(q_uart_tx, &uart_data, 0)) {

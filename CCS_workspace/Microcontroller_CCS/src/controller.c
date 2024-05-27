@@ -71,8 +71,8 @@ void vel_measurer(){
     double v_rad_pan = ((double) vel_sum_pan) * 0.02204626423;
     double v_rad_tilt = ((double) vel_sum_tilt) * 0.02204626423;
 
-    u_temp[1][1] = v_rad_pan / VEL_SIZE;
-    u_temp[2][1] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
+    u_temp[0][0] = v_rad_pan / VEL_SIZE;
+    u_temp[1][0] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
 
     //send_char(u_temp[1][1]);
 
@@ -104,7 +104,7 @@ void controller_task(void * pvParameters) {
 
         if(xSemaphoreTake(joystick_mutex, 0)){
 
-            setLEDColor(RED);
+            setLEDColor(BLUE);
             pan_pwm = joystick.x >> 4;
             tilt_pwm = joystick.y >> 4;
             xSemaphoreGive(joystick_mutex);

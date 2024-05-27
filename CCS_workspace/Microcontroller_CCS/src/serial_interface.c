@@ -33,7 +33,7 @@ void serial_interface_task (void *pvParameters){
     while(1){
     if(uxQueueMessagesWaiting(q_uart_rx)){
         char * str = receive_string();
-         
+
         if (strlen(str) != 0) {
             //send_string(str);
             if(strcmp(str, "debug\n")==0){
@@ -55,26 +55,26 @@ void serial_interface_task (void *pvParameters){
                 x = ((str[0] & 0x1F) << 7) | (str[1] & 0x7F);
                 y = ((str[2] & 0x1F) << 7) | (str[3] & 0x7F);
                 button = ((str[4] & 0x7F));
-                if(xSemaphoreTake(joystick_mutex, 0))
+                if(xSemaphoreTake(joystick_mutex, 5))
                 {
                     joystick.x = x;
                     joystick.y = y;
                     joystick.button = (button);
                     xSemaphoreGive(joystick_mutex);
                 }
-                INT8U data[6] = {x >> 8, x & 0x00FF, y >> 8, y & 0x00FF, button, 0x0A}; 
-                send_string(data);
-                if(xSemaphoreTake(encoder_mutex,0)){
-                    INT8U enc_data[5] = {((encoders >> 19) & 0x01), ((encoders >> 11) & 0xff), ((encoders >> 10) & 0x01), (encoders >> 2) & 0xff, 0x0a};
+                INT8U data[5] = {x >> 8, x & 0x00FF, y >> 8, y & 0x00FF, button}; 
+                send_string_len(data, 5);
+                if(xSemaphoreTake(encoder_mutex,5)){
+                    INT8U enc_data[4] = {((encoders >> 19) & 0x01), ((encoders >> 11) & 0xff), ((encoders >> 10) & 0x01), (encoders >> 2) & 0xff};
                     xSemaphoreGive(encoder_mutex);
-                    send_string(enc_data);
+                    send_string_len(enc_data, 4);
                 }
                 vTaskSuspend(NULL);
             }
-        } /* else {
-            vTaskSuspend(NULL);
-        } */
-    }
+        }
+    } else {
+            vTaskDelay(5);
+        }
     }
 }
 
