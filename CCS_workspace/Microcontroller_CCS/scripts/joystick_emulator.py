@@ -62,9 +62,9 @@ with open('joystick.csv', 'w') as file:
     file.write('\n')
     for num, line in enumerate(array):
         if(len(line)==12):
-            file.write(str(line[0:4])+", "+ str(line[4:8]) + ", " + str(line[8:10] + ", "))
+            file.write(str(int(line[0:4],16))+", "+ str(int(line[4:8],16)) + ", " + str(int(line[8:10],16)) + ", ")
         elif(len(line)==10):
-            file.write(str(line[0:4])+", "+ str(line[4:8]))
+            file.write(str(int(line[0:4],16))+", "+ str(int(line[4:8],16)))
             file.write('\n')
         else:
             print("Weird line length: ", len(line), " On line: ", num)
