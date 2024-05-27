@@ -18,6 +18,7 @@
 #define VEL_SIZE 10      // Size of the velocity buffer
 #define PI 3.14159265358979323846
 #define TICKS_PR_REV 285
+#define TICKS_TO_RAD = 0.02204626423
 
 
 
@@ -56,7 +57,6 @@ void send_debug_value(SPI_TYPE encoders){
 }
 const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
 
-#define TICKS_TO_RAD = 0.02204626423
 
 
 
@@ -72,9 +72,11 @@ void vel_measurer(){
     theta_current_pan = tics_to_rad((encoders >> 2) & 0x1FF);
     theta_current_tilt = tics_to_rad((encoders >> 11) & 0x1FF);
 
+
     // Calulate pan velocity and place in array
-    v_pan[i] = (dist(theta_last_pan, theta_current_pan)) / (xFrequency * portTICK_PERIOD_MS);
-    v_tilt[i] = (dist(theta_last_tilt, theta_current_tilt)) / (xFrequency * portTICK_PERIOD_MS);
+    v_pan[i] = ((dist(theta_last_pan, theta_current_pan)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
+    v_tilt[i] = ((dist(theta_last_tilt, theta_current_tilt)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
+    send_char((char) (v_tilt[i] * 100));
 
     // Sum of velocities
     double vel_sum_pan = 0;
@@ -84,11 +86,8 @@ void vel_measurer(){
         vel_sum_tilt += v_tilt[j];
     }
 
-    double v_rad_pan = ((double) vel_sum_pan);
-    double v_rad_tilt = ((double) vel_sum_tilt);
-
-    u_temp[0][0] = v_rad_pan / VEL_SIZE;
-    u_temp[1][0] = v_rad_tilt / VEL_SIZE;     // Get average of tilt velocities
+    u_temp[0][0] = vel_sum_pan / VEL_SIZE;
+    u_temp[1][0] = vel_sum_tilt / VEL_SIZE;     // Get average of tilt velocities
 
     send_char((char) (u_temp[1][0] * 100));
 
