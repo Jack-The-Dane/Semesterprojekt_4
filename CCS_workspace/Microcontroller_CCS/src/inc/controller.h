@@ -18,7 +18,7 @@ double tics_to_rad(INT16S ticks);
 
 void controller_task();
 
-void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, INT8U *ref[2][1], BOOLEAN tilt_direction, BOOLEAN pan_direction);
+void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1], BOOLEAN tilt_direction, BOOLEAN pan_direction);
 
 void voltage_to_pwm(double voltage, INT8U *pwm, BOOLEAN * direction);
 
