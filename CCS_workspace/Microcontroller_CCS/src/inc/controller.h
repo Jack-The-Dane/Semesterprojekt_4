@@ -6,7 +6,7 @@
 
 SPI_TYPE encoders;
 double y_temp[2][1];
-
+double glob_temp;
 // Function to calculate the angular velocity of pan and tilt
 void vel_measurer();
 

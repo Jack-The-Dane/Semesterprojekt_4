@@ -49,11 +49,11 @@ step_input = format_list(list_creator("int(2**12/2) if x < 40 else int(2**12 * 0
 # Speed up and slow down:
 parabol_velocities = scale_and_format(list_creator("15.82*x - 8.938*x**2", 0, 1.77, 0.025))
 
-
+constant_velocity = format_list(list_creator("int(2**12 * 0.85)", 0, 5*40, 1))
 
 
 # Change this variable to send something different to the tilt axis.
-tilt_vels = step_input
+tilt_vels = parabol_velocities
 
 ser = serial.Serial('/dev/ttyACM0', 115200, 8, "E", 1, 1)  # open serial port
 

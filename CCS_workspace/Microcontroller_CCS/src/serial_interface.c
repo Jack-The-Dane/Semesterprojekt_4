@@ -69,7 +69,8 @@ void serial_interface_task (void *pvParameters){
                     xSemaphoreGive(encoder_mutex);
                     send_string_len(enc_data, 4);
                 }
-                INT16U vel = (uint8_t) (u_temp[1][0]*100);
+                //INT16U vel = (uint8_t) (u_temp[1][0]*100);
+                INT8U vel = (uint8_t)(glob_temp*100);
                 INT8U vel_data[1] = {vel & 0xFF};
                 send_string_len(vel_data, 1);
                 vTaskSuspend(NULL);

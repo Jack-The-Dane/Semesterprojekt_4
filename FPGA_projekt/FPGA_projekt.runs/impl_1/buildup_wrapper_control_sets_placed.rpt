@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Mon May 27 14:49:15 2024
+| Date         : Tue May 28 11:40:32 2024
 | Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_control_sets -verbose -file buildup_wrapper_control_sets_placed.rpt
 | Design       : buildup_wrapper
@@ -74,8 +74,8 @@ Table of Contents
 |                         Clock Signal                         |                      Enable Signal                      |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------------------------------+---------------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
 |  buildup_i/spi_sub_0/U0/MISO_reg_i_2_n_0                     |                                                         |                                                |                1 |              1 |         1.00 |
-|  buildup_i/spi_sub_0/U0/next_state                           |                                                         |                                                |                2 |              5 |         2.50 |
 |  clk_IBUF_BUFG                                               |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              5 |         2.50 |
+|  buildup_i/spi_sub_0/U0/next_state                           |                                                         |                                                |                2 |              5 |         2.50 |
 |  buildup_i/clock_divider_0/U0/clk_div                        |                                                         | buildup_i/synchronizer_9/U0/Q                  |                2 |              8 |         4.00 |
 |  clk_IBUF_BUFG                                               | buildup_i/block_encoder_pan_0/U0/Rising_edge_b/U0/E[0]  | buildup_i/synchronizer_9/U0/Q                  |                4 |              9 |         2.25 |
 |  clk_IBUF_BUFG                                               | buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/E[0] | buildup_i/synchronizer_9/U0/Q                  |                5 |              9 |         1.80 |

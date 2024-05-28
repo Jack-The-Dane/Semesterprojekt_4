@@ -33,7 +33,7 @@ void init_spi() {
 
 // https://en.wikipedia.org/wiki/Serial_Peripheral_Interface#Bit-banging_the_protocol
 void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
-
+  SPI_TYPE receive_old = *data_recieve;
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
@@ -68,6 +68,15 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
 
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
+
+  SPI_TYPE encoders = *data_recieve;
+  if(((encoders>>2) & 0x1FF) > 360){
+    encoders = (encoders & ~(0x7FC)) | (receive_old & (0x7FC));
+  }
+  if(((encoders>>11) & 0x1FF) > 360){
+    encoders = (encoders & ~(0xFF80)) | (receive_old & (0xFF80));
+  }
+  *data_recieve = encoders;
 }
 
 void spi_task() {
