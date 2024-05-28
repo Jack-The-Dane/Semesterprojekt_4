@@ -59,13 +59,15 @@ void send_debug_value(SPI_TYPE encoders){
 
 
 void vel_measurer(){
-    static INT8U i = 0;
+
     static double theta_last_tilt = 0;      // Tilt position from last iteration
     static double theta_last_pan = 0;       // Pan position from last iteration
     static double theta_current_tilt = 0;   // Tilt position from current iteration
     static double theta_current_pan = 0;    // Pan position from current iteration
+    static INT8U i = 0;
 
-    if(i % VEL_SIZE == 0){i = 0;}
+    i = (i + 1) % VEL_SIZE;
+
     theta_current_pan = tics_to_rad((encoders >> 2) & 0x1FF);       // Get pan position
     theta_current_tilt = tics_to_rad((encoders >> 11) & 0x1FF);     // Get tilt position
 
@@ -73,7 +75,7 @@ void vel_measurer(){
     // Calulate pan velocity and place in array
     v_pan[i] = ((dist(theta_last_pan, theta_current_pan)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
     v_tilt[i] = ((dist(theta_last_tilt, theta_current_tilt)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
-
+    
     // Sum of velocities
     double vel_sum_pan = 0;
     double vel_sum_tilt = 0;
@@ -84,11 +86,10 @@ void vel_measurer(){
 
     u_temp[0][0] = vel_sum_pan / VEL_SIZE;
     u_temp[1][0] = vel_sum_tilt / VEL_SIZE;     // Get average of tilt velocities
-
-    send_char((char) (u_temp[1][0] * 100));     // Send tilt velocity over uart
+    glob_temp = u_temp[1][0];
+    //send_char((char) (u_temp[1][0] * 100));     // Send tilt velocity over uart
 
     // Iterate and set used positions as old
-    i++;
     theta_last_pan = theta_current_pan;
     theta_last_tilt = theta_current_tilt;
 
