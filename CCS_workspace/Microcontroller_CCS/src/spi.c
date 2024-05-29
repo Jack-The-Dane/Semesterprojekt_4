@@ -69,14 +69,16 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
 
-  SPI_TYPE encoders = *data_recieve;
-  if(((encoders>>2) & 0x1FF) > 360){
-    encoders = (encoders & ~(0x7FC)) | (receive_old & (0x7FC));
+  SPI_TYPE encoders_temp = *data_recieve;
+  INT16U temp = (encoders_temp>>2) & 0x1FF;
+  if(temp > 360){
+    encoders_temp = (encoders_temp & ~(0x7FC)) | (receive_old & (0x7FC));
   }
-  if(((encoders>>11) & 0x1FF) > 360){
-    encoders = (encoders & ~(0xFF80)) | (receive_old & (0xFF80));
+  temp = (encoders_temp>>11) & 0x1FF;
+  if(temp > 360){
+    encoders_temp = (encoders_temp & ~(0xFF80)) | (receive_old & (0xFF80));
   }
-  *data_recieve = encoders;
+  *data_recieve = encoders_temp;
 }
 
 void spi_task() {
