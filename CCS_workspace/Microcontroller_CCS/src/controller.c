@@ -68,6 +68,16 @@ double dist(double p1, double p2){
     return d;
 }
 
+void set_LED(double vel_pan, double vel_tilt) {
+    if( vel_pan > 0 || vel_tilt > 0){
+        setLEDColor(GREEN);
+    }
+    else{
+        setLEDColor(RED);
+    }
+
+}
+
 void send_debug_value(SPI_TYPE encoders){
     INT8U byte1 = encoders;
     INT8U byte2 = encoders >> 8;
@@ -128,6 +138,8 @@ void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1]
 
     if(v_tilt < JOYSTICK_DEADZONE) v_tilt = 0;
     if(v_pan < JOYSTICK_DEADZONE) v_pan = 0;
+
+    set_LED(v_pan, v_tilt);     // Set LED color if joystick is moved
 
     if (tilt_direction) v_tilt = -v_tilt;
     if (pan_direction) v_pan = -v_pan;
@@ -210,7 +222,7 @@ void controller_task(void * pvParameters) {
 
         if(xSemaphoreTake(joystick_mutex, 0)){
 
-            setLEDColor(BLUE);
+            // setLEDColor(BLUE);
             pan_pwm = joystick.x >> 4;
             tilt_pwm = joystick.y >> 4;
             xSemaphoreGive(joystick_mutex);

@@ -41,13 +41,13 @@ void serial_interface_task (void *pvParameters){
                 if (!debug_mode) {
                     send_string("Entering debug mode \n");
                     vTaskSuspend(joystick_handle);
-                    setLEDColor(GREEN);
+                    // setLEDColor(GREEN);
                     debug_mode = TRUE;
                 }
                 else {
                     send_string("Exiting debug mode \n");
                     vTaskResume(joystick_handle);
-                    setLEDColor(MAGENTA);
+                    // setLEDColor(MAGENTA);
                     debug_mode = FALSE;
                 }
 

@@ -29,14 +29,14 @@ void init_joystick() {
 
 void joystick_task(void * pvParameters) {
     while (1) {
-        setLEDColor(RED);
+        // setLEDColor(RED);
         if(xSemaphoreTake(joystick_mutex, 1)){
             joystick.x = get_adc0();
             joystick.y = get_adc1();
             joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
             xSemaphoreGive(joystick_mutex);
         }
-        setLEDColor(CYAN);
+        // setLEDColor(CYAN);
         vTaskDelay(20);
 
     }

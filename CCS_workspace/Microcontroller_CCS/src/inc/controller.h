@@ -22,4 +22,6 @@ void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1]
 
 void voltage_to_pwm(double voltage, INT8U *pwm, BOOLEAN * direction);
 
+void set_LED();
+
 #endif
