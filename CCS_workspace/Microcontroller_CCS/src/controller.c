@@ -70,8 +70,9 @@ double dist(double p1, double p2){
     return d;
 }
 
+#define ALPHA 1e-3
 void set_LED(double vel_pan, double vel_tilt) {
-    if( vel_pan > 0 || vel_tilt > 0){
+    if( abs(vel_pan) > ALPHA || abs(vel_tilt) > ALPHA) {
         setLEDColor(GREEN);
     }
     else{
@@ -173,6 +174,8 @@ void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir){
     theta_last_pan = theta_current_pan;
     theta_last_tilt = theta_current_tilt;
 
+    set_LED(vel_sum_pan, vel_sum_tilt);     // Set LED color if joystick is moved
+
     memcpy(y, y_temp, sizeof(double)*2);        // Overwrite u with velocities
 }
 
@@ -188,7 +191,7 @@ void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1]
     if(v_tilt < JOYSTICK_DEADZONE) v_tilt = 0;
     if(v_pan < JOYSTICK_DEADZONE) v_pan = 0;
 
-    set_LED(v_pan, v_tilt);     // Set LED color if joystick is moved
+    // set_LED(v_pan, v_tilt);     // Set LED color if joystick is moved
 
     if (tilt_direction) v_tilt = -v_tilt;
     if (pan_direction) v_pan = -v_pan;
