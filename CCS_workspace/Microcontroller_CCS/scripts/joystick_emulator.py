@@ -39,6 +39,7 @@ def send_tilt_velocities(vels):
         print(array[-1])
         line = ser.readline().hex()
         while(len(line)<4):
+            print(len(line))
             line += ser.readline().hex()
         array.append(line)
     return array

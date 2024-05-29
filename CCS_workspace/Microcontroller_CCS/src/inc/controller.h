@@ -8,7 +8,7 @@ SPI_TYPE encoders;
 double y_temp[2][1];
 double glob_temp;
 // Function to calculate the angular velocity of pan and tilt
-void vel_measurer();
+void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir);
 
 // Function to calculate the distance between two points. Returns the distance as a double.
 double dist(double p1, double p2);

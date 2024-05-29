@@ -16,7 +16,7 @@
 
 
 // How much time is allocated for the other tasks running on the microcontroller (5 ms / tick)
-#define CONTROLLER_EXTRA_SLEEP_TICKS 5      
+#define CONTROLLER_EXTRA_SLEEP_TICKS 5
 #define VEL_SIZE 10                         // Size of the velocity buffer
 #define PI 3.14159265358979323846           // PI aka 3
 #define TICKS_PR_REV 285                    // Number of ticks per revolution
@@ -35,6 +35,8 @@
 const TickType_t xFrequency = pdMS_TO_TICKS( (SCLK_HALF_PERIOD_US * (SPI_WORD_LENGTH * 2 + 2)) / 1000 ) + CONTROLLER_EXTRA_SLEEP_TICKS;
 double v_tilt[VEL_SIZE];
 double v_pan[VEL_SIZE];
+INT32S v_tilt_ticks[VEL_SIZE];
+INT32S v_pan_ticks[VEL_SIZE];
 
 double u[2][1];
 double y[2][1];
@@ -53,7 +55,7 @@ void voltage_to_pwm(double voltage, INT8U *pwm, BOOLEAN * direction){
         voltage = -voltage;
     }
 
-    *pwm = (INT8U) (voltage * 256 / 12);
+    *pwm = (INT8U) (voltage * 255 / 12);
 }
 
 double tics_to_rad(INT16S ticks){
@@ -79,15 +81,63 @@ void send_debug_value(SPI_TYPE encoders){
     xQueueSendToBack(q_uart_tx, &byte4, 0);
 }
 
-void vel_measurer(){
+INT32S ticks_dist(INT16U current_ticks, INT16U last_ticks, BOOLEAN direction){
+    INT32S dist = current_ticks - last_ticks;
+
+    if(!direction && dist >= 0){
+        return dist;
+    } else if(!direction && dist < 0){
+        dist = current_ticks + 360 - last_ticks;
+        return dist;
+    }
+    if(last_ticks < current_ticks){
+        last_ticks -= 360;
+    }
+    dist = current_ticks - last_ticks;
+    return dist;
+}
+
+void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir){
+    static INT8U i = 0;
+    i = (i + 1) % VEL_SIZE;
+    // static INT16U ticks_last_tilt = 0;
+    // static INT16U ticks_last_pan = 0;
+    // static INT16U ticks_current_tilt = 0;
+    // static INT16U ticks_current_pan = 0;
+    
+
+    // ticks_current_tilt = (encoders >> 11) & 0x1FF;
+    // ticks_current_pan = (encoders >> 2) & 0x1FF;
+    
+    // // Get velocity in ticks / sencond
+    // INT32S current_vel_tilt = ticks_dist(ticks_current_tilt, ticks_last_tilt, tilt_dir) * 1000 / (xFrequency * portTICK_PERIOD_MS);
+    // INT32S current_vel_pan = ticks_dist(ticks_current_pan, ticks_last_pan, pan_dir) * 1000 / (xFrequency * portTICK_PERIOD_MS);
+    
+    // if(current_vel_tilt < 1000){
+    //     v_tilt_ticks[i] = current_vel_tilt;
+    // }
+    // //glob_temp = v_tilt_ticks[i];
+    // v_pan_ticks[i] = current_vel_pan;
+
+    // // Sum of velocities
+    // INT32S vel_sum_pan = 0;
+    // INT32S vel_sum_tilt = 0;
+    // for(INT8U j = 0; j < VEL_SIZE; j++){
+    //     vel_sum_pan += v_pan_ticks[j];
+    //     vel_sum_tilt += v_tilt_ticks[j];
+    // }
+
+    // y_temp[0][0] = (double)((double)((double)(vel_sum_pan) / VEL_SIZE) * TICKS_TO_RAD);
+    // y_temp[1][0] = (double)((double)((double)(vel_sum_tilt) / VEL_SIZE) * TICKS_TO_RAD);     // Get average of tilt velocities
+    // ticks_last_pan = ticks_current_pan;
+    // ticks_last_tilt = ticks_current_tilt;
+    // glob_temp = y_temp[1][0];
 
     static double theta_last_tilt = 0;      // Tilt position from last iteration
     static double theta_last_pan = 0;       // Pan position from last iteration
     static double theta_current_tilt = 0;   // Tilt position from current iteration
     static double theta_current_pan = 0;    // Pan position from current iteration
-    static INT8U i = 0;
-
-    i = (i + 1) % VEL_SIZE;
+    
 
     theta_current_pan = tics_to_rad((encoders >> 2) & 0x1FF);       // Get pan position
     theta_current_tilt = tics_to_rad((encoders >> 11) & 0x1FF);     // Get tilt position
@@ -96,7 +146,7 @@ void vel_measurer(){
     // Calulate pan velocity and place in array
     v_pan[i] = ((dist(theta_last_pan, theta_current_pan)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
     v_tilt[i] = ((dist(theta_last_tilt, theta_current_tilt)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
-    
+
     // Sum of velocities
     double vel_sum_pan = 0;
     double vel_sum_tilt = 0;
@@ -107,8 +157,7 @@ void vel_measurer(){
 
     y_temp[0][0] = vel_sum_pan / VEL_SIZE;
     y_temp[1][0] = vel_sum_tilt / VEL_SIZE;     // Get average of tilt velocities
-
-    send_char((char) (y_temp[1][0] * 100));     // Send tilt velocity over uart
+    glob_temp = y_temp[1][0];   // Send tilt velocity over uart
 
     // Iterate and set used positions as old
     theta_last_pan = theta_current_pan;
@@ -128,12 +177,13 @@ void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1]
 
     if(v_tilt < JOYSTICK_DEADZONE) v_tilt = 0;
     if(v_pan < JOYSTICK_DEADZONE) v_pan = 0;
-
     if (tilt_direction) v_tilt = -v_tilt;
     if (pan_direction) v_pan = -v_pan;
 
-    ref[0][0] = v_pan;
-    ref[1][0] = v_tilt;
+    ref[0][0] = v_pan * 0.021816616;
+    ref[1][0] = v_tilt * 0.021816616;
+
+    return;
 }
 
 void step_controller(double ref[][1], double y[][1], void * u, double time_step) {
@@ -239,16 +289,15 @@ void controller_task(void * pvParameters) {
 
 
             joystick_velocity(pan_pwm, tilt_pwm, ref, tilt_direction, pan_direction);
-
-            SPI_TYPE motors = 0;
-
-            motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             
-            vel_measurer();
+            vel_measurer(tilt_direction, pan_direction);
             step_controller(ref, y , &u, TIME_STEP);
             voltage_to_pwm(u[0][0], &pan_pwm, &pan_direction);
             voltage_to_pwm(u[1][0], &tilt_pwm, &tilt_direction);
 
+            SPI_TYPE motors = 0;
+
+            motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             spi_tranceive(&motors, &encoders);
 
             vTaskResume(serial_task_handle);
