@@ -26,7 +26,7 @@
 #define INPUT_MIN -12.0
 #define CLOCKWISE FALSE
 #define COUNTERCLOCKWISE TRUE
-#define JOYSTICK_DEADZONE 5
+#define JOYSTICK_DEADZONE 15
 #define MAX_VELOCITY 1
 
 
@@ -311,10 +311,10 @@ void controller_task(void * pvParameters) {
 
             // send_char((char) (u_glob[0][0] * 100));
 
-            // voltage_to_pwm(u_glob[0][0], &pan_pwm, &pan_direction);
+            //voltage_to_pwm(u_glob[0][0], &pan_pwm, &pan_direction);
             voltage_to_pwm(u_glob[1][0], &tilt_pwm, &tilt_direction);
 
-            send_char(tilt_pwm);
+            // send_char(tilt_pwm);
 
             SPI_TYPE motors = 0;
 
