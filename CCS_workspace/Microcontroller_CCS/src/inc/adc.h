@@ -3,7 +3,10 @@
 
 #include "emp_type.h"
 
+// Get the value of the ADC0
 INT16U get_adc0();
+
+// Get the value of the ADC1
 INT16U get_adc1();
 void init_adc();
 

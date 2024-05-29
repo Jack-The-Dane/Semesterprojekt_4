@@ -5,11 +5,13 @@
 #include <stdlib.h>
 #include <assert.h>
 
+// Get the dimensions of a matrix
 #define matrix_get_dimensions(M, COLS, ROWS)       \
     int COLS = sizeof(M[0]) / sizeof(M[0][0]);     \
     int ROWS = sizeof(M) / sizeof(M[0][0]) / COLS; \
 
 
+// Matrix multiplication
 #define matrix_multiply(A, B, C) {                 \
     matrix_get_dimensions(A, A_cols, A_rows);      \
     matrix_get_dimensions(B, B_cols, B_rows);      \
@@ -32,6 +34,7 @@
     }                                              \
 }
 
+// Matrix scale by a constant
 #define matrix_scale(A, c) {                       \
     int i, j;                                      \
     matrix_get_dimensions(A, A_cols, A_rows);      \
@@ -44,6 +47,7 @@
     }                                              \
 }
 
+// Add 2 matrices function
 #define matrix_add(A, B) {                         \
     int i, j;                                      \
     matrix_get_dimensions(A, A_cols, A_rows);      \
@@ -59,6 +63,7 @@
     }                                              \
 }
 
+// Subtract 2 matrices function
 #define matrix_subtract(A, B) {                    \
     int i, j;                                      \
     matrix_get_dimensions(A, A_cols, A_rows);      \
@@ -74,7 +79,7 @@
     }                                              \
 }
 
-
+// Print matrix function
 #define matrix_print(M) {                          \
     int i, j;                                      \
     matrix_get_dimensions(M, cols, rows);          \
