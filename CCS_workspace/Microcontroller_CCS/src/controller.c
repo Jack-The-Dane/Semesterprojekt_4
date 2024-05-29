@@ -21,7 +21,7 @@
 #define PI 3.14159265358979323846           // PI aka 3
 #define TICKS_PR_REV 285                    // Number of ticks per revolution
 #define TICKS_TO_RAD 0.02204626423        // 2 * PI / 285
-#define TIME_STEP 0.0025
+#define TIME_STEP 0.025
 #define INPUT_MAX 12.0
 #define INPUT_MIN -12.0
 #define CLOCKWISE FALSE
@@ -38,9 +38,9 @@ double v_pan[VEL_SIZE];
 INT32S v_tilt_ticks[VEL_SIZE];
 INT32S v_pan_ticks[VEL_SIZE];
 
-double u[2][1];
-double y[2][1];
-double ref[2][1];
+double u_glob[2][1] = {{0},{0}};
+double y_glob[2][1] = {{0}, {0}};
+double ref_glob[2][1] = {{0.5},{0.5}};
 double v_temp = 0;
 
 extern BOOLEAN debug_mode;
@@ -174,9 +174,7 @@ void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir){
     theta_last_pan = theta_current_pan;
     theta_last_tilt = theta_current_tilt;
 
-    set_LED(vel_sum_pan, vel_sum_tilt);     // Set LED color if joystick is moved
-
-    memcpy(y, y_temp, sizeof(double)*2);        // Overwrite u with velocities
+    memcpy(y_glob, y_temp, sizeof(double)*2);        // Overwrite u with velocities
 }
 
 void clamp(double * d, double min, double max) {
@@ -215,7 +213,7 @@ void step_controller(double ref[][1], double y[][1], void * u, double time_step)
     double int_in[2][1];
     memcpy(int_in, y, sizeof(double)*2);
     matrix_subtract(int_in, ref);
-    matrix_scale(int_in, time_step);
+    matrix_scale(int_in, 1/time_step);
     matrix_add(control_integrator, int_in);
 
     // Calculate the new input
@@ -304,12 +302,19 @@ void controller_task(void * pvParameters) {
             }
 
 
-            joystick_velocity(pan_pwm, tilt_pwm, ref, tilt_direction, pan_direction);
+            joystick_velocity(pan_pwm, tilt_pwm, ref_glob, tilt_direction, pan_direction);
             
             vel_measurer(tilt_direction, pan_direction);
-            step_controller(ref, y , &u, TIME_STEP);
-            voltage_to_pwm(u[0][0], &pan_pwm, &pan_direction);
-            voltage_to_pwm(u[1][0], &tilt_pwm, &tilt_direction);
+            set_LED(y_glob[0][0], y_glob[1][0]);     // Set LED color if joystick is moved
+
+            step_controller(ref_glob, y_glob , &u_glob, TIME_STEP);
+
+            // send_char((char) (u_glob[0][0] * 100));
+
+            // voltage_to_pwm(u_glob[0][0], &pan_pwm, &pan_direction);
+            voltage_to_pwm(u_glob[1][0], &tilt_pwm, &tilt_direction);
+
+            send_char(tilt_pwm);
 
             SPI_TYPE motors = 0;
 
