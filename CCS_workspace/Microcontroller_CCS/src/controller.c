@@ -26,6 +26,8 @@
 #define INPUT_MIN -12.0
 #define CLOCKWISE FALSE
 #define COUNTERCLOCKWISE TRUE
+#define JOYSTICK_DEADZONE 5
+#define MAX_VELOCITY 1
 
 
 
@@ -36,6 +38,7 @@ double v_pan[VEL_SIZE];
 
 double u[2][1];
 double y[2][1];
+double ref[2][1];
 double v_temp = 0;
 
 extern BOOLEAN debug_mode;
@@ -111,7 +114,7 @@ void vel_measurer(){
     theta_last_pan = theta_current_pan;
     theta_last_tilt = theta_current_tilt;
 
-    memcpy(u, y_temp, sizeof(double)*2);        // Overwrite u with velocities
+    memcpy(y, y_temp, sizeof(double)*2);        // Overwrite u with velocities
 }
 
 void clamp(double * d, double min, double max) {
@@ -119,46 +122,18 @@ void clamp(double * d, double min, double max) {
     *d = *d > max ? max : *d;
 }
 
-void step_system(void * u, void * y, double time_step) {
+void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, double ref[2][1], BOOLEAN tilt_direction, BOOLEAN pan_direction){
+    double v_tilt = ((double)joystick_tilt);
+    double v_pan = ((double)joystick_pan);
 
-    // System states, also the integrator value
-    static double x[4][1] = {0};
+    if(v_tilt < JOYSTICK_DEADZONE) v_tilt = 0;
+    if(v_pan < JOYSTICK_DEADZONE) v_pan = 0;
 
-    double x_dot[4][1];
-    double x_dot_in1[4][1];
-    double x_dot_in2[4][1];
-    matrix_multiply(A, x, x_dot_in1);
+    if (tilt_direction) v_tilt = -v_tilt;
+    if (pan_direction) v_pan = -v_pan;
 
-    double u_temp[2][1];
-    memcpy(u_temp, u, sizeof(double)*2);
-
-    matrix_multiply(B, u_temp, x_dot_in2);
-    matrix_add(x_dot, x_dot_in1);
-    matrix_add(x_dot, x_dot_in2);
-
-
-    double int_in[4][1] = {0};
-    matrix_add(int_in, x_dot);
-    matrix_scale(int_in, time_step);
-
-    matrix_add(x, int_in);
-
-    log_double(x_dot[0][0]); // I_dot_pan
-    log_double(x_dot[2][0]); // I_dot_tilt
-    log_double(x[0][0]); // I_pan
-    log_double(x[1][0]); // theta_dot_pan
-    log_double(x[2][0]); // I_tilt
-    log_double(x[3][0]); // theta_dot_tilt
-
-
-    double y_temp[2][1];
-    matrix_multiply(C, x, y_temp);
-
-    memcpy(y, y_temp, sizeof(double)*2);
-}
-
-void joystick_velocity(INT8U joystick_pan, INT8U joystick_tilt, INT8U *ref[2][1], BOOLEAN tilt_direction, BOOLEAN pan_direction){
-    
+    ref[0][0] = v_pan;
+    ref[1][0] = v_tilt;
 }
 
 void step_controller(double ref[][1], double y[][1], void * u, double time_step) {
@@ -263,17 +238,19 @@ void controller_task(void * pvParameters) {
             }
 
 
-            double ref[2][1] = {{pan_pwm},{tilt_pwm}};
+            joystick_velocity(pan_pwm, tilt_pwm, ref, tilt_direction, pan_direction);
 
             SPI_TYPE motors = 0;
 
             motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             
-            spi_tranceive(&motors, &encoders);
             vel_measurer();
             step_controller(ref, y , &u, TIME_STEP);
-            voltage_to_pwm(u[0][0],pan_direction, &u[0][0]);
-            voltage_to_pwm(u[1][0], tilt_direction, &u[1][0]);
+            voltage_to_pwm(u[0][0], &pan_pwm, &pan_direction);
+            voltage_to_pwm(u[1][0], &tilt_pwm, &tilt_direction);
+
+            spi_tranceive(&motors, &encoders);
+
             vTaskResume(serial_task_handle);
 
             if (69) {
