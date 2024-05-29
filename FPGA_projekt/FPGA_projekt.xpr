@@ -158,11 +158,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_0_2/buildup_block_encoder_0_2.xci">
-          <Proxy FileSetName="buildup_block_encoder_0_2"/>
+        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_0_3/buildup_block_encoder_0_3.xci">
+          <Proxy FileSetName="buildup_block_encoder_0_3"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_pan_0_0/buildup_block_encoder_pan_0_0.xci">
-          <Proxy FileSetName="buildup_block_encoder_pan_0_0"/>
+        <CompFileExtendedInfo CompFileName="buildup.bd" FileRelPathName="ip/buildup_block_encoder_0_4/buildup_block_encoder_0_4.xci">
+          <Proxy FileSetName="buildup_block_encoder_0_4"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/buildup/hdl/buildup_wrapper.vhd">
@@ -423,15 +423,15 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="buildup_block_encoder_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_block_encoder_0_2" RelGenDir="$PGENDIR/buildup_block_encoder_0_2">
+    <FileSet Name="buildup_block_encoder_0_4" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_block_encoder_0_4" RelGenDir="$PGENDIR/buildup_block_encoder_0_4">
       <Config>
-        <Option Name="TopModule" Val="buildup_block_encoder_0_2"/>
+        <Option Name="TopModule" Val="buildup_block_encoder_0_4"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="buildup_block_encoder_pan_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_block_encoder_pan_0_0" RelGenDir="$PGENDIR/buildup_block_encoder_pan_0_0">
+    <FileSet Name="buildup_block_encoder_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/buildup_block_encoder_0_3" RelGenDir="$PGENDIR/buildup_block_encoder_0_3">
       <Config>
-        <Option Name="TopModule" Val="buildup_block_encoder_pan_0_0"/>
+        <Option Name="TopModule" Val="buildup_block_encoder_0_3"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -468,9 +468,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_block_encoder_0_2_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_0_2" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_0_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_synth_1">
+    <Run Id="buildup_block_encoder_0_4_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_0_4" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_4" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_0_4_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_4_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_4_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -478,9 +480,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_block_encoder_pan_0_0_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_pan_0_0" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_pan_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_pan_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_synth_1">
+    <Run Id="buildup_block_encoder_0_3_synth_1" Type="Ft3:Synth" SrcSet="buildup_block_encoder_0_3" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/buildup_block_encoder_0_3_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_3_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_3_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -506,9 +510,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_block_encoder_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_0_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_2_impl_1">
+    <Run Id="buildup_block_encoder_0_4_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_4" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_0_4_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_4_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_4_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -523,9 +529,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="buildup_block_encoder_pan_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_pan_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_pan_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_pan_0_0_impl_1">
+    <Run Id="buildup_block_encoder_0_3_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="buildup_block_encoder_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="buildup_block_encoder_0_3_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_3_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/buildup_block_encoder_0_3_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

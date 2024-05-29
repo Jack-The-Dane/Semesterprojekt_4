@@ -106,6 +106,6 @@ void uart_task(void *pvParameters) {
       send_char(uart_data);
     }
 
-    vTaskDelay(50 / portTICK_RATE_MS); // wait 50 ms.
+    vTaskDelay(1); // wait 50 ms.
   }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1716889163" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1716988241" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/pwm_generator_wrapper.dcp">
   <File Type="VDS-TIMING-PB" Name="buildup_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="buildup_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="buildup_wrapper.dcp"/>
@@ -295,6 +295,6 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_pan_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="buildup_block_encoder_0_4"/>
 </GenRun>

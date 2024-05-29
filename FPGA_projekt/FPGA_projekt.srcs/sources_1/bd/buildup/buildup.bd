@@ -41,8 +41,8 @@
       "Rising_edge_detector_0": "",
       "Falling_edge_detector_0": "",
       "xlslice_5": "",
-      "block_encoder_pan_0": "",
-      "block_encoder_tilt_0": ""
+      "block_encoder_tilt": "",
+      "block_encoder_pan": ""
     },
     "ports": {
       "CS": {
@@ -994,19 +994,19 @@
           }
         }
       },
-      "block_encoder_pan_0": {
-        "vlnv": "xilinx.com:user:block_encoder:1.0",
+      "block_encoder_tilt": {
+        "vlnv": "user.org:user:block_encoder:1.0",
         "ip_revision": "2",
-        "xci_name": "buildup_block_encoder_0_2",
-        "xci_path": "ip/buildup_block_encoder_0_2/buildup_block_encoder_0_2.xci",
-        "inst_hier_path": "block_encoder_pan_0"
+        "xci_name": "buildup_block_encoder_0_3",
+        "xci_path": "ip/buildup_block_encoder_0_3/buildup_block_encoder_0_3.xci",
+        "inst_hier_path": "block_encoder_tilt"
       },
-      "block_encoder_tilt_0": {
-        "vlnv": "xilinx.com:user:block_encoder:1.0",
+      "block_encoder_pan": {
+        "vlnv": "user.org:user:block_encoder:1.0",
         "ip_revision": "2",
-        "xci_name": "buildup_block_encoder_pan_0_0",
-        "xci_path": "ip/buildup_block_encoder_pan_0_0/buildup_block_encoder_pan_0_0.xci",
-        "inst_hier_path": "block_encoder_tilt_0"
+        "xci_name": "buildup_block_encoder_0_4",
+        "xci_path": "ip/buildup_block_encoder_0_4/buildup_block_encoder_0_4.xci",
+        "inst_hier_path": "block_encoder_pan"
       }
     },
     "nets": {
@@ -1085,15 +1085,15 @@
           "xlslice_2/Din"
         ]
       },
-      "block_encoder_pan_0_pulse_cnt": {
+      "block_encoder_pan_pulse_cnt": {
         "ports": [
-          "block_encoder_pan_0/pulse_cnt",
+          "block_encoder_pan/pulse_cnt",
           "xlconcat_0/In2"
         ]
       },
       "block_encoder_tilt_pulse_cnt": {
         "ports": [
-          "block_encoder_tilt_0/pulse_cnt",
+          "block_encoder_tilt/pulse_cnt",
           "xlconcat_0/In3",
           "xlslice_5/Din"
         ]
@@ -1101,8 +1101,6 @@
       "clk_1": {
         "ports": [
           "clk",
-          "block_encoder_pan_0/clk",
-          "block_encoder_tilt_0/clk",
           "clock_divider_0/clk",
           "spi_sub_0/clk",
           "synchronizer_8/clk",
@@ -1116,7 +1114,9 @@
           "synchronizer_6/clk",
           "synchronizer_7/clk",
           "Rising_edge_detector_0/clk",
-          "Falling_edge_detector_0/clk"
+          "Falling_edge_detector_0/clk",
+          "block_encoder_tilt/clk",
+          "block_encoder_pan/clk"
         ]
       },
       "clock_divider_0_clk_div": {
@@ -1209,13 +1209,13 @@
       "synchronizer_2_Q": {
         "ports": [
           "synchronizer_2/Q",
-          "block_encoder_pan_0/encoder_b"
+          "block_encoder_pan/encoder_b"
         ]
       },
       "synchronizer_3_Q": {
         "ports": [
           "synchronizer_3/Q",
-          "block_encoder_pan_0/encoder_a"
+          "block_encoder_pan/encoder_a"
         ]
       },
       "synchronizer_4_Q": {
@@ -1233,13 +1233,13 @@
       "synchronizer_6_Q": {
         "ports": [
           "synchronizer_6/Q",
-          "block_encoder_tilt_0/encoder_a"
+          "block_encoder_tilt/encoder_b"
         ]
       },
       "synchronizer_7_Q": {
         "ports": [
           "synchronizer_7/Q",
-          "block_encoder_tilt_0/encoder_b"
+          "block_encoder_tilt/encoder_a"
         ]
       },
       "synchronizer_8_Q": {
@@ -1252,10 +1252,11 @@
       "synchronizer_9_Q": {
         "ports": [
           "synchronizer_9/Q",
-          "block_encoder_pan_0/rst",
-          "block_encoder_tilt_0/rst",
           "counter_1/rst",
-          "spi_sub_0/rst"
+          "spi_sub_0/rst",
+          "clock_divider_0/rst",
+          "block_encoder_tilt/rst",
+          "block_encoder_pan/rst"
         ]
       },
       "xlconcat_0_dout": {
@@ -1267,9 +1268,9 @@
       "xlconstant_1_dout": {
         "ports": [
           "Always_true/dout",
-          "block_encoder_pan_0/enable",
-          "block_encoder_tilt_0/enable",
-          "counter_1/en"
+          "counter_1/en",
+          "block_encoder_tilt/enable",
+          "block_encoder_pan/enable"
         ]
       },
       "xlslice_0_Dout": {

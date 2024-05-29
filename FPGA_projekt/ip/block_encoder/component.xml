@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:vendor>user.org</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>block_encoder</spirit:name>
   <spirit:version>1.0</spirit:version>
@@ -18,7 +18,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>957f9be3</spirit:value>
+            <spirit:value>92c69a14</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -34,7 +34,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>206d9982</spirit:value>
+            <spirit:value>94ac95f4</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -48,7 +48,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f64a5dae</spirit:value>
+            <spirit:value>f92e9879</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -206,7 +206,7 @@
       <spirit:file>
         <spirit:name>src/block_encoder.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_bb97fb2b</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a9b16193</spirit:userFileType>
         <spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -278,7 +278,7 @@
       <spirit:file>
         <spirit:name>xgui/block_encoder_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_f64a5dae</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -301,11 +301,11 @@
       <xilinx:displayName>block_encoder_v1_0</xilinx:displayName>
       <xilinx:definitionSource>IPI</xilinx:definitionSource>
       <xilinx:coreRevision>2</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2024-05-24T11:26:30Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-05-29T13:09:43Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aa9b931d"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4270e524"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="641bb7a2"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="18a4dd90"/>
     </xilinx:packagingInfo>

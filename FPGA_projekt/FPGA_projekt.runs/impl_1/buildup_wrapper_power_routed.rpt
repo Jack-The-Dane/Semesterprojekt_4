@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Tue May 28 11:40:53 2024
+| Date             : Wed May 29 15:13:06 2024
 | Host             : Laptop running 64-bit Ubuntu 22.04.4 LTS
 | Command          : report_power -file buildup_wrapper_power_routed.rpt -pb buildup_wrapper_power_summary_routed.pb -rpx buildup_wrapper_power_routed.rpx
 | Design           : buildup_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.426        |
+| Total On-Chip Power (W)  | 3.470        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.224        |
-| Device Static (W)        | 0.202        |
+| Dynamic (W)              | 3.266        |
+| Device Static (W)        | 0.204        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 45.5         |
-| Junction Temperature (C) | 64.5         |
+| Max Ambient (C)          | 45.0         |
+| Junction Temperature (C) | 65.0         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.384 |      355 |       --- |             --- |
-|   LUT as Logic |     0.330 |      116 |     53200 |            0.22 |
-|   Register     |     0.027 |      159 |    106400 |            0.15 |
-|   CARRY4       |     0.021 |       12 |     13300 |            0.09 |
+| Slice Logic    |     0.409 |      354 |       --- |             --- |
+|   LUT as Logic |     0.352 |      116 |     53200 |            0.22 |
+|   Register     |     0.028 |      159 |    106400 |            0.15 |
+|   CARRY4       |     0.022 |       12 |     13300 |            0.09 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |       42 |       --- |             --- |
-| Signals        |     0.368 |      259 |       --- |             --- |
+|   Others       |     0.000 |       41 |       --- |             --- |
+| Signals        |     0.385 |      258 |       --- |             --- |
 | I/O            |     2.472 |       20 |       125 |           16.00 |
-| Static Power   |     0.202 |          |           |                 |
-| Total          |     3.426 |          |           |                 |
+| Static Power   |     0.204 |          |           |                 |
+| Total          |     3.470 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.826 |       0.792 |      0.034 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.868 |       0.834 |      0.034 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.113 |       0.089 |      0.024 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.689 |       0.688 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -84,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.059 |       0.000 |      0.059 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.061 |       0.000 |      0.061 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,44 +145,44 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| buildup_wrapper             |     3.224 |
-|   buildup_i                 |     0.703 |
-|     Falling_edge_detector_0 |     0.005 |
-|       U0                    |     0.005 |
-|     Rising_edge_detector_0  |     0.007 |
-|       U0                    |     0.007 |
-|     block_encoder_pan_0     |     0.090 |
+| buildup_wrapper             |     3.266 |
+|   buildup_i                 |     0.746 |
+|     Falling_edge_detector_0 |     0.008 |
+|       U0                    |     0.008 |
+|     Rising_edge_detector_0  |     0.006 |
+|       U0                    |     0.006 |
+|     block_encoder_pan       |     0.090 |
 |       U0                    |     0.090 |
-|     block_encoder_tilt_0    |     0.099 |
-|       U0                    |     0.099 |
-|     clock_divider_0         |     0.213 |
-|       U0                    |     0.213 |
-|     counter_1               |     0.119 |
-|       U0                    |     0.119 |
-|     pwm_pan                 |     0.025 |
-|       U0                    |     0.025 |
-|     pwm_tilt                |     0.025 |
-|       U0                    |     0.025 |
-|     spi_sub_0               |     0.063 |
-|       U0                    |     0.063 |
+|     block_encoder_tilt      |     0.103 |
+|       U0                    |     0.103 |
+|     clock_divider_0         |     0.250 |
+|       U0                    |     0.250 |
+|     counter_1               |     0.121 |
+|       U0                    |     0.121 |
+|     pwm_pan                 |     0.026 |
+|       U0                    |     0.026 |
+|     pwm_tilt                |     0.021 |
+|       U0                    |     0.021 |
+|     spi_sub_0               |     0.062 |
+|       U0                    |     0.062 |
 |     synchronizer_0          |     0.007 |
 |       U0                    |     0.007 |
 |     synchronizer_1          |     0.007 |
 |       U0                    |     0.007 |
-|     synchronizer_2          |     0.006 |
-|       U0                    |     0.006 |
-|     synchronizer_3          |     0.006 |
-|       U0                    |     0.006 |
-|     synchronizer_4          |     0.004 |
-|       U0                    |     0.004 |
-|     synchronizer_5          |     0.006 |
-|       U0                    |     0.006 |
-|     synchronizer_6          |     0.005 |
-|       U0                    |     0.005 |
-|     synchronizer_7          |     0.009 |
-|       U0                    |     0.009 |
-|     synchronizer_8          |     0.007 |
+|     synchronizer_2          |     0.007 |
 |       U0                    |     0.007 |
+|     synchronizer_3          |     0.004 |
+|       U0                    |     0.004 |
+|     synchronizer_4          |     0.005 |
+|       U0                    |     0.005 |
+|     synchronizer_5          |     0.007 |
+|       U0                    |     0.007 |
+|     synchronizer_6          |     0.010 |
+|       U0                    |     0.010 |
+|     synchronizer_7          |     0.007 |
+|       U0                    |     0.007 |
+|     synchronizer_8          |     0.006 |
+|       U0                    |     0.006 |
 +-----------------------------+-----------+
 
 

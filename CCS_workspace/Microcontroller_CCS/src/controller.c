@@ -19,13 +19,13 @@
 #define CONTROLLER_EXTRA_SLEEP_TICKS 5
 #define VEL_SIZE 10                         // Size of the velocity buffer
 #define PI 3.14159265358979323846           // PI aka 3
-#define TICKS_PR_REV 285                    // Number of ticks per revolution
-#define TICKS_TO_RAD 0.02204626423        // 2 * PI / 285
+#define TICKS_PR_REV 360                   // Number of ticks per revolution
+#define TICKS_TO_RAD 2*PI/TICKS_PR_REV        // 2 * PI / 285
 #define TIME_STEP 0.025
 #define INPUT_MAX 12.0
 #define INPUT_MIN -12.0
-#define CLOCKWISE FALSE
-#define COUNTERCLOCKWISE TRUE
+#define CLOCKWISE TRUE
+#define COUNTERCLOCKWISE FALSE
 #define JOYSTICK_DEADZONE 15
 #define MAX_VELOCITY 1
 
@@ -65,7 +65,7 @@ double tics_to_rad(INT16S ticks){
 
 double dist(double p1, double p2){
     double d = p2 - p1;
-    if(d < 0) d += 2 * PI;
+    while(d < 0) d += 2 * PI;
     if(d > PI) d -= 2 * PI;
     return d;
 }
@@ -153,10 +153,11 @@ void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir){
     theta_current_pan = tics_to_rad((encoders >> 2) & 0x1FF);       // Get pan position
     theta_current_tilt = tics_to_rad((encoders >> 11) & 0x1FF);     // Get tilt position
 
+    //send_char((char) (theta_current_tilt));
 
     // Calulate pan velocity and place in array
-    v_pan[i] = ((dist(theta_last_pan, theta_current_pan)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
-    v_tilt[i] = ((dist(theta_last_tilt, theta_current_tilt)) * 1000) / (xFrequency * portTICK_PERIOD_MS);
+    v_pan[i] = dist(theta_last_pan, theta_current_pan);
+    v_tilt[i] = dist(theta_last_tilt, theta_current_tilt);
 
     // Sum of velocities
     double vel_sum_pan = 0;
@@ -166,9 +167,9 @@ void vel_measurer(BOOLEAN tilt_dir, BOOLEAN pan_dir){
         vel_sum_tilt += v_tilt[j];
     }
 
-    y_temp[0][0] = vel_sum_pan / VEL_SIZE;
-    y_temp[1][0] = vel_sum_tilt / VEL_SIZE;     // Get average of tilt velocities
-    glob_temp = y_temp[1][0];   // Send tilt velocity over uart
+    y_temp[0][0] = (vel_sum_pan / VEL_SIZE) * 1000 / (xFrequency * portTICK_PERIOD_MS);
+    y_temp[1][0] = (vel_sum_tilt / VEL_SIZE) * 1000 / (xFrequency * portTICK_PERIOD_MS);     // Get average of tilt velocities
+    //glob_temp = y_temp[1][0];   // Send tilt velocity over uart
 
     // Iterate and set used positions as old
     theta_last_pan = theta_current_pan;
@@ -308,8 +309,8 @@ void controller_task(void * pvParameters) {
             set_LED(y_glob[0][0], y_glob[1][0]);     // Set LED color if joystick is moved
 
             step_controller(ref_glob, y_glob , &u_glob, TIME_STEP);
-
-            // send_char((char) (u_glob[0][0] * 100));
+            //glob_temp = u_glob[1][0];
+            //send_char((char) (ref_glob[1][0] * 10));
 
             //voltage_to_pwm(u_glob[0][0], &pan_pwm, &pan_direction);
             voltage_to_pwm(u_glob[1][0], &tilt_pwm, &tilt_direction);
@@ -320,7 +321,7 @@ void controller_task(void * pvParameters) {
 
             motors = pan_direction << 17 | tilt_direction << 16 | pan_pwm << 8 | tilt_pwm;
             spi_tranceive(&motors, &encoders);
-
+            send_char((encoders >> 12) & 0xFF);
             vTaskResume(serial_task_handle);
 
             if (69) {

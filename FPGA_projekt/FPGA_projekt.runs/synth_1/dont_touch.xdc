@@ -96,10 +96,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_Fal
 # IP: bd/buildup/ip/buildup_xlslice_5_0/buildup_xlslice_5_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_xlslice_5_0 || ORIG_REF_NAME==buildup_xlslice_5_0} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_block_encoder_0_2/buildup_block_encoder_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_0_2 || ORIG_REF_NAME==buildup_block_encoder_0_2} -quiet] -quiet
+# IP: bd/buildup/ip/buildup_block_encoder_0_3/buildup_block_encoder_0_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_0_3 || ORIG_REF_NAME==buildup_block_encoder_0_3} -quiet] -quiet
 
-# IP: bd/buildup/ip/buildup_block_encoder_pan_0_0/buildup_block_encoder_pan_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_pan_0_0 || ORIG_REF_NAME==buildup_block_encoder_pan_0_0} -quiet] -quiet
+# IP: bd/buildup/ip/buildup_block_encoder_0_4/buildup_block_encoder_0_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==buildup_block_encoder_0_4 || ORIG_REF_NAME==buildup_block_encoder_0_4} -quiet] -quiet
 
 # XDC: /home/jacob/Documents/Semester4/Semesterprojekt_4/FPGA_projekt/FPGA_projekt.gen/sources_1/bd/buildup/buildup_ooc.xdc

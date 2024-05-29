@@ -2,6 +2,9 @@ import serial
 import csv
 import numpy as np
 
+def radians_to_adc(rad):
+    return int((rad) * (2**12/2-1) + (2**12/2))
+
 # Create a list of numbers from a mathematical expression or code statement and an interval to calculate the function within. THe function must depend only on x.
 def list_creator(function: str, start, stop, step):
     list = [eval(function) for x in np.arange(start=start, stop=stop, step=step)]
@@ -45,16 +48,17 @@ def send_tilt_velocities(vels):
     return array
 
 # Step response:
-step_input = format_list(list_creator("int(2**12/2) if x < 40 else int(2**12 * 0.75)", 0, 120, 1))
+step_input = format_list(list_creator("radians_to_adc(0) if x < 1 else radians_to_adc(1)", 0, 120, 1))
 
+double_step = format_list(list_creator("radians_to_adc(0) if x < 40 or x > 120 else radians_to_adc(1)", 0, 200, 1))
 # Speed up and slow down:
 parabol_velocities = scale_and_format(list_creator("15.82*x - 8.938*x**2", 0, 1.77, 0.025))
 
-constant_velocity = format_list(list_creator("int(2**12 * 0.60)", 0, 5*40, 1))
+constant_velocity = format_list(list_creator("int(2**12 * 0.6)", 0, 5*40, 1))
 
-
+use_case = format_list(list_creator("radians_to_adc(-(1.0*((17.877*x - 15.82)/((22.6*x - 20.0)**2 + 144.0)**(1/2) + (0.5*(1021.5*x - 904.0)*(15.82*x - 8.9383*x**2))/((22.6*x - 20.0)**2 + 144.0)**(3/2)))/((15.82*x - 8.9383*x**2)**2/((22.6*x - 20.0)**2 + 144.0) + 1.0))",0,1.77,0.025))
 # Change this variable to send something different to the tilt axis.
-tilt_vels = constant_velocity
+tilt_vels = double_step
 
 ser = serial.Serial('/dev/ttyACM0', 115200, 8, "E", 1, 1)  # open serial port
 

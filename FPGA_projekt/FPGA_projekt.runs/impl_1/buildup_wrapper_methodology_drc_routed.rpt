@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Tue May 28 11:40:52 2024
+| Date         : Wed May 29 15:13:06 2024
 | Host         : Laptop running 64-bit Ubuntu 22.04.4 LTS
 | Command      : report_methodology -file buildup_wrapper_methodology_drc_routed.rpt -pb buildup_wrapper_methodology_drc_routed.pb -rpx buildup_wrapper_methodology_drc_routed.rpx
 | Design       : buildup_wrapper
@@ -56,132 +56,132 @@ Related violations: <none>
 
 TIMING-17#5 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/Rising_edge_a/U0/FF1_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/Rising_edge_a/U0/FF1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#6 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/Rising_edge_a/U0/FF2_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/Rising_edge_a/U0/FF2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#7 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/Rising_edge_b/U0/FF1_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/Rising_edge_b/U0/FF1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#8 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/Rising_edge_b/U0/FF2_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/Rising_edge_b/U0/FF2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#9 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_pan_0/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_pan/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/Rising_edge_a/U0/FF1_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/Rising_edge_a/U0/FF1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/Rising_edge_a/U0/FF2_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/Rising_edge_a/U0/FF2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/FF1_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/Rising_edge_b/U0/FF1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/Rising_edge_b/U0/FF2_reg/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/Rising_edge_b/U0/FF2_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin buildup_i/block_encoder_tilt_0/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
+The clock pin buildup_i/block_encoder_tilt/U0/up_down_counter_0/U0/int_cnt_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning

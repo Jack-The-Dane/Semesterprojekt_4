@@ -72,14 +72,14 @@ void serial_interface_task (void *pvParameters){
                 //INT16U vel = (uint8_t) (u_temp[1][0]*100);
                 //INT32S vel_ticks = glob_temp;
                 //INT8U vel_data[6] = {(vel_ticks >> 24) & 0xFF, (vel_ticks >> 16) & 0xFF, (vel_ticks >> 8) & 0xFF, vel_ticks & 0xFF};
-                INT8U vel = (INT8U)(glob_temp*100);
+                INT8U vel = (INT8U)(glob_temp*10);
                 INT8U vel_data[1] = {vel};
                 send_string_len(vel_data, 1);
                 vTaskSuspend(NULL);
             }
         }
     } else {
-            vTaskDelay(5);
+            vTaskDelay(1);
         }
     }
 }

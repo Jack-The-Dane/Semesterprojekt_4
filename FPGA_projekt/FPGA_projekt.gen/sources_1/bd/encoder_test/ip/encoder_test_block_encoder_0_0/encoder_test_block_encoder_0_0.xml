@@ -59,7 +59,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">10</spirit:left>
+            <spirit:left spirit:format="long">8</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -99,8 +99,8 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.2</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="d81bf95e"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="57a4f6c4"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="4270e524"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="641bb7a2"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="18a4dd90"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
