@@ -1,5 +1,6 @@
 #ifndef MODEL_H
 #define MODEL_H
+    // The matrices calculated from the state space model
 
 double A[4][4] = {
     { -2.0885e+03, -479.0588, 0,           0         },

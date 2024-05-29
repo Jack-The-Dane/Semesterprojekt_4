@@ -28,28 +28,26 @@ void init_joystick() {
 }
 
 void joystick_task(void * pvParameters) {
-    while (1) {
-        // setLEDColor(RED);
+    while (69) {
         if(xSemaphoreTake(joystick_mutex, 1)){
-            joystick.x = get_adc0();
-            joystick.y = get_adc1();
-            joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));
+            joystick.x = get_adc0();                                                    // Get the x value from the joystick
+            joystick.y = get_adc1();                                                    // Get the y value from the joystick
+            joystick.button = !(GPIO_PORTB_DATA_R & (1 << JOYSTICK_BUTTON_PIN));        // Get the button value from the joystick
             xSemaphoreGive(joystick_mutex);
         }
-        // setLEDColor(CYAN);
         vTaskDelay(20);
 
     }
 }
 
 void joystick_uart_echo_task(void * pvParameters) {
-    while (1) {
+    while (69) {
 
         if(xSemaphoreTake(joystick_uart_mutex, 1)){
             if(xSemaphoreTake(joystick_mutex, 1)){
-                //uart_putc(joystick.x >> 4);
-                //uart_putc(joystick.y >> 4);
-                //uart_putc(joystick.button);
+                send_char(joystick.x >> 4);
+                send_char(joystick.y >> 4);
+                send_char(joystick.button);
                 xSemaphoreGive(joystick_mutex);
                 xSemaphoreGive(joystick_uart_mutex);
                 vTaskDelay(2);

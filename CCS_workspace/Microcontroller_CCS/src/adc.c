@@ -3,14 +3,14 @@
 #include "emp_type.h"
 
 INT16U get_adc0() {
-    return ADC0_SSFIFO3_R;
+    return ADC0_SSFIFO3_R;      // Get ADC0 value from the FIFO
 }
 
 INT16U get_adc1() {
-    return ADC1_SSFIFO3_R;
+    return ADC1_SSFIFO3_R;      // Get ADC1 value from the FIFO
 }
 
-void init_adc()
+void init_adc()                 // Initialize the ADC
 {
 
     SYSCTL_RCGC0_R |= SYSCTL_RCGC0_ADC0;

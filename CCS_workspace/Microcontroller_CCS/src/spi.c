@@ -37,6 +37,7 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   // Pull CS low to select the device. This is the start of the SPI frame.
   GPIO_PORTE_DATA_R &= ~(1 << SPI_CS_PIN);
 
+
   delay_us(SCLK_HALF_PERIOD_US);
 
 
@@ -51,10 +52,10 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
     // Pulse the clock
     GPIO_PORTE_DATA_R &= ~(1 << SPI_CLK_PIN);
     delay_us(SCLK_HALF_PERIOD_US); // This should be as long as the FPGA needs to shift out a bit
-    GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;
+    GPIO_PORTE_DATA_R |= 1 << SPI_CLK_PIN;  // Rising edge
 
     // Read input bit
-    if (GPIO_PORTE_DATA_R & (1 << SPI_MISO_PIN)) {
+    if (GPIO_PORTE_DATA_R & (1 << SPI_MISO_PIN)) {    
       *data_recieve |= 1 << (i - 1); // Set 1
     } else {
       *data_recieve &= ~(1 << (i - 1)); // Set 0
@@ -69,14 +70,15 @@ void spi_tranceive(SPI_TYPE *data_send, SPI_TYPE *data_recieve) {
   // Set CS high to end the SPI frame.
   GPIO_PORTE_DATA_R |= (1 << SPI_CS_PIN);
 
-  SPI_TYPE encoders_temp = *data_recieve;
-  INT16U temp = (encoders_temp>>2) & 0x1FF;
+//  // Check if the encoder values are valid. This is to avoid big spikes in the encoder values.
+  SPI_TYPE encoders_temp = *data_recieve;     // Check if the encoder values are valid
+  INT16U temp = (encoders_temp>>2) & 0x1FF;   // Check if the pan encoder value is valid
   if(temp > 360){
-    encoders_temp = (encoders_temp & ~(0x7FC)) | (receive_old & (0x7FC));
+    encoders_temp = (encoders_temp & ~(0x7FC)) | (receive_old & (0x7FC));     // If the value is invalid, set it to the old value
   }
   temp = (encoders_temp>>11) & 0x1FF;
   if(temp > 360){
-    encoders_temp = (encoders_temp & ~(0xFF80)) | (receive_old & (0xFF80));
+    encoders_temp = (encoders_temp & ~(0xFF80)) | (receive_old & (0xFF80));   // If the value is invalid, set it to the old value
   }
   *data_recieve = encoders_temp;
 }
