@@ -12,7 +12,7 @@ This repository contain files used in the semester project for the fourth semest
 │   ├── c-matrix             -- Matrix implementation in C
 │   └── Microcontroller_CCS  -- Microchip Studio project containing MC code
 │
-├── modelering
+├── modelling
 │   ├── figures              -- Figures for use in report
 │   ├── matlab               -- Matlab and simulint files
 │   └── paper_derivations    -- Handwritten derivations
